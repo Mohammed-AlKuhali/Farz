@@ -1,0 +1,339 @@
+[
+ {
+  "file": "tray_synthetic_00.jpg",
+  "title_ar": "صينية تجريبية مركّبة: بدون عيوب (٠٪)",
+  "title_en": "Synthetic demo tray: no defects (0%)",
+  "synthetic": true,
+  "credit": "SYNTHETIC composite made by Farz from bean crops of the J4ckDev Green Coffee Beans dataset (https://github.com/J4ckDev/GreenCoffeeBeansDataset, CC BY-NC-SA 4.0). Not a real tray photo.",
+  "true_counts": {
+   "good": 100,
+   "dark": 0,
+   "insect": 0,
+   "broken": 0,
+   "unhulled": 0
+  },
+  "note": "Beans pasted onto a flat grey sheet. The shipped model saw these beans in training: demo of the flow, not evidence of accuracy.",
+  "note_en": "Made by us from photos of single beans pasted on a grey sheet. Farz learned from these same beans, so this shows how Farz works, not how accurate it is.",
+  "note_ar": "صينية ركّبناها من صور حبوب مفردة على خلفية رمادية. فرز تعلّم من نفس هذي الحبوب، فهي تورّي طريقة الشغل، مش دقته.",
+  "farz_python_counts": {
+   "good": 96,
+   "dark": 0,
+   "insect": 0,
+   "broken": 0,
+   "unhulled": 0,
+   "other_defect": 0,
+   "abstain": 4
+  },
+  "expected": {
+   "band": "clean",
+   "about": false,
+   "reason": "",
+   "verified": "v2 licence-stated model (sha256 c40c10f9…) with t_good 0.55 / t_defect 0.91 (reports_v2/threshold_sweep.md), measured 4 Oct 2026 05:18 BST in the built app (scripts/measure-browser.mjs -> reports/browser_measure.json) and in Node (tests/rules.all.test.ts -> reports/rules_measure_node.json); asserted in Chromium by e2e/offline.spec.ts"
+  },
+  "farz_node_counts": {
+   "good": 96,
+   "dark": 0,
+   "insect": 0,
+   "broken": 0,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 4
+  },
+  "farz_browser_counts": {
+   "good": 96,
+   "dark": 0,
+   "insect": 0,
+   "broken": 0,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 4
+  }
+ },
+ {
+  "file": "tray_synthetic_03.jpg",
+  "title_ar": "صينية تجريبية مركّبة: عيوب قليلة (حوالي ٣٪)",
+  "title_en": "Synthetic demo tray: few defects (~3%)",
+  "synthetic": true,
+  "credit": "SYNTHETIC composite made by Farz from bean crops of the J4ckDev Green Coffee Beans dataset (https://github.com/J4ckDev/GreenCoffeeBeansDataset, CC BY-NC-SA 4.0). Not a real tray photo.",
+  "true_counts": {
+   "good": 97,
+   "dark": 1,
+   "insect": 1,
+   "broken": 1,
+   "unhulled": 0
+  },
+  "farz_python_counts": {
+   "good": 96,
+   "dark": 1,
+   "insect": 1,
+   "broken": 1,
+   "unhulled": 0,
+   "other_defect": 0,
+   "abstain": 1
+  },
+  "note": "Beans pasted onto a flat grey sheet. The shipped model saw these beans in training: demo of the flow, not evidence of accuracy.",
+  "expected": {
+   "band": "clean",
+   "about": true,
+   "reason": "",
+   "verified": "v2 licence-stated model (sha256 c40c10f9…) with t_good 0.55 / t_defect 0.91 (reports_v2/threshold_sweep.md), measured 4 Oct 2026 05:18 BST in the built app (scripts/measure-browser.mjs -> reports/browser_measure.json) and in Node (tests/rules.all.test.ts -> reports/rules_measure_node.json); asserted in Chromium by e2e/offline.spec.ts"
+  },
+  "note_en": "Made by us from photos of single beans pasted on a grey sheet. Farz learned from these same beans, so this shows how Farz works, not how accurate it is.",
+  "note_ar": "صينية ركّبناها من صور حبوب مفردة على خلفية رمادية. فرز تعلّم من نفس هذي الحبوب، فهي تورّي طريقة الشغل، مش دقته.",
+  "farz_node_counts": {
+   "good": 94,
+   "dark": 1,
+   "insect": 1,
+   "broken": 1,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 3
+  },
+  "farz_browser_counts": {
+   "good": 96,
+   "dark": 1,
+   "insect": 1,
+   "broken": 1,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 1
+  }
+ },
+ {
+  "file": "tray_synthetic_12.jpg",
+  "title_ar": "صينية تجريبية مركّبة: بعض العيوب (حوالي ١٢٪)",
+  "title_en": "Synthetic demo tray: some defects (~12%)",
+  "synthetic": true,
+  "credit": "SYNTHETIC composite made by Farz from bean crops of the J4ckDev Green Coffee Beans dataset (https://github.com/J4ckDev/GreenCoffeeBeansDataset, CC BY-NC-SA 4.0). Not a real tray photo.",
+  "true_counts": {
+   "good": 88,
+   "dark": 4,
+   "insect": 3,
+   "broken": 3,
+   "unhulled": 2
+  },
+  "farz_python_counts": {
+   "good": 82,
+   "dark": 4,
+   "insect": 3,
+   "broken": 1,
+   "unhulled": 3,
+   "other_defect": 0,
+   "abstain": 7
+  },
+  "note": "Beans pasted onto a flat grey sheet. The shipped model saw these beans in training: demo of the flow, not evidence of accuracy.",
+  "expected": {
+   "band": "some",
+   "about": false,
+   "reason": "",
+   "verified": "v2 licence-stated model (sha256 c40c10f9…) with t_good 0.55 / t_defect 0.91 (reports_v2/threshold_sweep.md), measured 4 Oct 2026 05:18 BST in the built app (scripts/measure-browser.mjs -> reports/browser_measure.json) and in Node (tests/rules.all.test.ts -> reports/rules_measure_node.json); asserted in Chromium by e2e/offline.spec.ts"
+  },
+  "note_en": "Made by us from photos of single beans pasted on a grey sheet. Farz learned from these same beans, so this shows how Farz works, not how accurate it is.",
+  "note_ar": "صينية ركّبناها من صور حبوب مفردة على خلفية رمادية. فرز تعلّم من نفس هذي الحبوب، فهي تورّي طريقة الشغل، مش دقته.",
+  "farz_node_counts": {
+   "good": 82,
+   "dark": 4,
+   "insect": 3,
+   "broken": 1,
+   "unhulled": 3,
+   "other_defect": 0,
+   "unsure": 7
+  },
+  "farz_browser_counts": {
+   "good": 82,
+   "dark": 4,
+   "insect": 3,
+   "broken": 1,
+   "unhulled": 3,
+   "other_defect": 0,
+   "unsure": 7
+  }
+ },
+ {
+  "file": "tray_synthetic_30.jpg",
+  "title_ar": "صينية تجريبية مركّبة: عيوب كثيرة (حوالي ٣٠٪)",
+  "title_en": "Synthetic demo tray: many defects (~30%)",
+  "synthetic": true,
+  "credit": "SYNTHETIC composite made by Farz from bean crops of the J4ckDev Green Coffee Beans dataset (https://github.com/J4ckDev/GreenCoffeeBeansDataset, CC BY-NC-SA 4.0). Not a real tray photo.",
+  "true_counts": {
+   "good": 70,
+   "dark": 10,
+   "insect": 7,
+   "broken": 8,
+   "unhulled": 5
+  },
+  "farz_python_counts": {
+   "good": 67,
+   "dark": 11,
+   "insect": 2,
+   "broken": 7,
+   "unhulled": 5,
+   "other_defect": 0,
+   "abstain": 8
+  },
+  "note": "Beans pasted onto a flat grey sheet. The shipped model saw these beans in training: demo of the flow, not evidence of accuracy.",
+  "expected": {
+   "band": "many",
+   "about": true,
+   "reason": "",
+   "verified": "v2 licence-stated model (sha256 c40c10f9…) with t_good 0.55 / t_defect 0.91 (reports_v2/threshold_sweep.md), measured 4 Oct 2026 05:18 BST in the built app (scripts/measure-browser.mjs -> reports/browser_measure.json) and in Node (tests/rules.all.test.ts -> reports/rules_measure_node.json); asserted in Chromium by e2e/offline.spec.ts"
+  },
+  "note_en": "Made by us from photos of single beans pasted on a grey sheet. Farz learned from these same beans, so this shows how Farz works, not how accurate it is.",
+  "note_ar": "صينية ركّبناها من صور حبوب مفردة على خلفية رمادية. فرز تعلّم من نفس هذي الحبوب، فهي تورّي طريقة الشغل، مش دقته.",
+  "farz_node_counts": {
+   "good": 68,
+   "dark": 11,
+   "insect": 2,
+   "broken": 8,
+   "unhulled": 5,
+   "other_defect": 0,
+   "unsure": 6
+  },
+  "farz_browser_counts": {
+   "good": 67,
+   "dark": 11,
+   "insect": 2,
+   "broken": 7,
+   "unhulled": 5,
+   "other_defect": 0,
+   "unsure": 8
+  }
+ },
+ {
+  "file": "tray_synthetic_40.jpg",
+  "title_ar": "صينية تجريبية مركّبة: عيوب كثيرة (حوالي ٤٠٪)",
+  "title_en": "Synthetic demo tray: many defects (~40%)",
+  "synthetic": true,
+  "credit": "SYNTHETIC composite made by Farz from bean crops of the J4ckDev Green Coffee Beans dataset (https://github.com/J4ckDev/GreenCoffeeBeansDataset, CC BY-NC-SA 4.0). Not a real tray photo.",
+  "true_counts": {
+   "good": 60,
+   "dark": 12,
+   "insect": 8,
+   "broken": 12,
+   "unhulled": 8
+  },
+  "note": "Beans pasted onto a flat grey sheet. The shipped model saw these beans in training: demo of the flow, not evidence of accuracy.",
+  "note_en": "Made by us from photos of single beans pasted on a grey sheet. Farz learned from these same beans, so this shows how Farz works, not how accurate it is.",
+  "note_ar": "صينية ركّبناها من صور حبوب مفردة على خلفية رمادية. فرز تعلّم من نفس هذي الحبوب، فهي تورّي طريقة الشغل، مش دقته.",
+  "farz_python_counts": {
+   "good": 57,
+   "dark": 12,
+   "insect": 5,
+   "broken": 12,
+   "unhulled": 8,
+   "other_defect": 0,
+   "abstain": 6
+  },
+  "expected": {
+   "band": "many",
+   "about": false,
+   "reason": "",
+   "verified": "v2 licence-stated model (sha256 c40c10f9…) with t_good 0.55 / t_defect 0.91 (reports_v2/threshold_sweep.md), measured 4 Oct 2026 05:18 BST in the built app (scripts/measure-browser.mjs -> reports/browser_measure.json) and in Node (tests/rules.all.test.ts -> reports/rules_measure_node.json); asserted in Chromium by e2e/offline.spec.ts"
+  },
+  "farz_node_counts": {
+   "good": 57,
+   "dark": 12,
+   "insect": 5,
+   "broken": 12,
+   "unhulled": 8,
+   "other_defect": 0,
+   "unsure": 6
+  },
+  "farz_browser_counts": {
+   "good": 57,
+   "dark": 12,
+   "insect": 5,
+   "broken": 12,
+   "unhulled": 8,
+   "other_defect": 0,
+   "unsure": 6
+  }
+ },
+ {
+  "file": "cbd_aaa_2.jpg",
+  "title_ar": "صورة حقيقية من الهند (بيانات CBD): درجة AAA",
+  "title_en": "Real photo, India (CBD dataset): grade AAA",
+  "synthetic": false,
+  "credit": "CBD Coffee Bean Dataset, Mendeley Data 52877z55vr (2024), CC BY 4.0, https://data.mendeley.com/datasets/52877z55vr/1 - photo copied unmodified. Wayanad, India; size-graded, not defect-labelled.",
+  "farz_python_counts": {
+   "good": 5,
+   "dark": 1,
+   "insect": 3,
+   "broken": 5,
+   "unhulled": 0,
+   "other_defect": 0,
+   "abstain": 36
+  },
+  "note": "Real light-box photo from India (CBD dataset, size-graded, no per-bean defect labels, never used for training). The v2 model cannot tell most of these beans apart, so the photo rules (>15% unsure, or >60% of answered beans called defective) make Farz say 'not sure' instead of guessing. See app/reports/rules_measure_node.json.",
+  "expected": {
+   "band": "unsure",
+   "about": false,
+   "reason": "implausible",
+   "verified": "v2 licence-stated model (sha256 c40c10f9…) with t_good 0.55 / t_defect 0.91 (reports_v2/threshold_sweep.md), measured 4 Oct 2026 05:18 BST in the built app (scripts/measure-browser.mjs -> reports/browser_measure.json) and in Node (tests/rules.all.test.ts -> reports/rules_measure_node.json); asserted in Chromium by e2e/offline.spec.ts",
+   "changed_4oct_t_good_055": "was unsure / too_many_unsure at t_good 0.50"
+  },
+  "note_en": "Real photo from India — Farz has not seen beans like these, so it says not sure.",
+  "note_ar": "صورة حقيقية من الهند — فرز ما شاف حبوب مثل هذي قبل، فيقول «مش متأكد».",
+  "farz_node_counts": {
+   "good": 6,
+   "dark": 1,
+   "insect": 4,
+   "broken": 5,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 34
+  },
+  "farz_browser_counts": {
+   "good": 5,
+   "dark": 1,
+   "insect": 3,
+   "broken": 5,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 36
+  }
+ },
+ {
+  "file": "cbd_bits_262.jpg",
+  "title_ar": "صورة حقيقية من الهند (بيانات CBD): درجة Bits",
+  "title_en": "Real photo, India (CBD dataset): grade 'Bits'",
+  "synthetic": false,
+  "credit": "CBD Coffee Bean Dataset, Mendeley Data 52877z55vr (2024), CC BY 4.0, https://data.mendeley.com/datasets/52877z55vr/1 - photo copied unmodified. Wayanad, India; size-graded, not defect-labelled.",
+  "farz_python_counts": {
+   "good": 4,
+   "dark": 6,
+   "insect": 10,
+   "broken": 10,
+   "unhulled": 1,
+   "other_defect": 0,
+   "abstain": 19
+  },
+  "note": "Real light-box photo from India (CBD dataset, size-graded, no per-bean defect labels, never used for training). The v2 model cannot tell most of these beans apart, so the photo rules (>15% unsure, or >60% of answered beans called defective) make Farz say 'not sure' instead of guessing. See app/reports/rules_measure_node.json.",
+  "expected": {
+   "band": "unsure",
+   "about": false,
+   "reason": "implausible",
+   "verified": "v2 licence-stated model (sha256 c40c10f9…) with t_good 0.55 / t_defect 0.91 (reports_v2/threshold_sweep.md), measured 4 Oct 2026 05:18 BST in the built app (scripts/measure-browser.mjs -> reports/browser_measure.json) and in Node (tests/rules.all.test.ts -> reports/rules_measure_node.json); asserted in Chromium by e2e/offline.spec.ts"
+  },
+  "note_en": "Real photo from India — Farz has not seen beans like these, so it says not sure.",
+  "note_ar": "صورة حقيقية من الهند — فرز ما شاف حبوب مثل هذي قبل، فيقول «مش متأكد».",
+  "farz_node_counts": {
+   "good": 4,
+   "dark": 7,
+   "insect": 14,
+   "broken": 8,
+   "unhulled": 1,
+   "other_defect": 0,
+   "unsure": 16
+  },
+  "farz_browser_counts": {
+   "good": 4,
+   "dark": 6,
+   "insect": 10,
+   "broken": 10,
+   "unhulled": 1,
+   "other_defect": 0,
+   "unsure": 19
+  }
+ }
+]

@@ -1,0 +1,376 @@
+{
+ "arch": "mnv3s",
+ "tag": "smoke",
+ "train_n": 1875,
+ "heldout_sources": [
+  "uganda"
+ ],
+ "pytorch": {
+  "val": {
+   "set": "val (same sources as train)",
+   "n": 251,
+   "accuracy": 0.6932270916334662,
+   "per_class_recall": {
+    "healthy": 1.0,
+    "rust": 0.6752136752136753,
+    "miner": 0.8333333333333334,
+    "phoma": 0.5483870967741935,
+    "cercospora": 0.76
+   },
+   "confusion_matrix": [
+    [
+     17,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     2,
+     79,
+     4,
+     1,
+     31
+    ],
+    [
+     0,
+     0,
+     25,
+     0,
+     5
+    ],
+    [
+     4,
+     0,
+     18,
+     34,
+     6
+    ],
+    [
+     3,
+     0,
+     3,
+     0,
+     19
+    ]
+   ],
+   "classes_present": [
+    "healthy",
+    "rust",
+    "miner",
+    "phoma",
+    "cercospora"
+   ],
+   "selective": [
+    {
+     "threshold": 0.0,
+     "coverage": 1.0,
+     "accuracy_when_answering": 0.6932270916334662
+    },
+    {
+     "threshold": 0.5,
+     "coverage": 0.8047808764940239,
+     "accuracy_when_answering": 0.7574257425742574
+    },
+    {
+     "threshold": 0.6,
+     "coverage": 0.6533864541832669,
+     "accuracy_when_answering": 0.7987804878048781
+    },
+    {
+     "threshold": 0.7,
+     "coverage": 0.5577689243027888,
+     "accuracy_when_answering": 0.8571428571428571
+    },
+    {
+     "threshold": 0.8,
+     "coverage": 0.41434262948207173,
+     "accuracy_when_answering": 0.9134615384615384
+    },
+    {
+     "threshold": 0.9,
+     "coverage": 0.18725099601593626,
+     "accuracy_when_answering": 0.9361702127659575
+    },
+    {
+     "threshold": 0.95,
+     "coverage": 0.055776892430278883,
+     "accuracy_when_answering": 1.0
+    }
+   ]
+  },
+  "heldout": {
+   "set": "held-out countries",
+   "n": 1809,
+   "accuracy": 0.2448866777224986,
+   "per_class_recall": {
+    "healthy": 0.016238159675236806,
+    "rust": 0.43344155844155846,
+    "phoma": 0.36123348017621143
+   },
+   "confusion_matrix": [
+    [
+     12,
+     66,
+     45,
+     253,
+     363
+    ],
+    [
+     0,
+     267,
+     37,
+     90,
+     222
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     11,
+     128,
+     54,
+     164,
+     97
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "classes_present": [
+    "healthy",
+    "rust",
+    "phoma"
+   ],
+   "selective": [
+    {
+     "threshold": 0.0,
+     "coverage": 1.0,
+     "accuracy_when_answering": 0.2448866777224986
+    },
+    {
+     "threshold": 0.5,
+     "coverage": 0.564400221116639,
+     "accuracy_when_answering": 0.2850146914789422
+    },
+    {
+     "threshold": 0.6,
+     "coverage": 0.359314538419016,
+     "accuracy_when_answering": 0.32153846153846155
+    },
+    {
+     "threshold": 0.7,
+     "coverage": 0.22001105583195135,
+     "accuracy_when_answering": 0.3768844221105528
+    },
+    {
+     "threshold": 0.8,
+     "coverage": 0.10060807075732449,
+     "accuracy_when_answering": 0.44505494505494503
+    },
+    {
+     "threshold": 0.9,
+     "coverage": 0.030403537866224434,
+     "accuracy_when_answering": 0.5454545454545454
+    },
+    {
+     "threshold": 0.95,
+     "coverage": 0.007739082365948038,
+     "accuracy_when_answering": 0.5
+    }
+   ]
+  }
+ },
+ "onnx": {
+  "fp32": {
+   "size_mb": 6.1,
+   "median_ms_cpu": 1.18,
+   "set": "held-out",
+   "n": 1809,
+   "accuracy": 0.2448866777224986,
+   "per_class_recall": {
+    "healthy": 0.016238159675236806,
+    "rust": 0.43344155844155846,
+    "phoma": 0.36123348017621143
+   },
+   "confusion_matrix": [
+    [
+     12,
+     66,
+     45,
+     253,
+     363
+    ],
+    [
+     0,
+     267,
+     37,
+     90,
+     222
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     11,
+     128,
+     54,
+     164,
+     97
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "classes_present": [
+    "healthy",
+    "rust",
+    "phoma"
+   ],
+   "selective": [
+    {
+     "threshold": 0.0,
+     "coverage": 1.0,
+     "accuracy_when_answering": 0.2448866777224986
+    },
+    {
+     "threshold": 0.5,
+     "coverage": 0.564400221116639,
+     "accuracy_when_answering": 0.2850146914789422
+    },
+    {
+     "threshold": 0.6,
+     "coverage": 0.359314538419016,
+     "accuracy_when_answering": 0.32153846153846155
+    },
+    {
+     "threshold": 0.7,
+     "coverage": 0.22001105583195135,
+     "accuracy_when_answering": 0.3768844221105528
+    },
+    {
+     "threshold": 0.8,
+     "coverage": 0.10060807075732449,
+     "accuracy_when_answering": 0.44505494505494503
+    },
+    {
+     "threshold": 0.9,
+     "coverage": 0.030403537866224434,
+     "accuracy_when_answering": 0.5454545454545454
+    },
+    {
+     "threshold": 0.95,
+     "coverage": 0.007739082365948038,
+     "accuracy_when_answering": 0.5
+    }
+   ]
+  },
+  "int8": {
+   "size_mb": 1.88,
+   "median_ms_cpu": 1.01,
+   "set": "held-out",
+   "n": 1809,
+   "accuracy": 0.3604201216141515,
+   "per_class_recall": {
+    "healthy": 0.0013531799729364006,
+    "rust": 0.9155844155844156,
+    "phoma": 0.19162995594713655
+   },
+   "confusion_matrix": [
+    [
+     1,
+     569,
+     0,
+     167,
+     2
+    ],
+    [
+     1,
+     564,
+     0,
+     38,
+     13
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     6,
+     356,
+     0,
+     87,
+     5
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "classes_present": [
+    "healthy",
+    "rust",
+    "phoma"
+   ],
+   "selective": [
+    {
+     "threshold": 0.0,
+     "coverage": 1.0,
+     "accuracy_when_answering": 0.3604201216141515
+    },
+    {
+     "threshold": 0.5,
+     "coverage": 0.6440022111663902,
+     "accuracy_when_answering": 0.4231759656652361
+    },
+    {
+     "threshold": 0.6,
+     "coverage": 0.42454394693200664,
+     "accuracy_when_answering": 0.4453125
+    },
+    {
+     "threshold": 0.7,
+     "coverage": 0.22664455500276395,
+     "accuracy_when_answering": 0.3804878048780488
+    },
+    {
+     "threshold": 0.8,
+     "coverage": 0.08844665561083472,
+     "accuracy_when_answering": 0.3375
+    },
+    {
+     "threshold": 0.9,
+     "coverage": 0.007186290768380321,
+     "accuracy_when_answering": 0.6153846153846154
+    },
+    {
+     "threshold": 0.95,
+     "coverage": 0.0,
+     "accuracy_when_answering": null
+    }
+   ]
+  }
+ }
+}

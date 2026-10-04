@@ -1,0 +1,49 @@
+{
+ "protocol": "Does the per-photo defect share follow the CBD grade folders? (CBD never used for training or fitting anything.)\nPer photo: share of beans whose argmax is not 'good' (no abstention). v2 = models_v2 fp16 (deployed file) on the robust\ncache crops (frozen bean finder); v1 = reports/beans_ood_cbd_preds.npz (v1's own saved probabilities, read-only).\nGrade names are folder labels only: the CBD page does not define them, so the 'order' below is the folder order used by\nrobust_common.CBD_GRADES, not an official quality scale. Writes reports_v2/model_v2_cbd_rank.json.",
+ "v2": {
+  "model": "models_v2/farz_beans_v2_fp16.onnx",
+  "median_photo_defect_share": {
+   "AAA": 0.36367346938775513,
+   "AA": 0.36,
+   "A": 0.35346938775510206,
+   "AB": 0.42857142857142855,
+   "PB-I": 0.64,
+   "PB-II": 0.6176923076923078,
+   "C": 0.6,
+   "Bulk": 0.4432142857142857,
+   "Bits": 0.78
+  },
+  "auroc_Bits_above_AAA": 1.0,
+  "auroc_C_above_AAA": 0.9803921568627452,
+  "auroc_PB-I_above_AAA": 0.9849019607843137,
+  "auroc_Bits_above_AA": 0.991321118611379,
+  "spearman_vs_folder_order": {
+   "rho": 0.6419153734447755,
+   "p": 3.0012329976918278e-55,
+   "n_photos": 464
+  }
+ },
+ "v1": {
+  "model": "models/farz_beans_fp32.onnx (saved probs)",
+  "median_photo_defect_share": {
+   "AAA": 1.0,
+   "AA": 1.0,
+   "A": 1.0,
+   "AB": 1.0,
+   "PB-I": 0.98,
+   "PB-II": 0.98,
+   "C": 0.98,
+   "Bulk": 1.0,
+   "Bits": 0.96
+  },
+  "auroc_Bits_above_AAA": 0.06549019607843137,
+  "auroc_C_above_AAA": 0.18862745098039216,
+  "auroc_PB-I_above_AAA": 0.2203921568627451,
+  "auroc_Bits_above_AA": 0.15445194471231116,
+  "spearman_vs_folder_order": {
+   "rho": -0.47925036287253475,
+   "p": 5.089317803540733e-28,
+   "n_photos": 464
+  }
+ }
+}

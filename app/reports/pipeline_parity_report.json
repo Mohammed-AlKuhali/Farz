@@ -1,0 +1,74 @@
+[
+ {
+  "photo": "photos/cbd_aaa_1.png",
+  "beans": 49,
+  "maxAbsDiff": 0.000513237437057501,
+  "counts": {
+   "good": 7,
+   "dark": 0,
+   "insect": 6,
+   "broken": 5,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 31
+  },
+  "expected": {
+   "good": 7,
+   "dark": 0,
+   "insect": 6,
+   "broken": 5,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 31
+  },
+  "borderline": 0
+ },
+ {
+  "photo": "photos/j4ck_brocadoleve.png",
+  "beans": 30,
+  "maxAbsDiff": 0.0002977253829955506,
+  "counts": {
+   "good": 0,
+   "dark": 0,
+   "insect": 28,
+   "broken": 0,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 2
+  },
+  "expected": {
+   "good": 0,
+   "dark": 0,
+   "insect": 28,
+   "broken": 0,
+   "unhulled": 0,
+   "other_defect": 0,
+   "unsure": 2
+  },
+  "borderline": 0
+ },
+ {
+  "photo": "photos/j4ck_pergamino.png",
+  "beans": 90,
+  "maxAbsDiff": 0.00044608227462772376,
+  "counts": {
+   "good": 0,
+   "dark": 0,
+   "insect": 0,
+   "broken": 0,
+   "unhulled": 88,
+   "other_defect": 0,
+   "unsure": 2
+  },
+  "expected": {
+   "good": 0,
+   "dark": 0,
+   "insect": 0,
+   "broken": 0,
+   "unhulled": 88,
+   "other_defect": 0,
+   "unsure": 2
+  },
+  "borderline": 0
+ }
+]

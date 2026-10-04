@@ -1,0 +1,132 @@
+{
+ "protocol": "Export the deployed v2 model and try smaller formats.\n\n  1. models_v2/farz_beans_v2_fp32.onnx : final weights (train_folds.py final) + ImageNet normalisation + temperature\n     (from train_eval.py: fitted on the pooled LOSO held-out predictions) + softmax. input \"image\" [N,3,128,128] RGB\n     float in [0,1], output \"probs\" [N,6] (good, dark, insect, broken, unhulled, other_defect).\n  2. FP16: onnxconverter_common.float16.convert_float_to_float16(keep_io_types=True).\n  3. INT8 static QDQ (onnxruntime.quantization.quantize_static), calibrated on 1,200 TRAINING crops (100 per source,\n     seed 0), with HardSwish / HardSigmoid / Mul nodes and the squeeze-excitation convs excluded (nodes_to_exclude);\n     variants also keep the stem conv and the classifier in fp32.\n  A smaller file is kept ONLY if its argmax agreement with fp32 is >= 99% on held-out crops: all CBD bean crops\n  (never used for training, temperature, threshold or calibration). Agreement of the deployed 3-way call\n  (good / defect / unsure at the abstain threshold) is reported too.\nWrites models_v2/*.onnx, models_v2/farz_beans_v2_labels.json, reports_v2/model_v2_export.json.",
+ "temperature": 1.5583733433074904,
+ "abstain_threshold_symmetric": 0.89,
+ "pair_thresholds": [
+  0.66,
+  0.89
+ ],
+ "held_out_agreement_set": "23447 CBD bean crops",
+ "fp32": {
+  "file": "models_v2/farz_beans_v2_fp32.onnx",
+  "bytes": 6108756,
+  "max_abs_diff_vs_pytorch_first_2048": 3.7401914596557617e-06,
+  "latency_ms_batch50_1thread_cpu": 89.71652099899075
+ },
+ "fp16": {
+  "file": "models_v2/farz_beans_v2_fp16.onnx",
+  "bytes": 3084405,
+  "argmax_agreement": 0.9930908005288523,
+  "call3_agreement_at_symmetric_threshold": 0.994839425086365,
+  "call3_agreement_at_pair_thresholds": 0.9920245660425641,
+  "max_abs_prob_diff": 0.017515361309051514,
+  "latency_ms_batch50_1thread_cpu": 108.68741649937874,
+  "how": "onnxconverter_common.float16.convert_float_to_float16(keep_io_types=True)",
+  "kept": true
+ },
+ "int8": {
+  "op_counts": {
+   "Sub": 1,
+   "Div": 2,
+   "Conv": 52,
+   "HardSigmoid": 28,
+   "Mul": 28,
+   "Relu": 14,
+   "GlobalAveragePool": 10,
+   "Add": 6,
+   "Flatten": 1,
+   "Gemm": 2,
+   "Softmax": 1
+  },
+  "se_convs_excluded": 18,
+  "calibration": "1200 training crops, 100 per source, seed 0, MinMax",
+  "variants": {
+   "int8_ex_hswish_hsig_mul_se": {
+    "file": "models_v2/farz_beans_v2_int8_ex_hswish_hsig_mul_se.onnx",
+    "bytes": 3171531,
+    "argmax_agreement": 0.0195760651682518,
+    "call3_agreement_at_symmetric_threshold": 0.5514564763082697,
+    "call3_agreement_at_pair_thresholds": 0.47114769480104063,
+    "max_abs_prob_diff": 0.8418958783149719,
+    "latency_ms_batch50_1thread_cpu": 41.87877100048354,
+    "nodes_excluded": 37,
+    "kept": false
+   },
+   "int8_ex_hswish_hsig_mul_se_stem_head": {
+    "file": "models_v2/farz_beans_v2_int8_ex_hswish_hsig_mul_se_stem_head.onnx",
+    "bytes": 4941392,
+    "argmax_agreement": 0.4818100396639229,
+    "call3_agreement_at_symmetric_threshold": 0.6300166332579861,
+    "call3_agreement_at_pair_thresholds": 0.32294110120697744,
+    "max_abs_prob_diff": 0.8770768642425537,
+    "latency_ms_batch50_1thread_cpu": 41.86614550053491,
+    "nodes_excluded": 40,
+    "kept": false
+   },
+   "int8_ex_hswish_hsig_mul_se_first4convs_head": {
+    "file": "models_v2/farz_beans_v2_int8_ex_hswish_hsig_mul_se_first4convs_head.onnx",
+    "bytes": 4940308,
+    "argmax_agreement": 0.5499210986480146,
+    "call3_agreement_at_symmetric_threshold": 0.6748837804409946,
+    "call3_agreement_at_pair_thresholds": 0.5903953597475157,
+    "max_abs_prob_diff": 0.7798417210578918,
+    "latency_ms_batch50_1thread_cpu": 44.74300000038056,
+    "nodes_excluded": 41,
+    "kept": false
+   }
+  },
+  "extra_attempts": {
+   "pointwise_convs": 22,
+   "variants": {
+    "int8_ex_hswish_hsig_mul_se_percentile": {
+     "bytes": 3171547,
+     "argmax_agreement": 0.21115707766452,
+     "call3_agreement_at_pair_thresholds": 0.4679916407216275,
+     "max_abs_prob_diff": 0.892866849899292,
+     "kept": false
+    },
+    "int8_ex_hswish_hsig_mul_se_entropy": {
+     "bytes": 3171531,
+     "argmax_agreement": 0.0195760651682518,
+     "call3_agreement_at_pair_thresholds": 0.47114769480104063,
+     "max_abs_prob_diff": 0.8418958783149719,
+     "kept": false
+    },
+    "int8_pointwise_convs_only_minmax": {
+     "bytes": 5038639,
+     "argmax_agreement": 0.5401543907536145,
+     "call3_agreement_at_pair_thresholds": 0.562204119930055,
+     "max_abs_prob_diff": 0.7890743613243103,
+     "kept": false
+    }
+   }
+  }
+ },
+ "recommended_file": "models_v2/farz_beans_v2_fp16.onnx",
+ "recommended_format": "fp16",
+ "labels_json": {
+  "classes": [
+   "good",
+   "dark",
+   "insect",
+   "broken",
+   "unhulled",
+   "other_defect"
+  ],
+  "defect_classes": [
+   "dark",
+   "insect",
+   "broken",
+   "unhulled",
+   "other_defect"
+  ],
+  "good_at_or_above": 0.66,
+  "defect_at_or_above": 0.89,
+  "abstain_below": 0.89,
+  "input": 128,
+  "decision": "pGood = probs[0]; good if pGood >= good_at_or_above; else defect if 1 - pGood >= defect_at_or_above (type = argmax of probs[1:], shown only as 'possible'); otherwise unsure. Touching blobs are unsure. abstain_below = the single symmetric threshold (rule A, reported for comparison only).",
+  "temperature_baked_in": 1.5583733433074904,
+  "model_file": "models_v2/farz_beans_v2_fp16.onnx",
+  "note": "Farz v2 per-bean classifier. input 'image' float32 [N,3,128,128] RGB in [0,1] (crop contract of src/beans/beanfinder.py); output 'probs' [N,6] = softmax(logits/T). Temperature and abstain threshold were fitted on leave-one-source-out held-out predictions (reports_v2/model_v2_eval.json). Trained on 12 sources incl. 5 that state no licence and 2 that are non-commercial (see reports_v2/model_v2.md)."
+ }
+}

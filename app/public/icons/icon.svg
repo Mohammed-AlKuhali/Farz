@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#2b1b14"/>
+  <!-- qamariya: half-moon stained-glass window with gypsum tracery -->
+  <g transform="translate(256 330)">
+    <path d="M-190 0A190 190 0 0 1 -95 -164.5L-52 -90A104 104 0 0 0 -104 0Z" fill="#b6c88f"/>
+    <path d="M-95 -164.5A190 190 0 0 1 95 -164.5L52 -90A104 104 0 0 0 -52 -90Z" fill="#e38b32"/>
+    <path d="M95 -164.5A190 190 0 0 1 190 0H104A104 104 0 0 0 52 -90Z" fill="#e0473a"/>
+    <path d="M-190 0A190 190 0 0 1 190 0" fill="none" stroke="#f4ecdf" stroke-width="14"/>
+    <path d="M-104 0A104 104 0 0 1 104 0Z" fill="#3b281e" stroke="#f4ecdf" stroke-width="12"/>
+    <path d="M-95 -164.5L-52 -90M95 -164.5L52 -90" stroke="#f4ecdf" stroke-width="12"/>
+    <rect x="-206" y="-6" width="412" height="22" rx="6" fill="#f4ecdf"/>
+    <g transform="translate(0 -46) rotate(-28)">
+      <ellipse rx="30" ry="44" fill="#b6c88f" stroke="#6f8048" stroke-width="4"/>
+      <path d="M0 -40c-10 13 10 27 0 40s10 27 0 40" fill="none" stroke="#2b1b14" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

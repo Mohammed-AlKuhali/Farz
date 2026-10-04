@@ -1,0 +1,3337 @@
+{
+ "model": "app/public/models/farz_beans.onnx",
+ "model_sha256": "200fd5c3184caa5cd65101235a1bbac47e76b16c80bb8caa6fb4ce922b3e0c31",
+ "classes": [
+  "good",
+  "dark",
+  "insect",
+  "broken",
+  "unhulled"
+ ],
+ "abstain_below": 0.59,
+ "how_to_use": "Feed photos/<name>.png to the JS bean finder + model. These PNGs are the PIL-BILINEAR downscale of the source photo to <= 1200 px (the bean finder's own first step), so the bean finder's scale is 1.0 and results must match box-for-box. 'from_source_jpeg' shows the same pipeline run on the original JPEG in Python; it must be identical.",
+ "photos": [
+  {
+   "name": "j4ck_brocadoleve",
+   "fixture_png": "photos/j4ck_brocadoleve.png",
+   "source": "data/raw/green/ImageDataset/BrocadoLeve.jpg",
+   "source_size": [
+    1445,
+    1698
+   ],
+   "work_size": [
+    1021,
+    1200
+   ],
+   "bean_count": 30,
+   "checks": {
+    "sheet_luma": 164.79299926757812,
+    "too_dark": false,
+    "blur_var": 58.03378677368164,
+    "too_blurry": false,
+    "count": 30,
+    "count_ok": true,
+    "touching": 0,
+    "too_many_touching": false,
+    "threshold": 65.0
+   },
+   "median_area": 6362.0,
+   "decision_counts": {
+    "good": 0,
+    "dark": 0,
+    "insect": 30,
+    "broken": 0,
+    "unhulled": 0,
+    "abstain": 0
+   },
+   "from_source_jpeg_identical": true,
+   "beans": [
+    {
+     "box": [
+      72,
+      65,
+      169,
+      143
+     ],
+     "area": 6068,
+     "touching": false,
+     "probs": [
+      0.0091394,
+      0.0254948,
+      0.9620596,
+      0.0020128,
+      0.0012935
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      321,
+      107,
+      402,
+      202
+     ],
+     "area": 5731,
+     "touching": false,
+     "probs": [
+      0.0016528,
+      0.0022886,
+      0.9906231,
+      0.0022285,
+      0.003207
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      875,
+      111,
+      959,
+      217
+     ],
+     "area": 6655,
+     "touching": false,
+     "probs": [
+      0.0008815,
+      0.0003619,
+      0.9964564,
+      0.0011433,
+      0.0011569
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      682,
+      116,
+      760,
+      202
+     ],
+     "area": 5257,
+     "touching": false,
+     "probs": [
+      0.0003055,
+      0.0151535,
+      0.9830252,
+      0.0008593,
+      0.0006565
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      497,
+      122,
+      574,
+      216
+     ],
+     "area": 5277,
+     "touching": false,
+     "probs": [
+      0.0034942,
+      0.0571818,
+      0.879161,
+      0.0567754,
+      0.0033876
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      88,
+      265,
+      177,
+      378
+     ],
+     "area": 7360,
+     "touching": false,
+     "probs": [
+      0.001633,
+      0.0005892,
+      0.9949594,
+      0.0011874,
+      0.0016312
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      484,
+      289,
+      564,
+      398
+     ],
+     "area": 6579,
+     "touching": false,
+     "probs": [
+      0.0087005,
+      0.0042874,
+      0.9699363,
+      0.0023465,
+      0.0147293
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      862,
+      299,
+      950,
+      422
+     ],
+     "area": 8562,
+     "touching": false,
+     "probs": [
+      0.0063108,
+      0.0042954,
+      0.9780647,
+      0.0059082,
+      0.0054209
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      292,
+      306,
+      392,
+      385
+     ],
+     "area": 6413,
+     "touching": false,
+     "probs": [
+      8.89e-05,
+      0.0004686,
+      0.9986606,
+      0.0004934,
+      0.0002886
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      675,
+      311,
+      750,
+      410
+     ],
+     "area": 5729,
+     "touching": false,
+     "probs": [
+      0.0018324,
+      0.0004534,
+      0.9950538,
+      0.0023875,
+      0.0002729
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      70,
+      444,
+      169,
+      538
+     ],
+     "area": 6738,
+     "touching": false,
+     "probs": [
+      0.0042256,
+      0.0035301,
+      0.9778657,
+      0.0088551,
+      0.0055236
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      296,
+      471,
+      381,
+      574
+     ],
+     "area": 6174,
+     "touching": false,
+     "probs": [
+      0.0011868,
+      0.0015587,
+      0.994184,
+      0.0020951,
+      0.0009754
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      498,
+      483,
+      573,
+      584
+     ],
+     "area": 5545,
+     "touching": false,
+     "probs": [
+      0.0285488,
+      0.0071358,
+      0.9341099,
+      0.0187378,
+      0.0114677
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      669,
+      519,
+      752,
+      604
+     ],
+     "area": 5452,
+     "touching": false,
+     "probs": [
+      0.0092524,
+      0.0213579,
+      0.9540077,
+      0.0105859,
+      0.0047961
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      821,
+      528,
+      939,
+      611
+     ],
+     "area": 7580,
+     "touching": false,
+     "probs": [
+      0.000119,
+      0.000394,
+      0.9990132,
+      0.0002625,
+      0.0002114
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      71,
+      663,
+      173,
+      752
+     ],
+     "area": 6418,
+     "touching": false,
+     "probs": [
+      0.0097391,
+      0.0804373,
+      0.9014125,
+      0.0043384,
+      0.0040726
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      291,
+      689,
+      384,
+      776
+     ],
+     "area": 6461,
+     "touching": false,
+     "probs": [
+      0.0007409,
+      0.0004048,
+      0.9942265,
+      0.0037668,
+      0.000861
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      856,
+      690,
+      941,
+      788
+     ],
+     "area": 6311,
+     "touching": false,
+     "probs": [
+      0.0013885,
+      0.0003429,
+      0.9958966,
+      0.0013215,
+      0.0010505
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      469,
+      696,
+      546,
+      802
+     ],
+     "area": 6457,
+     "touching": false,
+     "probs": [
+      0.0012397,
+      0.002686,
+      0.9878357,
+      0.0069968,
+      0.0012417
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      614,
+      705,
+      724,
+      781
+     ],
+     "area": 6489,
+     "touching": false,
+     "probs": [
+      0.0034297,
+      0.2586676,
+      0.7103662,
+      0.0221594,
+      0.0053771
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      282,
+      813,
+      365,
+      917
+     ],
+     "area": 6726,
+     "touching": false,
+     "probs": [
+      0.0004671,
+      0.0067051,
+      0.9909887,
+      0.001172,
+      0.0006671
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      90,
+      818,
+      161,
+      904
+     ],
+     "area": 4735,
+     "touching": false,
+     "probs": [
+      0.0023497,
+      0.0099993,
+      0.9784047,
+      0.0081737,
+      0.0010725
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      425,
+      852,
+      540,
+      937
+     ],
+     "area": 7473,
+     "touching": false,
+     "probs": [
+      0.002916,
+      0.0578735,
+      0.934347,
+      0.0022017,
+      0.0026618
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      620,
+      886,
+      706,
+      956
+     ],
+     "area": 4837,
+     "touching": false,
+     "probs": [
+      0.0022323,
+      0.003777,
+      0.9895828,
+      0.0021161,
+      0.0022919
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      828,
+      891,
+      914,
+      963
+     ],
+     "area": 4674,
+     "touching": false,
+     "probs": [
+      0.0001176,
+      0.0013259,
+      0.9975626,
+      0.0006981,
+      0.0002958
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      74,
+      997,
+      161,
+      1103
+     ],
+     "area": 7344,
+     "touching": false,
+     "probs": [
+      0.0003379,
+      0.0016801,
+      0.9941976,
+      0.0022797,
+      0.0015047
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      293,
+      1005,
+      387,
+      1084
+     ],
+     "area": 5887,
+     "touching": false,
+     "probs": [
+      0.0020652,
+      0.0049139,
+      0.989197,
+      0.001454,
+      0.00237
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      619,
+      1036,
+      725,
+      1115
+     ],
+     "area": 6490,
+     "touching": false,
+     "probs": [
+      0.0017466,
+      0.1914186,
+      0.7861778,
+      0.0185137,
+      0.0021433
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      808,
+      1049,
+      904,
+      1129
+     ],
+     "area": 6166,
+     "touching": false,
+     "probs": [
+      0.0020717,
+      0.0011807,
+      0.9950465,
+      0.0009577,
+      0.0007433
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      445,
+      1058,
+      525,
+      1149
+     ],
+     "area": 5274,
+     "touching": false,
+     "probs": [
+      0.0022294,
+      0.000916,
+      0.9921976,
+      0.0015579,
+      0.003099
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    }
+   ]
+  },
+  {
+   "name": "j4ck_pergamino",
+   "fixture_png": "photos/j4ck_pergamino.png",
+   "source": "data/raw/green/ImageDataset/Pergamino.jpg",
+   "source_size": [
+    3087,
+    2766
+   ],
+   "work_size": [
+    1200,
+    1075
+   ],
+   "bean_count": 90,
+   "checks": {
+    "sheet_luma": 157.90699768066406,
+    "too_dark": false,
+    "blur_var": 47.84782028198242,
+    "too_blurry": false,
+    "count": 90,
+    "count_ok": true,
+    "touching": 0,
+    "too_many_touching": false,
+    "threshold": 78.0
+   },
+   "median_area": 3053.5,
+   "decision_counts": {
+    "good": 0,
+    "dark": 0,
+    "insect": 0,
+    "broken": 0,
+    "unhulled": 90,
+    "abstain": 0
+   },
+   "from_source_jpeg_identical": true,
+   "beans": [
+    {
+     "box": [
+      170,
+      20,
+      249,
+      79
+     ],
+     "area": 3670,
+     "touching": false,
+     "probs": [
+      0.0025515,
+      0.0032637,
+      0.0022977,
+      0.0014916,
+      0.9903956
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      980,
+      24,
+      1055,
+      83
+     ],
+     "area": 3496,
+     "touching": false,
+     "probs": [
+      0.0041754,
+      0.0043628,
+      0.0058893,
+      0.0044912,
+      0.9810813
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      567,
+      29,
+      647,
+      101
+     ],
+     "area": 3859,
+     "touching": false,
+     "probs": [
+      0.0005277,
+      0.0027065,
+      0.0008596,
+      0.0072327,
+      0.9886735
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      829,
+      29,
+      921,
+      82
+     ],
+     "area": 3966,
+     "touching": false,
+     "probs": [
+      0.000632,
+      0.0073933,
+      0.0009981,
+      0.0042063,
+      0.9867704
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1103,
+      30,
+      1168,
+      90
+     ],
+     "area": 2877,
+     "touching": false,
+     "probs": [
+      0.0005328,
+      0.0027867,
+      0.0001568,
+      0.0023177,
+      0.994206
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      23,
+      33,
+      103,
+      88
+     ],
+     "area": 3592,
+     "touching": false,
+     "probs": [
+      0.0006487,
+      0.0016804,
+      0.0006757,
+      0.0017436,
+      0.9952517
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      692,
+      36,
+      765,
+      92
+     ],
+     "area": 3154,
+     "touching": false,
+     "probs": [
+      0.0015119,
+      0.0039275,
+      0.0014476,
+      0.0011432,
+      0.9919698
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      301,
+      38,
+      357,
+      109
+     ],
+     "area": 3155,
+     "touching": false,
+     "probs": [
+      0.0010065,
+      0.0018942,
+      0.0008522,
+      0.0022432,
+      0.994004
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      441,
+      57,
+      503,
+      126
+     ],
+     "area": 3159,
+     "touching": false,
+     "probs": [
+      0.0010024,
+      0.0158205,
+      0.0010543,
+      0.0051248,
+      0.976998
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      998,
+      129,
+      1056,
+      203
+     ],
+     "area": 2985,
+     "touching": false,
+     "probs": [
+      0.0015169,
+      0.0221194,
+      0.0023599,
+      0.008928,
+      0.9650759
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1100,
+      137,
+      1161,
+      210
+     ],
+     "area": 3476,
+     "touching": false,
+     "probs": [
+      0.0006146,
+      0.0143016,
+      0.0004075,
+      0.0027266,
+      0.9819497
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      163,
+      142,
+      244,
+      205
+     ],
+     "area": 3846,
+     "touching": false,
+     "probs": [
+      0.0032018,
+      0.0057991,
+      0.0052832,
+      0.0289508,
+      0.9567651
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      571,
+      151,
+      648,
+      209
+     ],
+     "area": 3517,
+     "touching": false,
+     "probs": [
+      0.0017947,
+      0.0057078,
+      0.0044571,
+      0.0045667,
+      0.9834736
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      30,
+      156,
+      103,
+      208
+     ],
+     "area": 3020,
+     "touching": false,
+     "probs": [
+      0.0011886,
+      0.0057032,
+      0.0028821,
+      0.0176877,
+      0.9725385
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      706,
+      156,
+      769,
+      209
+     ],
+     "area": 2620,
+     "touching": false,
+     "probs": [
+      0.0004379,
+      0.0022736,
+      0.0010016,
+      0.0020367,
+      0.9942502
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      852,
+      158,
+      928,
+      216
+     ],
+     "area": 3431,
+     "touching": false,
+     "probs": [
+      0.002481,
+      0.0134922,
+      0.0050106,
+      0.0032118,
+      0.9758044
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      296,
+      162,
+      373,
+      221
+     ],
+     "area": 3624,
+     "touching": false,
+     "probs": [
+      0.0017622,
+      0.0025725,
+      0.0037788,
+      0.0023367,
+      0.9895499
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      426,
+      162,
+      509,
+      218
+     ],
+     "area": 3762,
+     "touching": false,
+     "probs": [
+      0.0018797,
+      0.0044808,
+      0.0080652,
+      0.0030265,
+      0.9825477
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      970,
+      248,
+      1043,
+      304
+     ],
+     "area": 3233,
+     "touching": false,
+     "probs": [
+      0.0053509,
+      0.0277104,
+      0.0126558,
+      0.0057322,
+      0.9485508
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      160,
+      255,
+      231,
+      323
+     ],
+     "area": 3522,
+     "touching": false,
+     "probs": [
+      0.0012063,
+      0.0019484,
+      0.0026294,
+      0.0097226,
+      0.9844933
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      430,
+      256,
+      511,
+      322
+     ],
+     "area": 3918,
+     "touching": false,
+     "probs": [
+      0.0023913,
+      0.0058385,
+      0.0034434,
+      0.0028939,
+      0.9854328
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1090,
+      259,
+      1155,
+      315
+     ],
+     "area": 2822,
+     "touching": false,
+     "probs": [
+      0.001376,
+      0.0061118,
+      0.0014238,
+      0.0011832,
+      0.9899053
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      711,
+      261,
+      782,
+      313
+     ],
+     "area": 3004,
+     "touching": false,
+     "probs": [
+      0.0006247,
+      0.0022965,
+      0.0051384,
+      0.0014731,
+      0.9904673
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      297,
+      264,
+      353,
+      334
+     ],
+     "area": 2934,
+     "touching": false,
+     "probs": [
+      0.0012,
+      0.0044881,
+      0.0036978,
+      0.0026274,
+      0.9879866
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      835,
+      264,
+      908,
+      318
+     ],
+     "area": 3215,
+     "touching": false,
+     "probs": [
+      0.0018168,
+      0.0026721,
+      0.0030084,
+      0.0016217,
+      0.990881
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      28,
+      267,
+      90,
+      317
+     ],
+     "area": 2422,
+     "touching": false,
+     "probs": [
+      0.0018001,
+      0.0044183,
+      0.0017753,
+      0.0027845,
+      0.9892218
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      586,
+      272,
+      652,
+      323
+     ],
+     "area": 2603,
+     "touching": false,
+     "probs": [
+      0.0003585,
+      0.0076345,
+      0.0064869,
+      0.0005129,
+      0.9850071
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1091,
+      344,
+      1149,
+      425
+     ],
+     "area": 3708,
+     "touching": false,
+     "probs": [
+      5.52e-05,
+      0.0008727,
+      7.88e-05,
+      0.0001121,
+      0.9988812
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      29,
+      361,
+      93,
+      425
+     ],
+     "area": 2983,
+     "touching": false,
+     "probs": [
+      0.0015465,
+      0.0023688,
+      0.0020401,
+      0.002451,
+      0.9915936
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      419,
+      369,
+      482,
+      420
+     ],
+     "area": 2485,
+     "touching": false,
+     "probs": [
+      0.0011509,
+      0.0008339,
+      0.0013621,
+      0.0024761,
+      0.994177
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      830,
+      369,
+      909,
+      429
+     ],
+     "area": 3808,
+     "touching": false,
+     "probs": [
+      0.0019813,
+      0.006268,
+      0.0017263,
+      0.0011813,
+      0.9888432
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      954,
+      373,
+      1032,
+      428
+     ],
+     "area": 3476,
+     "touching": false,
+     "probs": [
+      0.0021837,
+      0.0027647,
+      0.006225,
+      0.0010379,
+      0.9877887
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      290,
+      378,
+      351,
+      439
+     ],
+     "area": 2721,
+     "touching": false,
+     "probs": [
+      0.0011766,
+      0.0015047,
+      0.0026105,
+      0.0010516,
+      0.9936566
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      571,
+      384,
+      647,
+      436
+     ],
+     "area": 3284,
+     "touching": false,
+     "probs": [
+      0.0019058,
+      0.0043454,
+      0.0045366,
+      0.0019169,
+      0.9872953
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      160,
+      386,
+      228,
+      438
+     ],
+     "area": 2688,
+     "touching": false,
+     "probs": [
+      0.0013806,
+      0.0012369,
+      0.0026887,
+      0.0011142,
+      0.9935795
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      703,
+      387,
+      768,
+      435
+     ],
+     "area": 2527,
+     "touching": false,
+     "probs": [
+      0.003378,
+      0.0016744,
+      0.0063057,
+      0.0027453,
+      0.9858966
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      25,
+      469,
+      90,
+      525
+     ],
+     "area": 2851,
+     "touching": false,
+     "probs": [
+      0.0010614,
+      0.0013197,
+      0.0016236,
+      0.0022175,
+      0.9937779
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      123,
+      469,
+      190,
+      524
+     ],
+     "area": 2996,
+     "touching": false,
+     "probs": [
+      0.0022508,
+      0.0018869,
+      0.0034606,
+      0.0027117,
+      0.9896899
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      567,
+      471,
+      643,
+      531
+     ],
+     "area": 3414,
+     "touching": false,
+     "probs": [
+      0.0038484,
+      0.0040474,
+      0.0101773,
+      0.0045863,
+      0.9773407
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      699,
+      475,
+      771,
+      530
+     ],
+     "area": 3158,
+     "touching": false,
+     "probs": [
+      0.001535,
+      0.0039829,
+      0.00468,
+      0.001901,
+      0.9879011
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      286,
+      476,
+      364,
+      535
+     ],
+     "area": 3475,
+     "touching": false,
+     "probs": [
+      0.0023677,
+      0.002994,
+      0.0045865,
+      0.0009309,
+      0.9891209
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1080,
+      480,
+      1143,
+      545
+     ],
+     "area": 2986,
+     "touching": false,
+     "probs": [
+      0.0024789,
+      0.002904,
+      0.0060993,
+      0.0037674,
+      0.9847504
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      421,
+      482,
+      479,
+      529
+     ],
+     "area": 2206,
+     "touching": false,
+     "probs": [
+      0.0026728,
+      0.0030468,
+      0.0040248,
+      0.0015217,
+      0.988734
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      956,
+      482,
+      1012,
+      525
+     ],
+     "area": 1881,
+     "touching": false,
+     "probs": [
+      0.0013562,
+      0.0086172,
+      0.0073173,
+      0.0018567,
+      0.9808527
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      829,
+      488,
+      907,
+      540
+     ],
+     "area": 3152,
+     "touching": false,
+     "probs": [
+      0.0028096,
+      0.009646,
+      0.0027869,
+      0.0018297,
+      0.9829279
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      401,
+      551,
+      476,
+      621
+     ],
+     "area": 3687,
+     "touching": false,
+     "probs": [
+      0.0009431,
+      0.000424,
+      0.0016016,
+      0.0011666,
+      0.9958647
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      26,
+      561,
+      89,
+      632
+     ],
+     "area": 3338,
+     "touching": false,
+     "probs": [
+      0.0028851,
+      0.0096948,
+      0.0036294,
+      0.0044946,
+      0.9792961
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      144,
+      563,
+      208,
+      619
+     ],
+     "area": 2752,
+     "touching": false,
+     "probs": [
+      0.0006405,
+      0.0006356,
+      0.0005072,
+      0.0010657,
+      0.9971511
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      556,
+      564,
+      624,
+      627
+     ],
+     "area": 3142,
+     "touching": false,
+     "probs": [
+      0.0006772,
+      0.000681,
+      0.0034726,
+      0.0006964,
+      0.9944728
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      692,
+      565,
+      765,
+      621
+     ],
+     "area": 3313,
+     "touching": false,
+     "probs": [
+      0.0025506,
+      0.0040381,
+      0.0081109,
+      0.0015294,
+      0.9837711
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      272,
+      570,
+      352,
+      618
+     ],
+     "area": 2955,
+     "touching": false,
+     "probs": [
+      0.0010114,
+      0.0028065,
+      0.0018766,
+      0.0034349,
+      0.9908708
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      940,
+      572,
+      1017,
+      634
+     ],
+     "area": 3752,
+     "touching": false,
+     "probs": [
+      0.0003783,
+      0.0026644,
+      0.0010726,
+      0.0005585,
+      0.9953262
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      814,
+      574,
+      893,
+      629
+     ],
+     "area": 3451,
+     "touching": false,
+     "probs": [
+      0.0010519,
+      0.0150229,
+      0.0023177,
+      0.0008366,
+      0.9807709
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1068,
+      584,
+      1136,
+      638
+     ],
+     "area": 2842,
+     "touching": false,
+     "probs": [
+      0.001408,
+      0.0346743,
+      0.0030329,
+      0.0007686,
+      0.9601161
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      269,
+      661,
+      343,
+      720
+     ],
+     "area": 3229,
+     "touching": false,
+     "probs": [
+      0.0026663,
+      0.0065698,
+      0.0035066,
+      0.0057746,
+      0.9814827
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      400,
+      665,
+      485,
+      720
+     ],
+     "area": 3482,
+     "touching": false,
+     "probs": [
+      0.0006995,
+      0.0028128,
+      0.0016103,
+      0.0017432,
+      0.9931341
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      703,
+      665,
+      763,
+      731
+     ],
+     "area": 2890,
+     "touching": false,
+     "probs": [
+      0.0023638,
+      0.006406,
+      0.0042897,
+      0.0025163,
+      0.9844242
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      545,
+      666,
+      629,
+      723
+     ],
+     "area": 3780,
+     "touching": false,
+     "probs": [
+      0.0011964,
+      0.0027186,
+      0.0018007,
+      0.0011139,
+      0.9931705
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      20,
+      672,
+      83,
+      732
+     ],
+     "area": 2643,
+     "touching": false,
+     "probs": [
+      0.0013563,
+      0.0049736,
+      0.0030045,
+      0.0019515,
+      0.9887142
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1088,
+      675,
+      1150,
+      736
+     ],
+     "area": 2822,
+     "touching": false,
+     "probs": [
+      0.0006127,
+      0.000724,
+      0.0007139,
+      0.0005439,
+      0.9974055
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      947,
+      677,
+      1019,
+      737
+     ],
+     "area": 3150,
+     "touching": false,
+     "probs": [
+      0.0031169,
+      0.0047051,
+      0.0069725,
+      0.0028833,
+      0.9823223
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      144,
+      678,
+      210,
+      740
+     ],
+     "area": 3216,
+     "touching": false,
+     "probs": [
+      0.0007325,
+      0.0009083,
+      0.0009946,
+      0.0017983,
+      0.9955662
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      816,
+      681,
+      891,
+      735
+     ],
+     "area": 3077,
+     "touching": false,
+     "probs": [
+      0.0015976,
+      0.0040727,
+      0.0028331,
+      0.0035018,
+      0.9879948
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      265,
+      757,
+      338,
+      826
+     ],
+     "area": 3566,
+     "touching": false,
+     "probs": [
+      0.0021835,
+      0.0039612,
+      0.0039353,
+      0.0015514,
+      0.9883686
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      32,
+      762,
+      98,
+      821
+     ],
+     "area": 2890,
+     "touching": false,
+     "probs": [
+      0.0051638,
+      0.0084966,
+      0.0102597,
+      0.0060427,
+      0.9700372
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      689,
+      765,
+      763,
+      817
+     ],
+     "area": 3097,
+     "touching": false,
+     "probs": [
+      0.0018541,
+      0.0118476,
+      0.0049626,
+      0.002769,
+      0.9785666
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      418,
+      766,
+      482,
+      816
+     ],
+     "area": 2654,
+     "touching": false,
+     "probs": [
+      0.0033936,
+      0.0025519,
+      0.004404,
+      0.0026489,
+      0.9870017
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      826,
+      766,
+      903,
+      820
+     ],
+     "area": 3394,
+     "touching": false,
+     "probs": [
+      0.0007693,
+      0.0068104,
+      0.0008823,
+      0.0010015,
+      0.9905365
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      577,
+      771,
+      641,
+      830
+     ],
+     "area": 2742,
+     "touching": false,
+     "probs": [
+      0.0033202,
+      0.0119579,
+      0.0159809,
+      0.0040269,
+      0.9647141
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      143,
+      777,
+      217,
+      828
+     ],
+     "area": 3143,
+     "touching": false,
+     "probs": [
+      0.0006283,
+      0.0007655,
+      0.0005227,
+      0.0030612,
+      0.9950223
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      965,
+      783,
+      1034,
+      838
+     ],
+     "area": 2797,
+     "touching": false,
+     "probs": [
+      0.0006206,
+      0.0009821,
+      0.0013922,
+      0.0005368,
+      0.9964683
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1090,
+      786,
+      1166,
+      839
+     ],
+     "area": 3240,
+     "touching": false,
+     "probs": [
+      0.0017447,
+      0.0006862,
+      0.0012249,
+      0.0015799,
+      0.9947643
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      32,
+      850,
+      89,
+      900
+     ],
+     "area": 2202,
+     "touching": false,
+     "probs": [
+      0.0029191,
+      0.0037645,
+      0.0016959,
+      0.0031035,
+      0.988517
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      137,
+      857,
+      214,
+      917
+     ],
+     "area": 3414,
+     "touching": false,
+     "probs": [
+      0.0027079,
+      0.0083771,
+      0.0077332,
+      0.0088211,
+      0.9723606
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      421,
+      858,
+      487,
+      913
+     ],
+     "area": 2765,
+     "touching": false,
+     "probs": [
+      0.0067635,
+      0.0066357,
+      0.0130982,
+      0.0084351,
+      0.9650675
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      568,
+      859,
+      621,
+      920
+     ],
+     "area": 2488,
+     "touching": false,
+     "probs": [
+      0.0007685,
+      0.002386,
+      0.0013165,
+      0.0019785,
+      0.9935504
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      289,
+      860,
+      356,
+      913
+     ],
+     "area": 2741,
+     "touching": false,
+     "probs": [
+      0.0047185,
+      0.009688,
+      0.0088378,
+      0.0144224,
+      0.9623334
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      835,
+      867,
+      900,
+      910
+     ],
+     "area": 2312,
+     "touching": false,
+     "probs": [
+      0.0006267,
+      0.002169,
+      0.0072734,
+      0.0007697,
+      0.9891612
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      966,
+      871,
+      1036,
+      923
+     ],
+     "area": 2827,
+     "touching": false,
+     "probs": [
+      0.0011449,
+      0.0170024,
+      0.0016354,
+      0.0014613,
+      0.9787561
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      706,
+      872,
+      781,
+      924
+     ],
+     "area": 3030,
+     "touching": false,
+     "probs": [
+      0.0010442,
+      0.0117039,
+      0.001439,
+      0.0022835,
+      0.9835293
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1090,
+      875,
+      1166,
+      946
+     ],
+     "area": 3755,
+     "touching": false,
+     "probs": [
+      0.0001117,
+      0.000617,
+      0.0001806,
+      0.0004357,
+      0.9986551
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      412,
+      949,
+      477,
+      1004
+     ],
+     "area": 2693,
+     "touching": false,
+     "probs": [
+      0.0012655,
+      0.0052159,
+      0.0006513,
+      0.0037674,
+      0.9890999
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      286,
+      963,
+      357,
+      1015
+     ],
+     "area": 3023,
+     "touching": false,
+     "probs": [
+      0.0023703,
+      0.0064388,
+      0.0021544,
+      0.0032248,
+      0.9858116
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      974,
+      967,
+      1036,
+      1010
+     ],
+     "area": 2068,
+     "touching": false,
+     "probs": [
+      0.0103378,
+      0.0207685,
+      0.0123712,
+      0.0077487,
+      0.9487738
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      29,
+      969,
+      94,
+      1020
+     ],
+     "area": 2690,
+     "touching": false,
+     "probs": [
+      0.0022035,
+      0.0040828,
+      0.001963,
+      0.0034964,
+      0.9882542
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      146,
+      969,
+      218,
+      1019
+     ],
+     "area": 2804,
+     "touching": false,
+     "probs": [
+      0.0066694,
+      0.0090611,
+      0.0068811,
+      0.0053097,
+      0.9720786
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      554,
+      972,
+      614,
+      1018
+     ],
+     "area": 2195,
+     "touching": false,
+     "probs": [
+      0.0021967,
+      0.0053419,
+      0.0026727,
+      0.0047404,
+      0.9850483
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      828,
+      977,
+      890,
+      1031
+     ],
+     "area": 2551,
+     "touching": false,
+     "probs": [
+      0.0031738,
+      0.0025719,
+      0.0050827,
+      0.0021511,
+      0.9870205
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      705,
+      981,
+      772,
+      1036
+     ],
+     "area": 2916,
+     "touching": false,
+     "probs": [
+      0.0020091,
+      0.005904,
+      0.004333,
+      0.0038119,
+      0.983942
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      1088,
+      993,
+      1154,
+      1047
+     ],
+     "area": 2944,
+     "touching": false,
+     "probs": [
+      0.0019982,
+      0.0045107,
+      0.0013448,
+      0.0008144,
+      0.9913319
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    }
+   ]
+  },
+  {
+   "name": "cbd_aaa_1",
+   "fixture_png": "photos/cbd_aaa_1.png",
+   "source": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/AAA/1.jpg",
+   "source_size": [
+    4032,
+    3024
+   ],
+   "work_size": [
+    1200,
+    900
+   ],
+   "bean_count": 49,
+   "checks": {
+    "sheet_luma": 187.95700073242188,
+    "too_dark": false,
+    "blur_var": 149.2684783935547,
+    "too_blurry": false,
+    "count": 49,
+    "count_ok": true,
+    "touching": 1,
+    "too_many_touching": false,
+    "threshold": 69.0
+   },
+   "median_area": 1807.0,
+   "decision_counts": {
+    "good": 0,
+    "dark": 3,
+    "insect": 1,
+    "broken": 15,
+    "unhulled": 14,
+    "abstain": 16
+   },
+   "from_source_jpeg_identical": true,
+   "beans": [
+    {
+     "box": [
+      874,
+      89,
+      916,
+      139
+     ],
+     "area": 1646,
+     "touching": false,
+     "probs": [
+      0.0060472,
+      0.0084146,
+      0.0072306,
+      0.2081772,
+      0.7701305
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      786,
+      91,
+      829,
+      136
+     ],
+     "area": 1491,
+     "touching": false,
+     "probs": [
+      0.0568297,
+      0.0459913,
+      0.1918385,
+      0.5248429,
+      0.1804976
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      716,
+      93,
+      756,
+      145
+     ],
+     "area": 1645,
+     "touching": false,
+     "probs": [
+      0.0094504,
+      0.1705511,
+      0.0158111,
+      0.756709,
+      0.0474784
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      617,
+      122,
+      663,
+      177
+     ],
+     "area": 1914,
+     "touching": false,
+     "probs": [
+      0.0053062,
+      0.0021573,
+      0.0043883,
+      0.006742,
+      0.9814061
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      780,
+      158,
+      832,
+      201
+     ],
+     "area": 1814,
+     "touching": false,
+     "probs": [
+      0.0046971,
+      0.0024971,
+      0.0068072,
+      0.0428436,
+      0.943155
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      963,
+      170,
+      1005,
+      221
+     ],
+     "area": 1717,
+     "touching": false,
+     "probs": [
+      0.0052708,
+      0.0098684,
+      0.0119193,
+      0.0827044,
+      0.8902371
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      555,
+      172,
+      603,
+      218
+     ],
+     "area": 1705,
+     "touching": false,
+     "probs": [
+      0.0328634,
+      0.0330519,
+      0.3915912,
+      0.3699375,
+      0.172556
+     ],
+     "argmax": "insect",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      875,
+      174,
+      917,
+      225
+     ],
+     "area": 1697,
+     "touching": false,
+     "probs": [
+      0.00719,
+      0.2684263,
+      0.0306128,
+      0.4450149,
+      0.2487559
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      712,
+      179,
+      757,
+      229
+     ],
+     "area": 1717,
+     "touching": false,
+     "probs": [
+      0.0047772,
+      0.1357205,
+      0.1625778,
+      0.0637732,
+      0.6331512
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      641,
+      201,
+      693,
+      246
+     ],
+     "area": 1835,
+     "touching": false,
+     "probs": [
+      0.0015732,
+      0.0053308,
+      0.0053922,
+      0.002186,
+      0.9855177
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      506,
+      212,
+      552,
+      262
+     ],
+     "area": 1770,
+     "touching": false,
+     "probs": [
+      0.0029806,
+      0.0120735,
+      0.0014252,
+      0.9095502,
+      0.0739704
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      784,
+      220,
+      830,
+      270
+     ],
+     "area": 1735,
+     "touching": false,
+     "probs": [
+      0.007023,
+      0.0784198,
+      0.0171895,
+      0.162528,
+      0.7348397
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      997,
+      225,
+      1038,
+      275
+     ],
+     "area": 1642,
+     "touching": false,
+     "probs": [
+      0.0114041,
+      0.6445887,
+      0.1459641,
+      0.1934125,
+      0.0046306
+     ],
+     "argmax": "dark",
+     "decision": "dark"
+    },
+    {
+     "box": [
+      726,
+      246,
+      770,
+      296
+     ],
+     "area": 1771,
+     "touching": false,
+     "probs": [
+      0.0047107,
+      0.0410102,
+      0.0074862,
+      0.9408065,
+      0.0059864
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      914,
+      251,
+      960,
+      352
+     ],
+     "area": 3436,
+     "touching": true,
+     "probs": [
+      0.0422274,
+      0.2673899,
+      0.491639,
+      0.1438637,
+      0.05488
+     ],
+     "argmax": "insect",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      562,
+      255,
+      603,
+      309
+     ],
+     "area": 1725,
+     "touching": false,
+     "probs": [
+      0.0115134,
+      0.2757867,
+      0.0246143,
+      0.477381,
+      0.2107046
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      838,
+      273,
+      882,
+      314
+     ],
+     "area": 1425,
+     "touching": false,
+     "probs": [
+      0.0546944,
+      0.356759,
+      0.1606686,
+      0.2936727,
+      0.1342054
+     ],
+     "argmax": "dark",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      671,
+      280,
+      712,
+      330
+     ],
+     "area": 1541,
+     "touching": false,
+     "probs": [
+      0.004199,
+      0.6229624,
+      0.0037662,
+      0.35697,
+      0.0121024
+     ],
+     "argmax": "dark",
+     "decision": "dark"
+    },
+    {
+     "box": [
+      453,
+      288,
+      508,
+      341
+     ],
+     "area": 2169,
+     "touching": false,
+     "probs": [
+      0.0194975,
+      0.0468256,
+      0.0158125,
+      0.8056967,
+      0.1121678
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      1000,
+      312,
+      1043,
+      358
+     ],
+     "area": 1534,
+     "touching": false,
+     "probs": [
+      0.021467,
+      0.3514341,
+      0.0317612,
+      0.5667858,
+      0.028552
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      747,
+      315,
+      799,
+      361
+     ],
+     "area": 1869,
+     "touching": false,
+     "probs": [
+      0.0057793,
+      0.0048127,
+      0.0112068,
+      0.1969245,
+      0.7812767
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      608,
+      325,
+      660,
+      367
+     ],
+     "area": 1678,
+     "touching": false,
+     "probs": [
+      0.0251472,
+      0.0312659,
+      0.1860742,
+      0.5972217,
+      0.1602911
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      816,
+      327,
+      860,
+      372
+     ],
+     "area": 1572,
+     "touching": false,
+     "probs": [
+      0.0195839,
+      0.0239648,
+      0.1987233,
+      0.7450128,
+      0.0127153
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      499,
+      339,
+      551,
+      388
+     ],
+     "area": 1952,
+     "touching": false,
+     "probs": [
+      0.0015684,
+      0.0109266,
+      0.0008485,
+      0.0083858,
+      0.9782707
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      679,
+      349,
+      736,
+      404
+     ],
+     "area": 2385,
+     "touching": false,
+     "probs": [
+      0.0147043,
+      0.0699407,
+      0.1055957,
+      0.7977832,
+      0.011976
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      1073,
+      356,
+      1119,
+      403
+     ],
+     "area": 1714,
+     "touching": false,
+     "probs": [
+      0.0096106,
+      0.3050675,
+      0.0881098,
+      0.2573496,
+      0.3398625
+     ],
+     "argmax": "unhulled",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      919,
+      361,
+      976,
+      412
+     ],
+     "area": 2278,
+     "touching": false,
+     "probs": [
+      0.0335202,
+      0.0491058,
+      0.0522344,
+      0.7675966,
+      0.0975431
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      401,
+      363,
+      458,
+      415
+     ],
+     "area": 2186,
+     "touching": false,
+     "probs": [
+      0.0419887,
+      0.0075372,
+      0.3466617,
+      0.5253976,
+      0.0784149
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      559,
+      392,
+      604,
+      436
+     ],
+     "area": 1544,
+     "touching": false,
+     "probs": [
+      0.0113859,
+      0.375257,
+      0.0088971,
+      0.5766125,
+      0.0278476
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      751,
+      399,
+      799,
+      452
+     ],
+     "area": 1977,
+     "touching": false,
+     "probs": [
+      0.0021754,
+      0.0020092,
+      0.0019863,
+      0.0049735,
+      0.9888555
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      867,
+      402,
+      915,
+      457
+     ],
+     "area": 2081,
+     "touching": false,
+     "probs": [
+      0.0334152,
+      0.0497148,
+      0.0502881,
+      0.7137712,
+      0.1528107
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      611,
+      410,
+      660,
+      455
+     ],
+     "area": 1698,
+     "touching": false,
+     "probs": [
+      0.0219803,
+      0.075588,
+      0.3679593,
+      0.1640505,
+      0.3704219
+     ],
+     "argmax": "unhulled",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      993,
+      420,
+      1054,
+      473
+     ],
+     "area": 2445,
+     "touching": false,
+     "probs": [
+      0.0127646,
+      0.0131182,
+      0.0465486,
+      0.1153492,
+      0.8122194
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      474,
+      435,
+      524,
+      489
+     ],
+     "area": 1943,
+     "touching": false,
+     "probs": [
+      0.0073336,
+      0.1018544,
+      0.0178299,
+      0.8635158,
+      0.0094663
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      683,
+      454,
+      730,
+      497
+     ],
+     "area": 1667,
+     "touching": false,
+     "probs": [
+      0.0066941,
+      0.0174482,
+      0.0138486,
+      0.8446743,
+      0.1173349
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      562,
+      459,
+      606,
+      507
+     ],
+     "area": 1641,
+     "touching": false,
+     "probs": [
+      0.0219752,
+      0.4158203,
+      0.0219069,
+      0.4770885,
+      0.0632092
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      917,
+      461,
+      972,
+      509
+     ],
+     "area": 2015,
+     "touching": false,
+     "probs": [
+      0.0348866,
+      0.0215771,
+      0.2346078,
+      0.643505,
+      0.0654235
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      747,
+      465,
+      794,
+      518
+     ],
+     "area": 1873,
+     "touching": false,
+     "probs": [
+      0.0209651,
+      0.1693343,
+      0.0831291,
+      0.3547054,
+      0.3718662
+     ],
+     "argmax": "unhulled",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      1065,
+      471,
+      1110,
+      524
+     ],
+     "area": 1819,
+     "touching": false,
+     "probs": [
+      0.007493,
+      0.6067508,
+      0.052248,
+      0.329868,
+      0.0036402
+     ],
+     "argmax": "dark",
+     "decision": "dark"
+    },
+    {
+     "box": [
+      831,
+      479,
+      884,
+      528
+     ],
+     "area": 2037,
+     "touching": false,
+     "probs": [
+      0.004035,
+      0.0602548,
+      0.0219193,
+      0.8988811,
+      0.0149097
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      631,
+      502,
+      675,
+      555
+     ],
+     "area": 1850,
+     "touching": false,
+     "probs": [
+      0.0074497,
+      0.0343827,
+      0.0067571,
+      0.1220025,
+      0.829408
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      449,
+      503,
+      499,
+      552
+     ],
+     "area": 1854,
+     "touching": false,
+     "probs": [
+      0.0442793,
+      0.1918274,
+      0.2490158,
+      0.4997346,
+      0.0151429
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      954,
+      507,
+      998,
+      559
+     ],
+     "area": 1807,
+     "touching": false,
+     "probs": [
+      0.0409049,
+      0.0819922,
+      0.3765338,
+      0.3284195,
+      0.1721495
+     ],
+     "argmax": "insect",
+     "decision": "abstain"
+    },
+    {
+     "box": [
+      782,
+      537,
+      830,
+      600
+     ],
+     "area": 2270,
+     "touching": false,
+     "probs": [
+      0.0048458,
+      0.0274124,
+      0.9134784,
+      0.0396951,
+      0.0145683
+     ],
+     "argmax": "insect",
+     "decision": "insect"
+    },
+    {
+     "box": [
+      516,
+      542,
+      576,
+      592
+     ],
+     "area": 2176,
+     "touching": false,
+     "probs": [
+      0.0083312,
+      0.0285766,
+      0.0061999,
+      0.0595593,
+      0.897333
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      674,
+      542,
+      722,
+      593
+     ],
+     "area": 1795,
+     "touching": false,
+     "probs": [
+      0.0032714,
+      0.0047324,
+      0.0017575,
+      0.0183359,
+      0.9719027
+     ],
+     "argmax": "unhulled",
+     "decision": "unhulled"
+    },
+    {
+     "box": [
+      868,
+      556,
+      913,
+      607
+     ],
+     "area": 1769,
+     "touching": false,
+     "probs": [
+      0.0089274,
+      0.0530808,
+      0.026457,
+      0.8727995,
+      0.0387352
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      599,
+      574,
+      658,
+      621
+     ],
+     "area": 2087,
+     "touching": false,
+     "probs": [
+      0.0124296,
+      0.1459468,
+      0.024417,
+      0.7708771,
+      0.0463294
+     ],
+     "argmax": "broken",
+     "decision": "broken"
+    },
+    {
+     "box": [
+      715,
+      625,
+      763,
+      681
+     ],
+     "area": 2085,
+     "touching": false,
+     "probs": [
+      0.0098116,
+      0.3747904,
+      0.0120764,
+      0.4921127,
+      0.1112088
+     ],
+     "argmax": "broken",
+     "decision": "abstain"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,293 @@
+{
+ "deployed_model": "models/farz_beans_fp32.onnx",
+ "abstain_below": 0.59,
+ "honesty": "SYNTHETIC trays: the deployed model saw these beans in training (in-sample). 'out_of_fold' scores each bean with the fold model that never saw it.",
+ "rules": "pipeline.decide() = Python mirror of app/src/lib/rules.ts decide()",
+ "new_trays": [
+  {
+   "file": "tray_synthetic_00.jpg",
+   "seed": 2027,
+   "true_beans": 100,
+   "true_defects": 0,
+   "true_counts": {
+    "good": 100,
+    "dark": 0,
+    "insect": 0,
+    "broken": 0,
+    "unhulled": 0
+   },
+   "detected_beans": 100,
+   "matched": 100,
+   "checks": {
+    "sheet_luma": 235.0,
+    "too_dark": false,
+    "blur_var": 111.34513092041016,
+    "too_blurry": false,
+    "count": 100,
+    "count_ok": true,
+    "touching": 0,
+    "too_many_touching": false,
+    "threshold": 59.0
+   },
+   "deployed_in_sample": {
+    "counts": {
+     "good": 100,
+     "dark": 0,
+     "insect": 0,
+     "broken": 0,
+     "unhulled": 0,
+     "unsure": 0
+    },
+    "accuracy_answered": 1.0,
+    "outcome": {
+     "band": "clean",
+     "about": false,
+     "reason": "",
+     "answered": 100,
+     "defects": 0,
+     "p": 0.0,
+     "lo": 0.0,
+     "hi": 0.037
+    }
+   },
+   "out_of_fold_held_out": {
+    "counts": {
+     "good": 100,
+     "dark": 0,
+     "insect": 0,
+     "broken": 0,
+     "unhulled": 0,
+     "unsure": 0
+    },
+    "accuracy_answered": 1.0,
+    "outcome": {
+     "band": "clean",
+     "about": false,
+     "reason": "",
+     "answered": 100,
+     "defects": 0,
+     "p": 0.0,
+     "lo": 0.0,
+     "hi": 0.037
+    }
+   }
+  },
+  {
+   "file": "tray_synthetic_40.jpg",
+   "seed": 2028,
+   "true_beans": 100,
+   "true_defects": 40,
+   "true_counts": {
+    "good": 60,
+    "dark": 12,
+    "insect": 8,
+    "broken": 12,
+    "unhulled": 8
+   },
+   "detected_beans": 100,
+   "matched": 100,
+   "checks": {
+    "sheet_luma": 235.0,
+    "too_dark": false,
+    "blur_var": 148.10476684570312,
+    "too_blurry": false,
+    "count": 100,
+    "count_ok": true,
+    "touching": 0,
+    "too_many_touching": false,
+    "threshold": 64.0
+   },
+   "deployed_in_sample": {
+    "counts": {
+     "good": 62,
+     "dark": 14,
+     "insect": 4,
+     "broken": 10,
+     "unhulled": 8,
+     "unsure": 2
+    },
+    "accuracy_answered": 0.9592,
+    "outcome": {
+     "band": "many",
+     "about": false,
+     "reason": "",
+     "answered": 98,
+     "defects": 36,
+     "p": 0.3673,
+     "lo": 0.2786,
+     "hi": 0.4661
+    }
+   },
+   "out_of_fold_held_out": {
+    "counts": {
+     "good": 63,
+     "dark": 14,
+     "insect": 3,
+     "broken": 7,
+     "unhulled": 8,
+     "unsure": 5
+    },
+    "accuracy_answered": 0.9263,
+    "outcome": {
+     "band": "many",
+     "about": false,
+     "reason": "",
+     "answered": 95,
+     "defects": 32,
+     "p": 0.3368,
+     "lo": 0.2498,
+     "hi": 0.4366
+    }
+   }
+  }
+ ],
+ "all_trays": [
+  {
+   "file": "tray_synthetic_00.jpg",
+   "counts": {
+    "good": 100,
+    "dark": 0,
+    "insect": 0,
+    "broken": 0,
+    "unhulled": 0,
+    "unsure": 0
+   },
+   "outcome": {
+    "band": "clean",
+    "about": false,
+    "reason": "",
+    "answered": 100,
+    "defects": 0,
+    "p": 0.0,
+    "lo": 0.0,
+    "hi": 0.037
+   }
+  },
+  {
+   "file": "tray_synthetic_03.jpg",
+   "counts": {
+    "good": 97,
+    "dark": 1,
+    "insect": 1,
+    "broken": 1,
+    "unhulled": 0,
+    "unsure": 0
+   },
+   "outcome": {
+    "band": "clean",
+    "about": true,
+    "reason": "",
+    "answered": 100,
+    "defects": 3,
+    "p": 0.03,
+    "lo": 0.0103,
+    "hi": 0.0845
+   }
+  },
+  {
+   "file": "tray_synthetic_12.jpg",
+   "counts": {
+    "good": 88,
+    "dark": 4,
+    "insect": 3,
+    "broken": 2,
+    "unhulled": 2,
+    "unsure": 1
+   },
+   "outcome": {
+    "band": "some",
+    "about": false,
+    "reason": "",
+    "answered": 99,
+    "defects": 11,
+    "p": 0.1111,
+    "lo": 0.0632,
+    "hi": 0.1881
+   }
+  },
+  {
+   "file": "tray_synthetic_30.jpg",
+   "counts": {
+    "good": 72,
+    "dark": 11,
+    "insect": 1,
+    "broken": 8,
+    "unhulled": 5,
+    "unsure": 3
+   },
+   "outcome": {
+    "band": "many",
+    "about": true,
+    "reason": "",
+    "answered": 97,
+    "defects": 25,
+    "p": 0.2577,
+    "lo": 0.1811,
+    "hi": 0.3528
+   }
+  },
+  {
+   "file": "tray_synthetic_40.jpg",
+   "counts": {
+    "good": 62,
+    "dark": 14,
+    "insect": 4,
+    "broken": 10,
+    "unhulled": 8,
+    "unsure": 2
+   },
+   "outcome": {
+    "band": "many",
+    "about": false,
+    "reason": "",
+    "answered": 98,
+    "defects": 36,
+    "p": 0.3673,
+    "lo": 0.2786,
+    "hi": 0.4661
+   }
+  },
+  {
+   "file": "cbd_aaa_2.jpg",
+   "counts": {
+    "good": 0,
+    "dark": 0,
+    "insect": 0,
+    "broken": 39,
+    "unhulled": 8,
+    "unsure": 3
+   },
+   "outcome": {
+    "band": "unsure",
+    "about": false,
+    "reason": "implausible",
+    "answered": 47,
+    "defects": 47,
+    "p": 1.0,
+    "lo": 0.9244,
+    "hi": 1.0
+   }
+  },
+  {
+   "file": "cbd_bits_262.jpg",
+   "counts": {
+    "good": 0,
+    "dark": 5,
+    "insect": 1,
+    "broken": 14,
+    "unhulled": 9,
+    "unsure": 21
+   },
+   "outcome": {
+    "band": "unsure",
+    "about": false,
+    "reason": "implausible",
+    "answered": 29,
+    "defects": 29,
+    "p": 1.0,
+    "lo": 0.883,
+    "hi": 1.0
+   }
+  }
+ ]
+}

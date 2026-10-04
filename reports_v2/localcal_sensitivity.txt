@@ -1,0 +1,9 @@
+photo number range 4743 5791
+gap>0 K=20: mean bal acc 0.963 (min 0.955) cov 0.783 | test beans/good per draw [(1284, 135), (1287, 134), (1289, 136), (1287, 135), (1286, 135)] | mean NN cosine test->cal 0.585
+gap>0 K=50: mean bal acc 0.966 (min 0.959) cov 0.808 | test beans/good per draw [(1257, 120), (1253, 119), (1258, 120), (1255, 119), (1255, 118)] | mean NN cosine test->cal 0.687
+gap>0 K=100: mean bal acc 0.965 (min 0.954) cov 0.772 | test beans/good per draw [(1208, 96), (1204, 93), (1206, 95), (1203, 90), (1204, 95)] | mean NN cosine test->cal 0.732
+gap>20 K=20: mean bal acc 0.958 (min 0.944) cov 0.775 | test beans/good per draw [(902, 84), (1050, 53), (1154, 77), (1062, 92), (847, 104)] | mean NN cosine test->cal 0.569
+gap>20 K=50: mean bal acc 0.969 (min 0.950) cov 0.734 | test beans/good per draw [(709, 33), (645, 26), (835, 34), (562, 1), (824, 42)] | mean NN cosine test->cal 0.675
+gap>20 K=100: mean bal acc 0.963 (min 0.883) cov 0.764 | test beans/good per draw [(241, 0), (355, 5), (647, 22), (298, 0), (512, 1)] | mean NN cosine test->cal 0.721
+gap>50 K=20: mean bal acc 0.961 (min 0.936) cov 0.755 | test beans/good per draw [(463, 73), (720, 34), (1118, 73), (768, 53), (529, 23)] | mean NN cosine test->cal 0.563
+gap>50 K=50: mean bal acc 0.921 (min 0.779) cov 0.808 | test beans/good per draw [(251, 4), (209, 0), (437, 5), (161, 0), (437, 0)] | mean NN cosine test->cal 0.674

@@ -1,0 +1,9 @@
+{
+ "model_sha256": "c40c10f915f7a3ab78f1aead50d3cd027113b1a53d031eea21ffec331c5bc87a",
+ "n": 40,
+ "maxAbsProbDiff": 0.0004566594619751507,
+ "argmaxAgree": 40,
+ "minEmbedCosine": 0.9999960725083129,
+ "callAgree": 40,
+ "borderline": []
+}

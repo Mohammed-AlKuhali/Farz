@@ -1,0 +1,1490 @@
+{
+ "what": "(1) COLOUR-ONLY BASELINE vs the v1 model, both under LEAVE-ONE-PHOTO-OUT on J4ckDev.",
+ "protocol": "leave-one-photo-out on the 11 J4ckDev photos (582 crops); rules fitted only on the other photos",
+ "features": [
+  "luma_med",
+  "luma_p10",
+  "luma_p90",
+  "luma_std",
+  "dark_frac",
+  "sat_mean",
+  "hue_deg",
+  "val_mean",
+  "lab_a",
+  "lab_b",
+  "chroma_mean",
+  "fill",
+  "elong",
+  "solidity",
+  "circ",
+  "edge_luma_drop"
+ ],
+ "tasks": {
+  "dark": {
+   "positive_photos": [
+    "DXHongo",
+    "MarronAVinagre",
+    "Negros"
+   ],
+   "v1_model": {
+    "n_beans": 387,
+    "n_pos": 148,
+    "n_neg": 239,
+    "sensitivity": 0.2095,
+    "false_positive_rate": 0.3682,
+    "balanced_accuracy": 0.4206,
+    "photo_mean_sensitivity": 0.1744,
+    "photo_mean_fpr": 0.453,
+    "photo_balanced_accuracy": 0.3607,
+    "per_photo": {
+     "BrocadoLeve": {
+      "cls": "insect",
+      "positive": false,
+      "n": 30,
+      "called_positive": 0.3333
+     },
+     "BrocadoSevero": {
+      "cls": "insect",
+      "positive": false,
+      "n": 25,
+      "called_positive": 0.56
+     },
+     "CerezaSeca": {
+      "cls": "unhulled",
+      "positive": false,
+      "n": 9,
+      "called_positive": 1.0
+     },
+     "Concha": {
+      "cls": "broken",
+      "positive": false,
+      "n": 33,
+      "called_positive": 0.0
+     },
+     "DXHongo": {
+      "cls": "dark",
+      "positive": true,
+      "n": 12,
+      "called_positive": 0.0
+     },
+     "Inmaduro": {
+      "cls": "broken",
+      "positive": false,
+      "n": 16,
+      "called_positive": 0.75
+     },
+     "MarronAVinagre": {
+      "cls": "dark",
+      "positive": true,
+      "n": 36,
+      "called_positive": 0.3333
+     },
+     "Negros": {
+      "cls": "dark",
+      "positive": true,
+      "n": 100,
+      "called_positive": 0.19
+     },
+     "PMordidoCortado": {
+      "cls": "broken",
+      "positive": false,
+      "n": 36,
+      "called_positive": 0.0833
+     },
+     "Pergamino": {
+      "cls": "unhulled",
+      "positive": false,
+      "n": 90,
+      "called_positive": 0.4444
+     }
+    }
+   },
+   "R0": {
+    "same_10_photos_as_v1": {
+     "n_beans": 387,
+     "n_pos": 148,
+     "n_neg": 239,
+     "sensitivity": 0.1419,
+     "false_positive_rate": 0.0,
+     "balanced_accuracy": 0.5709,
+     "photo_mean_sensitivity": 0.07,
+     "photo_mean_fpr": 0.0,
+     "photo_balanced_accuracy": 0.535,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.0
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.21
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "all_11_photos": {
+     "n_beans": 582,
+     "n_pos": 148,
+     "n_neg": 434,
+     "sensitivity": 0.1419,
+     "false_positive_rate": 0.0,
+     "balanced_accuracy": 0.5709,
+     "photo_mean_sensitivity": 0.07,
+     "photo_mean_fpr": 0.0,
+     "photo_balanced_accuracy": 0.535,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.0
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.21
+      },
+      "Normales": {
+       "cls": "good",
+       "positive": false,
+       "n": 195,
+       "called_positive": 0.0
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "good_photo_Normales_called_positive": 0.0,
+    "rule_per_fold": {
+     "BrocadoLeve": "val_mean < 0.30 (fixed)",
+     "BrocadoSevero": "val_mean < 0.30 (fixed)",
+     "CerezaSeca": "val_mean < 0.30 (fixed)",
+     "Concha": "val_mean < 0.30 (fixed)",
+     "DXHongo": "val_mean < 0.30 (fixed)",
+     "Inmaduro": "val_mean < 0.30 (fixed)",
+     "MarronAVinagre": "val_mean < 0.30 (fixed)",
+     "Negros": "val_mean < 0.30 (fixed)",
+     "Normales": "val_mean < 0.30 (fixed)",
+     "PMordidoCortado": "val_mean < 0.30 (fixed)",
+     "Pergamino": "val_mean < 0.30 (fixed)"
+    }
+   },
+   "R1": {
+    "same_10_photos_as_v1": {
+     "n_beans": 387,
+     "n_pos": 148,
+     "n_neg": 239,
+     "sensitivity": 0.5878,
+     "false_positive_rate": 0.1632,
+     "balanced_accuracy": 0.7123,
+     "photo_mean_sensitivity": 0.3915,
+     "photo_mean_fpr": 0.3128,
+     "photo_balanced_accuracy": 0.5393,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0667
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 1.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 1.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0606
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.0833
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0625
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.3611
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.73
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "all_11_photos": {
+     "n_beans": 582,
+     "n_pos": 148,
+     "n_neg": 434,
+     "sensitivity": 0.5878,
+     "false_positive_rate": 0.0922,
+     "balanced_accuracy": 0.7478,
+     "photo_mean_sensitivity": 0.3915,
+     "photo_mean_fpr": 0.2744,
+     "photo_balanced_accuracy": 0.5586,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0667
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 1.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 1.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0606
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.0833
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0625
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.3611
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.73
+      },
+      "Normales": {
+       "cls": "good",
+       "positive": false,
+       "n": 195,
+       "called_positive": 0.0051
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "good_photo_Normales_called_positive": 0.0051,
+    "rule_per_fold": {
+     "BrocadoLeve": "luma_med < 97.127 (train bal.acc 0.905)",
+     "BrocadoSevero": "dark_frac > 0.087 (train bal.acc 0.922)",
+     "CerezaSeca": "luma_med < 97.518 (train bal.acc 0.913)",
+     "Concha": "luma_med < 97.729 (train bal.acc 0.903)",
+     "DXHongo": "luma_med < 97.358 (train bal.acc 0.939)",
+     "Inmaduro": "luma_med < 97.133 (train bal.acc 0.905)",
+     "MarronAVinagre": "val_mean < 0.447 (train bal.acc 0.926)",
+     "Negros": "hue_deg < 34.753 (train bal.acc 0.867)",
+     "Normales": "luma_med < 93.889 (train bal.acc 0.882)",
+     "PMordidoCortado": "luma_med < 97.639 (train bal.acc 0.900)",
+     "Pergamino": "luma_med < 97.146 (train bal.acc 0.896)"
+    }
+   },
+   "R2": {
+    "same_10_photos_as_v1": {
+     "n_beans": 387,
+     "n_pos": 148,
+     "n_neg": 239,
+     "sensitivity": 0.4257,
+     "false_positive_rate": 0.4435,
+     "balanced_accuracy": 0.4911,
+     "photo_mean_sensitivity": 0.3663,
+     "photo_mean_fpr": 0.4186,
+     "photo_balanced_accuracy": 0.4738,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.1
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.76
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 1.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.2121
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.25
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.125
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.3889
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.46
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.7333
+      }
+     }
+    },
+    "all_11_photos": {
+     "n_beans": 582,
+     "n_pos": 148,
+     "n_neg": 434,
+     "sensitivity": 0.4257,
+     "false_positive_rate": 0.2465,
+     "balanced_accuracy": 0.5896,
+     "photo_mean_sensitivity": 0.3663,
+     "photo_mean_fpr": 0.3669,
+     "photo_balanced_accuracy": 0.4997,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.1
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.76
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 1.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.2121
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.25
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.125
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.3889
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.46
+      },
+      "Normales": {
+       "cls": "good",
+       "positive": false,
+       "n": 195,
+       "called_positive": 0.0051
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.7333
+      }
+     }
+    },
+    "good_photo_Normales_called_positive": 0.0051,
+    "rule_per_fold": {
+     "BrocadoLeve": "|--- luma_med <= 97.14 | |   |--- luma_p90 <= 201.00 | |   |   |--- class: True | |   |--- luma_p90 >  201.00 | |   |   |--- class: True | |--- luma_med >  97.14 | |   |--- hue_deg <= 34.30 | |   |   |--- class: True | |   |--- hue_deg >  34.30 | |   |   |--- class: False | ",
+     "BrocadoSevero": "|--- dark_frac <= 0.15 | |   |--- hue_deg <= 34.31 | |   |   |--- class: True | |   |--- hue_deg >  34.31 | |   |   |--- class: False | |--- dark_frac >  0.15 | |   |--- luma_med <= 105.64 | |   |   |--- class: True | |   |--- luma_med >  105.64 | |   |   |--- class: False | ",
+     "CerezaSeca": "|--- luma_med <= 97.14 | |   |--- luma_med <= 90.98 | |   |   |--- class: True | |   |--- luma_med >  90.98 | |   |   |--- class: True | |--- luma_med >  97.14 | |   |--- hue_deg <= 34.30 | |   |   |--- class: True | |   |--- hue_deg >  34.30 | |   |   |--- class: False | ",
+     "Concha": "|--- luma_med <= 97.14 | |   |--- luma_med <= 90.98 | |   |   |--- class: True | |   |--- luma_med >  90.98 | |   |   |--- class: True | |--- luma_med >  97.14 | |   |--- hue_deg <= 34.30 | |   |   |--- class: True | |   |--- hue_deg >  34.30 | |   |   |--- class: False | ",
+     "DXHongo": "|--- luma_med <= 97.14 | |   |--- luma_med <= 90.98 | |   |   |--- class: True | |   |--- luma_med >  90.98 | |   |   |--- class: True | |--- luma_med >  97.14 | |   |--- hue_deg <= 34.29 | |   |   |--- class: True | |   |--- hue_deg >  34.29 | |   |   |--- class: False | ",
+     "Inmaduro": "|--- luma_med <= 97.14 | |   |--- luma_med <= 93.85 | |   |   |--- class: True | |   |--- luma_med >  93.85 | |   |   |--- class: True | |--- luma_med >  97.14 | |   |--- hue_deg <= 34.30 | |   |   |--- class: True | |   |--- hue_deg >  34.30 | |   |   |--- class: False | ",
+     "MarronAVinagre": "|--- val_mean <= 0.45 | |   |--- circ <= 1.49 | |   |   |--- class: True | |   |--- circ >  1.49 | |   |   |--- class: False | |--- val_mean >  0.45 | |   |--- hue_deg <= 43.73 | |   |   |--- class: False | |   |--- hue_deg >  43.73 | |   |   |--- class: True | ",
+     "Negros": "|--- hue_deg <= 34.77 | |   |--- sat_mean <= 0.23 | |   |   |--- class: False | |   |--- sat_mean >  0.23 | |   |   |--- class: True | |--- hue_deg >  34.77 | |   |--- dark_frac <= 0.00 | |   |   |--- class: False | |   |--- dark_frac >  0.00 | |   |   |--- class: False | ",
+     "Normales": "|--- luma_med <= 93.85 | |   |--- luma_p90 <= 200.31 | |   |   |--- class: True | |   |--- luma_p90 >  200.31 | |   |   |--- class: True | |--- luma_med >  93.85 | |   |--- hue_deg <= 33.23 | |   |   |--- class: True | |   |--- hue_deg >  33.23 | |   |   |--- class: False | ",
+     "PMordidoCortado": "|--- luma_med <= 97.14 | |   |--- luma_med <= 90.98 | |   |   |--- class: True | |   |--- luma_med >  90.98 | |   |   |--- class: True | |--- luma_med >  97.14 | |   |--- hue_deg <= 34.30 | |   |   |--- class: True | |   |--- hue_deg >  34.30 | |   |   |--- class: False | ",
+     "Pergamino": "|--- luma_med <= 97.14 | |   |--- luma_med <= 90.98 | |   |   |--- class: True | |   |--- luma_med >  90.98 | |   |   |--- class: True | |--- luma_med >  97.14 | |   |--- lab_a <= 3.66 | |   |   |--- class: False | |   |--- lab_a >  3.66 | |   |   |--- class: True | "
+    }
+   },
+   "R3": {
+    "same_10_photos_as_v1": {
+     "n_beans": 387,
+     "n_pos": 148,
+     "n_neg": 239,
+     "sensitivity": 0.4392,
+     "false_positive_rate": 0.2008,
+     "balanced_accuracy": 0.6192,
+     "photo_mean_sensitivity": 0.4441,
+     "photo_mean_fpr": 0.3266,
+     "photo_balanced_accuracy": 0.5587,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0333
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.92
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 1.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.1818
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.25
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0625
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.7222
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.36
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.0889
+      }
+     }
+    },
+    "all_11_photos": {
+     "n_beans": 582,
+     "n_pos": 148,
+     "n_neg": 434,
+     "sensitivity": 0.4392,
+     "false_positive_rate": 0.182,
+     "balanced_accuracy": 0.6286,
+     "photo_mean_sensitivity": 0.4441,
+     "photo_mean_fpr": 0.3057,
+     "photo_balanced_accuracy": 0.5692,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0333
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.92
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 9,
+       "called_positive": 1.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.1818
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": true,
+       "n": 12,
+       "called_positive": 0.25
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0625
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": true,
+       "n": 36,
+       "called_positive": 0.7222
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": true,
+       "n": 100,
+       "called_positive": 0.36
+      },
+      "Normales": {
+       "cls": "good",
+       "positive": false,
+       "n": 195,
+       "called_positive": 0.159
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": false,
+       "n": 90,
+       "called_positive": 0.0889
+      }
+     }
+    },
+    "good_photo_Normales_called_positive": 0.159,
+    "rule_per_fold": {
+     "BrocadoLeve": "logreg 16 stats",
+     "BrocadoSevero": "logreg 16 stats",
+     "CerezaSeca": "logreg 16 stats",
+     "Concha": "logreg 16 stats",
+     "DXHongo": "logreg 16 stats",
+     "Inmaduro": "logreg 16 stats",
+     "MarronAVinagre": "logreg 16 stats",
+     "Negros": "logreg 16 stats",
+     "Normales": "logreg 16 stats",
+     "PMordidoCortado": "logreg 16 stats",
+     "Pergamino": "logreg 16 stats"
+    }
+   }
+  },
+  "unhulled": {
+   "positive_photos": [
+    "CerezaSeca",
+    "Pergamino"
+   ],
+   "v1_model": {
+    "n_beans": 387,
+    "n_pos": 99,
+    "n_neg": 288,
+    "sensitivity": 0.0,
+    "false_positive_rate": 0.1181,
+    "balanced_accuracy": 0.441,
+    "photo_mean_sensitivity": 0.0,
+    "photo_mean_fpr": 0.0581,
+    "photo_balanced_accuracy": 0.471,
+    "per_photo": {
+     "BrocadoLeve": {
+      "cls": "insect",
+      "positive": false,
+      "n": 30,
+      "called_positive": 0.0
+     },
+     "BrocadoSevero": {
+      "cls": "insect",
+      "positive": false,
+      "n": 25,
+      "called_positive": 0.0
+     },
+     "CerezaSeca": {
+      "cls": "unhulled",
+      "positive": true,
+      "n": 9,
+      "called_positive": 0.0
+     },
+     "Concha": {
+      "cls": "broken",
+      "positive": false,
+      "n": 33,
+      "called_positive": 0.0
+     },
+     "DXHongo": {
+      "cls": "dark",
+      "positive": false,
+      "n": 12,
+      "called_positive": 0.0
+     },
+     "Inmaduro": {
+      "cls": "broken",
+      "positive": false,
+      "n": 16,
+      "called_positive": 0.0
+     },
+     "MarronAVinagre": {
+      "cls": "dark",
+      "positive": false,
+      "n": 36,
+      "called_positive": 0.1944
+     },
+     "Negros": {
+      "cls": "dark",
+      "positive": false,
+      "n": 100,
+      "called_positive": 0.27
+     },
+     "PMordidoCortado": {
+      "cls": "broken",
+      "positive": false,
+      "n": 36,
+      "called_positive": 0.0
+     },
+     "Pergamino": {
+      "cls": "unhulled",
+      "positive": true,
+      "n": 90,
+      "called_positive": 0.0
+     }
+    }
+   },
+   "R1": {
+    "same_10_photos_as_v1": {
+     "n_beans": 387,
+     "n_pos": 99,
+     "n_neg": 288,
+     "sensitivity": 0.0,
+     "false_positive_rate": 0.0174,
+     "balanced_accuracy": 0.4913,
+     "photo_mean_sensitivity": 0.0,
+     "photo_mean_fpr": 0.0246,
+     "photo_balanced_accuracy": 0.4877,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0303
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": false,
+       "n": 12,
+       "called_positive": 0.0833
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": false,
+       "n": 100,
+       "called_positive": 0.0
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0833
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "all_11_photos": {
+     "n_beans": 582,
+     "n_pos": 99,
+     "n_neg": 483,
+     "sensitivity": 0.0,
+     "false_positive_rate": 0.0145,
+     "balanced_accuracy": 0.4928,
+     "photo_mean_sensitivity": 0.0,
+     "photo_mean_fpr": 0.023,
+     "photo_balanced_accuracy": 0.4885,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0303
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": false,
+       "n": 12,
+       "called_positive": 0.0833
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": false,
+       "n": 100,
+       "called_positive": 0.0
+      },
+      "Normales": {
+       "cls": "good",
+       "positive": false,
+       "n": 195,
+       "called_positive": 0.0103
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0833
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "good_photo_Normales_called_positive": 0.0103,
+    "rule_per_fold": {
+     "BrocadoLeve": "val_mean > 0.689 (train bal.acc 0.947)",
+     "BrocadoSevero": "val_mean > 0.694 (train bal.acc 0.949)",
+     "CerezaSeca": "val_mean > 0.694 (train bal.acc 0.995)",
+     "Concha": "val_mean > 0.694 (train bal.acc 0.950)",
+     "DXHongo": "val_mean > 0.685 (train bal.acc 0.947)",
+     "Inmaduro": "val_mean > 0.690 (train bal.acc 0.947)",
+     "MarronAVinagre": "val_mean > 0.692 (train bal.acc 0.948)",
+     "Negros": "val_mean > 0.689 (train bal.acc 0.945)",
+     "Normales": "val_mean > 0.688 (train bal.acc 0.946)",
+     "PMordidoCortado": "val_mean > 0.691 (train bal.acc 0.951)",
+     "Pergamino": "luma_std > 58.857 (train bal.acc 0.955)"
+    }
+   },
+   "R2": {
+    "same_10_photos_as_v1": {
+     "n_beans": 387,
+     "n_pos": 99,
+     "n_neg": 288,
+     "sensitivity": 0.0,
+     "false_positive_rate": 0.25,
+     "balanced_accuracy": 0.375,
+     "photo_mean_sensitivity": 0.0,
+     "photo_mean_fpr": 0.127,
+     "photo_balanced_accuracy": 0.4365,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.08
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0303
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": false,
+       "n": 12,
+       "called_positive": 0.0833
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.1389
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": false,
+       "n": 100,
+       "called_positive": 0.6
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0833
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "all_11_photos": {
+     "n_beans": 582,
+     "n_pos": 99,
+     "n_neg": 483,
+     "sensitivity": 0.0,
+     "false_positive_rate": 0.1511,
+     "balanced_accuracy": 0.4244,
+     "photo_mean_sensitivity": 0.0,
+     "photo_mean_fpr": 0.1134,
+     "photo_balanced_accuracy": 0.4433,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.08
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0303
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": false,
+       "n": 12,
+       "called_positive": 0.0833
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.0
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.1389
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": false,
+       "n": 100,
+       "called_positive": 0.6
+      },
+      "Normales": {
+       "cls": "good",
+       "positive": false,
+       "n": 195,
+       "called_positive": 0.0051
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0833
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 90,
+       "called_positive": 0.0
+      }
+     }
+    },
+    "good_photo_Normales_called_positive": 0.0051,
+    "rule_per_fold": {
+     "BrocadoLeve": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: False | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "BrocadoSevero": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: True | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "CerezaSeca": "|--- val_mean <= 0.69 | |   |--- edge_luma_drop <= 5.11 | |   |   |--- class: False | |   |--- edge_luma_drop >  5.11 | |   |   |--- class: False | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "Concha": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: False | |--- val_mean >  0.69 | |   |--- edge_luma_drop <= 6.86 | |   |   |--- class: False | |   |--- edge_luma_drop >  6.86 | |   |   |--- class: True | ",
+     "DXHongo": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: True | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "Inmaduro": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: True | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "MarronAVinagre": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: True | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "Negros": "|--- val_mean <= 0.69 | |   |--- chroma_mean <= 16.64 | |   |   |--- class: True | |   |--- chroma_mean >  16.64 | |   |   |--- class: False | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "Normales": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: False | |--- val_mean >  0.69 | |   |--- lab_a <= 1.25 | |   |   |--- class: False | |   |--- lab_a >  1.25 | |   |   |--- class: True | ",
+     "PMordidoCortado": "|--- val_mean <= 0.69 | |   |--- luma_std <= 58.92 | |   |   |--- class: False | |   |--- luma_std >  58.92 | |   |   |--- class: False | |--- val_mean >  0.69 | |   |--- chroma_mean <= 39.91 | |   |   |--- class: False | |   |--- chroma_mean >  39.91 | |   |   |--- class: True | ",
+     "Pergamino": "|--- luma_std <= 58.92 | |   |--- class: False | |--- luma_std >  58.92 | |   |--- luma_p10 <= 31.87 | |   |   |--- class: False | |   |--- luma_p10 >  31.87 | |   |   |--- class: True | "
+    }
+   },
+   "R3": {
+    "same_10_photos_as_v1": {
+     "n_beans": 387,
+     "n_pos": 99,
+     "n_neg": 288,
+     "sensitivity": 0.0202,
+     "false_positive_rate": 0.0625,
+     "balanced_accuracy": 0.4789,
+     "photo_mean_sensitivity": 0.0111,
+     "photo_mean_fpr": 0.0534,
+     "photo_balanced_accuracy": 0.4789,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": false,
+       "n": 12,
+       "called_positive": 0.0
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.125
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.1389
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": false,
+       "n": 100,
+       "called_positive": 0.08
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0833
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 90,
+       "called_positive": 0.0222
+      }
+     }
+    },
+    "all_11_photos": {
+     "n_beans": 582,
+     "n_pos": 99,
+     "n_neg": 483,
+     "sensitivity": 0.0202,
+     "false_positive_rate": 0.0455,
+     "balanced_accuracy": 0.4873,
+     "photo_mean_sensitivity": 0.0111,
+     "photo_mean_fpr": 0.0497,
+     "photo_balanced_accuracy": 0.4807,
+     "per_photo": {
+      "BrocadoLeve": {
+       "cls": "insect",
+       "positive": false,
+       "n": 30,
+       "called_positive": 0.0
+      },
+      "BrocadoSevero": {
+       "cls": "insect",
+       "positive": false,
+       "n": 25,
+       "called_positive": 0.0
+      },
+      "CerezaSeca": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 9,
+       "called_positive": 0.0
+      },
+      "Concha": {
+       "cls": "broken",
+       "positive": false,
+       "n": 33,
+       "called_positive": 0.0
+      },
+      "DXHongo": {
+       "cls": "dark",
+       "positive": false,
+       "n": 12,
+       "called_positive": 0.0
+      },
+      "Inmaduro": {
+       "cls": "broken",
+       "positive": false,
+       "n": 16,
+       "called_positive": 0.125
+      },
+      "MarronAVinagre": {
+       "cls": "dark",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.1389
+      },
+      "Negros": {
+       "cls": "dark",
+       "positive": false,
+       "n": 100,
+       "called_positive": 0.08
+      },
+      "Normales": {
+       "cls": "good",
+       "positive": false,
+       "n": 195,
+       "called_positive": 0.0205
+      },
+      "PMordidoCortado": {
+       "cls": "broken",
+       "positive": false,
+       "n": 36,
+       "called_positive": 0.0833
+      },
+      "Pergamino": {
+       "cls": "unhulled",
+       "positive": true,
+       "n": 90,
+       "called_positive": 0.0222
+      }
+     }
+    },
+    "good_photo_Normales_called_positive": 0.0205,
+    "rule_per_fold": {
+     "BrocadoLeve": "logreg 16 stats",
+     "BrocadoSevero": "logreg 16 stats",
+     "CerezaSeca": "logreg 16 stats",
+     "Concha": "logreg 16 stats",
+     "DXHongo": "logreg 16 stats",
+     "Inmaduro": "logreg 16 stats",
+     "MarronAVinagre": "logreg 16 stats",
+     "Negros": "logreg 16 stats",
+     "Normales": "logreg 16 stats",
+     "PMordidoCortado": "logreg 16 stats",
+     "Pergamino": "logreg 16 stats"
+    }
+   }
+  }
+ },
+ "final_rules_and_cbd_behaviour": {
+  "dark": {
+   "R1_rule_all_j4ck": "luma_med < 97.152",
+   "train_bal_acc_in_sample": 0.9046,
+   "cbd_share_called": {
+    "AAA": {
+     "rule_R1": 0.1305,
+     "v1_argmax": 0.0584,
+     "rule_R0": 0.0
+    },
+    "AA": {
+     "rule_R1": 0.1808,
+     "v1_argmax": 0.1072,
+     "rule_R0": 0.0016
+    },
+    "A": {
+     "rule_R1": 0.1579,
+     "v1_argmax": 0.0548,
+     "rule_R0": 0.0012
+    },
+    "AB": {
+     "rule_R1": 0.1673,
+     "v1_argmax": 0.0753,
+     "rule_R0": 0.0036
+    },
+    "PB-I": {
+     "rule_R1": 0.1591,
+     "v1_argmax": 0.3181,
+     "rule_R0": 0.0
+    },
+    "PB-II": {
+     "rule_R1": 0.209,
+     "v1_argmax": 0.2354,
+     "rule_R0": 0.0016
+    },
+    "C": {
+     "rule_R1": 0.1056,
+     "v1_argmax": 0.1415,
+     "rule_R0": 0.0031
+    },
+    "Bulk": {
+     "rule_R1": 0.1588,
+     "v1_argmax": 0.101,
+     "rule_R0": 0.0044
+    },
+    "Bits": {
+     "rule_R1": 0.2202,
+     "v1_argmax": 0.2455,
+     "rule_R0": 0.0038
+    }
+   }
+  },
+  "unhulled": {
+   "R1_rule_all_j4ck": "val_mean > 0.691",
+   "train_bal_acc_in_sample": 0.9483,
+   "cbd_share_called": {
+    "AAA": {
+     "rule_R1": 0.004,
+     "v1_argmax": 0.2078
+    },
+    "AA": {
+     "rule_R1": 0.0026,
+     "v1_argmax": 0.1612
+    },
+    "A": {
+     "rule_R1": 0.0105,
+     "v1_argmax": 0.2096
+    },
+    "AB": {
+     "rule_R1": 0.0048,
+     "v1_argmax": 0.2179
+    },
+    "PB-I": {
+     "rule_R1": 0.0181,
+     "v1_argmax": 0.1343
+    },
+    "PB-II": {
+     "rule_R1": 0.002,
+     "v1_argmax": 0.1293
+    },
+    "C": {
+     "rule_R1": 0.0135,
+     "v1_argmax": 0.133
+    },
+    "Bulk": {
+     "rule_R1": 0.002,
+     "v1_argmax": 0.2075
+    },
+    "Bits": {
+     "rule_R1": 0.0111,
+     "v1_argmax": 0.1143
+    }
+   }
+  }
+ },
+ "within_photo_spatial_halves": {
+  "dark": {
+   "rule_R1": {
+    "sensitivity": 0.8716,
+    "false_positive_rate": 0.1244,
+    "balanced_accuracy": 0.8736,
+    "rules": {
+     "1": "edge_luma_drop > 16.741",
+     "2": "dark_frac > 0.237"
+    }
+   },
+   "v1_fold_models": {
+    "sensitivity": 0.8243,
+    "false_positive_rate": 0.0369,
+    "balanced_accuracy": 0.8937
+   }
+  },
+  "unhulled": {
+   "rule_R1": {
+    "sensitivity": 0.8283,
+    "false_positive_rate": 0.0124,
+    "balanced_accuracy": 0.9079,
+    "rules": {
+     "1": "lab_b > 23.957",
+     "2": "val_mean > 0.694"
+    }
+   },
+   "v1_fold_models": {
+    "sensitivity": 0.9596,
+    "false_positive_rate": 0.0124,
+    "balanced_accuracy": 0.9736
+   }
+  },
+  "note": "UPPER BOUND for both: train and test beans share each photo's camera, light and sheet"
+ },
+ "cbd_note": "CBD has no per-bean labels: these shares are OOD behaviour, not accuracy."
+}

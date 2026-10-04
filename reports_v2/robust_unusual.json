@@ -1,0 +1,1425 @@
+{
+ "what": "relative per-photo unusual-bean detector (no labels)",
+ "z_cut": 3.5,
+ "knn_k": 5,
+ "synthetic": {
+  "n_trays": 300,
+  "base_beans": 50,
+  "inserted_beans": 3,
+  "results": {
+   "A/raw": {
+    "hand": {
+     "mean_auroc": 0.9162,
+     "recall_inserted": 0.63,
+     "false_flag_rate_base": 0.0449,
+     "precision": 0.4573
+    },
+    "emb": {
+     "mean_auroc": 0.9597,
+     "recall_inserted": 0.4744,
+     "false_flag_rate_base": 0.0126,
+     "precision": 0.6932
+    },
+    "both": {
+     "mean_auroc": 0.965,
+     "recall_inserted": 0.6944,
+     "false_flag_rate_base": 0.0092,
+     "precision": 0.8191
+    },
+    "v1f": {
+     "mean_auroc": 1.0,
+     "recall_inserted": 0.9956,
+     "false_flag_rate_base": 0.0099,
+     "precision": 0.8582
+    }
+   },
+   "A/norm": {
+    "hand": {
+     "mean_auroc": 0.9099,
+     "recall_inserted": 0.6678,
+     "false_flag_rate_base": 0.0657,
+     "precision": 0.3787
+    },
+    "emb": {
+     "mean_auroc": 0.9534,
+     "recall_inserted": 0.5378,
+     "false_flag_rate_base": 0.0239,
+     "precision": 0.5741
+    },
+    "both": {
+     "mean_auroc": 0.9596,
+     "recall_inserted": 0.6822,
+     "false_flag_rate_base": 0.0279,
+     "precision": 0.5944
+    },
+    "v1f": {
+     "mean_auroc": 0.9998,
+     "recall_inserted": 0.9933,
+     "false_flag_rate_base": 0.0156,
+     "precision": 0.7926
+    }
+   },
+   "B/raw": {
+    "hand": {
+     "mean_auroc": 0.9613,
+     "recall_inserted": 0.6067,
+     "false_flag_rate_base": 0.0397,
+     "precision": 0.4781
+    },
+    "emb": {
+     "mean_auroc": 0.9788,
+     "recall_inserted": 0.3478,
+     "false_flag_rate_base": 0.0113,
+     "precision": 0.6494
+    },
+    "both": {
+     "mean_auroc": 0.9871,
+     "recall_inserted": 0.5456,
+     "false_flag_rate_base": 0.0085,
+     "precision": 0.7932
+    },
+    "v1f": {
+     "mean_auroc": 0.9999,
+     "recall_inserted": 0.9922,
+     "false_flag_rate_base": 0.0098,
+     "precision": 0.8587
+    }
+   },
+   "B/norm": {
+    "hand": {
+     "mean_auroc": 0.9384,
+     "recall_inserted": 0.5667,
+     "false_flag_rate_base": 0.0611,
+     "precision": 0.3574
+    },
+    "emb": {
+     "mean_auroc": 0.9789,
+     "recall_inserted": 0.5578,
+     "false_flag_rate_base": 0.0247,
+     "precision": 0.5757
+    },
+    "both": {
+     "mean_auroc": 0.976,
+     "recall_inserted": 0.64,
+     "false_flag_rate_base": 0.0267,
+     "precision": 0.5902
+    },
+    "v1f": {
+     "mean_auroc": 1.0,
+     "recall_inserted": 1.0,
+     "false_flag_rate_base": 0.0143,
+     "precision": 0.8072
+    }
+   },
+   "B2/raw": {
+    "hand": {
+     "mean_auroc": 1.0,
+     "recall_inserted": 1.0,
+     "false_flag_rate_base": 0.0448,
+     "precision": 0.5725
+    },
+    "emb": {
+     "mean_auroc": 0.5847,
+     "recall_inserted": 0.0144,
+     "false_flag_rate_base": 0.0223,
+     "precision": 0.0375
+    },
+    "both": {
+     "mean_auroc": 0.9997,
+     "recall_inserted": 0.9833,
+     "false_flag_rate_base": 0.0141,
+     "precision": 0.8067
+    },
+    "v1f": {
+     "mean_auroc": 0.8193,
+     "recall_inserted": 0.0856,
+     "false_flag_rate_base": 0.012,
+     "precision": 0.2996
+    }
+   },
+   "B2/norm": {
+    "hand": {
+     "mean_auroc": 0.7744,
+     "recall_inserted": 0.3533,
+     "false_flag_rate_base": 0.0675,
+     "precision": 0.2391
+    },
+    "emb": {
+     "mean_auroc": 0.4935,
+     "recall_inserted": 0.0344,
+     "false_flag_rate_base": 0.0399,
+     "precision": 0.0493
+    },
+    "both": {
+     "mean_auroc": 0.7071,
+     "recall_inserted": 0.1,
+     "false_flag_rate_base": 0.0323,
+     "precision": 0.1565
+    },
+    "v1f": {
+     "mean_auroc": 0.509,
+     "recall_inserted": 0.0222,
+     "false_flag_rate_base": 0.0221,
+     "precision": 0.057
+    }
+   },
+   "C/raw": {
+    "hand": {
+     "mean_auroc": 0.9196,
+     "recall_inserted": 0.6167,
+     "false_flag_rate_base": 0.0936,
+     "precision": 0.283
+    },
+    "emb": {
+     "mean_auroc": 0.9971,
+     "recall_inserted": 0.9633,
+     "false_flag_rate_base": 0.0122,
+     "precision": 0.8265
+    },
+    "both": {
+     "mean_auroc": 0.9942,
+     "recall_inserted": 0.91,
+     "false_flag_rate_base": 0.0191,
+     "precision": 0.7398
+    },
+    "v1f": {
+     "mean_auroc": 0.9894,
+     "recall_inserted": 0.8444,
+     "false_flag_rate_base": 0.0247,
+     "precision": 0.6714
+    }
+   },
+   "C/norm": {
+    "hand": {
+     "mean_auroc": 0.9258,
+     "recall_inserted": 0.4878,
+     "false_flag_rate_base": 0.0459,
+     "precision": 0.3885
+    },
+    "emb": {
+     "mean_auroc": 0.9818,
+     "recall_inserted": 0.7389,
+     "false_flag_rate_base": 0.0125,
+     "precision": 0.7805
+    },
+    "both": {
+     "mean_auroc": 0.977,
+     "recall_inserted": 0.6556,
+     "false_flag_rate_base": 0.0188,
+     "precision": 0.6758
+    },
+    "v1f": {
+     "mean_auroc": 0.981,
+     "recall_inserted": 0.73,
+     "false_flag_rate_base": 0.0163,
+     "precision": 0.7276
+    }
+   },
+   "D/raw": {
+    "hand": {
+     "mean_auroc": 0.8446,
+     "recall_inserted": 0.2556,
+     "false_flag_rate_base": 0.0973,
+     "precision": 0.1359
+    },
+    "emb": {
+     "mean_auroc": 0.9965,
+     "recall_inserted": 0.9289,
+     "false_flag_rate_base": 0.0119,
+     "precision": 0.8245
+    },
+    "both": {
+     "mean_auroc": 0.9887,
+     "recall_inserted": 0.7778,
+     "false_flag_rate_base": 0.0198,
+     "precision": 0.7014
+    },
+    "v1f": {
+     "mean_auroc": 0.9991,
+     "recall_inserted": 0.9967,
+     "false_flag_rate_base": 0.0258,
+     "precision": 0.6986
+    }
+   },
+   "D/norm": {
+    "hand": {
+     "mean_auroc": 0.8649,
+     "recall_inserted": 0.1722,
+     "false_flag_rate_base": 0.0493,
+     "precision": 0.1728
+    },
+    "emb": {
+     "mean_auroc": 0.9883,
+     "recall_inserted": 0.7633,
+     "false_flag_rate_base": 0.0116,
+     "precision": 0.7988
+    },
+    "both": {
+     "mean_auroc": 0.9737,
+     "recall_inserted": 0.4933,
+     "false_flag_rate_base": 0.0191,
+     "precision": 0.6074
+    },
+    "v1f": {
+     "mean_auroc": 0.9978,
+     "recall_inserted": 0.9744,
+     "false_flag_rate_base": 0.0189,
+     "precision": 0.7554
+    }
+   },
+   "E/raw": {
+    "hand": {
+     "mean_auroc": 0.7925,
+     "recall_inserted": 0.2222,
+     "false_flag_rate_base": 0.0982,
+     "precision": 0.1195
+    },
+    "emb": {
+     "mean_auroc": 0.876,
+     "recall_inserted": 0.3622,
+     "false_flag_rate_base": 0.012,
+     "precision": 0.6455
+    },
+    "both": {
+     "mean_auroc": 0.8795,
+     "recall_inserted": 0.2967,
+     "false_flag_rate_base": 0.021,
+     "precision": 0.4596
+    },
+    "v1f": {
+     "mean_auroc": 0.9291,
+     "recall_inserted": 0.4578,
+     "false_flag_rate_base": 0.0236,
+     "precision": 0.5372
+    }
+   },
+   "E/norm": {
+    "hand": {
+     "mean_auroc": 0.8594,
+     "recall_inserted": 0.2744,
+     "false_flag_rate_base": 0.0516,
+     "precision": 0.2419
+    },
+    "emb": {
+     "mean_auroc": 0.8641,
+     "recall_inserted": 0.3122,
+     "false_flag_rate_base": 0.0129,
+     "precision": 0.5941
+    },
+    "both": {
+     "mean_auroc": 0.908,
+     "recall_inserted": 0.3033,
+     "false_flag_rate_base": 0.0216,
+     "precision": 0.4573
+    },
+    "v1f": {
+     "mean_auroc": 0.8973,
+     "recall_inserted": 0.3856,
+     "false_flag_rate_base": 0.0176,
+     "precision": 0.5679
+    }
+   },
+   "F/raw": {
+    "hand": {
+     "mean_auroc": 0.5209,
+     "recall_inserted": 0.1078,
+     "false_flag_rate_base": 0.1054,
+     "precision": 0.0577
+    },
+    "emb": {
+     "mean_auroc": 0.5237,
+     "recall_inserted": 0.0178,
+     "false_flag_rate_base": 0.0198,
+     "precision": 0.0513
+    },
+    "both": {
+     "mean_auroc": 0.5271,
+     "recall_inserted": 0.0311,
+     "false_flag_rate_base": 0.0303,
+     "precision": 0.0581
+    },
+    "v1f": {
+     "mean_auroc": 0.6557,
+     "recall_inserted": 0.0844,
+     "false_flag_rate_base": 0.0271,
+     "precision": 0.1573
+    }
+   },
+   "F/norm": {
+    "hand": {
+     "mean_auroc": 0.5203,
+     "recall_inserted": 0.0656,
+     "false_flag_rate_base": 0.0614,
+     "precision": 0.0601
+    },
+    "emb": {
+     "mean_auroc": 0.5099,
+     "recall_inserted": 0.0189,
+     "false_flag_rate_base": 0.0191,
+     "precision": 0.0565
+    },
+    "both": {
+     "mean_auroc": 0.516,
+     "recall_inserted": 0.0267,
+     "false_flag_rate_base": 0.0268,
+     "precision": 0.0562
+    },
+    "v1f": {
+     "mean_auroc": 0.5101,
+     "recall_inserted": 0.0311,
+     "false_flag_rate_base": 0.0229,
+     "precision": 0.0755
+    }
+   }
+  },
+  "conditions": {
+   "A": "J4ck good + J4ck defects (other photos)",
+   "B": "CONTROL J4ck good + CBD AAA (good, other camera)",
+   "B2": "CONTROL J4ck good + J4ck good with synthetic exposure shift",
+   "C": "real CBD AAA photo + J4ck defects",
+   "D": "CONTROL real CBD AAA photo + J4ck good",
+   "E": "real CBD AAA photo + CBD Bits beans (same light box)",
+   "F": "CONTROL real CBD AAA photo + CBD AAA beans from other AAA photos"
+  }
+ },
+ "real_photos": {
+  "AAA": {
+   "photos": 50,
+   "beans": 2498,
+   "raw/hand": {
+    "share_flagged": 0.1057,
+    "mean_flags_per_photo": 5.28
+   },
+   "raw/emb": {
+    "share_flagged": 0.02,
+    "mean_flags_per_photo": 1.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0264,
+    "mean_flags_per_photo": 1.32
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0308,
+    "mean_flags_per_photo": 1.54
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.1029,
+    "mean_flags_per_photo": 5.14
+   },
+   "raw/both+size": {
+    "share_flagged": 0.026,
+    "mean_flags_per_photo": 1.3
+   },
+   "norm/hand": {
+    "share_flagged": 0.0604,
+    "mean_flags_per_photo": 3.02
+   },
+   "norm/emb": {
+    "share_flagged": 0.02,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0268,
+    "mean_flags_per_photo": 1.34
+   },
+   "norm/v1f": {
+    "share_flagged": 0.022,
+    "mean_flags_per_photo": 1.1
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.058,
+    "mean_flags_per_photo": 2.9
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0264,
+    "mean_flags_per_photo": 1.32
+   }
+  },
+  "AA": {
+   "photos": 61,
+   "beans": 3059,
+   "raw/hand": {
+    "share_flagged": 0.1131,
+    "mean_flags_per_photo": 5.672
+   },
+   "raw/emb": {
+    "share_flagged": 0.019,
+    "mean_flags_per_photo": 0.951
+   },
+   "raw/both": {
+    "share_flagged": 0.0265,
+    "mean_flags_per_photo": 1.328
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0258,
+    "mean_flags_per_photo": 1.295
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.118,
+    "mean_flags_per_photo": 5.918
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0278,
+    "mean_flags_per_photo": 1.393
+   },
+   "norm/hand": {
+    "share_flagged": 0.0974,
+    "mean_flags_per_photo": 4.885
+   },
+   "norm/emb": {
+    "share_flagged": 0.0229,
+    "mean_flags_per_photo": 1.148
+   },
+   "norm/both": {
+    "share_flagged": 0.0347,
+    "mean_flags_per_photo": 1.738
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0209,
+    "mean_flags_per_photo": 1.049
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0987,
+    "mean_flags_per_photo": 4.951
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0324,
+    "mean_flags_per_photo": 1.623
+   }
+  },
+  "A": {
+   "photos": 50,
+   "beans": 2572,
+   "raw/hand": {
+    "share_flagged": 0.0591,
+    "mean_flags_per_photo": 3.04
+   },
+   "raw/emb": {
+    "share_flagged": 0.0284,
+    "mean_flags_per_photo": 1.46
+   },
+   "raw/both": {
+    "share_flagged": 0.0202,
+    "mean_flags_per_photo": 1.04
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0365,
+    "mean_flags_per_photo": 1.88
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0591,
+    "mean_flags_per_photo": 3.04
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0218,
+    "mean_flags_per_photo": 1.12
+   },
+   "norm/hand": {
+    "share_flagged": 0.0731,
+    "mean_flags_per_photo": 3.76
+   },
+   "norm/emb": {
+    "share_flagged": 0.0284,
+    "mean_flags_per_photo": 1.46
+   },
+   "norm/both": {
+    "share_flagged": 0.0342,
+    "mean_flags_per_photo": 1.76
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0342,
+    "mean_flags_per_photo": 1.76
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0743,
+    "mean_flags_per_photo": 3.82
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0358,
+    "mean_flags_per_photo": 1.84
+   }
+  },
+  "AB": {
+   "photos": 50,
+   "beans": 2510,
+   "raw/hand": {
+    "share_flagged": 0.0765,
+    "mean_flags_per_photo": 3.84
+   },
+   "raw/emb": {
+    "share_flagged": 0.0291,
+    "mean_flags_per_photo": 1.46
+   },
+   "raw/both": {
+    "share_flagged": 0.0351,
+    "mean_flags_per_photo": 1.76
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0398,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0813,
+    "mean_flags_per_photo": 4.08
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0378,
+    "mean_flags_per_photo": 1.9
+   },
+   "norm/hand": {
+    "share_flagged": 0.0641,
+    "mean_flags_per_photo": 3.22
+   },
+   "norm/emb": {
+    "share_flagged": 0.0255,
+    "mean_flags_per_photo": 1.28
+   },
+   "norm/both": {
+    "share_flagged": 0.0319,
+    "mean_flags_per_photo": 1.6
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0359,
+    "mean_flags_per_photo": 1.8
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0653,
+    "mean_flags_per_photo": 3.28
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0339,
+    "mean_flags_per_photo": 1.7
+   }
+  },
+  "PB-I": {
+   "photos": 51,
+   "beans": 2546,
+   "raw/hand": {
+    "share_flagged": 0.0416,
+    "mean_flags_per_photo": 2.078
+   },
+   "raw/emb": {
+    "share_flagged": 0.0075,
+    "mean_flags_per_photo": 0.373
+   },
+   "raw/both": {
+    "share_flagged": 0.0086,
+    "mean_flags_per_photo": 0.431
+   },
+   "raw/v1f": {
+    "share_flagged": 0.013,
+    "mean_flags_per_photo": 0.647
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.042,
+    "mean_flags_per_photo": 2.098
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0075,
+    "mean_flags_per_photo": 0.373
+   },
+   "norm/hand": {
+    "share_flagged": 0.0389,
+    "mean_flags_per_photo": 1.941
+   },
+   "norm/emb": {
+    "share_flagged": 0.011,
+    "mean_flags_per_photo": 0.549
+   },
+   "norm/both": {
+    "share_flagged": 0.0098,
+    "mean_flags_per_photo": 0.49
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0114,
+    "mean_flags_per_photo": 0.569
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0389,
+    "mean_flags_per_photo": 1.941
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0114,
+    "mean_flags_per_photo": 0.569
+   }
+  },
+  "PB-II": {
+   "photos": 50,
+   "beans": 2536,
+   "raw/hand": {
+    "share_flagged": 0.071,
+    "mean_flags_per_photo": 3.6
+   },
+   "raw/emb": {
+    "share_flagged": 0.0134,
+    "mean_flags_per_photo": 0.68
+   },
+   "raw/both": {
+    "share_flagged": 0.0174,
+    "mean_flags_per_photo": 0.88
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0221,
+    "mean_flags_per_photo": 1.12
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.071,
+    "mean_flags_per_photo": 3.6
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0189,
+    "mean_flags_per_photo": 0.96
+   },
+   "norm/hand": {
+    "share_flagged": 0.0493,
+    "mean_flags_per_photo": 2.5
+   },
+   "norm/emb": {
+    "share_flagged": 0.0174,
+    "mean_flags_per_photo": 0.88
+   },
+   "norm/both": {
+    "share_flagged": 0.0193,
+    "mean_flags_per_photo": 0.98
+   },
+   "norm/v1f": {
+    "share_flagged": 0.026,
+    "mean_flags_per_photo": 1.32
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0509,
+    "mean_flags_per_photo": 2.58
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0197,
+    "mean_flags_per_photo": 1.0
+   }
+  },
+  "C": {
+   "photos": 51,
+   "beans": 2594,
+   "raw/hand": {
+    "share_flagged": 0.0705,
+    "mean_flags_per_photo": 3.588
+   },
+   "raw/emb": {
+    "share_flagged": 0.022,
+    "mean_flags_per_photo": 1.118
+   },
+   "raw/both": {
+    "share_flagged": 0.0212,
+    "mean_flags_per_photo": 1.078
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0266,
+    "mean_flags_per_photo": 1.353
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0686,
+    "mean_flags_per_photo": 3.49
+   },
+   "raw/both+size": {
+    "share_flagged": 0.022,
+    "mean_flags_per_photo": 1.118
+   },
+   "norm/hand": {
+    "share_flagged": 0.081,
+    "mean_flags_per_photo": 4.118
+   },
+   "norm/emb": {
+    "share_flagged": 0.0231,
+    "mean_flags_per_photo": 1.176
+   },
+   "norm/both": {
+    "share_flagged": 0.0355,
+    "mean_flags_per_photo": 1.804
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0254,
+    "mean_flags_per_photo": 1.294
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0821,
+    "mean_flags_per_photo": 4.176
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0359,
+    "mean_flags_per_photo": 1.824
+   }
+  },
+  "Bulk": {
+   "photos": 50,
+   "beans": 2525,
+   "raw/hand": {
+    "share_flagged": 0.0685,
+    "mean_flags_per_photo": 3.46
+   },
+   "raw/emb": {
+    "share_flagged": 0.0214,
+    "mean_flags_per_photo": 1.08
+   },
+   "raw/both": {
+    "share_flagged": 0.0242,
+    "mean_flags_per_photo": 1.22
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0309,
+    "mean_flags_per_photo": 1.56
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0697,
+    "mean_flags_per_photo": 3.52
+   },
+   "raw/both+size": {
+    "share_flagged": 0.025,
+    "mean_flags_per_photo": 1.26
+   },
+   "norm/hand": {
+    "share_flagged": 0.0709,
+    "mean_flags_per_photo": 3.58
+   },
+   "norm/emb": {
+    "share_flagged": 0.021,
+    "mean_flags_per_photo": 1.06
+   },
+   "norm/both": {
+    "share_flagged": 0.036,
+    "mean_flags_per_photo": 1.82
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0301,
+    "mean_flags_per_photo": 1.52
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0685,
+    "mean_flags_per_photo": 3.46
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0341,
+    "mean_flags_per_photo": 1.72
+   }
+  },
+  "Bits": {
+   "photos": 51,
+   "beans": 2607,
+   "raw/hand": {
+    "share_flagged": 0.0529,
+    "mean_flags_per_photo": 2.706
+   },
+   "raw/emb": {
+    "share_flagged": 0.0238,
+    "mean_flags_per_photo": 1.216
+   },
+   "raw/both": {
+    "share_flagged": 0.0146,
+    "mean_flags_per_photo": 0.745
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0134,
+    "mean_flags_per_photo": 0.686
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.056,
+    "mean_flags_per_photo": 2.863
+   },
+   "raw/both+size": {
+    "share_flagged": 0.015,
+    "mean_flags_per_photo": 0.765
+   },
+   "norm/hand": {
+    "share_flagged": 0.061,
+    "mean_flags_per_photo": 3.118
+   },
+   "norm/emb": {
+    "share_flagged": 0.0215,
+    "mean_flags_per_photo": 1.098
+   },
+   "norm/both": {
+    "share_flagged": 0.0242,
+    "mean_flags_per_photo": 1.235
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0138,
+    "mean_flags_per_photo": 0.706
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0579,
+    "mean_flags_per_photo": 2.961
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0226,
+    "mean_flags_per_photo": 1.157
+   }
+  },
+  "J4CK:BrocadoLeve": {
+   "photos": 1,
+   "beans": 30,
+   "raw/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0333,
+    "mean_flags_per_photo": 1.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0333,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0333,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   }
+  },
+  "J4CK:BrocadoSevero": {
+   "photos": 1,
+   "beans": 25,
+   "raw/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.04,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   }
+  },
+  "J4CK:Concha": {
+   "photos": 1,
+   "beans": 33,
+   "raw/hand": {
+    "share_flagged": 0.0606,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0606,
+    "mean_flags_per_photo": 2.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0606,
+    "mean_flags_per_photo": 2.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   }
+  },
+  "J4CK:DXHongo": {
+   "photos": 1,
+   "beans": 12,
+   "raw/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0833,
+    "mean_flags_per_photo": 1.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.1667,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0833,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0833,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0833,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0833,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0833,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0833,
+    "mean_flags_per_photo": 1.0
+   }
+  },
+  "J4CK:Inmaduro": {
+   "photos": 1,
+   "beans": 16,
+   "raw/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0625,
+    "mean_flags_per_photo": 1.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0625,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.125,
+    "mean_flags_per_photo": 2.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0625,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   }
+  },
+  "J4CK:MarronAVinagre": {
+   "photos": 1,
+   "beans": 36,
+   "raw/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0278,
+    "mean_flags_per_photo": 1.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0556,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0278,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   }
+  },
+  "J4CK:Negros": {
+   "photos": 1,
+   "beans": 100,
+   "raw/hand": {
+    "share_flagged": 0.02,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.02,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.02,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.06,
+    "mean_flags_per_photo": 6.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.06,
+    "mean_flags_per_photo": 6.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   }
+  },
+  "J4CK:Normales": {
+   "photos": 1,
+   "beans": 195,
+   "raw/hand": {
+    "share_flagged": 0.0462,
+    "mean_flags_per_photo": 9.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0154,
+    "mean_flags_per_photo": 3.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0103,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0205,
+    "mean_flags_per_photo": 4.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.041,
+    "mean_flags_per_photo": 8.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0103,
+    "mean_flags_per_photo": 2.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0872,
+    "mean_flags_per_photo": 17.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0308,
+    "mean_flags_per_photo": 6.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0359,
+    "mean_flags_per_photo": 7.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0154,
+    "mean_flags_per_photo": 3.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0872,
+    "mean_flags_per_photo": 17.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0359,
+    "mean_flags_per_photo": 7.0
+   }
+  },
+  "J4CK:PMordidoCortado": {
+   "photos": 1,
+   "beans": 36,
+   "raw/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0556,
+    "mean_flags_per_photo": 2.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0278,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0278,
+    "mean_flags_per_photo": 1.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   }
+  },
+  "J4CK:Pergamino": {
+   "photos": 1,
+   "beans": 90,
+   "raw/hand": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/emb": {
+    "share_flagged": 0.0111,
+    "mean_flags_per_photo": 1.0
+   },
+   "raw/both": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/v1f": {
+    "share_flagged": 0.0556,
+    "mean_flags_per_photo": 5.0
+   },
+   "raw/hand+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "raw/both+size": {
+    "share_flagged": 0.0,
+    "mean_flags_per_photo": 0.0
+   },
+   "norm/hand": {
+    "share_flagged": 0.0556,
+    "mean_flags_per_photo": 5.0
+   },
+   "norm/emb": {
+    "share_flagged": 0.0222,
+    "mean_flags_per_photo": 2.0
+   },
+   "norm/both": {
+    "share_flagged": 0.0333,
+    "mean_flags_per_photo": 3.0
+   },
+   "norm/v1f": {
+    "share_flagged": 0.0333,
+    "mean_flags_per_photo": 3.0
+   },
+   "norm/hand+size": {
+    "share_flagged": 0.0556,
+    "mean_flags_per_photo": 5.0
+   },
+   "norm/both+size": {
+    "share_flagged": 0.0333,
+    "mean_flags_per_photo": 3.0
+   }
+  }
+ },
+ "cbd_grade_trend": {
+  "raw/hand": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.2903,
+   "p": 1.8397179386182343e-10
+  },
+  "raw/emb": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.055,
+   "p": 0.23688956276492204
+  },
+  "raw/both": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.1243,
+   "p": 0.007341918661802651
+  },
+  "raw/v1f": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.1654,
+   "p": 0.0003465943987026964
+  },
+  "raw/hand+size": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.2691,
+   "p": 3.873001827822893e-09
+  },
+  "raw/both+size": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.1306,
+   "p": 0.00484212010736186
+  },
+  "norm/hand": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.0817,
+   "p": 0.07862935622378665
+  },
+  "norm/emb": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.0392,
+   "p": 0.39963754652468597
+  },
+  "norm/both": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.0208,
+   "p": 0.655130738219624
+  },
+  "norm/v1f": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.0735,
+   "p": 0.11402354793649819
+  },
+  "norm/hand+size": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.0882,
+   "p": 0.057538559092404955
+  },
+  "norm/both+size": {
+   "spearman_rho_grade_order_vs_photo_flag_share": -0.0388,
+   "p": 0.4048850327515548
+  }
+ }
+}

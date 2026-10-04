@@ -1,0 +1,16 @@
+{
+ "what": "shipped v2 clean fp16 model on ALL loja_yolo crops (keep==1, non-touching), IN-SAMPLE (loja_yolo is in its training set); Python onnxruntime CPU; rule good if P(good)>=0.50, defect if 1-P(good)>=0.91",
+ "when": "2026-10-04T03:28:08",
+ "good": {
+  "n": 146,
+  "called_good": 146,
+  "called_defect": 0,
+  "unsure": 0
+ },
+ "defect": {
+  "n": 1163,
+  "called_good": 0,
+  "called_defect": 1116,
+  "unsure": 47
+ }
+}

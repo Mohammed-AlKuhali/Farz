@@ -1,0 +1,392 @@
+[
+ {
+  "file": "ImageDataset/BrocadoLeve.jpg",
+  "count": 30,
+  "colour": "",
+  "frac": {
+   "pale": 1,
+   "dark": 0,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 0,
+  "med_h_dark": null,
+  "med_s_dark": null,
+  "med_v_dark": null,
+  "med_elong": 1.3587205358128096,
+  "med_solidity": 0.9752820817936838,
+  "med_fill": 0.9957190103964806,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/BrocadoSevero.jpg",
+  "count": 25,
+  "colour": "",
+  "frac": {
+   "pale": 0.7933057135006024,
+   "dark": 0.20669428649939758,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 6,
+  "med_h_dark": 32.25521491894999,
+  "med_s_dark": 0.3033273425653371,
+  "med_v_dark": 0.28235453379410974,
+  "med_elong": 1.3692003355355655,
+  "med_solidity": 0.9580549070123179,
+  "med_fill": 0.9878000073484237,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/CerezaSeca.jpg",
+  "count": 9,
+  "colour": "too_dark_beans",
+  "frac": {
+   "pale": 0,
+   "dark": 1,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "not_green",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "colour",
+   "beanShaped": 1,
+   "areaCV": 0.15790849308936683,
+   "darkHue": 24.003530843187583,
+   "darkSat": 0.2058745396324162,
+   "medElong": 1.3020489104905384
+  },
+  "dark_blobs": 9,
+  "med_h_dark": 24.003530843187583,
+  "med_s_dark": 0.2058745396324162,
+  "med_v_dark": 0.22444776212072895,
+  "med_elong": 1.3020489104905384,
+  "med_solidity": 0.9783712032482236,
+  "med_fill": 0.9972969353119727,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/Concha.jpg",
+  "count": 33,
+  "colour": "",
+  "frac": {
+   "pale": 1,
+   "dark": 0,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 0,
+  "med_h_dark": null,
+  "med_s_dark": null,
+  "med_v_dark": null,
+  "med_elong": 1.5335026388648527,
+  "med_solidity": 0.9633226572993078,
+  "med_fill": 0.9898979745179676,
+  "touching": 1,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/DXHongo.jpg",
+  "count": 12,
+  "colour": "",
+  "frac": {
+   "pale": 1,
+   "dark": 0,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "count",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 0,
+  "med_h_dark": null,
+  "med_s_dark": null,
+  "med_v_dark": null,
+  "med_elong": 1.377767132575043,
+  "med_solidity": 0.9749434430020252,
+  "med_fill": 0.9936690460192101,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/Inmaduro.jpg",
+  "count": 16,
+  "colour": "",
+  "frac": {
+   "pale": 1,
+   "dark": 0,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "count",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 0,
+  "med_h_dark": null,
+  "med_s_dark": null,
+  "med_v_dark": null,
+  "med_elong": 1.3127884433994654,
+  "med_solidity": 0.9770680618524832,
+  "med_fill": 0.9960591167468872,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/MarronAVinagre.jpg",
+  "count": 36,
+  "colour": "",
+  "frac": {
+   "pale": 0.8561276397571155,
+   "dark": 0.11713894212685164,
+   "white": 0,
+   "off": 0.026733418116032887
+  },
+  "gate": "",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 4,
+  "med_h_dark": 25.275507898606445,
+  "med_s_dark": 0.374295790103676,
+  "med_v_dark": 0.23490925644686309,
+  "med_elong": 1.437642715409511,
+  "med_solidity": 0.9746190852533438,
+  "med_fill": 0.9963733041085592,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/Negros.jpg",
+  "count": 100,
+  "colour": "too_dark_beans",
+  "frac": {
+   "pale": 0.05611996098829649,
+   "dark": 0.9438800390117035,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "not_green",
+  "darkLot": {
+   "isDarkLot": true,
+   "why": "",
+   "beanShaped": 1,
+   "areaCV": 0.18115141173536842,
+   "darkHue": 31.81850944212198,
+   "darkSat": 0.26325320773103783,
+   "medElong": 1.5253147219095022
+  },
+  "dark_blobs": 95,
+  "med_h_dark": 31.81850944212198,
+  "med_s_dark": 0.26325320773103783,
+  "med_v_dark": 0.22697129034572533,
+  "med_elong": 1.5253147219095022,
+  "med_solidity": 0.9549999977515065,
+  "med_fill": 0.9917626272820685,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/Normales.jpg",
+  "count": 195,
+  "colour": "",
+  "frac": {
+   "pale": 1,
+   "dark": 0,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "count",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 0,
+  "med_h_dark": null,
+  "med_s_dark": null,
+  "med_v_dark": null,
+  "med_elong": 1.3210714727791575,
+  "med_solidity": 0.9667921944539541,
+  "med_fill": 0.996798656172597,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/PMordidoCortado.jpg",
+  "count": 36,
+  "colour": "",
+  "frac": {
+   "pale": 1,
+   "dark": 0,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 0,
+  "med_h_dark": null,
+  "med_s_dark": null,
+  "med_v_dark": null,
+  "med_elong": 1.199847824805044,
+  "med_solidity": 0.9369741468258732,
+  "med_fill": 0.9661288866157784,
+  "touching": 1,
+  "too_many_touching": false
+ },
+ {
+  "file": "ImageDataset/Pergamino.jpg",
+  "count": 90,
+  "colour": "",
+  "frac": {
+   "pale": 1,
+   "dark": 0,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "not_dark",
+   "beanShaped": 0,
+   "areaCV": null,
+   "darkHue": null,
+   "darkSat": null,
+   "medElong": null
+  },
+  "dark_blobs": 0,
+  "med_h_dark": null,
+  "med_s_dark": null,
+  "med_v_dark": null,
+  "med_elong": 1.3577337071147446,
+  "med_solidity": 0.9717435283527518,
+  "med_fill": 0.9971362187715376,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "darklot/black_beans_synthetic.jpg",
+  "count": 100,
+  "colour": "too_dark_beans",
+  "frac": {
+   "pale": 0,
+   "dark": 1,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "not_green",
+  "darkLot": {
+   "isDarkLot": true,
+   "why": "",
+   "beanShaped": 0.98,
+   "areaCV": 0.1671324218689449,
+   "darkHue": 49.26440259849402,
+   "darkSat": 0.24369438614779998,
+   "medElong": 1.3185261010580505
+  },
+  "dark_blobs": 100,
+  "med_h_dark": 49.26440259849402,
+  "med_s_dark": 0.24369438614779998,
+  "med_v_dark": 0.17583659927253453,
+  "med_elong": 1.3185261010580505,
+  "med_solidity": 0.9702145515913895,
+  "med_fill": 0.99693917779454,
+  "touching": 0,
+  "too_many_touching": false
+ },
+ {
+  "file": "darklot/roast_dark_synthetic.jpg",
+  "count": 100,
+  "colour": "too_dark_beans",
+  "frac": {
+   "pale": 0,
+   "dark": 1,
+   "white": 0,
+   "off": 0
+  },
+  "gate": "not_green",
+  "darkLot": {
+   "isDarkLot": false,
+   "why": "colour",
+   "beanShaped": 0.98,
+   "areaCV": 0.1671324218689449,
+   "darkHue": 22.100532932038917,
+   "darkSat": 0.611756268370635,
+   "medElong": 1.3185261010580505
+  },
+  "dark_blobs": 100,
+  "med_h_dark": 22.100532932038917,
+  "med_s_dark": 0.611756268370635,
+  "med_v_dark": 0.18554851580899168,
+  "med_elong": 1.3185261010580505,
+  "med_solidity": 0.9702145515913895,
+  "med_fill": 0.99693917779454,
+  "touching": 0,
+  "too_many_touching": false
+ }
+]

@@ -1,0 +1,147 @@
+{
+ "what": "calibration demo walkthrough, real app pipeline in Node",
+ "model_sha256": "c40c10f915f7a3ab78f1aead50d3cd027113b1a53d031eea21ffec331c5bc87a",
+ "head": {
+  "m_hi": 0.6348251540933314,
+  "loo_errors": 0,
+  "n_good": 10,
+  "n_defect": 10
+ },
+ "rows": [
+  {
+   "file": "test/IMG_4804.jpg",
+   "beans": 10,
+   "touching": 0,
+   "truth": {
+    "good": 5,
+    "defect": 5,
+    "labelled_beans": 10,
+    "source_classes": [
+     "broca_leve_severa",
+     "normal",
+     "normal",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa",
+     "normal",
+     "normal",
+     "broca_leve_severa"
+    ]
+   },
+   "app_gate": "count",
+   "demo_gate_min1": null,
+   "blur_var": 53.38900741612524,
+   "before": {
+    "band": "many",
+    "about": false,
+    "reason": "",
+    "good_defect_unsure": [
+     5,
+     5,
+     0
+    ]
+   },
+   "after": {
+    "band": "many",
+    "about": false,
+    "reason": "",
+    "good_defect_unsure": [
+     5,
+     5,
+     0
+    ]
+   }
+  },
+  {
+   "file": "test/IMG_4807.jpg",
+   "beans": 10,
+   "touching": 0,
+   "truth": {
+    "good": 2,
+    "defect": 8,
+    "labelled_beans": 10,
+    "source_classes": [
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa"
+    ]
+   },
+   "app_gate": "count",
+   "demo_gate_min1": null,
+   "blur_var": 58.618561208715455,
+   "before": {
+    "band": "unsure",
+    "about": false,
+    "reason": "implausible",
+    "good_defect_unsure": [
+     2,
+     7,
+     1
+    ]
+   },
+   "after": {
+    "band": "unsure",
+    "about": false,
+    "reason": "implausible",
+    "good_defect_unsure": [
+     2,
+     7,
+     1
+    ]
+   }
+  },
+  {
+   "file": "test/IMG_4809.jpg",
+   "beans": 11,
+   "touching": 1,
+   "truth": {
+    "good": 2,
+    "defect": 8,
+    "labelled_beans": 10,
+    "source_classes": [
+     "normal",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa"
+    ]
+   },
+   "app_gate": "count",
+   "demo_gate_min1": null,
+   "blur_var": 56.79316472238567,
+   "before": {
+    "band": "unsure",
+    "about": false,
+    "reason": "implausible",
+    "good_defect_unsure": [
+     2,
+     8,
+     1
+    ]
+   },
+   "after": {
+    "band": "unsure",
+    "about": false,
+    "reason": "implausible",
+    "good_defect_unsure": [
+     2,
+     6,
+     3
+    ]
+   }
+  }
+ ]
+}

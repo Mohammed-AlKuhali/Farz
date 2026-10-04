@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+/* Farz tokens — named after the coffee's own life and the Yemeni highland house:
+   husk (dried qishr), qudad (lime-gypsum plaster), basalt (terrace stone), parchment (bean husk paper),
+   bean (green coffee), cherry (ripe fruit, = defect), saffron (= not sure), qishr amber (= middle band). */
+@theme {
+  --color-husk: #2b1b14;
+  --color-husk-2: #3b281e;
+  --color-qudad: #f4ecdf;
+  --color-basalt: #241812;
+  --color-parchment: #d2bf9f;
+  --color-bean: #b6c88f;
+  --color-bean-deep: #6f8048;
+  --color-cherry: #e0473a;
+  --color-cherry-light: #ff6a5c; /* cherry text on dark cards: 4.9:1 on husk-2 */
+  --color-cherry-deep: #c8372b; /* white text on cherry: 5.2:1 */
+  --color-saffron: #f4c84a;
+  --color-qishr: #e38b32;
+  --font-display: "Reem Kufi", "Noto Naskh Arabic", system-ui, sans-serif;
+  --font-body: "Noto Naskh Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html { background: var(--color-husk); color: var(--color-qudad); -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.55;
+    background:
+      radial-gradient(120% 60% at 50% -10%, #4a3226 0%, transparent 60%),
+      var(--color-husk);
+    min-height: 100dvh;
+    -webkit-tap-highlight-color: transparent;
+  }
+  :lang(en) body, html[lang="en"] body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  button, label, a { -webkit-user-select: none; user-select: none; }
+  :focus-visible { outline: 3px solid var(--color-saffron); outline-offset: 3px; border-radius: 10px; }
+}
+
+@layer components {
+  .font-display { font-family: var(--font-display); }
+
+  /* solid header: content never shows through the Back / language buttons when scrolling */
+  .topbar {
+    background: var(--color-husk);
+    box-shadow: 0 1px 0 color-mix(in srgb, var(--color-qudad) 12%, transparent), 0 8px 16px -10px rgba(0, 0, 0, 0.6);
+  }
+  .iconbtn {
+    display: inline-grid; place-items: center; min-width: 48px; min-height: 48px; border-radius: 14px;
+    color: var(--color-qudad); background: color-mix(in srgb, var(--color-qudad) 8%, transparent);
+  }
+  .iconbtn:active { transform: scale(0.96); }
+  [dir="rtl"] .flip-rtl { transform: scaleX(-1); }
+
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 60px; padding: 10px 18px; border-radius: 18px;
+    font-weight: 700; font-size: 20px; cursor: pointer; text-align: center; text-decoration: none;
+    transition: transform 0.08s ease, background-color 0.15s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn:has(input:focus-visible), .tray-btn:has(input:focus-visible) { outline: 3px solid var(--color-saffron); outline-offset: 3px; }
+  .btn-primary { background: var(--color-bean); color: var(--color-basalt); box-shadow: 0 3px 0 var(--color-bean-deep); }
+  .btn-quiet { background: color-mix(in srgb, var(--color-qudad) 10%, transparent); color: var(--color-qudad); border: 2px solid color-mix(in srgb, var(--color-qudad) 22%, transparent); }
+  .sheet .btn-quiet { color: var(--color-basalt); border-color: color-mix(in srgb, var(--color-basalt) 25%, transparent); }
+  .btn-danger { background: transparent; color: var(--color-cherry); border: 2px solid var(--color-cherry); }
+  .btn-voice { background: var(--color-qudad); color: var(--color-basalt); min-width: 170px; border-radius: 999px; }
+  .btn-voice.is-playing { background: var(--color-saffron); }
+  .btn-voice.is-playing svg { animation: pulse 1s ease-in-out infinite; }
+
+  /* The camera button is a round woven sorting tray seen from above. */
+  .tray-btn {
+    position: relative; display: grid; place-items: center; cursor: pointer;
+    width: min(68vw, 270px); aspect-ratio: 1; border-radius: 50%;
+    color: var(--color-basalt);
+    background:
+      radial-gradient(circle at 50% 50%, var(--color-bean) 0 55%, transparent 55.5%),
+      repeating-radial-gradient(circle at 50% 50%, #c79b5f 0 5px, #a77a43 5px 7px, #d6ad6f 7px 11px);
+    box-shadow: 0 0 0 6px #8a6236, 0 14px 30px rgba(0, 0, 0, 0.45), inset 0 0 0 2px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s ease;
+  }
+  .tray-btn:active { transform: scale(0.97); }
+  .tray-face { display: grid; justify-items: center; padding: 0 14%; text-align: center; }
+
+  .steps li { display: grid; justify-items: center; gap: 4px; font-size: 15px; line-height: 1.3; color: var(--color-parchment); }
+
+  .card-dark { background: var(--color-husk-2); border-radius: 22px; border: 1px solid color-mix(in srgb, var(--color-qudad) 10%, transparent); }
+  .card-light { background: var(--color-qudad); border-radius: 22px; color: var(--color-basalt); }
+
+  .count-row { display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 6px 2px; }
+  .count-row.is-zero { opacity: 0.65; }
+
+  .band-clean { color: var(--color-bean); }
+  .band-some { color: var(--color-qishr); }
+  .band-many { color: var(--color-cherry); }
+  .band-unsure { color: var(--color-saffron); }
+  .chip { border-radius: 999px; padding: 4px 12px; font-size: 15px; font-weight: 700; white-space: nowrap; }
+  .band-chip-clean { background: var(--color-bean); color: var(--color-basalt); }
+  .band-chip-some { background: var(--color-qishr); color: var(--color-basalt); }
+  .band-chip-many { background: var(--color-cherry-deep); color: #fff; }
+  .band-chip-unsure { background: var(--color-saffron); color: var(--color-basalt); }
+
+  /* legend: the ring SHAPES, not colour words */
+  .legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: -4px; font-size: 16px; line-height: 1.3; color: var(--color-qudad); }
+  .legend li { display: flex; align-items: center; gap: 7px; }
+
+  /* the photo never pushes the verdict below the fold: height capped, width follows the aspect ratio */
+  .photo-frame { margin: 0 auto; width: min(100%, calc(36dvh * var(--ar))); }
+  .photo-cap {
+    position: absolute; inset-block-start: 8px; inset-inline-start: 8px; padding: 2px 10px; border-radius: 999px;
+    background: var(--color-husk); color: var(--color-qudad); font-size: 15px; font-weight: 700;
+  }
+
+  /* "about": sampling uncertainty, said as a word, not a colour */
+  .about-tag {
+    display: inline-block; margin-inline-end: 10px; padding: 0 12px; border-radius: 999px; vertical-align: 6px;
+    font-family: var(--font-body); font-size: 17px; font-weight: 700; line-height: 30px;
+    color: var(--color-husk); background: var(--color-qudad);
+  }
+  .credit { overflow-wrap: anywhere; color: var(--color-parchment); }
+  .tag { background: var(--color-saffron); color: var(--color-basalt); font-size: 11px; font-weight: 800; letter-spacing: 0.06em; border-radius: 6px; padding: 1px 6px; }
+  .tag-real { background: var(--color-bean); }
+  .demo-tile { text-align: start; padding: 6px; border-radius: 16px; background: rgba(0,0,0,0.04); }
+  .demo-tile:active { transform: scale(0.98); }
+
+  .sms-bubble {
+    background: #e9e9eb; color: #111; border-radius: 20px 20px 6px 20px; padding: 12px 16px; font-size: 19px; line-height: 1.6;
+    font-family: var(--font-body);
+  }
+
+  .pict { border-radius: 16px; overflow: hidden; }
+  .about { overflow-wrap: anywhere; min-width: 0; }
+  .about h2 { font-family: var(--font-display); font-size: 22px; margin-bottom: 6px; color: var(--color-qudad); }
+  .about ul { list-style: disc; padding-inline-start: 1.2em; display: grid; gap: 6px; font-size: 17px; line-height: 1.55; }
+  .about section p { font-size: 17px; }
+
+  /* "possible …": the defect TYPE is a guess, set apart under a dashed rule, smaller and never in the big numerals */
+  .possible { border-top: 2px dashed color-mix(in srgb, var(--color-basalt) 28%, transparent); padding-top: 10px; }
+  .possible-head { font-size: 15px; font-weight: 700; color: color-mix(in srgb, var(--color-basalt) 78%, transparent); }
+  .possible ul { margin-top: 4px; display: grid; gap: 2px; }
+  .possible li { display: flex; align-items: center; gap: 8px; min-height: 36px; font-size: 17px; color: var(--color-basalt); }
+  .possible li .tabular-nums { font-weight: 700; }
+  .possible-note { margin-top: 4px; font-size: 13.5px; line-height: 1.4; color: color-mix(in srgb, var(--color-basalt) 70%, transparent); }
+
+  /* no voice in this build: a quiet, honest line instead of a button that does nothing */
+  .voice-coming { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; font-size: 15px; color: var(--color-parchment); border: 1.5px dashed color-mix(in srgb, var(--color-parchment) 55%, transparent); }
+  .voice-coming svg { opacity: 0.7; }
+
+  /* the bean ledger: one dot per bean; "sure" beans sit in a bordered tray, "not sure" beans outside it */
+  .ledger-total { display: flex; align-items: baseline; gap: 10px; }
+  .ledger-big { font-size: 48px; line-height: 1; }
+  .ledger-total-label { font-size: 19px; font-weight: 700; }
+  .ledger-sum { margin-top: 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 18px; font-weight: 700; color: color-mix(in srgb, var(--color-basalt) 72%, transparent); }
+  .ledger-sum .op { font-weight: 400; }
+  .ledger-sum-term { display: inline-flex; align-items: center; gap: 4px; }
+  .sure-chip, .unsure-chip { display: inline-block; width: 16px; height: 16px; border-radius: 50%; flex: none; }
+  .sure-chip { background: conic-gradient(var(--color-cherry-deep) 0 25%, var(--color-bean-deep) 25% 100%); }
+  .unsure-chip { border: 2px dashed #a07a10; }
+  .ledger-group { margin-top: 12px; border-radius: 16px; padding: 10px 12px 6px; }
+  .ledger-group-sure { border: 2px solid color-mix(in srgb, var(--color-basalt) 22%, transparent); }
+  .ledger-group-unsure { border: 2px dashed #c9a23a; }
+  .ledger-group-unsure.is-zero { opacity: 0.65; }
+  .ledger-head { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 19px; font-weight: 700; }
+  .ledger-head .sure-chip { width: 22px; height: 22px; margin-inline: 6px; }
+  .ledger-num { font-size: 32px; line-height: 1; }
+  .ledger-dots { display: block; margin: 4px 0 6px; }
+  .ledger-split { border-top: 1px solid color-mix(in srgb, var(--color-basalt) 14%, transparent); padding-inline-start: 14px; }
+  .ledger-split .count-row { min-height: 50px; font-size: 18px; }
+
+  /* "calibrated for: …" — a woven-tray rim around the cooperative's name */
+  .cal-chip {
+    display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 14px; border-radius: 999px;
+    background: var(--color-husk-2); color: var(--color-qudad); font-size: 15.5px; font-weight: 700; line-height: 1.25;
+    box-shadow: 0 0 0 2px #8a6236, inset 0 0 0 1px rgba(0, 0, 0, 0.25); text-align: start;
+  }
+  button.cal-chip:active { transform: scale(0.98); }
+
+  .calibrate .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: 0.02em; color: var(--color-parchment); display: flex; align-items: center; gap: 8px; }
+  .cal-steps { list-style: decimal; padding-inline-start: 1.3em; display: grid; gap: 6px; }
+  [dir="rtl"] .cal-steps { list-style: arabic-indic; }
+  .field {
+    min-height: 52px; border-radius: 14px; padding: 8px 14px; font-size: 19px; color: var(--color-basalt);
+    background: var(--color-qudad); border: 2px solid transparent;
+  }
+  .field:focus-visible { border-color: var(--color-saffron); outline: none; }
+  .btn.is-disabled, .btn:disabled { opacity: 0.45; pointer-events: none; box-shadow: none; }
+
+  /* the grader's two piles: 10 slots each fill with beans as they are labelled (the calibration screen's signature) */
+  .piles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pile { border-radius: 18px; padding: 10px 12px 12px; background: var(--color-husk-2); border: 2px solid color-mix(in srgb, var(--color-qudad) 12%, transparent); }
+  .pile-good { border-color: color-mix(in srgb, var(--color-bean) 55%, transparent); }
+  .pile-defect { border-color: color-mix(in srgb, var(--color-cherry) 55%, transparent); }
+  .pile-label { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; font-size: 16px; }
+  .pile-label .font-display { font-size: 26px; line-height: 1; }
+  .pile-of { font-size: 16px; color: var(--color-parchment); }
+  .pile-slots { margin-top: 8px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+  .slot { aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; border: 1.5px dashed color-mix(in srgb, var(--color-qudad) 28%, transparent); }
+  .slot.is-full { border: none; background: color-mix(in srgb, var(--color-qudad) 9%, transparent); animation: fade-in 0.25s ease-out both; }
+
+  .pen { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 5px; border-radius: 20px; background: color-mix(in srgb, var(--color-qudad) 8%, transparent); }
+  .pen-opt { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 54px; border-radius: 15px; font-size: 18px; font-weight: 700; color: var(--color-qudad); }
+  .pen-good.is-on { background: var(--color-bean); color: var(--color-basalt); box-shadow: 0 3px 0 var(--color-bean-deep); }
+  .pen-defect.is-on { background: var(--color-cherry-deep); color: #fff; box-shadow: 0 3px 0 #8f241b; }
+
+  .label-frame { margin: 0 auto; width: min(100%, calc(58dvh * var(--ar))); }
+  .label-frame svg g[role="button"]:focus, .label-frame svg g[role="button"]:focus-visible { outline: none; }
+  .label-frame svg g[role="button"]:focus-visible circle:first-child { stroke: var(--color-saffron); stroke-width: 4px; vector-effect: non-scaling-stroke; }
+
+  .crop-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .crop { position: relative; border-radius: 12px; overflow: hidden; border: 3px solid var(--color-bean); }
+  .crop-defect { border-color: var(--color-cherry); }
+  .crop img { display: block; width: 100%; aspect-ratio: 1; }
+  .crop span { position: absolute; inset-inline: 0; bottom: 0; font-size: 11px; font-weight: 800; text-align: center; background: rgba(26, 16, 11, 0.78); color: var(--color-qudad); }
+
+  /* calibration demo: an isolated sandbox, said in words and drawn as a dashed fence */
+  .demo-only { border: 2px dashed var(--color-saffron); border-radius: 14px; padding: 8px 12px; font-size: 16px; font-weight: 700; color: var(--color-saffron); text-align: center; }
+  .demo-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .demo-check { border-radius: 16px; padding: 10px 12px; background: color-mix(in srgb, var(--color-qudad) 6%, transparent); }
+  .demo-check .check-score { font-size: 44px; }
+  .crop.is-flipped { border-style: dashed; outline: 3px solid var(--color-saffron); outline-offset: -8px; }
+  .crop.is-flipped span { background: var(--color-saffron); color: var(--color-basalt); }
+
+  .check .check-score { font-size: 56px; line-height: 1; color: var(--color-bean); margin: 6px 0; }
+  .check.is-bad .check-score { color: var(--color-cherry-light); }
+  .check .check-score span { font-size: 26px; color: var(--color-parchment); }
+
+  .working-tray {
+    width: 220px; height: 220px; border-radius: 50%; padding: 14px;
+    background: repeating-radial-gradient(circle, #c79b5f 0 5px, #a77a43 5px 7px, #d6ad6f 7px 11px);
+    box-shadow: 0 0 0 6px #8a6236;
+    animation: spin 6s linear infinite;
+  }
+
+  /* one orchestrated moment: rings draw onto the photo, then the qamariya lights and the bracket sweeps in */
+  .ring { animation: ring-in 0.45s ease-out both; transform-box: fill-box; transform-origin: center; }
+  .gauge .pane { animation: fade-in 0.5s ease-out both; }
+  .gauge .bracket-arc { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 0.9s 0.45s ease-out forwards; }
+  .sheet { animation: rise 0.22s ease-out both; }
+}
+
+@keyframes ring-in { from { opacity: 0; transform: scale(1.6); } to { opacity: 1; transform: scale(1); } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 50% { opacity: 0.45; } }
+@keyframes rise { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-delay: 0ms !important; transition: none !important; }
+  .gauge .bracket-arc { stroke-dashoffset: 0; }
+}

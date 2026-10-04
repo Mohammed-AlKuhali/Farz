@@ -1,0 +1,3201 @@
+{
+ "protocol": "Honest evaluation + temperature/threshold fit for the licence-stated (\"clean\") v2 model.\n\nProtocol\n  * Leave-one-source-out over the 7 licensed sources, with afiyah_deteksi + afiyah_bijikopi held out TOGETHER as one group\n    (\"afiyah\"): 6 folds (clean_folds.py clean_loso_*). Every crop of the held-out group is scored by a model that never\n    saw that group.\n  * Weights: every held-out GROUP has total weight 1, split equally between its good and defect rows (so the afiyah twins\n    count once, and vicanadya16's 86k crops count as much as J4ckDev's 582).\n  * Deployed temperature T and the two thresholds (good if P(good) >= t_good, defect if P(defect) = 1 - P(good) >= t_defect)\n    are fitted on ALL 6 groups' held-out predictions pooled (train_eval.fit_T and train_eval.pick_pair, unchanged: answered\n    good-vs-defect accuracy >= 90% and stable for every higher t_defect; the pair with the largest coverage).\n    Per-group rows use T and thresholds fitted on the OTHER 5 groups only.\n  * The 5 sources that state no licence are TEST ONLY: scored by the shipped clean model (licensed.pt), never trained on.\n  * J4ckDev leave-one-photo-out (clean_lopo_*): each photo scored by the model trained without it.\nWrites reports_v2/clean_eval.json and CACHE/clean_emb_final_unlicensed.npz (embeddings for localcal.py).",
+ "licensed_sources": [
+  "j4ckdev",
+  "vicanadya16",
+  "afiyah_deteksi",
+  "afiyah_bijikopi",
+  "loja_yolo",
+  "lojano",
+  "samruddh_grading"
+ ],
+ "groups": {
+  "loja_yolo": [
+   "loja_yolo"
+  ],
+  "lojano": [
+   "lojano"
+  ],
+  "afiyah": [
+   "afiyah_deteksi",
+   "afiyah_bijikopi"
+  ],
+  "j4ckdev": [
+   "j4ckdev"
+  ],
+  "samruddh_grading": [
+   "samruddh_grading"
+  ],
+  "vicanadya16": [
+   "vicanadya16"
+  ]
+ },
+ "groups_present": [
+  "loja_yolo",
+  "lojano",
+  "afiyah",
+  "j4ckdev",
+  "samruddh_grading",
+  "vicanadya16"
+ ],
+ "groups_missing": [],
+ "unlicensed_test_only": [
+  "mfu17",
+  "usk_coffee",
+  "daffa_defect",
+  "mindforge_doubleside",
+  "notplying_defects"
+ ],
+ "final_weights": "$SCRATCHPAD/v2train/folds/licensed.pt",
+ "final_weights_train_info": {
+  "steps": 3000,
+  "batch": 128,
+  "lr": 0.002,
+  "seed": 0,
+  "train_seconds": 384.2,
+  "sampler_pool_sizes": {
+   "good": {
+    "j4ckdev": 195,
+    "loja_yolo": 146,
+    "lojano": 598,
+    "samruddh_grading": 467,
+    "afiyah_deteksi": 658,
+    "afiyah_bijikopi": 579
+   },
+   "dark": {
+    "j4ckdev": 148,
+    "loja_yolo": 472,
+    "vicanadya16": 22316
+   },
+   "insect": {
+    "j4ckdev": 55,
+    "loja_yolo": 135,
+    "vicanadya16": 16138
+   },
+   "broken": {
+    "j4ckdev": 85,
+    "loja_yolo": 367,
+    "vicanadya16": 24749
+   },
+   "unhulled": {
+    "j4ckdev": 99,
+    "loja_yolo": 191,
+    "vicanadya16": 20014
+   },
+   "other_defect": {
+    "vicanadya16": 2906
+   },
+   "defect_untyped": {
+    "lojano": 584,
+    "samruddh_grading": 870,
+    "afiyah_deteksi": 327,
+    "afiyah_bijikopi": 591
+   }
+  }
+ },
+ "deployed": {
+  "temperature": 2.045858915197777,
+  "pair_thresholds": {
+   "t_good": 0.5,
+   "t_defect": 0.91,
+   "answered_accuracy": 0.9023806727186368,
+   "coverage": 0.6947835711413415,
+   "answered": 89406,
+   "rule": "Two thresholds: good if P(good) >= tg, defect if 1 - P(good) >= td (tg >= 0.5 so a bean cannot be both).\n    For every tg in 0.50..0.95 take the lowest td in 0.50..0.99 whose weighted answered good-vs-defect accuracy is >= target\n    and stays >= target for every higher td answering >= min_answered beans; keep the (tg, td) with the largest weighted\n    coverage. Needed because P(good) is capped well below P(defect) (label smoothing over 6 classes + T > 1 + summing 5\n    defect classes), so one symmetric threshold almost never lets a bean be called good."
+  },
+  "symmetric_threshold": 0.9,
+  "symmetric_point": {
+   "threshold": 0.9,
+   "coverage": 0.5331365683732744,
+   "answered": 88838,
+   "accuracy_answered": 0.9007609697102356
+  },
+  "ece_binary_pooled_weighted": 0.11530892684634732,
+  "ece_binary_pooled_weighted_T1": 0.12659490863411194,
+  "fitted_on": "clean LOSO held-out predictions of ['loja_yolo', 'lojano', 'afiyah', 'j4ckdev', 'samruddh_grading', 'vicanadya16'] pooled; group- and class-balanced weights (afiyah twins = one group)"
+ },
+ "per_group": {
+  "loja_yolo": {
+   "T_fitted_on_other_groups": 2.285756567671259,
+   "pair_fitted_on_other_groups": [
+    0.58,
+    0.91
+   ],
+   "symmetric_fitted_on_other_groups": 0.91,
+   "all": {
+    "n": 1311,
+    "no_abstain": {
+     "n": 1311,
+     "n_by_kind": {
+      "good": 146,
+      "dark": 472,
+      "insect": 135,
+      "broken": 367,
+      "unhulled": 191
+     },
+     "per_kind_recall": {
+      "good": 0.8904109589041096,
+      "dark": 0.6292372881355932,
+      "insect": 0.23703703703703705,
+      "broken": 0.4141689373297003,
+      "unhulled": 0.1099476439790576
+     },
+     "macro_accuracy": 0.45616037307709956,
+     "accuracy_rows": 0.4820747520976354,
+     "binary": {
+      "good_recall": 0.3493150684931507,
+      "defect_recall": 0.992274678111588,
+      "accuracy": 0.9206712433257056,
+      "balanced_accuracy": 0.6707948733023693
+     },
+     "ece_binary": 0.05293415695238524,
+     "ece_top1": 0.03993491491731213,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        130,
+        3,
+        2,
+        7,
+        4,
+        0
+       ],
+       [
+        32,
+        297,
+        53,
+        44,
+        4,
+        42
+       ],
+       [
+        14,
+        73,
+        32,
+        10,
+        4,
+        2
+       ],
+       [
+        13,
+        170,
+        26,
+        152,
+        6,
+        0
+       ],
+       [
+        15,
+        155,
+        0,
+        0,
+        21,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.58,
+     "t_defect": 0.91,
+     "coverage": 0.6811594202898551,
+     "answered_binary_accuracy": 0.9944008958566629,
+     "good_beans": {
+      "n": 146,
+      "called_good": 0.15753424657534246,
+      "called_defect": 0.02054794520547945
+     },
+     "defect_beans": {
+      "n": 1165,
+      "called_good": 0.0017167381974248926,
+      "called_defect": 0.7424892703862661
+     },
+     "coverage_class_balanced": 0.4611441001822564,
+     "answered_accuracy_class_balanced": 0.9758592993013412
+    },
+    "at_symmetric": {
+     "threshold": 0.91,
+     "coverage": 0.662090007627765,
+     "answered": 868,
+     "answered_binary_accuracy": 0.9965437788018433,
+     "answered_typed_accuracy": 0.45276497695852536,
+     "by_kind": {
+      "good": {
+       "n": 146,
+       "coverage": 0.02054794520547945,
+       "answered_binary_accuracy": 0.0,
+       "answered_typed_accuracy": 0.0,
+       "called_good": 0.0,
+       "called_defect": 0.02054794520547945,
+       "unsure": 0.9794520547945206
+      },
+      "dark": {
+       "n": 472,
+       "coverage": 0.7563559322033898,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.6890756302521008,
+       "called_good": 0.0,
+       "called_defect": 0.7563559322033898,
+       "unsure": 0.24364406779661016
+      },
+      "insect": {
+       "n": 135,
+       "coverage": 0.6296296296296297,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.2823529411764706,
+       "called_good": 0.0,
+       "called_defect": 0.6296296296296297,
+       "unsure": 0.37037037037037035
+      },
+      "broken": {
+       "n": 367,
+       "coverage": 0.8065395095367848,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.3783783783783784,
+       "called_good": 0.0,
+       "called_defect": 0.8065395095367848,
+       "unsure": 0.19346049046321526
+      },
+      "unhulled": {
+       "n": 191,
+       "coverage": 0.6649214659685864,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.08661417322834646,
+       "called_good": 0.0,
+       "called_defect": 0.6649214659685864,
+       "unsure": 0.33507853403141363
+      }
+     }
+    },
+    "ece_binary": 0.05293415695238524
+   },
+   "at_deployed_T_and_pair": {
+    "n": 1311,
+    "no_abstain": {
+     "n": 1311,
+     "n_by_kind": {
+      "good": 146,
+      "dark": 472,
+      "insect": 135,
+      "broken": 367,
+      "unhulled": 191
+     },
+     "per_kind_recall": {
+      "good": 0.8904109589041096,
+      "dark": 0.6292372881355932,
+      "insect": 0.23703703703703705,
+      "broken": 0.4141689373297003,
+      "unhulled": 0.1099476439790576
+     },
+     "macro_accuracy": 0.45616037307709956,
+     "accuracy_rows": 0.4820747520976354,
+     "binary": {
+      "good_recall": 0.5068493150684932,
+      "defect_recall": 0.9879828326180258,
+      "accuracy": 0.9344012204424104,
+      "balanced_accuracy": 0.7474160738432595
+     },
+     "ece_binary": 0.0476369654844207,
+     "ece_top1": 0.02230861828523567,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        130,
+        3,
+        2,
+        7,
+        4,
+        0
+       ],
+       [
+        32,
+        297,
+        53,
+        44,
+        4,
+        42
+       ],
+       [
+        14,
+        73,
+        32,
+        10,
+        4,
+        2
+       ],
+       [
+        13,
+        170,
+        26,
+        152,
+        6,
+        0
+       ],
+       [
+        15,
+        155,
+        0,
+        0,
+        21,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.91,
+     "coverage": 0.7574370709382151,
+     "answered_binary_accuracy": 0.9828801611278952,
+     "good_beans": {
+      "n": 146,
+      "called_good": 0.5068493150684932,
+      "called_defect": 0.02054794520547945
+     },
+     "defect_beans": {
+      "n": 1165,
+      "called_good": 0.01201716738197425,
+      "called_defect": 0.7742489270386266
+     },
+     "coverage_class_balanced": 0.6568316773472865,
+     "answered_accuracy_class_balanced": 0.9752104582417731
+    },
+    "ece_binary": 0.0476369654844207
+   }
+  },
+  "lojano": {
+   "T_fitted_on_other_groups": 2.0012903963422737,
+   "pair_fitted_on_other_groups": [
+    0.5,
+    0.88
+   ],
+   "symmetric_fitted_on_other_groups": 0.87,
+   "all": {
+    "n": 1182,
+    "no_abstain": {
+     "n": 1182,
+     "n_by_kind": {
+      "good": 598,
+      "defect_untyped": 584
+     },
+     "per_kind_recall": {
+      "good": 0.411371237458194,
+      "defect_untyped": 0.9537671232876712
+     },
+     "macro_accuracy": 0.6825691803729326,
+     "accuracy_rows": 0.6793570219966159,
+     "binary": {
+      "good_recall": 0.2508361204013378,
+      "defect_recall": 0.9845890410958904,
+      "accuracy": 0.6133671742808798,
+      "balanced_accuracy": 0.6177125807486141
+     },
+     "ece_binary": 0.23348075997595036,
+     "ece_top1": 0.15539937217416988,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        246,
+        26,
+        145,
+        177,
+        3,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        27,
+        42,
+        46,
+        463,
+        5,
+        1
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.88,
+     "coverage": 0.7072758037225042,
+     "answered_binary_accuracy": 0.7643540669856459,
+     "good_beans": {
+      "n": 598,
+      "called_good": 0.2508361204013378,
+      "called_defect": 0.31438127090301005
+     },
+     "defect_beans": {
+      "n": 584,
+      "called_good": 0.015410958904109588,
+      "called_defect": 0.8373287671232876
+     },
+     "coverage_class_balanced": 0.7089785586658726,
+     "answered_accuracy_class_balanced": 0.7674173458590132
+    },
+    "at_symmetric": {
+     "threshold": 0.87,
+     "coverage": 0.5964467005076142,
+     "answered": 705,
+     "answered_binary_accuracy": 0.7120567375886525,
+     "answered_typed_accuracy": 0.7120567375886525,
+     "by_kind": {
+      "good": {
+       "n": 598,
+       "coverage": 0.3394648829431438,
+       "answered_binary_accuracy": 0.0,
+       "answered_typed_accuracy": 0.0,
+       "called_good": 0.0,
+       "called_defect": 0.3394648829431438,
+       "unsure": 0.6605351170568562
+      },
+      "defect_untyped": {
+       "n": 584,
+       "coverage": 0.8595890410958904,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 1.0,
+       "called_good": 0.0,
+       "called_defect": 0.8595890410958904,
+       "unsure": 0.1404109589041096
+      }
+     }
+    },
+    "ece_binary": 0.23348075997595036
+   },
+   "at_deployed_T_and_pair": {
+    "n": 1182,
+    "no_abstain": {
+     "n": 1182,
+     "n_by_kind": {
+      "good": 598,
+      "defect_untyped": 584
+     },
+     "per_kind_recall": {
+      "good": 0.411371237458194,
+      "defect_untyped": 0.9537671232876712
+     },
+     "macro_accuracy": 0.6825691803729326,
+     "accuracy_rows": 0.6793570219966159,
+     "binary": {
+      "good_recall": 0.24414715719063546,
+      "defect_recall": 0.9845890410958904,
+      "accuracy": 0.6099830795262268,
+      "balanced_accuracy": 0.614368099143263
+     },
+     "ece_binary": 0.2350718176754135,
+     "ece_top1": 0.1634426651828028,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        246,
+        26,
+        145,
+        177,
+        3,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        27,
+        42,
+        46,
+        463,
+        5,
+        1
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.91,
+     "coverage": 0.6015228426395939,
+     "answered_binary_accuracy": 0.7946554149085795,
+     "good_beans": {
+      "n": 598,
+      "called_good": 0.24414715719063546,
+      "called_defect": 0.22909698996655517
+     },
+     "defect_beans": {
+      "n": 584,
+      "called_good": 0.015410958904109588,
+      "called_defect": 0.7174657534246576
+     },
+     "coverage_class_balanced": 0.6030604297429789,
+     "answered_accuracy_class_balanced": 0.7972774063663297
+    },
+    "ece_binary": 0.2350718176754135
+   }
+  },
+  "afiyah": {
+   "T_fitted_on_other_groups": 2.0443486146327836,
+   "pair_fitted_on_other_groups": [
+    0.5,
+    0.89
+   ],
+   "symmetric_fitted_on_other_groups": 0.87,
+   "all": {
+    "n": 2155,
+    "no_abstain": {
+     "n": 2155,
+     "n_by_kind": {
+      "good": 1237,
+      "defect_untyped": 918
+     },
+     "per_kind_recall": {
+      "good": 0.43007275666936134,
+      "defect_untyped": 0.9945533769063181
+     },
+     "macro_accuracy": 0.7123130667878397,
+     "accuracy_rows": 0.6705336426914154,
+     "binary": {
+      "good_recall": 0.11317704122877931,
+      "defect_recall": 0.9989106753812637,
+      "accuracy": 0.49048723897911833,
+      "balanced_accuracy": 0.5560438583050215
+     },
+     "ece_binary": 0.3467628185472526,
+     "ece_top1": 0.23493680393915423,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        532,
+        177,
+        5,
+        308,
+        214,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        5,
+        328,
+        327,
+        214,
+        44,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.89,
+     "coverage": 0.608816705336427,
+     "answered_binary_accuracy": 0.7629573170731707,
+     "good_beans": {
+      "n": 1237,
+      "called_good": 0.11317704122877931,
+      "called_defect": 0.25060630557801133
+     },
+     "defect_beans": {
+      "n": 918,
+      "called_good": 0.0010893246187363835,
+      "called_defect": 0.9379084967320261
+     },
+     "coverage_class_balanced": 0.6513905840787767,
+     "answered_accuracy_class_balanced": 0.8068012983694676
+    },
+    "at_symmetric": {
+     "threshold": 0.87,
+     "coverage": 0.5874709976798144,
+     "answered": 1266,
+     "answered_binary_accuracy": 0.69826224328594,
+     "answered_typed_accuracy": 0.69826224328594,
+     "by_kind": {
+      "good": {
+       "n": 1237,
+       "coverage": 0.3088116410670978,
+       "answered_binary_accuracy": 0.0,
+       "answered_typed_accuracy": 0.0,
+       "called_good": 0.0,
+       "called_defect": 0.3088116410670978,
+       "unsure": 0.6911883589329022
+      },
+      "defect_untyped": {
+       "n": 918,
+       "coverage": 0.9629629629629629,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 1.0,
+       "called_good": 0.0,
+       "called_defect": 0.9629629629629629,
+       "unsure": 0.037037037037037035
+      }
+     }
+    },
+    "ece_binary": 0.3467628185472526
+   },
+   "at_deployed_T_and_pair": {
+    "n": 2155,
+    "no_abstain": {
+     "n": 2155,
+     "n_by_kind": {
+      "good": 1237,
+      "defect_untyped": 918
+     },
+     "per_kind_recall": {
+      "good": 0.43007275666936134,
+      "defect_untyped": 0.9945533769063181
+     },
+     "macro_accuracy": 0.7123130667878397,
+     "accuracy_rows": 0.6705336426914154,
+     "binary": {
+      "good_recall": 0.11317704122877931,
+      "defect_recall": 0.9989106753812637,
+      "accuracy": 0.49048723897911833,
+      "balanced_accuracy": 0.5560438583050215
+     },
+     "ece_binary": 0.34673988482932355,
+     "ece_top1": 0.2351283959316988,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        532,
+        177,
+        5,
+        308,
+        214,
+        1
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        5,
+        328,
+        327,
+        214,
+        44,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.91,
+     "coverage": 0.5470997679814386,
+     "answered_binary_accuracy": 0.8091603053435115,
+     "good_beans": {
+      "n": 1237,
+      "called_good": 0.11317704122877931,
+      "called_defect": 0.18108326596604687
+     },
+     "defect_beans": {
+      "n": 918,
+      "called_good": 0.0010893246187363835,
+      "called_defect": 0.8867102396514162
+     },
+     "coverage_class_balanced": 0.5910299357324895,
+     "answered_accuracy_class_balanced": 0.8458854792532556
+    },
+    "ece_binary": 0.34673988482932355
+   },
+   "per_source": {
+    "afiyah_deteksi": {
+     "n": 985,
+     "no_abstain": {
+      "n": 985,
+      "n_by_kind": {
+       "good": 658,
+       "defect_untyped": 327
+      },
+      "per_kind_recall": {
+       "good": 0.3434650455927052,
+       "defect_untyped": 0.9969418960244648
+      },
+      "macro_accuracy": 0.670203470808585,
+      "accuracy_rows": 0.5604060913705584,
+      "binary": {
+       "good_recall": 0.057750759878419454,
+       "defect_recall": 1.0,
+       "accuracy": 0.37055837563451777,
+       "balanced_accuracy": 0.5288753799392097
+      },
+      "ece_binary": 0.47232221844631117,
+      "ece_top1": 0.14159248482826767,
+      "confusion_rows_kinds_cols_classes": {
+       "rows": [
+        "good",
+        "dark",
+        "insect",
+        "broken",
+        "unhulled",
+        "other_defect",
+        "defect_untyped"
+       ],
+       "cols": [
+        "good",
+        "dark",
+        "insect",
+        "broken",
+        "unhulled",
+        "other_defect"
+       ],
+       "matrix": [
+        [
+         226,
+         171,
+         5,
+         180,
+         76,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         1,
+         198,
+         53,
+         40,
+         35,
+         0
+        ]
+       ]
+      }
+     },
+     "at_pair": {
+      "t_good": 0.5,
+      "t_defect": 0.89,
+      "coverage": 0.5695431472081218,
+      "answered_binary_accuracy": 0.6399286987522281,
+      "good_beans": {
+       "n": 658,
+       "called_good": 0.057750759878419454,
+       "called_defect": 0.3069908814589666
+      },
+      "defect_beans": {
+       "n": 327,
+       "called_good": 0.0,
+       "called_defect": 0.981651376146789
+      },
+      "coverage_class_balanced": 0.6731965087420876,
+      "answered_accuracy_class_balanced": 0.7719901414576559
+     },
+     "ece_binary": 0.47232221844631117
+    },
+    "afiyah_bijikopi": {
+     "n": 1170,
+     "no_abstain": {
+      "n": 1170,
+      "n_by_kind": {
+       "good": 579,
+       "defect_untyped": 591
+      },
+      "per_kind_recall": {
+       "good": 0.5284974093264249,
+       "defect_untyped": 0.9932318104906938
+      },
+      "macro_accuracy": 0.7608646099085593,
+      "accuracy_rows": 0.7632478632478632,
+      "binary": {
+       "good_recall": 0.17616580310880828,
+       "defect_recall": 0.9983079526226735,
+       "accuracy": 0.5914529914529915,
+       "balanced_accuracy": 0.5872368778657409
+      },
+      "ece_binary": 0.24105938179753722,
+      "ece_top1": 0.32426368820618073,
+      "confusion_rows_kinds_cols_classes": {
+       "rows": [
+        "good",
+        "dark",
+        "insect",
+        "broken",
+        "unhulled",
+        "other_defect",
+        "defect_untyped"
+       ],
+       "cols": [
+        "good",
+        "dark",
+        "insect",
+        "broken",
+        "unhulled",
+        "other_defect"
+       ],
+       "matrix": [
+        [
+         306,
+         6,
+         0,
+         128,
+         138,
+         1
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        [
+         4,
+         130,
+         274,
+         174,
+         9,
+         0
+        ]
+       ]
+      }
+     },
+     "at_pair": {
+      "t_good": 0.5,
+      "t_defect": 0.89,
+      "coverage": 0.6418803418803419,
+      "answered_binary_accuracy": 0.8548601864181092,
+      "good_beans": {
+       "n": 579,
+       "called_good": 0.17616580310880828,
+       "called_defect": 0.18652849740932642
+      },
+      "defect_beans": {
+       "n": 591,
+       "called_good": 0.001692047377326565,
+       "called_defect": 0.9137055837563451
+      },
+      "coverage_class_balanced": 0.6390459658259031,
+      "answered_accuracy_class_balanced": 0.8527331719061894
+     },
+     "ece_binary": 0.24105938179753722
+    }
+   }
+  },
+  "j4ckdev": {
+   "T_fitted_on_other_groups": 2.141042997524173,
+   "pair_fitted_on_other_groups": [
+    0.5,
+    0.89
+   ],
+   "symmetric_fitted_on_other_groups": 0.9,
+   "all": {
+    "n": 582,
+    "no_abstain": {
+     "n": 582,
+     "n_by_kind": {
+      "good": 195,
+      "dark": 148,
+      "insect": 55,
+      "broken": 85,
+      "unhulled": 99
+     },
+     "per_kind_recall": {
+      "good": 0.7230769230769231,
+      "dark": 0.38513513513513514,
+      "insect": 0.6545454545454545,
+      "broken": 0.6235294117647059,
+      "unhulled": 0.13131313131313133
+     },
+     "macro_accuracy": 0.5035200111670701,
+     "accuracy_rows": 0.5154639175257731,
+     "binary": {
+      "good_recall": 0.30256410256410254,
+      "defect_recall": 0.8475452196382429,
+      "accuracy": 0.6649484536082474,
+      "balanced_accuracy": 0.5750546611011728
+     },
+     "ece_binary": 0.1323566264781935,
+     "ece_top1": 0.0911535411911224,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        141,
+        20,
+        22,
+        6,
+        6,
+        0
+       ],
+       [
+        6,
+        57,
+        52,
+        1,
+        32,
+        0
+       ],
+       [
+        7,
+        12,
+        36,
+        0,
+        0,
+        0
+       ],
+       [
+        16,
+        10,
+        6,
+        53,
+        0,
+        0
+       ],
+       [
+        78,
+        1,
+        6,
+        1,
+        13,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.89,
+     "coverage": 0.6597938144329897,
+     "answered_binary_accuracy": 0.796875,
+     "good_beans": {
+      "n": 195,
+      "called_good": 0.30256410256410254,
+      "called_defect": 0.09743589743589744
+     },
+     "defect_beans": {
+      "n": 387,
+      "called_good": 0.1524547803617571,
+      "called_defect": 0.6382428940568475
+     },
+     "coverage_class_balanced": 0.5953488372093023,
+     "answered_accuracy_class_balanced": 0.7901308760683761
+    },
+    "at_symmetric": {
+     "threshold": 0.9,
+     "coverage": 0.44501718213058417,
+     "answered": 259,
+     "answered_binary_accuracy": 0.9343629343629344,
+     "answered_typed_accuracy": 0.5173745173745173,
+     "by_kind": {
+      "good": {
+       "n": 195,
+       "coverage": 0.08717948717948718,
+       "answered_binary_accuracy": 0.0,
+       "answered_typed_accuracy": 0.0,
+       "called_good": 0.0,
+       "called_defect": 0.08717948717948718,
+       "unsure": 0.9128205128205128
+      },
+      "dark": {
+       "n": 148,
+       "coverage": 0.8986486486486487,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.39097744360902253,
+       "called_good": 0.0,
+       "called_defect": 0.8986486486486487,
+       "unsure": 0.10135135135135136
+      },
+      "insect": {
+       "n": 55,
+       "coverage": 0.7090909090909091,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.7948717948717948,
+       "called_good": 0.0,
+       "called_defect": 0.7090909090909091,
+       "unsure": 0.2909090909090909
+      },
+      "broken": {
+       "n": 85,
+       "coverage": 0.6588235294117647,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.7678571428571429,
+       "called_good": 0.0,
+       "called_defect": 0.6588235294117647,
+       "unsure": 0.3411764705882353
+      },
+      "unhulled": {
+       "n": 99,
+       "coverage": 0.1414141414141414,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.5714285714285714,
+       "called_good": 0.0,
+       "called_defect": 0.1414141414141414,
+       "unsure": 0.8585858585858586
+      }
+     }
+    },
+    "ece_binary": 0.1323566264781935
+   },
+   "at_deployed_T_and_pair": {
+    "n": 582,
+    "no_abstain": {
+     "n": 582,
+     "n_by_kind": {
+      "good": 195,
+      "dark": 148,
+      "insect": 55,
+      "broken": 85,
+      "unhulled": 99
+     },
+     "per_kind_recall": {
+      "good": 0.7230769230769231,
+      "dark": 0.38513513513513514,
+      "insect": 0.6545454545454545,
+      "broken": 0.6235294117647059,
+      "unhulled": 0.13131313131313133
+     },
+     "macro_accuracy": 0.5035200111670701,
+     "accuracy_rows": 0.5154639175257731,
+     "binary": {
+      "good_recall": 0.3230769230769231,
+      "defect_recall": 0.8449612403100775,
+      "accuracy": 0.6701030927835051,
+      "balanced_accuracy": 0.5840190816935003
+     },
+     "ece_binary": 0.14123394462723685,
+     "ece_top1": 0.0964588852490437,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        141,
+        20,
+        22,
+        6,
+        6,
+        0
+       ],
+       [
+        6,
+        57,
+        52,
+        1,
+        32,
+        0
+       ],
+       [
+        7,
+        12,
+        36,
+        0,
+        0,
+        0
+       ],
+       [
+        16,
+        10,
+        6,
+        53,
+        0,
+        0
+       ],
+       [
+        78,
+        1,
+        6,
+        1,
+        13,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.91,
+     "coverage": 0.6494845360824743,
+     "answered_binary_accuracy": 0.8015873015873016,
+     "good_beans": {
+      "n": 195,
+      "called_good": 0.3230769230769231,
+      "called_defect": 0.07692307692307693
+     },
+     "defect_beans": {
+      "n": 387,
+      "called_good": 0.15503875968992248,
+      "called_defect": 0.6201550387596899
+     },
+     "coverage_class_balanced": 0.5875968992248062,
+     "answered_accuracy_class_balanced": 0.8026182261010758
+    },
+    "ece_binary": 0.14123394462723685
+   }
+  },
+  "samruddh_grading": {
+   "T_fitted_on_other_groups": 2.2325543069951936,
+   "pair_fitted_on_other_groups": [
+    0.54,
+    0.91
+   ],
+   "symmetric_fitted_on_other_groups": 0.9,
+   "all": {
+    "n": 1337,
+    "no_abstain": {
+     "n": 1337,
+     "n_by_kind": {
+      "good": 467,
+      "defect_untyped": 870
+     },
+     "per_kind_recall": {
+      "good": 0.854389721627409,
+      "defect_untyped": 0.8310344827586207
+     },
+     "macro_accuracy": 0.8427121021930148,
+     "accuracy_rows": 0.8391922213911742,
+     "binary": {
+      "good_recall": 0.6659528907922913,
+      "defect_recall": 0.9356321839080459,
+      "accuracy": 0.8414360508601346,
+      "balanced_accuracy": 0.8007925373501685
+     },
+     "ece_binary": 0.08073414247617203,
+     "ece_top1": 0.36334197180898586,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        399,
+        33,
+        20,
+        15,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        147,
+        131,
+        148,
+        422,
+        20,
+        2
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.54,
+     "t_defect": 0.91,
+     "coverage": 0.649962602842184,
+     "answered_binary_accuracy": 0.9309551208285386,
+     "good_beans": {
+      "n": 467,
+      "called_good": 0.588865096359743,
+      "called_defect": 0.034261241970021415
+     },
+     "defect_beans": {
+      "n": 870,
+      "called_good": 0.05057471264367816,
+      "called_defect": 0.6137931034482759
+     },
+     "coverage_class_balanced": 0.6437470772108591,
+     "answered_accuracy_class_balanced": 0.9341076972486887
+    },
+    "at_symmetric": {
+     "threshold": 0.9,
+     "coverage": 0.44203440538519073,
+     "answered": 591,
+     "answered_binary_accuracy": 0.9678510998307953,
+     "answered_typed_accuracy": 0.9678510998307953,
+     "by_kind": {
+      "good": {
+       "n": 467,
+       "coverage": 0.04068522483940043,
+       "answered_binary_accuracy": 0.0,
+       "answered_typed_accuracy": 0.0,
+       "called_good": 0.0,
+       "called_defect": 0.04068522483940043,
+       "unsure": 0.9593147751605996
+      },
+      "defect_untyped": {
+       "n": 870,
+       "coverage": 0.6574712643678161,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 1.0,
+       "called_good": 0.0,
+       "called_defect": 0.6574712643678161,
+       "unsure": 0.3425287356321839
+      }
+     }
+    },
+    "ece_binary": 0.08073414247617203
+   },
+   "at_deployed_T_and_pair": {
+    "n": 1337,
+    "no_abstain": {
+     "n": 1337,
+     "n_by_kind": {
+      "good": 467,
+      "defect_untyped": 870
+     },
+     "per_kind_recall": {
+      "good": 0.854389721627409,
+      "defect_untyped": 0.8310344827586207
+     },
+     "macro_accuracy": 0.8427121021930148,
+     "accuracy_rows": 0.8391922213911742,
+     "binary": {
+      "good_recall": 0.7109207708779444,
+      "defect_recall": 0.9160919540229885,
+      "accuracy": 0.8444278234854151,
+      "balanced_accuracy": 0.8135063624504664
+     },
+     "ece_binary": 0.06644657696979579,
+     "ece_top1": 0.3329754719599567,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        399,
+        33,
+        20,
+        15,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        147,
+        131,
+        148,
+        422,
+        20,
+        2
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.91,
+     "coverage": 0.7389678384442783,
+     "answered_binary_accuracy": 0.9078947368421053,
+     "good_beans": {
+      "n": 467,
+      "called_good": 0.7109207708779444,
+      "called_defect": 0.03854389721627409
+     },
+     "defect_beans": {
+      "n": 870,
+      "called_good": 0.0839080459770115,
+      "called_defect": 0.6494252873563219
+     },
+     "coverage_class_balanced": 0.7413990007137757,
+     "answered_accuracy_class_balanced": 0.9174183246299253
+    },
+    "ece_binary": 0.06644657696979579
+   }
+  },
+  "vicanadya16": {
+   "T_fitted_on_other_groups": 1.613087213117768,
+   "pair_fitted_on_other_groups": [
+    0.7,
+    0.96
+   ],
+   "symmetric_fitted_on_other_groups": 0.96,
+   "all": {
+    "n": 86123,
+    "no_abstain": {
+     "n": 86123,
+     "n_by_kind": {
+      "dark": 22316,
+      "insect": 16138,
+      "broken": 24749,
+      "unhulled": 20014,
+      "other_defect": 2906
+     },
+     "per_kind_recall": {
+      "dark": 0.04951604230148772,
+      "insect": 0.0004337588300904697,
+      "broken": 0.9860600428300134,
+      "unhulled": 0.20215848905765965,
+      "other_defect": 0.0
+     },
+     "macro_accuracy": 0.24763366660385025,
+     "accuracy_rows": 0.34325325406685786,
+     "binary": {
+      "good_recall": null,
+      "defect_recall": 0.9997909965978891,
+      "accuracy": 0.9997909965978891,
+      "balanced_accuracy": 0.9997909965978891
+     },
+     "ece_binary": 0.011008354735640507,
+     "ece_top1": 0.37004832069044236,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        9,
+        1105,
+        18,
+        20862,
+        322,
+        0
+       ],
+       [
+        2,
+        72,
+        7,
+        16030,
+        27,
+        0
+       ],
+       [
+        20,
+        116,
+        14,
+        24404,
+        195,
+        0
+       ],
+       [
+        127,
+        977,
+        170,
+        14694,
+        4046,
+        0
+       ],
+       [
+        6,
+        34,
+        3,
+        2863,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.7,
+     "t_defect": 0.96,
+     "coverage": 0.9697525631945009,
+     "answered_binary_accuracy": 0.9999760530664048,
+     "good_beans": {
+      "n": 0,
+      "called_good": null,
+      "called_defect": null
+     },
+     "defect_beans": {
+      "n": 86123,
+      "called_good": 2.322260023454826e-05,
+      "called_defect": 0.9697293405942663
+     },
+     "coverage_class_balanced": 0.969752563194501,
+     "answered_accuracy_class_balanced": 0.9999760530664049
+    },
+    "at_symmetric": {
+     "threshold": 0.96,
+     "coverage": 0.9697293405942663,
+     "answered": 83516,
+     "answered_binary_accuracy": 1.0,
+     "answered_typed_accuracy": 0.34388620144642945,
+     "by_kind": {
+      "dark": {
+       "n": 22316,
+       "coverage": 0.9711865925793153,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.04364877958750519,
+       "called_good": 0.0,
+       "called_defect": 0.9711865925793153,
+       "unsure": 0.028813407420684712
+      },
+      "insect": {
+       "n": 16138,
+       "coverage": 0.9961581360763415,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.00043543169942771834,
+       "called_good": 0.0,
+       "called_defect": 0.9961581360763415,
+       "unsure": 0.003841863923658446
+      },
+      "broken": {
+       "n": 24749,
+       "coverage": 0.9865045052325346,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.9887364325209912,
+       "called_good": 0.0,
+       "called_defect": 0.9865045052325346,
+       "unsure": 0.013495494767465352
+      },
+      "unhulled": {
+       "n": 20014,
+       "coverage": 0.9239032677126012,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.196149478124493,
+       "called_good": 0.0,
+       "called_defect": 0.9239032677126012,
+       "unsure": 0.07609673228739883
+      },
+      "other_defect": {
+       "n": 2906,
+       "coverage": 0.9845147969717826,
+       "answered_binary_accuracy": 1.0,
+       "answered_typed_accuracy": 0.0,
+       "called_good": 0.0,
+       "called_defect": 0.9845147969717826,
+       "unsure": 0.015485203028217482
+      }
+     }
+    },
+    "ece_binary": 0.011008354735640507
+   },
+   "at_deployed_T_and_pair": {
+    "n": 86123,
+    "no_abstain": {
+     "n": 86123,
+     "n_by_kind": {
+      "dark": 22316,
+      "insect": 16138,
+      "broken": 24749,
+      "unhulled": 20014,
+      "other_defect": 2906
+     },
+     "per_kind_recall": {
+      "dark": 0.04951604230148772,
+      "insect": 0.0004337588300904697,
+      "broken": 0.9860600428300134,
+      "unhulled": 0.20215848905765965,
+      "other_defect": 0.0
+     },
+     "macro_accuracy": 0.24763366660385025,
+     "accuracy_rows": 0.34325325406685786,
+     "binary": {
+      "good_recall": null,
+      "defect_recall": 0.9998838869988272,
+      "accuracy": 0.9998838869988272,
+      "balanced_accuracy": 0.9998838869988272
+     },
+     "ece_binary": 0.020206041847432202,
+     "ece_top1": 0.27313442176715536,
+     "confusion_rows_kinds_cols_classes": {
+      "rows": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect",
+       "defect_untyped"
+      ],
+      "cols": [
+       "good",
+       "dark",
+       "insect",
+       "broken",
+       "unhulled",
+       "other_defect"
+      ],
+      "matrix": [
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       [
+        9,
+        1105,
+        18,
+        20862,
+        322,
+        0
+       ],
+       [
+        2,
+        72,
+        7,
+        16030,
+        27,
+        0
+       ],
+       [
+        20,
+        116,
+        14,
+        24404,
+        195,
+        0
+       ],
+       [
+        127,
+        977,
+        170,
+        14694,
+        4046,
+        0
+       ],
+       [
+        6,
+        34,
+        3,
+        2863,
+        0,
+        0
+       ],
+       [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+       ]
+      ]
+     }
+    },
+    "at_pair": {
+     "t_good": 0.5,
+     "t_defect": 0.91,
+     "coverage": 0.9887834840867132,
+     "answered_binary_accuracy": 0.9998825698415867,
+     "good_beans": {
+      "n": 0,
+      "called_good": null,
+      "called_defect": null
+     },
+     "defect_beans": {
+      "n": 86123,
+      "called_good": 0.00011611300117274131,
+      "called_defect": 0.9886673710855405
+     },
+     "coverage_class_balanced": 0.9887834840867132,
+     "answered_accuracy_class_balanced": 0.9998825698415869
+    },
+    "ece_binary": 0.020206041847432202
+   }
+  }
+ },
+ "loso_summary": {
+  "mean_balanced_accuracy_groups_with_good_beans": 0.6440797021614693,
+  "groups_with_good_beans": [
+   "loja_yolo",
+   "lojano",
+   "afiyah",
+   "j4ckdev",
+   "samruddh_grading"
+  ],
+  "groups_below_90_answered_at_own_pair": [
+   "lojano",
+   "afiyah",
+   "j4ckdev"
+  ]
+ },
+ "integrity_final_logits_vs_saved": {
+  "rows": 25453,
+  "same_rows": true,
+  "max_abs_logit_diff": 0.0
+ },
+ "unlicensed_test": {
+  "mfu17": {
+   "n": 962,
+   "no_abstain": {
+    "n": 962,
+    "n_by_kind": {
+     "dark": 303,
+     "insect": 111,
+     "broken": 250,
+     "unhulled": 161,
+     "other_defect": 137
+    },
+    "per_kind_recall": {
+     "dark": 0.46204620462046203,
+     "insect": 0.5405405405405406,
+     "broken": 0.68,
+     "unhulled": 0.639751552795031,
+     "other_defect": 0.0
+    },
+    "macro_accuracy": 0.4644676595912068,
+    "accuracy_rows": 0.4916839916839917,
+    "binary": {
+     "good_recall": null,
+     "defect_recall": 0.9625779625779626,
+     "accuracy": 0.9625779625779626,
+     "balanced_accuracy": 0.9625779625779626
+    },
+    "ece_binary": 0.08020809026406281,
+    "ece_top1": 0.04172186109450072,
+    "confusion_rows_kinds_cols_classes": {
+     "rows": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect",
+      "defect_untyped"
+     ],
+     "cols": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect"
+     ],
+     "matrix": [
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       14,
+       140,
+       64,
+       62,
+       22,
+       1
+      ],
+      [
+       15,
+       12,
+       60,
+       17,
+       7,
+       0
+      ],
+      [
+       22,
+       25,
+       28,
+       170,
+       5,
+       0
+      ],
+      [
+       2,
+       32,
+       13,
+       11,
+       103,
+       0
+      ],
+      [
+       41,
+       11,
+       9,
+       63,
+       13,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "at_pair": {
+    "t_good": 0.5,
+    "t_defect": 0.91,
+    "coverage": 0.7047817047817048,
+    "answered_binary_accuracy": 0.9469026548672567,
+    "good_beans": {
+     "n": 0,
+     "called_good": null,
+     "called_defect": null
+    },
+    "defect_beans": {
+     "n": 962,
+     "called_good": 0.037422037422037424,
+     "called_defect": 0.6673596673596673
+    },
+    "coverage_class_balanced": 0.7047817047817049,
+    "answered_accuracy_class_balanced": 0.9469026548672564
+   },
+   "at_symmetric": {
+    "threshold": 0.9,
+    "coverage": 0.7016632016632016,
+    "answered": 675,
+    "answered_binary_accuracy": 1.0,
+    "answered_typed_accuracy": 0.6074074074074074,
+    "by_kind": {
+     "dark": {
+      "n": 303,
+      "coverage": 0.8151815181518152,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.5263157894736842,
+      "called_good": 0.0,
+      "called_defect": 0.8151815181518152,
+      "unsure": 0.1848184818481848
+     },
+     "insect": {
+      "n": 111,
+      "coverage": 0.5675675675675675,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.6666666666666666,
+      "called_good": 0.0,
+      "called_defect": 0.5675675675675675,
+      "unsure": 0.43243243243243246
+     },
+     "broken": {
+      "n": 250,
+      "coverage": 0.732,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.7704918032786885,
+      "called_good": 0.0,
+      "called_defect": 0.732,
+      "unsure": 0.268
+     },
+     "unhulled": {
+      "n": 161,
+      "coverage": 0.937888198757764,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.6423841059602649,
+      "called_good": 0.0,
+      "called_defect": 0.937888198757764,
+      "unsure": 0.062111801242236024
+     },
+     "other_defect": {
+      "n": 137,
+      "coverage": 0.22627737226277372,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.0,
+      "called_good": 0.0,
+      "called_defect": 0.22627737226277372,
+      "unsure": 0.7737226277372263
+     }
+    }
+   },
+   "ece_binary": 0.08020809026406281
+  },
+  "usk_coffee": {
+   "n": 7969,
+   "no_abstain": {
+    "n": 7969,
+    "n_by_kind": {
+     "good": 5970,
+     "defect_untyped": 1999
+    },
+    "per_kind_recall": {
+     "good": 0.5748743718592965,
+     "defect_untyped": 0.6258129064532266
+    },
+    "macro_accuracy": 0.6003436391562615,
+    "accuracy_rows": 0.5876521520893462,
+    "binary": {
+     "good_recall": 0.28559463986599665,
+     "defect_recall": 0.791895947973987,
+     "accuracy": 0.412598820429163,
+     "balanced_accuracy": 0.5387452939199918
+    },
+    "ece_binary": 0.32365804424104605,
+    "ece_top1": 0.14529691077532664,
+    "confusion_rows_kinds_cols_classes": {
+     "rows": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect",
+      "defect_untyped"
+     ],
+     "cols": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect"
+     ],
+     "matrix": [
+      [
+       3432,
+       25,
+       962,
+       1528,
+       23,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       748,
+       122,
+       513,
+       580,
+       35,
+       1
+      ]
+     ]
+    }
+   },
+   "at_pair": {
+    "t_good": 0.5,
+    "t_defect": 0.91,
+    "coverage": 0.46342075542728073,
+    "answered_binary_accuracy": 0.6504197129704847,
+    "good_beans": {
+     "n": 5970,
+     "called_good": 0.28559463986599665,
+     "called_defect": 0.14656616415410384
+    },
+    "defect_beans": {
+     "n": 1999,
+     "called_good": 0.208104052026013,
+     "called_defect": 0.3486743371685843
+    },
+    "coverage_class_balanced": 0.49446959660734885,
+    "answered_accuracy_class_balanced": 0.6413629689129752
+   },
+   "at_symmetric": {
+    "threshold": 0.9,
+    "coverage": 0.21721671476973273,
+    "answered": 1731,
+    "answered_binary_accuracy": 0.42980935875216636,
+    "answered_typed_accuracy": 0.42980935875216636,
+    "by_kind": {
+     "good": {
+      "n": 5970,
+      "coverage": 0.16532663316582916,
+      "answered_binary_accuracy": 0.0,
+      "answered_typed_accuracy": 0.0,
+      "called_good": 0.0,
+      "called_defect": 0.16532663316582916,
+      "unsure": 0.8346733668341708
+     },
+     "defect_untyped": {
+      "n": 1999,
+      "coverage": 0.3721860930465233,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 1.0,
+      "called_good": 0.0,
+      "called_defect": 0.3721860930465233,
+      "unsure": 0.6278139069534767
+     }
+    }
+   },
+   "ece_binary": 0.32365804424104605
+  },
+  "daffa_defect": {
+   "n": 1000,
+   "no_abstain": {
+    "n": 1000,
+    "n_by_kind": {
+     "good": 500,
+     "defect_untyped": 500
+    },
+    "per_kind_recall": {
+     "good": 0.35,
+     "defect_untyped": 0.886
+    },
+    "macro_accuracy": 0.618,
+    "accuracy_rows": 0.618,
+    "binary": {
+     "good_recall": 0.114,
+     "defect_recall": 0.968,
+     "accuracy": 0.541,
+     "balanced_accuracy": 0.541
+    },
+    "ece_binary": 0.29635743027472444,
+    "ece_top1": 0.22350948786687677,
+    "confusion_rows_kinds_cols_classes": {
+     "rows": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect",
+      "defect_untyped"
+     ],
+     "cols": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect"
+     ],
+     "matrix": [
+      [
+       175,
+       0,
+       303,
+       21,
+       1,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       57,
+       34,
+       204,
+       159,
+       46,
+       0
+      ]
+     ]
+    }
+   },
+   "at_pair": {
+    "t_good": 0.5,
+    "t_defect": 0.91,
+    "coverage": 0.538,
+    "answered_binary_accuracy": 0.7509293680297398,
+    "good_beans": {
+     "n": 500,
+     "called_good": 0.114,
+     "called_defect": 0.236
+    },
+    "defect_beans": {
+     "n": 500,
+     "called_good": 0.032,
+     "called_defect": 0.694
+    },
+    "coverage_class_balanced": 0.5379999999999998,
+    "answered_accuracy_class_balanced": 0.7509293680297398
+   },
+   "at_symmetric": {
+    "threshold": 0.9,
+    "coverage": 0.496,
+    "answered": 496,
+    "answered_binary_accuracy": 0.7217741935483871,
+    "answered_typed_accuracy": 0.7217741935483871,
+    "by_kind": {
+     "good": {
+      "n": 500,
+      "coverage": 0.276,
+      "answered_binary_accuracy": 0.0,
+      "answered_typed_accuracy": 0.0,
+      "called_good": 0.0,
+      "called_defect": 0.276,
+      "unsure": 0.724
+     },
+     "defect_untyped": {
+      "n": 500,
+      "coverage": 0.716,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 1.0,
+      "called_good": 0.0,
+      "called_defect": 0.716,
+      "unsure": 0.284
+     }
+    }
+   },
+   "ece_binary": 0.29635743027472444
+  },
+  "mindforge_doubleside": {
+   "n": 7372,
+   "no_abstain": {
+    "n": 7372,
+    "n_by_kind": {
+     "good": 1447,
+     "dark": 1026,
+     "insect": 1039,
+     "broken": 2357,
+     "other_defect": 1503
+    },
+    "per_kind_recall": {
+     "good": 0.6268140981340705,
+     "dark": 0.47076023391812866,
+     "insect": 0.5293551491819056,
+     "broken": 0.6376750106067034,
+     "other_defect": 0.004657351962741184
+    },
+    "macro_accuracy": 0.4538523687607098,
+    "accuracy_rows": 0.4679869777536625,
+    "binary": {
+     "good_recall": 0.29163787145818937,
+     "defect_recall": 0.9578059071729957,
+     "accuracy": 0.8270482908301682,
+     "balanced_accuracy": 0.6247218893155926
+    },
+    "ece_binary": 0.03069012504568227,
+    "ece_top1": 0.01854784295283999,
+    "confusion_rows_kinds_cols_classes": {
+     "rows": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect",
+      "defect_untyped"
+     ],
+     "cols": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect"
+     ],
+     "matrix": [
+      [
+       907,
+       50,
+       185,
+       289,
+       14,
+       2
+      ],
+      [
+       96,
+       483,
+       194,
+       235,
+       13,
+       5
+      ],
+      [
+       238,
+       74,
+       550,
+       171,
+       6,
+       0
+      ],
+      [
+       175,
+       266,
+       392,
+       1503,
+       13,
+       8
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       293,
+       181,
+       242,
+       740,
+       40,
+       7
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "at_pair": {
+    "t_good": 0.5,
+    "t_defect": 0.91,
+    "coverage": 0.5865436787845903,
+    "answered_binary_accuracy": 0.9123496762257169,
+    "good_beans": {
+     "n": 1447,
+     "called_good": 0.29163787145818937,
+     "called_defect": 0.08914996544574982
+    },
+    "defect_beans": {
+     "n": 5925,
+     "called_good": 0.04219409282700422,
+     "called_defect": 0.5945991561181435
+    },
+    "coverage_class_balanced": 0.5087905429245434,
+    "answered_accuracy_class_balanced": 0.8709252165755831
+   },
+   "at_symmetric": {
+    "threshold": 0.9,
+    "coverage": 0.5282148670645687,
+    "answered": 3894,
+    "answered_binary_accuracy": 0.96045197740113,
+    "answered_typed_accuracy": 0.49486389316897794,
+    "by_kind": {
+     "good": {
+      "n": 1447,
+      "coverage": 0.10642709053213545,
+      "answered_binary_accuracy": 0.0,
+      "answered_typed_accuracy": 0.0,
+      "called_good": 0.0,
+      "called_defect": 0.10642709053213545,
+      "unsure": 0.8935729094678645
+     },
+     "dark": {
+      "n": 1026,
+      "coverage": 0.6461988304093568,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.5444947209653092,
+      "called_good": 0.0,
+      "called_defect": 0.6461988304093568,
+      "unsure": 0.3538011695906433
+     },
+     "insect": {
+      "n": 1039,
+      "coverage": 0.44850818094321465,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.6587982832618026,
+      "called_good": 0.0,
+      "called_defect": 0.44850818094321465,
+      "unsure": 0.5514918190567853
+     },
+     "broken": {
+      "n": 2357,
+      "coverage": 0.7624098430207892,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.6983861992209237,
+      "called_good": 0.0,
+      "called_defect": 0.7624098430207892,
+      "unsure": 0.23759015697921085
+     },
+     "other_defect": {
+      "n": 1503,
+      "coverage": 0.541583499667332,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.004914004914004914,
+      "called_good": 0.0,
+      "called_defect": 0.541583499667332,
+      "unsure": 0.458416500332668
+     }
+    }
+   },
+   "ece_binary": 0.03069012504568227
+  },
+  "notplying_defects": {
+   "n": 8150,
+   "no_abstain": {
+    "n": 8150,
+    "n_by_kind": {
+     "dark": 1363,
+     "insect": 1362,
+     "broken": 5142,
+     "unhulled": 257,
+     "other_defect": 26
+    },
+    "per_kind_recall": {
+     "dark": 0.2413793103448276,
+     "insect": 0.2459618208516887,
+     "broken": 0.6493582263710619,
+     "unhulled": 0.0,
+     "other_defect": 0.3076923076923077
+    },
+    "macro_accuracy": 0.2888783330519772,
+    "accuracy_rows": 0.49214723926380366,
+    "binary": {
+     "good_recall": null,
+     "defect_recall": 0.9992638036809816,
+     "accuracy": 0.9992638036809816,
+     "balanced_accuracy": 0.9992638036809816
+    },
+    "ece_binary": 0.06091130614915706,
+    "ece_top1": 0.11430542219899191,
+    "confusion_rows_kinds_cols_classes": {
+     "rows": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect",
+      "defect_untyped"
+     ],
+     "cols": [
+      "good",
+      "dark",
+      "insect",
+      "broken",
+      "unhulled",
+      "other_defect"
+     ],
+     "matrix": [
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ],
+      [
+       3,
+       329,
+       178,
+       218,
+       28,
+       607
+      ],
+      [
+       3,
+       75,
+       335,
+       353,
+       3,
+       593
+      ],
+      [
+       46,
+       208,
+       722,
+       3339,
+       6,
+       821
+      ],
+      [
+       8,
+       6,
+       42,
+       136,
+       0,
+       65
+      ],
+      [
+       2,
+       0,
+       2,
+       14,
+       0,
+       8
+      ],
+      [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     ]
+    }
+   },
+   "at_pair": {
+    "t_good": 0.5,
+    "t_defect": 0.91,
+    "coverage": 0.8511656441717791,
+    "answered_binary_accuracy": 0.9991350727980395,
+    "good_beans": {
+     "n": 0,
+     "called_good": null,
+     "called_defect": null
+    },
+    "defect_beans": {
+     "n": 8150,
+     "called_good": 0.000736196319018405,
+     "called_defect": 0.8504294478527608
+    },
+    "coverage_class_balanced": 0.8511656441717791,
+    "answered_accuracy_class_balanced": 0.9991350727980396
+   },
+   "at_symmetric": {
+    "threshold": 0.9,
+    "coverage": 0.8921472392638037,
+    "answered": 7271,
+    "answered_binary_accuracy": 1.0,
+    "answered_typed_accuracy": 0.4958052537477651,
+    "by_kind": {
+     "dark": {
+      "n": 1363,
+      "coverage": 0.9383712399119589,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.2470680218921032,
+      "called_good": 0.0,
+      "called_defect": 0.9383712399119589,
+      "unsure": 0.061628760088041086
+     },
+     "insect": {
+      "n": 1362,
+      "coverage": 0.8972099853157122,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.24058919803600654,
+      "called_good": 0.0,
+      "called_defect": 0.8972099853157122,
+      "unsure": 0.1027900146842878
+     },
+     "broken": {
+      "n": 5142,
+      "coverage": 0.8856476079346558,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.6565656565656566,
+      "called_good": 0.0,
+      "called_defect": 0.8856476079346558,
+      "unsure": 0.11435239206534423
+     },
+     "unhulled": {
+      "n": 257,
+      "coverage": 0.7859922178988327,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.0,
+      "called_good": 0.0,
+      "called_defect": 0.7859922178988327,
+      "unsure": 0.2140077821011673
+     },
+     "other_defect": {
+      "n": 26,
+      "coverage": 0.5384615384615384,
+      "answered_binary_accuracy": 1.0,
+      "answered_typed_accuracy": 0.35714285714285715,
+      "called_good": 0.0,
+      "called_defect": 0.5384615384615384,
+      "unsure": 0.46153846153846156
+     }
+    }
+   },
+   "ece_binary": 0.06091130614915706
+  }
+ },
+ "reference_all_sources_v2_LOSO": {
+  "mfu17": 0.8825363825363826,
+  "usk_coffee": 0.5322420841911742,
+  "daffa_defect": 0.57,
+  "mindforge_doubleside": 0.7327678683381009,
+  "notplying_defects": 0.996441717791411
+ },
+ "reference_licensed_model_old_fit": {
+  "mfu17": 0.9355509355509356,
+  "usk_coffee": 0.5683538167743838,
+  "daffa_defect": 0.5900000000000001,
+  "mindforge_doubleside": 0.6931488107214403,
+  "notplying_defects": 0.9979141104294479
+ },
+ "j4ck_lopo": {
+  "T": 2.141042997524173,
+  "pair": [
+   0.5,
+   0.89
+  ],
+  "photos": {
+   "BrocadoLeve": {
+    "n": 30,
+    "class": "insect",
+    "typed_recall": 0.26666666666666666,
+    "good_vs_defect_correct_no_abstain": 0.9666666666666667,
+    "coverage_at_pair": 0.5666666666666667,
+    "answered_correct_at_pair": 0.9411764705882353
+   },
+   "BrocadoSevero": {
+    "n": 25,
+    "class": "insect",
+    "typed_recall": 0.32,
+    "good_vs_defect_correct_no_abstain": 1.0,
+    "coverage_at_pair": 1.0,
+    "answered_correct_at_pair": 1.0
+   },
+   "CerezaSeca": {
+    "n": 9,
+    "class": "unhulled",
+    "typed_recall": 0.0,
+    "good_vs_defect_correct_no_abstain": 1.0,
+    "coverage_at_pair": 1.0,
+    "answered_correct_at_pair": 1.0
+   },
+   "Concha": {
+    "n": 33,
+    "class": "broken",
+    "typed_recall": 0.7272727272727273,
+    "good_vs_defect_correct_no_abstain": 0.9696969696969697,
+    "coverage_at_pair": 0.8181818181818182,
+    "answered_correct_at_pair": 0.9629629629629629
+   },
+   "DXHongo": {
+    "n": 12,
+    "class": "dark",
+    "typed_recall": 0.25,
+    "good_vs_defect_correct_no_abstain": 1.0,
+    "coverage_at_pair": 0.9166666666666666,
+    "answered_correct_at_pair": 1.0
+   },
+   "Inmaduro": {
+    "n": 16,
+    "class": "broken",
+    "typed_recall": 0.1875,
+    "good_vs_defect_correct_no_abstain": 0.9375,
+    "coverage_at_pair": 0.625,
+    "answered_correct_at_pair": 0.9
+   },
+   "MarronAVinagre": {
+    "n": 36,
+    "class": "dark",
+    "typed_recall": 0.4444444444444444,
+    "good_vs_defect_correct_no_abstain": 0.9722222222222222,
+    "coverage_at_pair": 0.8333333333333334,
+    "answered_correct_at_pair": 0.9666666666666667
+   },
+   "Negros": {
+    "n": 100,
+    "class": "dark",
+    "typed_recall": 0.19,
+    "good_vs_defect_correct_no_abstain": 1.0,
+    "coverage_at_pair": 0.98,
+    "answered_correct_at_pair": 1.0
+   },
+   "Normales": {
+    "n": 195,
+    "class": "good",
+    "typed_recall": 0.015384615384615385,
+    "good_vs_defect_correct_no_abstain": 0.0,
+    "coverage_at_pair": 0.7384615384615385,
+    "answered_correct_at_pair": 0.0
+   },
+   "PMordidoCortado": {
+    "n": 36,
+    "class": "broken",
+    "typed_recall": 0.9166666666666666,
+    "good_vs_defect_correct_no_abstain": 1.0,
+    "coverage_at_pair": 0.8333333333333334,
+    "answered_correct_at_pair": 1.0
+   },
+   "Pergamino": {
+    "n": 90,
+    "class": "unhulled",
+    "typed_recall": 0.022222222222222223,
+    "good_vs_defect_correct_no_abstain": 0.8,
+    "coverage_at_pair": 0.5333333333333333,
+    "answered_correct_at_pair": 0.625
+   }
+  },
+  "photos_present": 11,
+  "typed_accuracy_bean_weighted_same_10_as_v1": 0.2997416020671835,
+  "summary_all": {
+   "n": 582,
+   "n_by_kind": {
+    "good": 195,
+    "dark": 148,
+    "insect": 55,
+    "broken": 85,
+    "unhulled": 99
+   },
+   "per_kind_recall": {
+    "good": 0.015384615384615385,
+    "dark": 0.25675675675675674,
+    "insect": 0.2909090909090909,
+    "broken": 0.7058823529411765,
+    "unhulled": 0.020202020202020204
+   },
+   "macro_accuracy": 0.25782696723873194,
+   "accuracy_rows": 0.20446735395189003,
+   "binary": {
+    "good_recall": 0.0,
+    "defect_recall": 0.9431524547803618,
+    "accuracy": 0.627147766323024,
+    "balanced_accuracy": 0.4715762273901809
+   },
+   "ece_binary": 0.26994000644430083,
+   "ece_top1": 0.29521338591089047,
+   "confusion_rows_kinds_cols_classes": {
+    "rows": [
+     "good",
+     "dark",
+     "insect",
+     "broken",
+     "unhulled",
+     "other_defect",
+     "defect_untyped"
+    ],
+    "cols": [
+     "good",
+     "dark",
+     "insect",
+     "broken",
+     "unhulled",
+     "other_defect"
+    ],
+    "matrix": [
+     [
+      3,
+      21,
+      151,
+      20,
+      0,
+      0
+     ],
+     [
+      2,
+      38,
+      63,
+      13,
+      32,
+      0
+     ],
+     [
+      5,
+      24,
+      16,
+      10,
+      0,
+      0
+     ],
+     [
+      4,
+      11,
+      10,
+      60,
+      0,
+      0
+     ],
+     [
+      33,
+      40,
+      15,
+      9,
+      2,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    ]
+   }
+  }
+ }
+}

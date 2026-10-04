@@ -1,0 +1,33 @@
+{
+ "model": "farz_beans_v2_clean_fp16 (MobileNetV3-Small, fp16 ONNX, opset 17)",
+ "model_sha256": "c40c10f915f7a3ab78f1aead50d3cd027113b1a53d031eea21ffec331c5bc87a",
+ "model_bytes": 3082642,
+ "classes": [
+  "good",
+  "dark",
+  "insect",
+  "broken",
+  "unhulled",
+  "other_defect"
+ ],
+ "defect_classes": [
+  "dark",
+  "insect",
+  "broken",
+  "unhulled",
+  "other_defect"
+ ],
+ "good_at_or_above": 0.55,
+ "defect_at_or_above": 0.91,
+ "temperature_baked_in": 2.045858915197777,
+ "input": 128,
+ "outputs": {
+  "probs": "[N,6] softmax(logits/T)",
+  "embed": "[N,1024] L2-normalised penultimate feature (for on-device calibration)"
+ },
+ "decision": "pGood = probs[0]; good if pGood >= good_at_or_above; else defect if 1 - pGood >= defect_at_or_above (type = argmax of probs[1:], shown only as 'possible'); otherwise unsure. Touching blobs are unsure.",
+ "training_data": "ONLY the 7 sources that state a licence: afiyah_deteksi, afiyah_bijikopi, vicanadya16 (CC0), loja_yolo (CC BY 4.0), samruddh_grading (MIT), lojano (CC BY-NC 4.0), J4ckDev (CC BY-NC-SA 4.0). The 5 sources with no licence were used only as held-out test data. Licence of these weights: NON-COMMERCIAL research prototype, ShareAlike (CC BY-NC-SA 4.0 from J4ckDev).",
+ "thresholds_fitted_on": "clean leave-one-source-out predictions over the licensed sources, afiyah twins held out together (reports_v2/clean_eval.json)",
+ "copied_from": "models_v2/farz_beans_v2_clean_fp16.onnx + models_v2/farz_beans_v2_clean_labels.json (reports_v2/clean_model.json)",
+ "good_at_or_above_source": "reports_v2/threshold_sweep.md (pre-registered 04:53 BST 4 Oct 2026): smallest t_good in {0.50..0.75} with 0 dangerous trays and <= 5% wrong bands on every held-out source with >= 10 bands; t_defect 0.91 and T unchanged. models_v2/farz_beans_v2_clean_labels.json still lists the pooled fit (0.50)."
+}

@@ -1,0 +1,318 @@
+{
+ "what": "Calibration demo set: a new cooperative in Loja, Ecuador (real photos from the loja_yolo dataset)",
+ "credit": "Coffee bean photos and labels: \"Deteccion de defectos del grano\" (v14), Roboflow Universe project tesis-kmw54, https://universe.roboflow.com/tesis-kmw54/deteccion-de-defectos-del-grano , mirrored on Kaggle as cristianyagg/defectos-grano-de-cafe-de-la-provincia-de-loja (Loja province, Ecuador). Licence: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), as stated in the dataset's README.dataset.txt. ",
+ "licence": "CC BY 4.0",
+ "source": "models_v2/localcal_demo (written by src/beans_v2/localcal_export.py): loja_yolo draw 1 at K = 20",
+ "in_sample_warning": "The shipped model was trained on loja_yolo (all its photos, including these). This demo shows the calibration FLOW, not evidence that calibration works on a new farm. Held-out evidence: reports_v2/localcal.md (GO on loja_yolo only; clean trays called 'many' on lojano and Mindforge).",
+ "calibration": [
+  {
+   "file": "calibration/000_good_IMG_5749.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_5749"
+  },
+  {
+   "file": "calibration/001_good_IMG_5749.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_5749"
+  },
+  {
+   "file": "calibration/002_good_IMG_4758.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/003_good_IMG_5749.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_5749"
+  },
+  {
+   "file": "calibration/004_good_IMG_4758.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/005_good_IMG_4758.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/006_good_IMG_5749.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_5749"
+  },
+  {
+   "file": "calibration/007_good_IMG_5749.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_5749"
+  },
+  {
+   "file": "calibration/008_good_IMG_4758.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/009_good_IMG_4758.png",
+   "label": "good",
+   "source_label": "normal",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/010_defect_IMG_5488.png",
+   "label": "defect",
+   "source_label": "por_hongo",
+   "source_photo": "IMG_5488"
+  },
+  {
+   "file": "calibration/011_defect_IMG_5488.png",
+   "label": "defect",
+   "source_label": "por_hongo",
+   "source_photo": "IMG_5488"
+  },
+  {
+   "file": "calibration/012_defect_IMG_4758.png",
+   "label": "defect",
+   "source_label": "cereza_seca",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/013_defect_IMG_5488.png",
+   "label": "defect",
+   "source_label": "cereza_seca",
+   "source_photo": "IMG_5488"
+  },
+  {
+   "file": "calibration/014_defect_IMG_5488.png",
+   "label": "defect",
+   "source_label": "cereza_seca",
+   "source_photo": "IMG_5488"
+  },
+  {
+   "file": "calibration/015_defect_IMG_4758.png",
+   "label": "defect",
+   "source_label": "cereza_seca",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/016_defect_IMG_5488.png",
+   "label": "defect",
+   "source_label": "cereza_seca",
+   "source_photo": "IMG_5488"
+  },
+  {
+   "file": "calibration/017_defect_IMG_4758.png",
+   "label": "defect",
+   "source_label": "cereza_seca",
+   "source_photo": "IMG_4758"
+  },
+  {
+   "file": "calibration/018_defect_IMG_5488.png",
+   "label": "defect",
+   "source_label": "por_hongo",
+   "source_photo": "IMG_5488"
+  },
+  {
+   "file": "calibration/019_defect_IMG_5749.png",
+   "label": "defect",
+   "source_label": "grano_negro",
+   "source_photo": "IMG_5749"
+  }
+ ],
+ "test": [
+  {
+   "file": "test/IMG_4804.jpg",
+   "source_file": "IMG_4804_JPG.rf.88cd28ca66322f4019d2800a29d2cc6d.jpg",
+   "group": "loja_yolo/IMG_4804",
+   "truth": {
+    "good": 5,
+    "defect": 5,
+    "labelled_beans": 10,
+    "source_classes": [
+     "broca_leve_severa",
+     "normal",
+     "normal",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa",
+     "normal",
+     "normal",
+     "broca_leve_severa"
+    ]
+   },
+   "python_pipeline_gates_ignored_shipped_model": {
+    "base_alone_good_defect_unsure": [
+     5,
+     5,
+     0
+    ],
+    "with_head_good_defect_unsure": [
+     5,
+     5,
+     0
+    ],
+    "outcome_with_head": "many"
+   },
+   "truth_band": "many",
+   "recorded": {
+    "before": {
+     "band": "many",
+     "about": false,
+     "reason": "",
+     "good_defect_unsure": [
+      5,
+      5,
+      0
+     ]
+    },
+    "after": {
+     "band": "many",
+     "about": false,
+     "reason": "",
+     "good_defect_unsure": [
+      5,
+      5,
+      0
+     ]
+    }
+   },
+   "recorded_how": "App pipeline in Node (tests/localcal.test.ts -> reports/localcal_demo_measure.json), count rule relaxed to >= 1 bean (demo only); asserted again in Chromium by e2e/offline.spec.ts"
+  },
+  {
+   "file": "test/IMG_4807.jpg",
+   "source_file": "IMG_4807_JPG.rf.a469fbfed8e963bb35ce8b9b50a1d05c.jpg",
+   "group": "loja_yolo/IMG_4807",
+   "truth": {
+    "good": 2,
+    "defect": 8,
+    "labelled_beans": 10,
+    "source_classes": [
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa"
+    ]
+   },
+   "python_pipeline_gates_ignored_shipped_model": {
+    "base_alone_good_defect_unsure": [
+     2,
+     7,
+     1
+    ],
+    "with_head_good_defect_unsure": [
+     2,
+     7,
+     1
+    ],
+    "outcome_with_head": "notsure:implausible"
+   },
+   "truth_band": "unsure-by-rule",
+   "recorded": {
+    "before": {
+     "band": "unsure",
+     "about": false,
+     "reason": "implausible",
+     "good_defect_unsure": [
+      2,
+      7,
+      1
+     ]
+    },
+    "after": {
+     "band": "unsure",
+     "about": false,
+     "reason": "implausible",
+     "good_defect_unsure": [
+      2,
+      7,
+      1
+     ]
+    }
+   },
+   "recorded_how": "App pipeline in Node (tests/localcal.test.ts -> reports/localcal_demo_measure.json), count rule relaxed to >= 1 bean (demo only); asserted again in Chromium by e2e/offline.spec.ts"
+  },
+  {
+   "file": "test/IMG_4809.jpg",
+   "source_file": "IMG_4809_JPG.rf.39e490d2e6798fb25b329ef039dff033.jpg",
+   "group": "loja_yolo/IMG_4809",
+   "truth": {
+    "good": 2,
+    "defect": 8,
+    "labelled_beans": 10,
+    "source_classes": [
+     "normal",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "broca_leve_severa",
+     "normal",
+     "broca_leve_severa"
+    ]
+   },
+   "python_pipeline_gates_ignored_shipped_model": {
+    "base_alone_good_defect_unsure": [
+     2,
+     8,
+     1
+    ],
+    "with_head_good_defect_unsure": [
+     2,
+     6,
+     3
+    ],
+    "outcome_with_head": "notsure:implausible"
+   },
+   "truth_band": "unsure-by-rule",
+   "recorded": {
+    "before": {
+     "band": "unsure",
+     "about": false,
+     "reason": "implausible",
+     "good_defect_unsure": [
+      2,
+      8,
+      1
+     ]
+    },
+    "after": {
+     "band": "unsure",
+     "about": false,
+     "reason": "implausible",
+     "good_defect_unsure": [
+      2,
+      6,
+      3
+     ]
+    }
+   },
+   "recorded_how": "App pipeline in Node (tests/localcal.test.ts -> reports/localcal_demo_measure.json), count rule relaxed to >= 1 bean (demo only); asserted again in Chromium by e2e/offline.spec.ts"
+  }
+ ],
+ "python_head_from_shipped_model": {
+  "m_hi": 0.634810189632667,
+  "loo_errors": 0
+ },
+ "head_measured_in_app": {
+  "m_hi": 0.6348251540933314,
+  "loo_errors": 0,
+  "runtime": "onnxruntime-web 1.30.0 wasm, Node"
+ },
+ "finding": "Before and after calibration give the SAME answer on all 3 test photos (IMG_4804 many: 5 sound / 5 defect, matches the labels; IMG_4807 and IMG_4809 not sure: 80% of labelled beans are defects, above the 60% plausibility rule). The shipped model was trained on this dataset and already sorts its beans in-sample (146/146 good crops called good, 96% of defect crops called defect at 0.50/0.91), so calibration has nothing to add here. This demo shows the grader's steps only."
+}

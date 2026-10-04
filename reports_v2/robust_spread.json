@@ -1,0 +1,181 @@
+{
+ "what": "(2b, follow-up) PHOTO-LEVEL SPREAD: how mixed is the sample, as a whole?",
+ "per_grade_median": {
+  "AAA": {
+   "luma_iqr": 21.0984,
+   "b_iqr": 5.3088,
+   "dark_rel": 0.0817,
+   "emb_spread": 0.0904
+  },
+  "AA": {
+   "luma_iqr": 20.9812,
+   "b_iqr": 4.7107,
+   "dark_rel": 0.0962,
+   "emb_spread": 0.0967
+  },
+  "A": {
+   "luma_iqr": 22.9321,
+   "b_iqr": 5.0599,
+   "dark_rel": 0.1165,
+   "emb_spread": 0.098
+  },
+  "AB": {
+   "luma_iqr": 21.892,
+   "b_iqr": 4.924,
+   "dark_rel": 0.1188,
+   "emb_spread": 0.0969
+  },
+  "PB-I": {
+   "luma_iqr": 25.1348,
+   "b_iqr": 4.3988,
+   "dark_rel": 0.1,
+   "emb_spread": 0.0972
+  },
+  "PB-II": {
+   "luma_iqr": 21.9638,
+   "b_iqr": 5.5114,
+   "dark_rel": 0.1154,
+   "emb_spread": 0.1015
+  },
+  "C": {
+   "luma_iqr": 20.7705,
+   "b_iqr": 4.2011,
+   "dark_rel": 0.1,
+   "emb_spread": 0.0963
+  },
+  "Bulk": {
+   "luma_iqr": 19.7405,
+   "b_iqr": 4.258,
+   "dark_rel": 0.1,
+   "emb_spread": 0.0975
+  },
+  "Bits": {
+   "luma_iqr": 27.025,
+   "b_iqr": 5.4045,
+   "dark_rel": 0.1429,
+   "emb_spread": 0.1035
+  }
+ },
+ "spearman_vs_grade_order": {
+  "luma_iqr": {
+   "rho": 0.0931,
+   "p": 0.045016691265451325
+  },
+  "b_iqr": {
+   "rho": -0.1094,
+   "p": 0.018358112880665793
+  },
+  "dark_rel": {
+   "rho": 0.2687,
+   "p": 4.104170001822234e-09
+  },
+  "emb_spread": {
+   "rho": 0.2877,
+   "p": 2.7105589110704873e-10
+  }
+ },
+ "auroc_AAA_vs_grade": {
+  "luma_iqr": {
+   "AA": 0.4846,
+   "A": 0.6636,
+   "AB": 0.5548,
+   "PB-I": 0.7114,
+   "PB-II": 0.5684,
+   "C": 0.4345,
+   "Bulk": 0.404,
+   "Bits": 0.7859
+  },
+  "b_iqr": {
+   "AA": 0.3702,
+   "A": 0.4432,
+   "AB": 0.4356,
+   "PB-I": 0.1878,
+   "PB-II": 0.4888,
+   "C": 0.2247,
+   "Bulk": 0.1704,
+   "Bits": 0.5765
+  },
+  "dark_rel": {
+   "AA": 0.5243,
+   "A": 0.6846,
+   "AB": 0.6388,
+   "PB-I": 0.6037,
+   "PB-II": 0.7258,
+   "C": 0.5653,
+   "Bulk": 0.6246,
+   "Bits": 0.851
+  },
+  "emb_spread": {
+   "AA": 0.677,
+   "A": 0.8244,
+   "AB": 0.8104,
+   "PB-I": 0.6886,
+   "PB-II": 0.8684,
+   "C": 0.7753,
+   "Bulk": 0.8156,
+   "Bits": 0.818
+  }
+ },
+ "j4ck_photos": {
+  "BrocadoLeve": {
+   "luma_iqr": 23.4006,
+   "b_iqr": 3.9353,
+   "dark_rel": 0.0667,
+   "emb_spread": 0.1498
+  },
+  "BrocadoSevero": {
+   "luma_iqr": 26.579,
+   "b_iqr": 5.0191,
+   "dark_rel": 0.16,
+   "emb_spread": 0.1527
+  },
+  "Concha": {
+   "luma_iqr": 35.5828,
+   "b_iqr": 3.4494,
+   "dark_rel": 0.1875,
+   "emb_spread": 0.1878
+  },
+  "DXHongo": {
+   "luma_iqr": 26.3789,
+   "b_iqr": 2.9958,
+   "dark_rel": 0.1667,
+   "emb_spread": 0.1549
+  },
+  "Inmaduro": {
+   "luma_iqr": 19.2764,
+   "b_iqr": 4.3591,
+   "dark_rel": 0.1875,
+   "emb_spread": 0.1312
+  },
+  "MarronAVinagre": {
+   "luma_iqr": 24.3697,
+   "b_iqr": 5.3553,
+   "dark_rel": 0.0833,
+   "emb_spread": 0.1112
+  },
+  "Negros": {
+   "luma_iqr": 12.3704,
+   "b_iqr": 3.3267,
+   "dark_rel": 0.0,
+   "emb_spread": 0.1245
+  },
+  "Normales": {
+   "luma_iqr": 13.9315,
+   "b_iqr": 3.6886,
+   "dark_rel": 0.0103,
+   "emb_spread": 0.0612
+  },
+  "PMordidoCortado": {
+   "luma_iqr": 12.7985,
+   "b_iqr": 3.4938,
+   "dark_rel": 0.0278,
+   "emb_spread": 0.1875
+  },
+  "Pergamino": {
+   "luma_iqr": 11.365,
+   "b_iqr": 4.6297,
+   "dark_rel": 0.0,
+   "emb_spread": 0.0783
+  }
+ }
+}

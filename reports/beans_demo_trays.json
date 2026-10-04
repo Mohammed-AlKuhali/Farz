@@ -1,0 +1,188 @@
+{
+ "deployed_model": "models/farz_beans_fp32.onnx",
+ "abstain_below": 0.59,
+ "honesty": "Deployed model saw these beans in training (in-sample). 'out_of_fold' uses, per bean, the fold model that never saw it.",
+ "trays": [
+  {
+   "file": "tray_synthetic_03.jpg",
+   "true_beans": 100,
+   "true_defects": 3,
+   "true_counts": {
+    "good": 97,
+    "dark": 1,
+    "insect": 1,
+    "broken": 1,
+    "unhulled": 0
+   },
+   "detected_beans": 100,
+   "matched": 100,
+   "checks": {
+    "sheet_luma": 235.0,
+    "too_dark": false,
+    "blur_var": 116.77958679199219,
+    "too_blurry": false,
+    "count": 100,
+    "count_ok": true,
+    "touching": 0,
+    "too_many_touching": false,
+    "threshold": 60.0
+   },
+   "deployed_in_sample": {
+    "counts": {
+     "good": 97,
+     "dark": 1,
+     "insect": 1,
+     "broken": 1,
+     "unhulled": 0,
+     "abstain": 0
+    },
+    "answered": 100,
+    "accuracy_answered": 1.0,
+    "defects_flagged": 3
+   },
+   "out_of_fold_held_out": {
+    "counts": {
+     "good": 97,
+     "dark": 1,
+     "insect": 0,
+     "broken": 1,
+     "unhulled": 0,
+     "abstain": 1
+    },
+    "answered": 99,
+    "accuracy_answered": 1.0,
+    "defects_flagged": 2
+   }
+  },
+  {
+   "file": "tray_synthetic_12.jpg",
+   "true_beans": 100,
+   "true_defects": 12,
+   "true_counts": {
+    "good": 88,
+    "dark": 4,
+    "insect": 3,
+    "broken": 3,
+    "unhulled": 2
+   },
+   "detected_beans": 100,
+   "matched": 100,
+   "checks": {
+    "sheet_luma": 235.0,
+    "too_dark": false,
+    "blur_var": 124.91461181640625,
+    "too_blurry": false,
+    "count": 100,
+    "count_ok": true,
+    "touching": 0,
+    "too_many_touching": false,
+    "threshold": 61.0
+   },
+   "deployed_in_sample": {
+    "counts": {
+     "good": 88,
+     "dark": 4,
+     "insect": 3,
+     "broken": 2,
+     "unhulled": 2,
+     "abstain": 1
+    },
+    "answered": 99,
+    "accuracy_answered": 1.0,
+    "defects_flagged": 11
+   },
+   "out_of_fold_held_out": {
+    "counts": {
+     "good": 88,
+     "dark": 4,
+     "insect": 1,
+     "broken": 0,
+     "unhulled": 2,
+     "abstain": 5
+    },
+    "answered": 95,
+    "accuracy_answered": 0.9895,
+    "defects_flagged": 7
+   }
+  },
+  {
+   "file": "tray_synthetic_30.jpg",
+   "true_beans": 100,
+   "true_defects": 30,
+   "true_counts": {
+    "good": 70,
+    "dark": 10,
+    "insect": 7,
+    "broken": 8,
+    "unhulled": 5
+   },
+   "detected_beans": 100,
+   "matched": 100,
+   "checks": {
+    "sheet_luma": 235.0,
+    "too_dark": false,
+    "blur_var": 146.6207275390625,
+    "too_blurry": false,
+    "count": 100,
+    "count_ok": true,
+    "touching": 0,
+    "too_many_touching": false,
+    "threshold": 64.0
+   },
+   "deployed_in_sample": {
+    "counts": {
+     "good": 72,
+     "dark": 11,
+     "insect": 1,
+     "broken": 8,
+     "unhulled": 5,
+     "abstain": 3
+    },
+    "answered": 97,
+    "accuracy_answered": 0.9588,
+    "defects_flagged": 25
+   },
+   "out_of_fold_held_out": {
+    "counts": {
+     "good": 72,
+     "dark": 13,
+     "insect": 0,
+     "broken": 6,
+     "unhulled": 5,
+     "abstain": 4
+    },
+    "answered": 96,
+    "accuracy_answered": 0.9375,
+    "defects_flagged": 24
+   }
+  },
+  {
+   "file": "cbd_aaa_2.jpg",
+   "source": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/AAA/2.jpg",
+   "detected_beans": 50,
+   "deployed_counts": {
+    "good": 0,
+    "dark": 0,
+    "insect": 0,
+    "broken": 37,
+    "unhulled": 10,
+    "abstain": 3
+   },
+   "note": "real photo; no per-bean defect labels exist"
+  },
+  {
+   "file": "cbd_bits_262.jpg",
+   "source": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/Bits/262.jpg",
+   "detected_beans": 50,
+   "deployed_counts": {
+    "good": 0,
+    "dark": 6,
+    "insect": 1,
+    "broken": 28,
+    "unhulled": 5,
+    "abstain": 10
+   },
+   "note": "real photo; no per-bean defect labels exist"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "what": "train on all other J4ckDev photos, test on every bean of the held-out photo; PyTorch, uncalibrated argmax, no abstention",
+ "recipe": "same as train_beans.py (epochs 40, seed 0)",
+ "photos": {
+  "BrocadoLeve": {
+   "class": "insect",
+   "n": 30,
+   "recall_correct_class": 0.2667,
+   "predicted_share": {
+    "good": 0.0333,
+    "dark": 0.3333,
+    "insect": 0.2667,
+    "broken": 0.3667,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.6692
+  },
+  "BrocadoSevero": {
+   "class": "insect",
+   "n": 25,
+   "recall_correct_class": 0.4,
+   "predicted_share": {
+    "good": 0.0,
+    "dark": 0.56,
+    "insect": 0.4,
+    "broken": 0.04,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.8113
+  },
+  "CerezaSeca": {
+   "class": "unhulled",
+   "n": 9,
+   "recall_correct_class": 0.0,
+   "predicted_share": {
+    "good": 0.0,
+    "dark": 1.0,
+    "insect": 0.0,
+    "broken": 0.0,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.9337
+  },
+  "Concha": {
+   "class": "broken",
+   "n": 33,
+   "recall_correct_class": 0.7576,
+   "predicted_share": {
+    "good": 0.0606,
+    "dark": 0.0,
+    "insect": 0.1818,
+    "broken": 0.7576,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.9282
+  },
+  "DXHongo": {
+   "class": "dark",
+   "n": 12,
+   "recall_correct_class": 0.0,
+   "predicted_share": {
+    "good": 0.0,
+    "dark": 0.0,
+    "insect": 0.3333,
+    "broken": 0.6667,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.718
+  },
+  "Inmaduro": {
+   "class": "broken",
+   "n": 16,
+   "recall_correct_class": 0.25,
+   "predicted_share": {
+    "good": 0.0,
+    "dark": 0.75,
+    "insect": 0.0,
+    "broken": 0.25,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.775
+  },
+  "MarronAVinagre": {
+   "class": "dark",
+   "n": 36,
+   "recall_correct_class": 0.3333,
+   "predicted_share": {
+    "good": 0.0,
+    "dark": 0.3333,
+    "insect": 0.3333,
+    "broken": 0.1389,
+    "unhulled": 0.1944
+   },
+   "median_max_prob_uncalibrated": 0.7052
+  },
+  "Negros": {
+   "class": "dark",
+   "n": 100,
+   "recall_correct_class": 0.19,
+   "predicted_share": {
+    "good": 0.0,
+    "dark": 0.19,
+    "insect": 0.5,
+    "broken": 0.04,
+    "unhulled": 0.27
+   },
+   "median_max_prob_uncalibrated": 0.76
+  },
+  "Normales": {
+   "class": "good",
+   "skipped": "only photo of its class - cannot be left out"
+  },
+  "PMordidoCortado": {
+   "class": "broken",
+   "n": 36,
+   "recall_correct_class": 0.7778,
+   "predicted_share": {
+    "good": 0.0,
+    "dark": 0.0833,
+    "insect": 0.1389,
+    "broken": 0.7778,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.918
+  },
+  "Pergamino": {
+   "class": "unhulled",
+   "n": 90,
+   "recall_correct_class": 0.0,
+   "predicted_share": {
+    "good": 0.0333,
+    "dark": 0.4444,
+    "insect": 0.0222,
+    "broken": 0.5,
+    "unhulled": 0.0
+   },
+   "median_max_prob_uncalibrated": 0.7787
+  }
+ },
+ "bean_weighted_accuracy": 0.2739,
+ "photo_mean_accuracy": 0.2975
+}

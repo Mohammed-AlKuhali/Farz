@@ -1,0 +1,46 @@
+{
+ "what": "(2c) Browser cost of the unusual-bean detector's frozen feature extractor.",
+ "params": 927008,
+ "models": {
+  "fp32": {
+   "file": "robust_feat_mnv3s_imagenet_fp32.onnx",
+   "bytes": 3711429,
+   "max_abs_diff_vs_torch": 3.272294998168945e-05,
+   "min_cosine_vs_torch": 0.9999998807907104,
+   "median_ms_batch50_python_ort_cpu_1thread": 76.2,
+   "wasm": {
+    "runtime": "onnxruntime-web 1.30.0 wasm, numThreads=1, Node v26.8.2",
+    "median_ms_batch50": 116.3,
+    "max_abs_diff_vs_python_bean0": 5.245208740234375e-06
+   }
+  },
+  "fp16": {
+   "file": "robust_feat_mnv3s_imagenet_fp16.onnx",
+   "bytes": 1878403,
+   "max_abs_diff_vs_torch": 0.13876664638519287,
+   "min_cosine_vs_torch": 0.9992414712905884,
+   "median_ms_batch50_python_ort_cpu_1thread": 75.4,
+   "wasm": {
+    "runtime": "onnxruntime-web 1.30.0 wasm, numThreads=1, Node v26.8.2",
+    "median_ms_batch50": 113.5,
+    "max_abs_diff_vs_python_bean0": 0.000244140625
+   }
+  }
+ },
+ "decision_parity_fp16_vs_torch": {
+  "photos": 40,
+  "beans": 2037,
+  "emb": {
+   "flag_agreement": 0.99853,
+   "beans_changed": 3,
+   "beans_flagged_fp32": 36
+  },
+  "both": {
+   "flag_agreement": 1.0,
+   "beans_changed": 0,
+   "beans_flagged_fp32": 36
+  }
+ },
+ "machine": "MacBook M5 Pro (laptop CPU), NOT a phone",
+ "note": "model files written to the scratchpad, not shipped; the v1 classifier (6.1 MB fp32) is a separate download"
+}

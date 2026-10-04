@@ -1,0 +1,261 @@
+{
+ "model": {
+  "fp16": "models_v2/farz_beans_v2_clean_fp16.onnx",
+  "fp16_bytes": 3082642,
+  "fp16_sha256": "c40c10f915f7a3ab78f1aead50d3cd027113b1a53d031eea21ffec331c5bc87a",
+  "fp32": "models_v2/farz_beans_v2_clean_fp32.onnx",
+  "fp32_bytes": 6107254,
+  "labels": "models_v2/farz_beans_v2_clean_labels.json",
+  "outputs": [
+   "probs [N,6]",
+   "embed [N,1024] L2-normalised"
+  ],
+  "training_sources": [
+   "j4ckdev",
+   "vicanadya16",
+   "afiyah_deteksi",
+   "afiyah_bijikopi",
+   "loja_yolo",
+   "lojano",
+   "samruddh_grading"
+  ],
+  "licence_of_weights": "non-commercial, ShareAlike (CC BY-NC-SA 4.0 via J4ckDev; CC BY-NC 4.0 via lojano)",
+  "unlicensed_sources_used_for": "held-out test only"
+ },
+ "temperature": 2.045858915197777,
+ "pair_thresholds": {
+  "t_good": 0.5,
+  "t_defect": 0.91,
+  "pooled_coverage": 0.6947835711413415,
+  "pooled_answered_accuracy": 0.9023806727186368
+ },
+ "fp16_vs_fp32": {
+  "top_class_agreement_vs_fp32": 0.9964174521260716,
+  "call3_agreement_vs_fp32_at_pair": 0.9952659188808802,
+  "max_abs_prob_diff_vs_fp32": 0.007645905017852783,
+  "embed_cosine_vs_fp32_min_mean": [
+   0.9998837113380432,
+   0.9999805092811584
+  ]
+ },
+ "wasm_parity": {
+  "fp32": {
+   "n": 300,
+   "max_abs_prob_diff_vs_python_ort": 8.940696716308594e-07,
+   "max_abs_embed_diff_vs_python_ort": 8.344650268554688e-07,
+   "argmax_agreement": 1,
+   "call3_agreement_at_pair": 1
+  },
+  "fp16": {
+   "n": 300,
+   "max_abs_prob_diff_vs_python_ort": 0.0004864931106567383,
+   "max_abs_embed_diff_vs_python_ort": 0.0015014857053756714,
+   "argmax_agreement": 1,
+   "call3_agreement_at_pair": 1
+  }
+ },
+ "loso_licensed": {
+  "loja_yolo": {
+   "n": 1311,
+   "balanced_accuracy_no_abstain": 0.6707948733023693,
+   "pair_from_other_groups": [
+    0.58,
+    0.91
+   ],
+   "coverage": 0.6811594202898551,
+   "answered_accuracy": 0.9944008958566629
+  },
+  "lojano": {
+   "n": 1182,
+   "balanced_accuracy_no_abstain": 0.6177125807486141,
+   "pair_from_other_groups": [
+    0.5,
+    0.88
+   ],
+   "coverage": 0.7072758037225042,
+   "answered_accuracy": 0.7643540669856459
+  },
+  "afiyah": {
+   "n": 2155,
+   "balanced_accuracy_no_abstain": 0.5560438583050215,
+   "pair_from_other_groups": [
+    0.5,
+    0.89
+   ],
+   "coverage": 0.608816705336427,
+   "answered_accuracy": 0.7629573170731707
+  },
+  "j4ckdev": {
+   "n": 582,
+   "balanced_accuracy_no_abstain": 0.5750546611011728,
+   "pair_from_other_groups": [
+    0.5,
+    0.89
+   ],
+   "coverage": 0.6597938144329897,
+   "answered_accuracy": 0.796875
+  },
+  "samruddh_grading": {
+   "n": 1337,
+   "balanced_accuracy_no_abstain": 0.8007925373501685,
+   "pair_from_other_groups": [
+    0.54,
+    0.91
+   ],
+   "coverage": 0.649962602842184,
+   "answered_accuracy": 0.9309551208285386
+  },
+  "vicanadya16": {
+   "n": 86123,
+   "balanced_accuracy_no_abstain": 0.9997909965978891,
+   "pair_from_other_groups": [
+    0.7,
+    0.96
+   ],
+   "coverage": 0.9697525631945009,
+   "answered_accuracy": 0.9999760530664048
+  }
+ },
+ "loso_mean_balanced_accuracy_groups_with_good_beans": 0.6440797021614693,
+ "unlicensed_test_only": {
+  "mfu17": {
+   "n": 962,
+   "balanced_accuracy_no_abstain": 0.9625779625779626,
+   "coverage": 0.7047817047817048,
+   "answered_accuracy": 0.9469026548672567
+  },
+  "usk_coffee": {
+   "n": 7969,
+   "balanced_accuracy_no_abstain": 0.5387452939199918,
+   "coverage": 0.46342075542728073,
+   "answered_accuracy": 0.6504197129704847
+  },
+  "daffa_defect": {
+   "n": 1000,
+   "balanced_accuracy_no_abstain": 0.541,
+   "coverage": 0.538,
+   "answered_accuracy": 0.7509293680297398
+  },
+  "mindforge_doubleside": {
+   "n": 7372,
+   "balanced_accuracy_no_abstain": 0.6247218893155926,
+   "coverage": 0.5865436787845903,
+   "answered_accuracy": 0.9123496762257169
+  },
+  "notplying_defects": {
+   "n": 8150,
+   "balanced_accuracy_no_abstain": 0.9992638036809816,
+   "coverage": 0.8511656441717791,
+   "answered_accuracy": 0.9991350727980395
+  }
+ },
+ "cbd": {
+  "photos_banded_gates_ignored": 0,
+  "AAA_many_gates_ignored": 0,
+  "AAA_many_with_gates": 0,
+  "spearman": 0.6797904770851236,
+  "auroc_Bits_above_AAA": 1.0,
+  "auroc_AA_above_AAA": 0.43868852459016394
+ },
+ "stress_777_auditor_banded": 0,
+ "stress_777_report_banded": 0,
+ "j4ck_1200": {
+  "v1_fold_abstain0.59 (integrity check vs AUDIT_V2)": {
+   "trays": 1200,
+   "bands": 793,
+   "correct": 736,
+   "wrong": 57,
+   "dangerous_clean_called_many": 10
+  },
+  "clean_deployed_T2.046_0.50/0.91": {
+   "trays": 1200,
+   "bands": 241,
+   "correct": 241,
+   "wrong": 0,
+   "dangerous_clean_called_many": 0
+  },
+  "clean_j4ck_heldout_T2.141_0.50/0.89": {
+   "trays": 1200,
+   "bands": 381,
+   "correct": 381,
+   "wrong": 0,
+   "dangerous_clean_called_many": 0
+  }
+ },
+ "trays_heldout_totals": {
+  "licensed_heldout|heldout": {
+   "trays": 7200,
+   "bands": 1,
+   "correct": 1,
+   "wrong": 0,
+   "dangerous_clean_called_many": 0,
+   "dangerous_many_called_clean": 0,
+   "groups_with_bands": [
+    "samruddh_grading: 1"
+   ]
+  },
+  "licensed_heldout|deployed": {
+   "trays": 7200,
+   "bands": 42,
+   "correct": 31,
+   "wrong": 11,
+   "dangerous_clean_called_many": 0,
+   "dangerous_many_called_clean": 0,
+   "groups_with_bands": [
+    "samruddh_grading: 42"
+   ]
+  },
+  "TEST_unlicensed|heldout": {
+   "trays": 4600,
+   "bands": 0,
+   "correct": 0,
+   "wrong": 0,
+   "dangerous_clean_called_many": 0,
+   "dangerous_many_called_clean": 0,
+   "groups_with_bands": []
+  }
+ },
+ "lojano_real": {
+  "heldout": {
+   "gates_ignored": {
+    "notsure:implausible": 26,
+    "notsure:too_many_unsure": 10
+   },
+   "with_gates_banded": 0
+  },
+  "deployed": {
+   "gates_ignored": {
+    "notsure:implausible": 25,
+    "notsure:too_many_unsure": 11
+   },
+   "with_gates_banded": 0
+  }
+ },
+ "loja_yolo_real": {
+  "heldout": {
+   "gates_ignored": {
+    "notsure:implausible": 286,
+    "notsure:too_many_unsure": 29
+   },
+   "with_gates_banded": 0
+  },
+  "deployed": {
+   "gates_ignored": {
+    "many": 1,
+    "notsure:implausible": 281,
+    "notsure:too_many_unsure": 33
+   },
+   "with_gates_banded": 0
+  }
+ },
+ "j4ck_lopo_real": {
+  "heldout": {
+   "notsure:implausible": 11
+  },
+  "deployed": {
+   "notsure:implausible": 10,
+   "notsure:too_many_unsure": 1
+  }
+ },
+ "j4ck_lopo_typed_accuracy_same_10_as_v1": 0.2997416020671835
+}

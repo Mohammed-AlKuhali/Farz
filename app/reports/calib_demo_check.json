@@ -1,0 +1,18 @@
+{
+ "what": "in-app calibration demo = the quality check only (nothing saved): loja_yolo dataset labels vs the same 20 beans with deliberately wrong labels",
+ "model_sha256": "c40c10f915f7a3ab78f1aead50d3cd027113b1a53d031eea21ffec331c5bc87a",
+ "wrong_labels": 6,
+ "limit_errors": 2,
+ "right": {
+  "ok": true,
+  "loo_errors": 0,
+  "loo_n": 20,
+  "m_hi": 0.6348251540933314
+ },
+ "wrong": {
+  "ok": false,
+  "loo_errors": 7,
+  "loo_n": 20,
+  "m_hi": 0.6213427962946768
+ }
+}

@@ -1,0 +1,170 @@
+[
+ {
+  "photo": "data/raw/green/ImageDataset/BrocadoLeve.jpg",
+  "count": 30,
+  "pyCount": 30,
+  "maxBboxDevPx": 1,
+  "thrJs": 64,
+  "thrPy": 65
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/BrocadoSevero.jpg",
+  "count": 25,
+  "pyCount": 25,
+  "maxBboxDevPx": 1,
+  "thrJs": 78,
+  "thrPy": 78
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/CerezaSeca.jpg",
+  "count": 9,
+  "pyCount": 9,
+  "maxBboxDevPx": 0,
+  "thrJs": 94,
+  "thrPy": 94
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/Concha.jpg",
+  "count": 33,
+  "pyCount": 33,
+  "maxBboxDevPx": 1,
+  "thrJs": 60,
+  "thrPy": 61
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/DXHongo.jpg",
+  "count": 12,
+  "pyCount": 12,
+  "maxBboxDevPx": 1,
+  "thrJs": 63,
+  "thrPy": 62
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/Inmaduro.jpg",
+  "count": 16,
+  "pyCount": 16,
+  "maxBboxDevPx": 1,
+  "thrJs": 61,
+  "thrPy": 61
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/MarronAVinagre.jpg",
+  "count": 36,
+  "pyCount": 36,
+  "maxBboxDevPx": 1,
+  "thrJs": 81,
+  "thrPy": 81
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/Negros.jpg",
+  "count": 100,
+  "pyCount": 100,
+  "maxBboxDevPx": 1,
+  "thrJs": 93,
+  "thrPy": 94
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/Normales.jpg",
+  "count": 195,
+  "pyCount": 195,
+  "maxBboxDevPx": 1,
+  "thrJs": 61,
+  "thrPy": 61
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/PMordidoCortado.jpg",
+  "count": 36,
+  "pyCount": 36,
+  "maxBboxDevPx": 1,
+  "thrJs": 57,
+  "thrPy": 57
+ },
+ {
+  "photo": "data/raw/green/ImageDataset/Pergamino.jpg",
+  "count": 90,
+  "pyCount": 90,
+  "maxBboxDevPx": 1,
+  "thrJs": 77,
+  "thrPy": 78
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/A/212.jpg",
+  "count": 58,
+  "pyCount": 58,
+  "maxBboxDevPx": 1,
+  "thrJs": 70,
+  "thrPy": 70
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/AA/100.jpg",
+  "count": 50,
+  "pyCount": 50,
+  "maxBboxDevPx": 0,
+  "thrJs": 72,
+  "thrPy": 72
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/AAA/1.jpg",
+  "count": 49,
+  "pyCount": 49,
+  "maxBboxDevPx": 1,
+  "thrJs": 69,
+  "thrPy": 69
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/AB/112.jpg",
+  "count": 51,
+  "pyCount": 51,
+  "maxBboxDevPx": 1,
+  "thrJs": 69,
+  "thrPy": 69
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/Bits/262.jpg",
+  "count": 50,
+  "pyCount": 50,
+  "maxBboxDevPx": 1,
+  "thrJs": 65,
+  "thrPy": 65
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/Bulk/415.jpg",
+  "count": 50,
+  "pyCount": 50,
+  "maxBboxDevPx": 1,
+  "thrJs": 69,
+  "thrPy": 69
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/C/313.jpg",
+  "count": 52,
+  "pyCount": 52,
+  "maxBboxDevPx": 0,
+  "thrJs": 64,
+  "thrPy": 64
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/PB-I/364.jpg",
+  "count": 50,
+  "pyCount": 50,
+  "maxBboxDevPx": 1,
+  "thrJs": 69,
+  "thrPy": 68
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/PB-II/162.jpg",
+  "count": 50,
+  "pyCount": 50,
+  "maxBboxDevPx": 1,
+  "thrJs": 72,
+  "thrPy": 72
+ },
+ {
+  "photo": "data/raw/cbd/CBD_Coffee Bean Dataset/CBD_Coffee Bean Dataset/Bits/263.jpg",
+  "count": 51,
+  "pyCount": 51,
+  "maxBboxDevPx": 1,
+  "thrJs": 68,
+  "thrPy": 67
+ }
+]

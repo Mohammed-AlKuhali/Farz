@@ -1,0 +1,7 @@
+{
+ "photos": 475,
+ "refused": [
+  "data/raw/green/ImageDataset/CerezaSeca.jpg too_dark_beans",
+  "data/raw/green/ImageDataset/Negros.jpg too_dark_beans"
+ ]
+}

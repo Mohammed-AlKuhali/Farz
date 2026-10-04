@@ -1,0 +1,214 @@
+{
+ "thresholds_shipped": {
+  "good": 0.55,
+  "defect": 0.91
+ },
+ "per_unit": {
+  "loja_yolo": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   }
+  },
+  "lojano": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   }
+  },
+  "afiyah": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   }
+  },
+  "j4ckdev": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   }
+  },
+  "samruddh_grading": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 5,
+    "wrong": 1,
+    "dangerous": 0,
+    "notsure": 2795
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 52,
+    "wrong": 13,
+    "dangerous": 0,
+    "notsure": 2748
+   }
+  },
+  "vicanadya16": {
+   "shipped": {
+    "trays": 400,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 400
+   },
+   "old_050": {
+    "trays": 400,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 400
+   }
+  },
+  "mfu17": {
+   "shipped": {
+    "trays": 400,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 400
+   },
+   "old_050": {
+    "trays": 400,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 400
+   }
+  },
+  "usk_coffee": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   }
+  },
+  "daffa_defect": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   }
+  },
+  "mindforge_doubleside": {
+   "shipped": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   },
+   "old_050": {
+    "trays": 2800,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 2800
+   }
+  },
+  "notplying_defects": {
+   "shipped": {
+    "trays": 400,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 400
+   },
+   "old_050": {
+    "trays": 400,
+    "bands": 0,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 400
+   }
+  },
+  "j4ckdev_1200_auditor": {
+   "shipped": {
+    "trays": 1200,
+    "bands": 11,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 1189
+   },
+   "old_050": {
+    "trays": 1200,
+    "bands": 241,
+    "wrong": 0,
+    "dangerous": 0,
+    "notsure": 959
+   }
+  }
+ },
+ "totals": {
+  "shipped": {
+   "trays": 24800,
+   "bands": 16,
+   "wrong": 1,
+   "dangerous": 0
+  },
+  "old_050": {
+   "trays": 24800,
+   "bands": 293,
+   "wrong": 13,
+   "dangerous": 0
+  }
+ }
+}

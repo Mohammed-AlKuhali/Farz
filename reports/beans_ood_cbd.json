@@ -1,0 +1,295 @@
+{
+ "dataset": "CBD Coffee Bean Dataset, Mendeley Data 52877z55vr (2024), CC BY 4.0, https://data.mendeley.com/datasets/52877z55vr/1",
+ "what_it_is": "OOD sanity check only: India, light box, size grades, NO per-bean defect labels. Not an accuracy measurement.",
+ "model": "models/farz_beans_fp32.onnx",
+ "abstain_below": 0.59,
+ "photos": 464,
+ "beans": 23447,
+ "overall_share_with_abstain": {
+  "good": 0.0136,
+  "dark": 0.1008,
+  "insect": 0.0143,
+  "broken": 0.5427,
+  "unhulled": 0.1285,
+  "abstain": 0.2
+ },
+ "overall_median_max_prob": 0.8242,
+ "per_grade": {
+  "AAA": {
+   "photos": 50,
+   "beans": 2498,
+   "share_with_abstain": {
+    "good": 0.0,
+    "dark": 0.0344,
+    "insect": 0.012,
+    "broken": 0.6125,
+    "unhulled": 0.1665,
+    "abstain": 0.1745
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0008,
+    "dark": 0.0584,
+    "insect": 0.028,
+    "broken": 0.705,
+    "unhulled": 0.2078
+   },
+   "defect_share_of_answered": 1.0,
+   "median_max_prob": 0.852
+  },
+  "AA": {
+   "photos": 61,
+   "beans": 3059,
+   "share_with_abstain": {
+    "good": 0.0098,
+    "dark": 0.0719,
+    "insect": 0.0092,
+    "broken": 0.6175,
+    "unhulled": 0.121,
+    "abstain": 0.1706
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.017,
+    "dark": 0.1072,
+    "insect": 0.0235,
+    "broken": 0.6911,
+    "unhulled": 0.1612
+   },
+   "defect_share_of_answered": 0.9882,
+   "median_max_prob": 0.8617
+  },
+  "A": {
+   "photos": 50,
+   "beans": 2572,
+   "share_with_abstain": {
+    "good": 0.0012,
+    "dark": 0.0288,
+    "insect": 0.0113,
+    "broken": 0.6357,
+    "unhulled": 0.1719,
+    "abstain": 0.1512
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0023,
+    "dark": 0.0548,
+    "insect": 0.0214,
+    "broken": 0.7119,
+    "unhulled": 0.2096
+   },
+   "defect_share_of_answered": 0.9986,
+   "median_max_prob": 0.8739
+  },
+  "AB": {
+   "photos": 50,
+   "beans": 2510,
+   "share_with_abstain": {
+    "good": 0.0008,
+    "dark": 0.0486,
+    "insect": 0.0092,
+    "broken": 0.608,
+    "unhulled": 0.1669,
+    "abstain": 0.1665
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0016,
+    "dark": 0.0753,
+    "insect": 0.0199,
+    "broken": 0.6853,
+    "unhulled": 0.2179
+   },
+   "defect_share_of_answered": 0.999,
+   "median_max_prob": 0.8522
+  },
+  "PB-I": {
+   "photos": 51,
+   "beans": 2546,
+   "share_with_abstain": {
+    "good": 0.0122,
+    "dark": 0.2396,
+    "insect": 0.0161,
+    "broken": 0.3857,
+    "unhulled": 0.0962,
+    "abstain": 0.2502
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0251,
+    "dark": 0.3181,
+    "insect": 0.0357,
+    "broken": 0.4866,
+    "unhulled": 0.1343
+   },
+   "defect_share_of_answered": 0.9838,
+   "median_max_prob": 0.7674
+  },
+  "PB-II": {
+   "photos": 50,
+   "beans": 2536,
+   "share_with_abstain": {
+    "good": 0.0095,
+    "dark": 0.1747,
+    "insect": 0.0189,
+    "broken": 0.4775,
+    "unhulled": 0.1013,
+    "abstain": 0.2181
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0189,
+    "dark": 0.2354,
+    "insect": 0.0402,
+    "broken": 0.5761,
+    "unhulled": 0.1293
+   },
+   "defect_share_of_answered": 0.9879,
+   "median_max_prob": 0.802
+  },
+  "C": {
+   "photos": 51,
+   "beans": 2594,
+   "share_with_abstain": {
+    "good": 0.0239,
+    "dark": 0.0887,
+    "insect": 0.02,
+    "broken": 0.5621,
+    "unhulled": 0.0971,
+    "abstain": 0.2082
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0405,
+    "dark": 0.1415,
+    "insect": 0.037,
+    "broken": 0.648,
+    "unhulled": 0.133
+   },
+   "defect_share_of_answered": 0.9698,
+   "median_max_prob": 0.815
+  },
+  "Bulk": {
+   "photos": 50,
+   "beans": 2525,
+   "share_with_abstain": {
+    "good": 0.0032,
+    "dark": 0.0602,
+    "insect": 0.0107,
+    "broken": 0.56,
+    "unhulled": 0.1596,
+    "abstain": 0.2063
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0099,
+    "dark": 0.101,
+    "insect": 0.0265,
+    "broken": 0.655,
+    "unhulled": 0.2075
+   },
+   "defect_share_of_answered": 0.996,
+   "median_max_prob": 0.8184
+  },
+  "Bits": {
+   "photos": 51,
+   "beans": 2607,
+   "share_with_abstain": {
+    "good": 0.061,
+    "dark": 0.1634,
+    "insect": 0.0222,
+    "broken": 0.4143,
+    "unhulled": 0.0806,
+    "abstain": 0.2585
+   },
+   "share_argmax_no_abstain": {
+    "good": 0.0921,
+    "dark": 0.2455,
+    "insect": 0.0426,
+    "broken": 0.5056,
+    "unhulled": 0.1143
+   },
+   "defect_share_of_answered": 0.9177,
+   "median_max_prob": 0.7664
+  }
+ },
+ "photo_level_rule": {
+  "rule": "photo answered 'not sure' when > 15% of its beans are below abstain_below (PLAN s.5)",
+  "at_deployed_threshold": {
+   "abstain_below": 0.59,
+   "j4ck_heldout_coverage": 0.9141,
+   "j4ck_heldout_accuracy_answered": 0.9004,
+   "cbd_bean_abstain_share": 0.2,
+   "cbd_photos_where_15pct_rule_fires": 0.6401,
+   "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.4091,
+   "j4ck_heldout_half_photos": 22
+  },
+  "threshold_sweep": [
+   {
+    "abstain_below": 0.59,
+    "j4ck_heldout_coverage": 0.9141,
+    "j4ck_heldout_accuracy_answered": 0.9004,
+    "cbd_bean_abstain_share": 0.2,
+    "cbd_photos_where_15pct_rule_fires": 0.6401,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.4091,
+    "j4ck_heldout_half_photos": 22
+   },
+   {
+    "abstain_below": 0.6,
+    "j4ck_heldout_coverage": 0.9089,
+    "j4ck_heldout_accuracy_answered": 0.9055,
+    "cbd_bean_abstain_share": 0.2116,
+    "cbd_photos_where_15pct_rule_fires": 0.6659,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.4091,
+    "j4ck_heldout_half_photos": 22
+   },
+   {
+    "abstain_below": 0.65,
+    "j4ck_heldout_coverage": 0.89,
+    "j4ck_heldout_accuracy_answered": 0.9112,
+    "cbd_bean_abstain_share": 0.2701,
+    "cbd_photos_where_15pct_rule_fires": 0.8427,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.4091,
+    "j4ck_heldout_half_photos": 22
+   },
+   {
+    "abstain_below": 0.7,
+    "j4ck_heldout_coverage": 0.866,
+    "j4ck_heldout_accuracy_answered": 0.9147,
+    "cbd_bean_abstain_share": 0.3293,
+    "cbd_photos_where_15pct_rule_fires": 0.9289,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.4545,
+    "j4ck_heldout_half_photos": 22
+   },
+   {
+    "abstain_below": 0.75,
+    "j4ck_heldout_coverage": 0.8368,
+    "j4ck_heldout_accuracy_answered": 0.9261,
+    "cbd_bean_abstain_share": 0.3914,
+    "cbd_photos_where_15pct_rule_fires": 0.9784,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.5455,
+    "j4ck_heldout_half_photos": 22
+   },
+   {
+    "abstain_below": 0.8,
+    "j4ck_heldout_coverage": 0.7938,
+    "j4ck_heldout_accuracy_answered": 0.9372,
+    "cbd_bean_abstain_share": 0.463,
+    "cbd_photos_where_15pct_rule_fires": 0.9914,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.5909,
+    "j4ck_heldout_half_photos": 22
+   },
+   {
+    "abstain_below": 0.85,
+    "j4ck_heldout_coverage": 0.7595,
+    "j4ck_heldout_accuracy_answered": 0.9502,
+    "cbd_bean_abstain_share": 0.5413,
+    "cbd_photos_where_15pct_rule_fires": 1.0,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.6364,
+    "j4ck_heldout_half_photos": 22
+   },
+   {
+    "abstain_below": 0.9,
+    "j4ck_heldout_coverage": 0.6976,
+    "j4ck_heldout_accuracy_answered": 0.9655,
+    "cbd_bean_abstain_share": 0.6386,
+    "cbd_photos_where_15pct_rule_fires": 1.0,
+    "j4ck_heldout_half_photos_where_15pct_rule_fires": 0.7273,
+    "j4ck_heldout_half_photos": 22
+   }
+  ],
+  "note": "the CBD columns are OOD behaviour only; CBD has no defect labels"
+ }
+}

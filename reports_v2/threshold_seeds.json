@@ -1,0 +1,1772 @@
+{
+ "what": "Multi-seed robustness of the t_good sweep. NOT pre-registered; information only. The shipped threshold (0.55) was chosen on seed 0 (the pre-registered draw) and is unchanged.",
+ "method": "src/beans_v2/threshold_sweep.py build_trays()/score()/verdict() on the saved fold predictions, shipped T and t_defect 0.91; only the two tray-draw seeds change (20261004 -> 1000+s, 2026 -> 5000+s). To reproduce one seed, edit those two default_rng() seeds in threshold_sweep.py.",
+ "cross_check": "Identical (bands, wrong, dangerous and chosen t_good, for every seed and candidate) to an independent re-implementation run in the internal regression check of 4 Oct 06:11 (its own decide() and labels). Seed 0 reproduces threshold_sweep.json: 16 bands / 1 wrong / 0 dangerous at 0.55, 293 / 13 / 0 at 0.50.",
+ "run_started": "2026-10-04 06:28:10 BST",
+ "run_finished": "2026-10-04 06:28:45 BST",
+ "summary_seeds_1_to_20": {
+  "seeds": "1..20 (not the pre-registered draw)",
+  "trays_per_seed": 24800,
+  "chosen_t_good_counts": {
+   "0.55": 18,
+   "0.6": 2
+  },
+  "dangerous_any_seed_any_candidate": 0,
+  "all_units": {
+   "0.50": {
+    "bands": 5685,
+    "wrong": 217,
+    "dangerous": 0,
+    "wrong_share": 0.0382
+   },
+   "0.55": {
+    "bands": 417,
+    "wrong": 26,
+    "dangerous": 0,
+    "wrong_share": 0.0624
+   },
+   "0.60": {
+    "bands": 29,
+    "wrong": 0,
+    "dangerous": 0,
+    "wrong_share": 0.0
+   }
+  },
+  "samruddh_grading": {
+   "0.50": {
+    "bands": 993,
+    "wrong": 217,
+    "dangerous": 0,
+    "wrong_share": 0.2185
+   },
+   "0.55": {
+    "bands": 105,
+    "wrong": 26,
+    "dangerous": 0,
+    "wrong_share": 0.2476
+   },
+   "0.60": {
+    "bands": 5,
+    "wrong": 0,
+    "dangerous": 0,
+    "wrong_share": 0.0
+   }
+  },
+  "j4ckdev_1200_auditor": {
+   "0.50": {
+    "bands": 4691,
+    "wrong": 0,
+    "dangerous": 0,
+    "wrong_share": 0.0
+   },
+   "0.55": {
+    "bands": 312,
+    "wrong": 0,
+    "dangerous": 0,
+    "wrong_share": 0.0
+   },
+   "0.60": {
+    "bands": 24,
+    "wrong": 0,
+    "dangerous": 0,
+    "wrong_share": 0.0
+   }
+  }
+ },
+ "per_seed": {
+  "0": {
+   "tray_seeds": "pre-registered (20261004, 2026)",
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 293,
+     "wrong": 13,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 52,
+       "wrong": 13,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 241,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 16,
+     "wrong": 1,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 5,
+       "wrong": 1,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 11,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 2,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "1": {
+   "tray_seeds": [
+    1001,
+    5001
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 285,
+     "wrong": 7,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 47,
+       "wrong": 7,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 238,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 25,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 6,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 19,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "2": {
+   "tray_seeds": [
+    1002,
+    5002
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 293,
+     "wrong": 10,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 51,
+       "wrong": 10,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 242,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 22,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 6,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 16,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 2,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 2,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "3": {
+   "tray_seeds": [
+    1003,
+    5003
+   ],
+   "chosen_t_good": 0.6,
+   "per_t_good": {
+    "0.50": {
+     "bands": 286,
+     "wrong": 15,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 57,
+       "wrong": 15,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 229,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 25,
+     "wrong": 5,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 10,
+       "wrong": 5,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 15,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "4": {
+   "tray_seeds": [
+    1004,
+    5004
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 301,
+     "wrong": 8,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 45,
+       "wrong": 8,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 256,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 13,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 13,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "5": {
+   "tray_seeds": [
+    1005,
+    5005
+   ],
+   "chosen_t_good": 0.6,
+   "per_t_good": {
+    "0.50": {
+     "bands": 273,
+     "wrong": 11,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 49,
+       "wrong": 11,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 224,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 28,
+     "wrong": 1,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 10,
+       "wrong": 1,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 18,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "6": {
+   "tray_seeds": [
+    1006,
+    5006
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 277,
+     "wrong": 11,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 50,
+       "wrong": 11,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 227,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 12,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 3,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 9,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "7": {
+   "tray_seeds": [
+    1007,
+    5007
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 262,
+     "wrong": 8,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 46,
+       "wrong": 8,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 216,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 20,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 19,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 4,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 4,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "8": {
+   "tray_seeds": [
+    1008,
+    5008
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 285,
+     "wrong": 11,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 47,
+       "wrong": 11,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 238,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 18,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 5,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 13,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 6,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 6,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "9": {
+   "tray_seeds": [
+    1009,
+    5009
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 267,
+     "wrong": 11,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 44,
+       "wrong": 11,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 223,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 22,
+     "wrong": 1,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 3,
+       "wrong": 1,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 19,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "10": {
+   "tray_seeds": [
+    1010,
+    5010
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 290,
+     "wrong": 9,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 40,
+       "wrong": 9,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 250,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 17,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 4,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 13,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "11": {
+   "tray_seeds": [
+    1011,
+    5011
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 268,
+     "wrong": 11,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "loja_yolo": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "samruddh_grading": {
+       "bands": 46,
+       "wrong": 11,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 221,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 16,
+     "wrong": 1,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 8,
+       "wrong": 1,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 8,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "12": {
+   "tray_seeds": [
+    1012,
+    5012
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 292,
+     "wrong": 10,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 51,
+       "wrong": 10,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 241,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 17,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 3,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 14,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "13": {
+   "tray_seeds": [
+    1013,
+    5013
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 297,
+     "wrong": 12,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 56,
+       "wrong": 12,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 241,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 28,
+     "wrong": 1,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 7,
+       "wrong": 1,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 21,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 2,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 2,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "14": {
+   "tray_seeds": [
+    1014,
+    5014
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 283,
+     "wrong": 12,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 53,
+       "wrong": 12,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 230,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 28,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 5,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 23,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "15": {
+   "tray_seeds": [
+    1015,
+    5015
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 285,
+     "wrong": 12,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 55,
+       "wrong": 12,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 230,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 20,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 5,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 15,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "16": {
+   "tray_seeds": [
+    1016,
+    5016
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 297,
+     "wrong": 15,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 54,
+       "wrong": 15,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 243,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 20,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 6,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 14,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "17": {
+   "tray_seeds": [
+    1017,
+    5017
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 264,
+     "wrong": 7,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 49,
+       "wrong": 7,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 215,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 16,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 5,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 11,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 3,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 2,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "18": {
+   "tray_seeds": [
+    1018,
+    5018
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 282,
+     "wrong": 11,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 52,
+       "wrong": 11,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 230,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 21,
+     "wrong": 2,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 7,
+       "wrong": 2,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 14,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 2,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "19": {
+   "tray_seeds": [
+    1019,
+    5019
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 300,
+     "wrong": 13,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 52,
+       "wrong": 13,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 248,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 29,
+     "wrong": 1,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 5,
+       "wrong": 1,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 24,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "j4ckdev_1200_auditor": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  },
+  "20": {
+   "tray_seeds": [
+    1020,
+    5020
+   ],
+   "chosen_t_good": 0.55,
+   "per_t_good": {
+    "0.50": {
+     "bands": 298,
+     "wrong": 13,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [
+      "samruddh_grading"
+     ],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 49,
+       "wrong": 13,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 249,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.55": {
+     "bands": 20,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 6,
+       "wrong": 0,
+       "dangerous": 0
+      },
+      "j4ckdev_1200_auditor": {
+       "bands": 14,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.60": {
+     "bands": 1,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {
+      "samruddh_grading": {
+       "bands": 1,
+       "wrong": 0,
+       "dangerous": 0
+      }
+     }
+    },
+    "0.65": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.70": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    },
+    "0.75": {
+     "bands": 0,
+     "wrong": 0,
+     "dangerous": 0,
+     "units_failing_5pct_rule": [],
+     "per_unit": {}
+    }
+   }
+  }
+ },
+ "script_source": "\"\"\"Multi-seed robustness of the pre-registered t_good sweep (NOT pre-registered; information only).\nRuns src/beans_v2/threshold_sweep.py's own build_trays()/score()/verdict() from the saved fold predictions,\nchanging only the two tray-draw seeds: 20261004 -> 1000+s and 2026 -> 5000+s for s = 1..20\n(the same seeds as the independent regression check of 4 Oct). Seed 0 = the pre-registered draw (must give 16/1/0).\"\"\"\nimport json, sys, time\nfrom pathlib import Path\nROOT = Path(\"<project root>\")\nsys.path.insert(0, str(ROOT / \"src/beans_v2\"))\nimport numpy as np\nimport threshold_sweep as ts\n\n_orig = np.random.default_rng\ndef run(s):\n    def patched(seed=None):\n        if s == 0: return _orig(seed)\n        return _orig({20261004: 1000 + s, 2026: 5000 + s}[seed])\n    np.random.default_rng = patched\n    try:\n        units = ts.build_trays()\n    finally:\n        np.random.default_rng = _orig\n    T = ts.cc.deployed()[0]\n    per_t = {f\"{tg:.2f}\": ts.score(units, T, tg) for tg in ts.CANDIDATES}\n    rows, chosen = ts.verdict(per_t)\n    return units, per_t, rows, chosen\n\nt0 = time.strftime(\"%Y-%m-%d %H:%M:%S %Z\")\nseeds = {}\nfor s in range(0, 21):\n    units, per_t, rows, chosen = run(s)\n    rec = {\"tray_seeds\": \"pre-registered (20261004, 2026)\" if s == 0 else [1000 + s, 5000 + s], \"chosen_t_good\": chosen,\n           \"per_t_good\": {}}\n    for k, r in per_t.items():\n        rec[\"per_t_good\"][k] = {\"bands\": rows[k][\"bands_total\"], \"wrong\": rows[k][\"wrong_total\"],\n                                \"dangerous\": rows[k][\"dangerous_total\"], \"units_failing_5pct_rule\": rows[k][\"units_failing_b\"],\n                                \"per_unit\": {u: {\"bands\": v[\"bands\"], \"wrong\": v[\"wrong\"], \"dangerous\": v[\"dangerous\"]}\n                                             for u, v in r.items() if v[\"bands\"]}}\n    seeds[str(s)] = rec\n    p = rec[\"per_t_good\"][\"0.55\"][\"per_unit\"]\n    print(s, chosen, {u: (v[\"bands\"], v[\"wrong\"]) for u, v in p.items()}, flush=True)\n\ndef agg(tg, unit=None):\n    b = w = d = 0\n    for s in range(1, 21):\n        r = seeds[str(s)][\"per_t_good\"][tg]\n        if unit is None: b += r[\"bands\"]; w += r[\"wrong\"]; d += r[\"dangerous\"]\n        else:\n            v = r[\"per_unit\"].get(unit, {\"bands\": 0, \"wrong\": 0, \"dangerous\": 0}); b += v[\"bands\"]; w += v[\"wrong\"]; d += v[\"dangerous\"]\n    return {\"bands\": b, \"wrong\": w, \"dangerous\": d, \"wrong_share\": round(w / b, 4) if b else None}\n\nsummary = {\"seeds\": \"1..20 (not the pre-registered draw)\",\n           \"trays_per_seed\": sum(len(u[\"trays\"]) for u in units),\n           \"chosen_t_good_counts\": {str(c): sum(1 for s in range(1, 21) if seeds[str(s)][\"chosen_t_good\"] == c)\n                                    for c in sorted({seeds[str(s)][\"chosen_t_good\"] for s in range(1, 21)})},\n           \"dangerous_any_seed_any_candidate\": sum(seeds[str(s)][\"per_t_good\"][k][\"dangerous\"] for s in range(1, 21) for k in seeds[str(s)][\"per_t_good\"]),\n           \"all_units\": {tg: agg(tg) for tg in (\"0.50\", \"0.55\", \"0.60\")},\n           \"samruddh_grading\": {tg: agg(tg, \"samruddh_grading\") for tg in (\"0.50\", \"0.55\", \"0.60\")},\n           \"j4ckdev_1200_auditor\": {tg: agg(tg, \"j4ckdev_1200_auditor\") for tg in (\"0.50\", \"0.55\", \"0.60\")}}\nout = {\"what\": \"Multi-seed robustness of the t_good sweep. NOT pre-registered; information only. The shipped threshold (0.55) \"\n               \"was chosen on seed 0 (the pre-registered draw) and is unchanged.\",\n       \"method\": \"src/beans_v2/threshold_sweep.py build_trays()/score()/verdict() on the saved fold predictions, shipped T and \"\n                 \"t_defect 0.91; only the two tray-draw seeds change (20261004 -> 1000+s, 2026 -> 5000+s). \"\n                 \"To reproduce one seed, edit those two default_rng() seeds in threshold_sweep.py.\",\n       \"run_started\": t0, \"run_finished\": time.strftime(\"%Y-%m-%d %H:%M:%S %Z\"),\n       \"summary_seeds_1_to_20\": summary, \"per_seed\": seeds}\njson.dump(out, open(ROOT / \"reports_v2/threshold_seeds.json\", \"w\"), indent=1, default=lambda o: o.item() if hasattr(o, \"item\") else str(o))\nprint(json.dumps(summary, indent=1))\n"
+}

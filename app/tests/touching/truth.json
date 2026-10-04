@@ -1,0 +1,4141 @@
+{
+"what": "SYNTHETIC touching-bean trays (app/scripts/make_touching_trays.py); beans pasted, classes known",
+"trays": [
+{
+"file": "touch_spread_108_12.jpg",
+"layout": "spread_108",
+"mix": "12",
+"seed": 11,
+"size": 1200,
+"true_counts": {
+"good": 88,
+"dark": 4,
+"insect": 3,
+"broken": 3,
+"unhulled": 2
+},
+"true_defects": 12,
+"beans": [
+{
+"cls": "good",
+"cx": 117,
+"cy": 118
+},
+{
+"cls": "good",
+"cx": 219,
+"cy": 105
+},
+{
+"cls": "good",
+"cx": 321,
+"cy": 109
+},
+{
+"cls": "good",
+"cx": 437,
+"cy": 115
+},
+{
+"cls": "good",
+"cx": 552,
+"cy": 122
+},
+{
+"cls": "good",
+"cx": 648,
+"cy": 106
+},
+{
+"cls": "dark",
+"cx": 763,
+"cy": 108
+},
+{
+"cls": "good",
+"cx": 874,
+"cy": 114
+},
+{
+"cls": "good",
+"cx": 984,
+"cy": 122
+},
+{
+"cls": "good",
+"cx": 1080,
+"cy": 122
+},
+{
+"cls": "good",
+"cx": 105,
+"cy": 212
+},
+{
+"cls": "good",
+"cx": 227,
+"cy": 223
+},
+{
+"cls": "good",
+"cx": 329,
+"cy": 213
+},
+{
+"cls": "good",
+"cx": 428,
+"cy": 231
+},
+{
+"cls": "good",
+"cx": 556,
+"cy": 214
+},
+{
+"cls": "good",
+"cx": 659,
+"cy": 214
+},
+{
+"cls": "good",
+"cx": 761,
+"cy": 222
+},
+{
+"cls": "good",
+"cx": 864,
+"cy": 214
+},
+{
+"cls": "good",
+"cx": 970,
+"cy": 226
+},
+{
+"cls": "good",
+"cx": 1093,
+"cy": 223
+},
+{
+"cls": "good",
+"cx": 105,
+"cy": 324
+},
+{
+"cls": "good",
+"cx": 222,
+"cy": 331
+},
+{
+"cls": "broken",
+"cx": 322,
+"cy": 335
+},
+{
+"cls": "unhulled",
+"cx": 430,
+"cy": 333
+},
+{
+"cls": "good",
+"cx": 536,
+"cy": 335
+},
+{
+"cls": "dark",
+"cx": 662,
+"cy": 320
+},
+{
+"cls": "good",
+"cx": 771,
+"cy": 332
+},
+{
+"cls": "good",
+"cx": 872,
+"cy": 338
+},
+{
+"cls": "good",
+"cx": 968,
+"cy": 339
+},
+{
+"cls": "good",
+"cx": 1078,
+"cy": 322
+},
+{
+"cls": "broken",
+"cx": 106,
+"cy": 448
+},
+{
+"cls": "good",
+"cx": 215,
+"cy": 436
+},
+{
+"cls": "good",
+"cx": 333,
+"cy": 438
+},
+{
+"cls": "good",
+"cx": 440,
+"cy": 446
+},
+{
+"cls": "good",
+"cx": 550,
+"cy": 442
+},
+{
+"cls": "good",
+"cx": 658,
+"cy": 445
+},
+{
+"cls": "good",
+"cx": 754,
+"cy": 444
+},
+{
+"cls": "good",
+"cx": 876,
+"cy": 428
+},
+{
+"cls": "good",
+"cx": 977,
+"cy": 447
+},
+{
+"cls": "good",
+"cx": 1078,
+"cy": 443
+},
+{
+"cls": "good",
+"cx": 104,
+"cy": 543
+},
+{
+"cls": "good",
+"cx": 215,
+"cy": 551
+},
+{
+"cls": "dark",
+"cx": 339,
+"cy": 551
+},
+{
+"cls": "good",
+"cx": 436,
+"cy": 536
+},
+{
+"cls": "dark",
+"cx": 547,
+"cy": 545
+},
+{
+"cls": "good",
+"cx": 648,
+"cy": 555
+},
+{
+"cls": "good",
+"cx": 758,
+"cy": 552
+},
+{
+"cls": "good",
+"cx": 865,
+"cy": 546
+},
+{
+"cls": "good",
+"cx": 982,
+"cy": 551
+},
+{
+"cls": "good",
+"cx": 1083,
+"cy": 546
+},
+{
+"cls": "good",
+"cx": 116,
+"cy": 652
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 664
+},
+{
+"cls": "good",
+"cx": 333,
+"cy": 650
+},
+{
+"cls": "good",
+"cx": 434,
+"cy": 656
+},
+{
+"cls": "good",
+"cx": 543,
+"cy": 662
+},
+{
+"cls": "good",
+"cx": 654,
+"cy": 650
+},
+{
+"cls": "good",
+"cx": 756,
+"cy": 648
+},
+{
+"cls": "good",
+"cx": 875,
+"cy": 655
+},
+{
+"cls": "good",
+"cx": 969,
+"cy": 646
+},
+{
+"cls": "good",
+"cx": 1084,
+"cy": 649
+},
+{
+"cls": "insect",
+"cx": 107,
+"cy": 766
+},
+{
+"cls": "broken",
+"cx": 227,
+"cy": 760
+},
+{
+"cls": "good",
+"cx": 326,
+"cy": 765
+},
+{
+"cls": "good",
+"cx": 440,
+"cy": 772
+},
+{
+"cls": "good",
+"cx": 552,
+"cy": 767
+},
+{
+"cls": "good",
+"cx": 654,
+"cy": 771
+},
+{
+"cls": "unhulled",
+"cx": 766,
+"cy": 762
+},
+{
+"cls": "good",
+"cx": 862,
+"cy": 753
+},
+{
+"cls": "good",
+"cx": 976,
+"cy": 771
+},
+{
+"cls": "good",
+"cx": 1077,
+"cy": 760
+},
+{
+"cls": "good",
+"cx": 122,
+"cy": 871
+},
+{
+"cls": "good",
+"cx": 221,
+"cy": 880
+},
+{
+"cls": "good",
+"cx": 338,
+"cy": 860
+},
+{
+"cls": "good",
+"cx": 448,
+"cy": 864
+},
+{
+"cls": "good",
+"cx": 548,
+"cy": 874
+},
+{
+"cls": "good",
+"cx": 650,
+"cy": 860
+},
+{
+"cls": "good",
+"cx": 760,
+"cy": 867
+},
+{
+"cls": "good",
+"cx": 864,
+"cy": 861
+},
+{
+"cls": "good",
+"cx": 988,
+"cy": 863
+},
+{
+"cls": "good",
+"cx": 1090,
+"cy": 863
+},
+{
+"cls": "good",
+"cx": 124,
+"cy": 985
+},
+{
+"cls": "good",
+"cx": 232,
+"cy": 988
+},
+{
+"cls": "insect",
+"cx": 331,
+"cy": 970
+},
+{
+"cls": "good",
+"cx": 434,
+"cy": 974
+},
+{
+"cls": "good",
+"cx": 551,
+"cy": 976
+},
+{
+"cls": "good",
+"cx": 649,
+"cy": 968
+},
+{
+"cls": "good",
+"cx": 767,
+"cy": 985
+},
+{
+"cls": "good",
+"cx": 861,
+"cy": 973
+},
+{
+"cls": "good",
+"cx": 975,
+"cy": 976
+},
+{
+"cls": "insect",
+"cx": 1087,
+"cy": 985
+},
+{
+"cls": "good",
+"cx": 120,
+"cy": 1092
+},
+{
+"cls": "good",
+"cx": 231,
+"cy": 1081
+},
+{
+"cls": "good",
+"cx": 332,
+"cy": 1083
+},
+{
+"cls": "good",
+"cx": 430,
+"cy": 1089
+},
+{
+"cls": "good",
+"cx": 548,
+"cy": 1080
+},
+{
+"cls": "good",
+"cx": 658,
+"cy": 1090
+},
+{
+"cls": "good",
+"cx": 758,
+"cy": 1096
+},
+{
+"cls": "good",
+"cx": 860,
+"cy": 1088
+},
+{
+"cls": "good",
+"cx": 985,
+"cy": 1094
+},
+{
+"cls": "good",
+"cx": 1096,
+"cy": 1092
+}
+]
+},
+{
+"file": "touch_cell72_12.jpg",
+"layout": "cell72",
+"mix": "12",
+"seed": 12,
+"size": 840,
+"true_counts": {
+"good": 88,
+"dark": 4,
+"insect": 3,
+"broken": 3,
+"unhulled": 2
+},
+"true_defects": 12,
+"beans": [
+{
+"cls": "broken",
+"cx": 99,
+"cy": 92
+},
+{
+"cls": "good",
+"cx": 162,
+"cy": 101
+},
+{
+"cls": "good",
+"cx": 245,
+"cy": 92
+},
+{
+"cls": "good",
+"cx": 306,
+"cy": 102
+},
+{
+"cls": "good",
+"cx": 378,
+"cy": 91
+},
+{
+"cls": "good",
+"cx": 456,
+"cy": 98
+},
+{
+"cls": "good",
+"cx": 525,
+"cy": 102
+},
+{
+"cls": "good",
+"cx": 600,
+"cy": 102
+},
+{
+"cls": "good",
+"cx": 667,
+"cy": 101
+},
+{
+"cls": "broken",
+"cx": 743,
+"cy": 93
+},
+{
+"cls": "good",
+"cx": 94,
+"cy": 166
+},
+{
+"cls": "good",
+"cx": 174,
+"cy": 173
+},
+{
+"cls": "good",
+"cx": 244,
+"cy": 170
+},
+{
+"cls": "good",
+"cx": 313,
+"cy": 171
+},
+{
+"cls": "good",
+"cx": 387,
+"cy": 163
+},
+{
+"cls": "good",
+"cx": 453,
+"cy": 170
+},
+{
+"cls": "good",
+"cx": 531,
+"cy": 173
+},
+{
+"cls": "good",
+"cx": 604,
+"cy": 168
+},
+{
+"cls": "good",
+"cx": 675,
+"cy": 165
+},
+{
+"cls": "dark",
+"cx": 739,
+"cy": 168
+},
+{
+"cls": "good",
+"cx": 95,
+"cy": 239
+},
+{
+"cls": "good",
+"cx": 163,
+"cy": 244
+},
+{
+"cls": "good",
+"cx": 239,
+"cy": 236
+},
+{
+"cls": "good",
+"cx": 316,
+"cy": 235
+},
+{
+"cls": "good",
+"cx": 389,
+"cy": 238
+},
+{
+"cls": "unhulled",
+"cx": 454,
+"cy": 245
+},
+{
+"cls": "good",
+"cx": 524,
+"cy": 246
+},
+{
+"cls": "insect",
+"cx": 604,
+"cy": 244
+},
+{
+"cls": "dark",
+"cx": 676,
+"cy": 240
+},
+{
+"cls": "good",
+"cx": 743,
+"cy": 236
+},
+{
+"cls": "good",
+"cx": 90,
+"cy": 309
+},
+{
+"cls": "good",
+"cx": 169,
+"cy": 315
+},
+{
+"cls": "good",
+"cx": 241,
+"cy": 313
+},
+{
+"cls": "good",
+"cx": 308,
+"cy": 306
+},
+{
+"cls": "good",
+"cx": 388,
+"cy": 315
+},
+{
+"cls": "good",
+"cx": 455,
+"cy": 313
+},
+{
+"cls": "good",
+"cx": 525,
+"cy": 311
+},
+{
+"cls": "good",
+"cx": 595,
+"cy": 309
+},
+{
+"cls": "good",
+"cx": 666,
+"cy": 311
+},
+{
+"cls": "good",
+"cx": 743,
+"cy": 310
+},
+{
+"cls": "broken",
+"cx": 93,
+"cy": 389
+},
+{
+"cls": "good",
+"cx": 168,
+"cy": 382
+},
+{
+"cls": "good",
+"cx": 237,
+"cy": 386
+},
+{
+"cls": "good",
+"cx": 308,
+"cy": 386
+},
+{
+"cls": "good",
+"cx": 389,
+"cy": 383
+},
+{
+"cls": "good",
+"cx": 452,
+"cy": 386
+},
+{
+"cls": "dark",
+"cx": 529,
+"cy": 384
+},
+{
+"cls": "good",
+"cx": 603,
+"cy": 386
+},
+{
+"cls": "good",
+"cx": 677,
+"cy": 381
+},
+{
+"cls": "good",
+"cx": 745,
+"cy": 385
+},
+{
+"cls": "good",
+"cx": 102,
+"cy": 450
+},
+{
+"cls": "good",
+"cx": 174,
+"cy": 453
+},
+{
+"cls": "good",
+"cx": 240,
+"cy": 458
+},
+{
+"cls": "good",
+"cx": 317,
+"cy": 462
+},
+{
+"cls": "good",
+"cx": 390,
+"cy": 456
+},
+{
+"cls": "good",
+"cx": 458,
+"cy": 460
+},
+{
+"cls": "good",
+"cx": 529,
+"cy": 460
+},
+{
+"cls": "good",
+"cx": 594,
+"cy": 451
+},
+{
+"cls": "good",
+"cx": 674,
+"cy": 459
+},
+{
+"cls": "good",
+"cx": 748,
+"cy": 454
+},
+{
+"cls": "good",
+"cx": 95,
+"cy": 534
+},
+{
+"cls": "good",
+"cx": 173,
+"cy": 522
+},
+{
+"cls": "good",
+"cx": 239,
+"cy": 534
+},
+{
+"cls": "insect",
+"cx": 313,
+"cy": 527
+},
+{
+"cls": "good",
+"cx": 388,
+"cy": 526
+},
+{
+"cls": "good",
+"cx": 452,
+"cy": 524
+},
+{
+"cls": "good",
+"cx": 529,
+"cy": 525
+},
+{
+"cls": "good",
+"cx": 606,
+"cy": 530
+},
+{
+"cls": "good",
+"cx": 668,
+"cy": 526
+},
+{
+"cls": "insect",
+"cx": 745,
+"cy": 522
+},
+{
+"cls": "good",
+"cx": 96,
+"cy": 606
+},
+{
+"cls": "good",
+"cx": 167,
+"cy": 598
+},
+{
+"cls": "good",
+"cx": 240,
+"cy": 604
+},
+{
+"cls": "good",
+"cx": 315,
+"cy": 598
+},
+{
+"cls": "good",
+"cx": 384,
+"cy": 606
+},
+{
+"cls": "good",
+"cx": 459,
+"cy": 599
+},
+{
+"cls": "good",
+"cx": 524,
+"cy": 596
+},
+{
+"cls": "good",
+"cx": 598,
+"cy": 604
+},
+{
+"cls": "good",
+"cx": 666,
+"cy": 604
+},
+{
+"cls": "good",
+"cx": 747,
+"cy": 606
+},
+{
+"cls": "good",
+"cx": 102,
+"cy": 672
+},
+{
+"cls": "good",
+"cx": 168,
+"cy": 672
+},
+{
+"cls": "good",
+"cx": 243,
+"cy": 676
+},
+{
+"cls": "good",
+"cx": 310,
+"cy": 671
+},
+{
+"cls": "dark",
+"cx": 384,
+"cy": 678
+},
+{
+"cls": "good",
+"cx": 456,
+"cy": 673
+},
+{
+"cls": "good",
+"cx": 528,
+"cy": 672
+},
+{
+"cls": "good",
+"cx": 606,
+"cy": 668
+},
+{
+"cls": "good",
+"cx": 668,
+"cy": 678
+},
+{
+"cls": "good",
+"cx": 741,
+"cy": 670
+},
+{
+"cls": "good",
+"cx": 91,
+"cy": 742
+},
+{
+"cls": "good",
+"cx": 170,
+"cy": 738
+},
+{
+"cls": "good",
+"cx": 244,
+"cy": 749
+},
+{
+"cls": "good",
+"cx": 317,
+"cy": 743
+},
+{
+"cls": "good",
+"cx": 389,
+"cy": 742
+},
+{
+"cls": "good",
+"cx": 462,
+"cy": 740
+},
+{
+"cls": "unhulled",
+"cx": 526,
+"cy": 741
+},
+{
+"cls": "good",
+"cx": 605,
+"cy": 738
+},
+{
+"cls": "good",
+"cx": 674,
+"cy": 742
+},
+{
+"cls": "good",
+"cx": 738,
+"cy": 738
+}
+]
+},
+{
+"file": "touch_cell64_12.jpg",
+"layout": "cell64",
+"mix": "12",
+"seed": 13,
+"size": 760,
+"true_counts": {
+"good": 88,
+"dark": 4,
+"insect": 3,
+"broken": 3,
+"unhulled": 2
+},
+"true_defects": 12,
+"beans": [
+{
+"cls": "good",
+"cx": 91,
+"cy": 95
+},
+{
+"cls": "good",
+"cx": 157,
+"cy": 89
+},
+{
+"cls": "insect",
+"cx": 217,
+"cy": 87
+},
+{
+"cls": "dark",
+"cx": 280,
+"cy": 92
+},
+{
+"cls": "good",
+"cx": 345,
+"cy": 90
+},
+{
+"cls": "good",
+"cx": 411,
+"cy": 91
+},
+{
+"cls": "good",
+"cx": 480,
+"cy": 93
+},
+{
+"cls": "good",
+"cx": 539,
+"cy": 87
+},
+{
+"cls": "good",
+"cx": 604,
+"cy": 89
+},
+{
+"cls": "good",
+"cx": 664,
+"cy": 92
+},
+{
+"cls": "good",
+"cx": 94,
+"cy": 158
+},
+{
+"cls": "good",
+"cx": 160,
+"cy": 160
+},
+{
+"cls": "good",
+"cx": 221,
+"cy": 151
+},
+{
+"cls": "good",
+"cx": 284,
+"cy": 159
+},
+{
+"cls": "good",
+"cx": 347,
+"cy": 153
+},
+{
+"cls": "good",
+"cx": 407,
+"cy": 156
+},
+{
+"cls": "good",
+"cx": 473,
+"cy": 159
+},
+{
+"cls": "good",
+"cx": 537,
+"cy": 151
+},
+{
+"cls": "good",
+"cx": 602,
+"cy": 161
+},
+{
+"cls": "good",
+"cx": 665,
+"cy": 152
+},
+{
+"cls": "good",
+"cx": 94,
+"cy": 220
+},
+{
+"cls": "good",
+"cx": 152,
+"cy": 220
+},
+{
+"cls": "good",
+"cx": 219,
+"cy": 218
+},
+{
+"cls": "good",
+"cx": 279,
+"cy": 218
+},
+{
+"cls": "good",
+"cx": 353,
+"cy": 218
+},
+{
+"cls": "good",
+"cx": 415,
+"cy": 222
+},
+{
+"cls": "good",
+"cx": 474,
+"cy": 224
+},
+{
+"cls": "good",
+"cx": 541,
+"cy": 224
+},
+{
+"cls": "good",
+"cx": 599,
+"cy": 223
+},
+{
+"cls": "good",
+"cx": 663,
+"cy": 216
+},
+{
+"cls": "good",
+"cx": 96,
+"cy": 281
+},
+{
+"cls": "good",
+"cx": 159,
+"cy": 284
+},
+{
+"cls": "insect",
+"cx": 223,
+"cy": 285
+},
+{
+"cls": "good",
+"cx": 283,
+"cy": 281
+},
+{
+"cls": "good",
+"cx": 351,
+"cy": 283
+},
+{
+"cls": "good",
+"cx": 411,
+"cy": 280
+},
+{
+"cls": "good",
+"cx": 476,
+"cy": 279
+},
+{
+"cls": "good",
+"cx": 535,
+"cy": 281
+},
+{
+"cls": "good",
+"cx": 599,
+"cy": 280
+},
+{
+"cls": "good",
+"cx": 671,
+"cy": 283
+},
+{
+"cls": "good",
+"cx": 88,
+"cy": 348
+},
+{
+"cls": "broken",
+"cx": 161,
+"cy": 349
+},
+{
+"cls": "good",
+"cx": 217,
+"cy": 352
+},
+{
+"cls": "good",
+"cx": 289,
+"cy": 347
+},
+{
+"cls": "good",
+"cx": 343,
+"cy": 344
+},
+{
+"cls": "good",
+"cx": 408,
+"cy": 347
+},
+{
+"cls": "good",
+"cx": 477,
+"cy": 349
+},
+{
+"cls": "good",
+"cx": 542,
+"cy": 349
+},
+{
+"cls": "dark",
+"cx": 603,
+"cy": 345
+},
+{
+"cls": "good",
+"cx": 665,
+"cy": 350
+},
+{
+"cls": "good",
+"cx": 91,
+"cy": 407
+},
+{
+"cls": "good",
+"cx": 159,
+"cy": 407
+},
+{
+"cls": "good",
+"cx": 223,
+"cy": 411
+},
+{
+"cls": "good",
+"cx": 283,
+"cy": 412
+},
+{
+"cls": "broken",
+"cx": 346,
+"cy": 410
+},
+{
+"cls": "good",
+"cx": 412,
+"cy": 413
+},
+{
+"cls": "good",
+"cx": 473,
+"cy": 414
+},
+{
+"cls": "good",
+"cx": 541,
+"cy": 411
+},
+{
+"cls": "good",
+"cx": 601,
+"cy": 414
+},
+{
+"cls": "unhulled",
+"cx": 672,
+"cy": 415
+},
+{
+"cls": "good",
+"cx": 94,
+"cy": 474
+},
+{
+"cls": "good",
+"cx": 157,
+"cy": 478
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 471
+},
+{
+"cls": "good",
+"cx": 288,
+"cy": 471
+},
+{
+"cls": "good",
+"cx": 350,
+"cy": 479
+},
+{
+"cls": "good",
+"cx": 409,
+"cy": 473
+},
+{
+"cls": "good",
+"cx": 472,
+"cy": 471
+},
+{
+"cls": "good",
+"cx": 544,
+"cy": 473
+},
+{
+"cls": "good",
+"cx": 603,
+"cy": 472
+},
+{
+"cls": "good",
+"cx": 670,
+"cy": 480
+},
+{
+"cls": "good",
+"cx": 95,
+"cy": 535
+},
+{
+"cls": "good",
+"cx": 154,
+"cy": 545
+},
+{
+"cls": "good",
+"cx": 221,
+"cy": 535
+},
+{
+"cls": "good",
+"cx": 287,
+"cy": 535
+},
+{
+"cls": "good",
+"cx": 353,
+"cy": 537
+},
+{
+"cls": "broken",
+"cx": 411,
+"cy": 544
+},
+{
+"cls": "good",
+"cx": 473,
+"cy": 545
+},
+{
+"cls": "good",
+"cx": 535,
+"cy": 543
+},
+{
+"cls": "good",
+"cx": 605,
+"cy": 539
+},
+{
+"cls": "good",
+"cx": 666,
+"cy": 542
+},
+{
+"cls": "good",
+"cx": 87,
+"cy": 608
+},
+{
+"cls": "good",
+"cx": 152,
+"cy": 602
+},
+{
+"cls": "good",
+"cx": 220,
+"cy": 607
+},
+{
+"cls": "good",
+"cx": 287,
+"cy": 599
+},
+{
+"cls": "good",
+"cx": 352,
+"cy": 606
+},
+{
+"cls": "unhulled",
+"cx": 412,
+"cy": 609
+},
+{
+"cls": "good",
+"cx": 474,
+"cy": 608
+},
+{
+"cls": "good",
+"cx": 535,
+"cy": 607
+},
+{
+"cls": "good",
+"cx": 605,
+"cy": 602
+},
+{
+"cls": "dark",
+"cx": 671,
+"cy": 599
+},
+{
+"cls": "good",
+"cx": 88,
+"cy": 668
+},
+{
+"cls": "good",
+"cx": 153,
+"cy": 670
+},
+{
+"cls": "good",
+"cx": 220,
+"cy": 665
+},
+{
+"cls": "good",
+"cx": 289,
+"cy": 668
+},
+{
+"cls": "good",
+"cx": 346,
+"cy": 673
+},
+{
+"cls": "insect",
+"cx": 411,
+"cy": 672
+},
+{
+"cls": "good",
+"cx": 472,
+"cy": 667
+},
+{
+"cls": "good",
+"cx": 537,
+"cy": 665
+},
+{
+"cls": "dark",
+"cx": 601,
+"cy": 672
+},
+{
+"cls": "good",
+"cx": 664,
+"cy": 663
+}
+]
+},
+{
+"file": "touch_cell58_12.jpg",
+"layout": "cell58",
+"mix": "12",
+"seed": 14,
+"size": 700,
+"true_counts": {
+"good": 88,
+"dark": 4,
+"insect": 3,
+"broken": 3,
+"unhulled": 2
+},
+"true_defects": 12,
+"beans": [
+{
+"cls": "good",
+"cx": 86,
+"cy": 87
+},
+{
+"cls": "good",
+"cx": 145,
+"cy": 87
+},
+{
+"cls": "good",
+"cx": 201,
+"cy": 88
+},
+{
+"cls": "good",
+"cx": 264,
+"cy": 93
+},
+{
+"cls": "broken",
+"cx": 317,
+"cy": 91
+},
+{
+"cls": "good",
+"cx": 382,
+"cy": 89
+},
+{
+"cls": "good",
+"cx": 440,
+"cy": 90
+},
+{
+"cls": "good",
+"cx": 492,
+"cy": 90
+},
+{
+"cls": "good",
+"cx": 549,
+"cy": 93
+},
+{
+"cls": "good",
+"cx": 608,
+"cy": 86
+},
+{
+"cls": "good",
+"cx": 91,
+"cy": 144
+},
+{
+"cls": "good",
+"cx": 143,
+"cy": 145
+},
+{
+"cls": "good",
+"cx": 202,
+"cy": 143
+},
+{
+"cls": "good",
+"cx": 263,
+"cy": 143
+},
+{
+"cls": "good",
+"cx": 319,
+"cy": 149
+},
+{
+"cls": "good",
+"cx": 377,
+"cy": 143
+},
+{
+"cls": "good",
+"cx": 440,
+"cy": 150
+},
+{
+"cls": "good",
+"cx": 498,
+"cy": 151
+},
+{
+"cls": "dark",
+"cx": 549,
+"cy": 147
+},
+{
+"cls": "good",
+"cx": 608,
+"cy": 147
+},
+{
+"cls": "good",
+"cx": 88,
+"cy": 205
+},
+{
+"cls": "broken",
+"cx": 151,
+"cy": 201
+},
+{
+"cls": "good",
+"cx": 209,
+"cy": 204
+},
+{
+"cls": "good",
+"cx": 259,
+"cy": 206
+},
+{
+"cls": "good",
+"cx": 318,
+"cy": 202
+},
+{
+"cls": "good",
+"cx": 381,
+"cy": 207
+},
+{
+"cls": "unhulled",
+"cx": 440,
+"cy": 205
+},
+{
+"cls": "good",
+"cx": 496,
+"cy": 206
+},
+{
+"cls": "good",
+"cx": 549,
+"cy": 205
+},
+{
+"cls": "good",
+"cx": 609,
+"cy": 205
+},
+{
+"cls": "good",
+"cx": 89,
+"cy": 262
+},
+{
+"cls": "insect",
+"cx": 151,
+"cy": 266
+},
+{
+"cls": "good",
+"cx": 201,
+"cy": 260
+},
+{
+"cls": "good",
+"cx": 266,
+"cy": 264
+},
+{
+"cls": "good",
+"cx": 323,
+"cy": 265
+},
+{
+"cls": "insect",
+"cx": 379,
+"cy": 265
+},
+{
+"cls": "dark",
+"cx": 436,
+"cy": 259
+},
+{
+"cls": "good",
+"cx": 497,
+"cy": 266
+},
+{
+"cls": "good",
+"cx": 552,
+"cy": 265
+},
+{
+"cls": "good",
+"cx": 615,
+"cy": 260
+},
+{
+"cls": "insect",
+"cx": 88,
+"cy": 320
+},
+{
+"cls": "good",
+"cx": 146,
+"cy": 321
+},
+{
+"cls": "good",
+"cx": 202,
+"cy": 320
+},
+{
+"cls": "good",
+"cx": 260,
+"cy": 324
+},
+{
+"cls": "good",
+"cx": 325,
+"cy": 317
+},
+{
+"cls": "good",
+"cx": 375,
+"cy": 320
+},
+{
+"cls": "good",
+"cx": 437,
+"cy": 323
+},
+{
+"cls": "good",
+"cx": 498,
+"cy": 320
+},
+{
+"cls": "good",
+"cx": 550,
+"cy": 318
+},
+{
+"cls": "good",
+"cx": 609,
+"cy": 322
+},
+{
+"cls": "good",
+"cx": 92,
+"cy": 378
+},
+{
+"cls": "good",
+"cx": 149,
+"cy": 376
+},
+{
+"cls": "good",
+"cx": 206,
+"cy": 382
+},
+{
+"cls": "good",
+"cx": 262,
+"cy": 380
+},
+{
+"cls": "good",
+"cx": 322,
+"cy": 382
+},
+{
+"cls": "good",
+"cx": 383,
+"cy": 379
+},
+{
+"cls": "good",
+"cx": 433,
+"cy": 377
+},
+{
+"cls": "good",
+"cx": 498,
+"cy": 377
+},
+{
+"cls": "good",
+"cx": 553,
+"cy": 382
+},
+{
+"cls": "good",
+"cx": 611,
+"cy": 383
+},
+{
+"cls": "good",
+"cx": 85,
+"cy": 435
+},
+{
+"cls": "good",
+"cx": 143,
+"cy": 441
+},
+{
+"cls": "dark",
+"cx": 201,
+"cy": 437
+},
+{
+"cls": "good",
+"cx": 266,
+"cy": 438
+},
+{
+"cls": "good",
+"cx": 321,
+"cy": 438
+},
+{
+"cls": "good",
+"cx": 377,
+"cy": 435
+},
+{
+"cls": "good",
+"cx": 433,
+"cy": 436
+},
+{
+"cls": "good",
+"cx": 499,
+"cy": 434
+},
+{
+"cls": "good",
+"cx": 551,
+"cy": 436
+},
+{
+"cls": "good",
+"cx": 611,
+"cy": 439
+},
+{
+"cls": "good",
+"cx": 92,
+"cy": 496
+},
+{
+"cls": "good",
+"cx": 145,
+"cy": 496
+},
+{
+"cls": "good",
+"cx": 204,
+"cy": 499
+},
+{
+"cls": "good",
+"cx": 264,
+"cy": 496
+},
+{
+"cls": "good",
+"cx": 325,
+"cy": 497
+},
+{
+"cls": "good",
+"cx": 376,
+"cy": 491
+},
+{
+"cls": "good",
+"cx": 433,
+"cy": 495
+},
+{
+"cls": "good",
+"cx": 495,
+"cy": 493
+},
+{
+"cls": "good",
+"cx": 553,
+"cy": 494
+},
+{
+"cls": "good",
+"cx": 610,
+"cy": 492
+},
+{
+"cls": "good",
+"cx": 93,
+"cy": 552
+},
+{
+"cls": "good",
+"cx": 149,
+"cy": 553
+},
+{
+"cls": "good",
+"cx": 208,
+"cy": 550
+},
+{
+"cls": "good",
+"cx": 265,
+"cy": 550
+},
+{
+"cls": "good",
+"cx": 324,
+"cy": 550
+},
+{
+"cls": "good",
+"cx": 383,
+"cy": 552
+},
+{
+"cls": "good",
+"cx": 433,
+"cy": 557
+},
+{
+"cls": "good",
+"cx": 494,
+"cy": 557
+},
+{
+"cls": "good",
+"cx": 557,
+"cy": 555
+},
+{
+"cls": "good",
+"cx": 610,
+"cy": 557
+},
+{
+"cls": "good",
+"cx": 86,
+"cy": 609
+},
+{
+"cls": "broken",
+"cx": 148,
+"cy": 614
+},
+{
+"cls": "good",
+"cx": 202,
+"cy": 608
+},
+{
+"cls": "good",
+"cx": 260,
+"cy": 615
+},
+{
+"cls": "unhulled",
+"cx": 320,
+"cy": 610
+},
+{
+"cls": "good",
+"cx": 376,
+"cy": 609
+},
+{
+"cls": "good",
+"cx": 440,
+"cy": 615
+},
+{
+"cls": "good",
+"cx": 498,
+"cy": 612
+},
+{
+"cls": "good",
+"cx": 555,
+"cy": 615
+},
+{
+"cls": "dark",
+"cx": 608,
+"cy": 612
+}
+]
+},
+{
+"file": "touch_pairs_12.jpg",
+"layout": "pairs",
+"mix": "12",
+"seed": 15,
+"size": 1200,
+"true_counts": {
+"good": 88,
+"dark": 4,
+"insect": 3,
+"broken": 3,
+"unhulled": 2
+},
+"true_defects": 12,
+"beans": [
+{
+"cls": "good",
+"cx": 115,
+"cy": 112
+},
+{
+"cls": "good",
+"cx": 165,
+"cy": 116
+},
+{
+"cls": "good",
+"cx": 332,
+"cy": 117
+},
+{
+"cls": "good",
+"cx": 377,
+"cy": 114
+},
+{
+"cls": "good",
+"cx": 549,
+"cy": 115
+},
+{
+"cls": "good",
+"cx": 595,
+"cy": 116
+},
+{
+"cls": "good",
+"cx": 762,
+"cy": 111
+},
+{
+"cls": "good",
+"cx": 809,
+"cy": 113
+},
+{
+"cls": "good",
+"cx": 976,
+"cy": 117
+},
+{
+"cls": "insect",
+"cx": 1025,
+"cy": 113
+},
+{
+"cls": "good",
+"cx": 112,
+"cy": 219
+},
+{
+"cls": "good",
+"cx": 162,
+"cy": 224
+},
+{
+"cls": "good",
+"cx": 331,
+"cy": 225
+},
+{
+"cls": "good",
+"cx": 376,
+"cy": 219
+},
+{
+"cls": "good",
+"cx": 543,
+"cy": 224
+},
+{
+"cls": "dark",
+"cx": 593,
+"cy": 220
+},
+{
+"cls": "good",
+"cx": 764,
+"cy": 224
+},
+{
+"cls": "good",
+"cx": 807,
+"cy": 225
+},
+{
+"cls": "dark",
+"cx": 980,
+"cy": 222
+},
+{
+"cls": "good",
+"cx": 1027,
+"cy": 220
+},
+{
+"cls": "good",
+"cx": 112,
+"cy": 329
+},
+{
+"cls": "good",
+"cx": 160,
+"cy": 331
+},
+{
+"cls": "good",
+"cx": 333,
+"cy": 327
+},
+{
+"cls": "good",
+"cx": 377,
+"cy": 330
+},
+{
+"cls": "good",
+"cx": 544,
+"cy": 330
+},
+{
+"cls": "good",
+"cx": 596,
+"cy": 328
+},
+{
+"cls": "good",
+"cx": 761,
+"cy": 333
+},
+{
+"cls": "good",
+"cx": 811,
+"cy": 328
+},
+{
+"cls": "good",
+"cx": 979,
+"cy": 328
+},
+{
+"cls": "good",
+"cx": 1026,
+"cy": 330
+},
+{
+"cls": "good",
+"cx": 114,
+"cy": 438
+},
+{
+"cls": "good",
+"cx": 163,
+"cy": 436
+},
+{
+"cls": "good",
+"cx": 330,
+"cy": 435
+},
+{
+"cls": "good",
+"cx": 378,
+"cy": 437
+},
+{
+"cls": "good",
+"cx": 546,
+"cy": 440
+},
+{
+"cls": "good",
+"cx": 592,
+"cy": 440
+},
+{
+"cls": "good",
+"cx": 759,
+"cy": 438
+},
+{
+"cls": "good",
+"cx": 809,
+"cy": 438
+},
+{
+"cls": "good",
+"cx": 980,
+"cy": 436
+},
+{
+"cls": "good",
+"cx": 1023,
+"cy": 440
+},
+{
+"cls": "good",
+"cx": 115,
+"cy": 543
+},
+{
+"cls": "good",
+"cx": 163,
+"cy": 548
+},
+{
+"cls": "good",
+"cx": 330,
+"cy": 546
+},
+{
+"cls": "good",
+"cx": 375,
+"cy": 545
+},
+{
+"cls": "good",
+"cx": 546,
+"cy": 546
+},
+{
+"cls": "good",
+"cx": 595,
+"cy": 549
+},
+{
+"cls": "dark",
+"cx": 761,
+"cy": 546
+},
+{
+"cls": "insect",
+"cx": 810,
+"cy": 549
+},
+{
+"cls": "good",
+"cx": 978,
+"cy": 546
+},
+{
+"cls": "good",
+"cx": 1028,
+"cy": 548
+},
+{
+"cls": "good",
+"cx": 115,
+"cy": 657
+},
+{
+"cls": "good",
+"cx": 159,
+"cy": 652
+},
+{
+"cls": "good",
+"cx": 332,
+"cy": 653
+},
+{
+"cls": "broken",
+"cx": 378,
+"cy": 654
+},
+{
+"cls": "good",
+"cx": 545,
+"cy": 656
+},
+{
+"cls": "good",
+"cx": 595,
+"cy": 654
+},
+{
+"cls": "good",
+"cx": 763,
+"cy": 651
+},
+{
+"cls": "good",
+"cx": 808,
+"cy": 657
+},
+{
+"cls": "good",
+"cx": 976,
+"cy": 652
+},
+{
+"cls": "good",
+"cx": 1029,
+"cy": 655
+},
+{
+"cls": "good",
+"cx": 115,
+"cy": 762
+},
+{
+"cls": "good",
+"cx": 164,
+"cy": 759
+},
+{
+"cls": "good",
+"cx": 332,
+"cy": 762
+},
+{
+"cls": "good",
+"cx": 380,
+"cy": 761
+},
+{
+"cls": "good",
+"cx": 545,
+"cy": 765
+},
+{
+"cls": "good",
+"cx": 597,
+"cy": 762
+},
+{
+"cls": "good",
+"cx": 761,
+"cy": 760
+},
+{
+"cls": "good",
+"cx": 813,
+"cy": 761
+},
+{
+"cls": "good",
+"cx": 978,
+"cy": 759
+},
+{
+"cls": "good",
+"cx": 1025,
+"cy": 764
+},
+{
+"cls": "good",
+"cx": 116,
+"cy": 868
+},
+{
+"cls": "good",
+"cx": 161,
+"cy": 868
+},
+{
+"cls": "good",
+"cx": 331,
+"cy": 869
+},
+{
+"cls": "good",
+"cx": 377,
+"cy": 868
+},
+{
+"cls": "good",
+"cx": 546,
+"cy": 872
+},
+{
+"cls": "good",
+"cx": 595,
+"cy": 868
+},
+{
+"cls": "good",
+"cx": 760,
+"cy": 870
+},
+{
+"cls": "dark",
+"cx": 811,
+"cy": 867
+},
+{
+"cls": "good",
+"cx": 980,
+"cy": 868
+},
+{
+"cls": "good",
+"cx": 1029,
+"cy": 868
+},
+{
+"cls": "good",
+"cx": 114,
+"cy": 978
+},
+{
+"cls": "broken",
+"cx": 160,
+"cy": 979
+},
+{
+"cls": "unhulled",
+"cx": 329,
+"cy": 981
+},
+{
+"cls": "good",
+"cx": 378,
+"cy": 980
+},
+{
+"cls": "good",
+"cx": 548,
+"cy": 978
+},
+{
+"cls": "good",
+"cx": 596,
+"cy": 980
+},
+{
+"cls": "insect",
+"cx": 764,
+"cy": 978
+},
+{
+"cls": "good",
+"cx": 812,
+"cy": 981
+},
+{
+"cls": "good",
+"cx": 981,
+"cy": 978
+},
+{
+"cls": "unhulled",
+"cx": 1029,
+"cy": 976
+},
+{
+"cls": "good",
+"cx": 113,
+"cy": 1089
+},
+{
+"cls": "good",
+"cx": 162,
+"cy": 1085
+},
+{
+"cls": "broken",
+"cx": 329,
+"cy": 1086
+},
+{
+"cls": "good",
+"cx": 377,
+"cy": 1088
+},
+{
+"cls": "good",
+"cx": 545,
+"cy": 1083
+},
+{
+"cls": "good",
+"cx": 597,
+"cy": 1084
+},
+{
+"cls": "good",
+"cx": 762,
+"cy": 1084
+},
+{
+"cls": "good",
+"cx": 812,
+"cy": 1088
+},
+{
+"cls": "good",
+"cx": 976,
+"cy": 1087
+},
+{
+"cls": "good",
+"cx": 1028,
+"cy": 1089
+}
+]
+},
+{
+"file": "touch_clump30_12.jpg",
+"layout": "clump30",
+"mix": "12",
+"seed": 16,
+"size": 1200,
+"true_counts": {
+"good": 88,
+"dark": 4,
+"insect": 3,
+"broken": 3,
+"unhulled": 2
+},
+"true_defects": 12,
+"beans": [
+{
+"cls": "good",
+"cx": 124,
+"cy": 107
+},
+{
+"cls": "unhulled",
+"cx": 222,
+"cy": 105
+},
+{
+"cls": "good",
+"cx": 334,
+"cy": 106
+},
+{
+"cls": "good",
+"cx": 443,
+"cy": 105
+},
+{
+"cls": "good",
+"cx": 552,
+"cy": 114
+},
+{
+"cls": "good",
+"cx": 661,
+"cy": 109
+},
+{
+"cls": "good",
+"cx": 755,
+"cy": 115
+},
+{
+"cls": "good",
+"cx": 872,
+"cy": 113
+},
+{
+"cls": "good",
+"cx": 980,
+"cy": 106
+},
+{
+"cls": "good",
+"cx": 1083,
+"cy": 110
+},
+{
+"cls": "good",
+"cx": 118,
+"cy": 218
+},
+{
+"cls": "good",
+"cx": 212,
+"cy": 232
+},
+{
+"cls": "good",
+"cx": 320,
+"cy": 219
+},
+{
+"cls": "good",
+"cx": 438,
+"cy": 224
+},
+{
+"cls": "good",
+"cx": 555,
+"cy": 231
+},
+{
+"cls": "good",
+"cx": 650,
+"cy": 213
+},
+{
+"cls": "good",
+"cx": 760,
+"cy": 232
+},
+{
+"cls": "good",
+"cx": 860,
+"cy": 224
+},
+{
+"cls": "good",
+"cx": 988,
+"cy": 213
+},
+{
+"cls": "good",
+"cx": 1080,
+"cy": 229
+},
+{
+"cls": "good",
+"cx": 111,
+"cy": 326
+},
+{
+"cls": "good",
+"cx": 228,
+"cy": 340
+},
+{
+"cls": "good",
+"cx": 337,
+"cy": 340
+},
+{
+"cls": "good",
+"cx": 436,
+"cy": 336
+},
+{
+"cls": "good",
+"cx": 536,
+"cy": 339
+},
+{
+"cls": "good",
+"cx": 663,
+"cy": 336
+},
+{
+"cls": "dark",
+"cx": 758,
+"cy": 335
+},
+{
+"cls": "good",
+"cx": 878,
+"cy": 335
+},
+{
+"cls": "good",
+"cx": 979,
+"cy": 324
+},
+{
+"cls": "good",
+"cx": 1090,
+"cy": 325
+},
+{
+"cls": "good",
+"cx": 107,
+"cy": 434
+},
+{
+"cls": "good",
+"cx": 212,
+"cy": 430
+},
+{
+"cls": "good",
+"cx": 331,
+"cy": 437
+},
+{
+"cls": "good",
+"cx": 448,
+"cy": 448
+},
+{
+"cls": "good",
+"cx": 539,
+"cy": 432
+},
+{
+"cls": "dark",
+"cx": 645,
+"cy": 433
+},
+{
+"cls": "good",
+"cx": 771,
+"cy": 431
+},
+{
+"cls": "broken",
+"cx": 867,
+"cy": 439
+},
+{
+"cls": "good",
+"cx": 974,
+"cy": 446
+},
+{
+"cls": "good",
+"cx": 1089,
+"cy": 430
+},
+{
+"cls": "good",
+"cx": 109,
+"cy": 538
+},
+{
+"cls": "insect",
+"cx": 226,
+"cy": 538
+},
+{
+"cls": "good",
+"cx": 321,
+"cy": 554
+},
+{
+"cls": "insect",
+"cx": 432,
+"cy": 540
+},
+{
+"cls": "good",
+"cx": 541,
+"cy": 542
+},
+{
+"cls": "good",
+"cx": 657,
+"cy": 537
+},
+{
+"cls": "good",
+"cx": 763,
+"cy": 539
+},
+{
+"cls": "good",
+"cx": 872,
+"cy": 549
+},
+{
+"cls": "good",
+"cx": 976,
+"cy": 539
+},
+{
+"cls": "good",
+"cx": 1095,
+"cy": 548
+},
+{
+"cls": "good",
+"cx": 123,
+"cy": 650
+},
+{
+"cls": "good",
+"cx": 223,
+"cy": 658
+},
+{
+"cls": "good",
+"cx": 331,
+"cy": 657
+},
+{
+"cls": "insect",
+"cx": 428,
+"cy": 655
+},
+{
+"cls": "good",
+"cx": 542,
+"cy": 646
+},
+{
+"cls": "good",
+"cx": 650,
+"cy": 656
+},
+{
+"cls": "good",
+"cx": 765,
+"cy": 645
+},
+{
+"cls": "good",
+"cx": 878,
+"cy": 650
+},
+{
+"cls": "good",
+"cx": 981,
+"cy": 661
+},
+{
+"cls": "good",
+"cx": 1086,
+"cy": 645
+},
+{
+"cls": "broken",
+"cx": 120,
+"cy": 764
+},
+{
+"cls": "good",
+"cx": 223,
+"cy": 752
+},
+{
+"cls": "good",
+"cx": 340,
+"cy": 756
+},
+{
+"cls": "good",
+"cx": 441,
+"cy": 759
+},
+{
+"cls": "good",
+"cx": 546,
+"cy": 757
+},
+{
+"cls": "good",
+"cx": 656,
+"cy": 753
+},
+{
+"cls": "good",
+"cx": 764,
+"cy": 753
+},
+{
+"cls": "good",
+"cx": 872,
+"cy": 772
+},
+{
+"cls": "good",
+"cx": 982,
+"cy": 772
+},
+{
+"cls": "good",
+"cx": 1077,
+"cy": 756
+},
+{
+"cls": "good",
+"cx": 117,
+"cy": 834
+},
+{
+"cls": "broken",
+"cx": 174,
+"cy": 834
+},
+{
+"cls": "dark",
+"cx": 226,
+"cy": 837
+},
+{
+"cls": "good",
+"cx": 275,
+"cy": 837
+},
+{
+"cls": "good",
+"cx": 330,
+"cy": 837
+},
+{
+"cls": "unhulled",
+"cx": 380,
+"cy": 839
+},
+{
+"cls": "good",
+"cx": 429,
+"cy": 833
+},
+{
+"cls": "good",
+"cx": 481,
+"cy": 839
+},
+{
+"cls": "good",
+"cx": 537,
+"cy": 839
+},
+{
+"cls": "good",
+"cx": 589,
+"cy": 833
+},
+{
+"cls": "good",
+"cx": 118,
+"cy": 887
+},
+{
+"cls": "good",
+"cx": 173,
+"cy": 889
+},
+{
+"cls": "good",
+"cx": 221,
+"cy": 889
+},
+{
+"cls": "good",
+"cx": 277,
+"cy": 887
+},
+{
+"cls": "good",
+"cx": 328,
+"cy": 886
+},
+{
+"cls": "good",
+"cx": 381,
+"cy": 888
+},
+{
+"cls": "good",
+"cx": 431,
+"cy": 889
+},
+{
+"cls": "good",
+"cx": 485,
+"cy": 891
+},
+{
+"cls": "good",
+"cx": 536,
+"cy": 889
+},
+{
+"cls": "good",
+"cx": 585,
+"cy": 890
+},
+{
+"cls": "good",
+"cx": 123,
+"cy": 938
+},
+{
+"cls": "good",
+"cx": 173,
+"cy": 937
+},
+{
+"cls": "dark",
+"cx": 223,
+"cy": 939
+},
+{
+"cls": "good",
+"cx": 275,
+"cy": 942
+},
+{
+"cls": "good",
+"cx": 330,
+"cy": 940
+},
+{
+"cls": "good",
+"cx": 382,
+"cy": 939
+},
+{
+"cls": "good",
+"cx": 429,
+"cy": 943
+},
+{
+"cls": "good",
+"cx": 487,
+"cy": 942
+},
+{
+"cls": "good",
+"cx": 535,
+"cy": 940
+},
+{
+"cls": "good",
+"cx": 587,
+"cy": 943
+}
+]
+},
+{
+"file": "touch_cell64_03.jpg",
+"layout": "cell64",
+"mix": "03",
+"seed": 17,
+"size": 760,
+"true_counts": {
+"good": 97,
+"dark": 1,
+"insect": 1,
+"broken": 1,
+"unhulled": 0
+},
+"true_defects": 3,
+"beans": [
+{
+"cls": "good",
+"cx": 91,
+"cy": 91
+},
+{
+"cls": "good",
+"cx": 153,
+"cy": 87
+},
+{
+"cls": "good",
+"cx": 222,
+"cy": 92
+},
+{
+"cls": "good",
+"cx": 284,
+"cy": 90
+},
+{
+"cls": "good",
+"cx": 343,
+"cy": 91
+},
+{
+"cls": "good",
+"cx": 408,
+"cy": 95
+},
+{
+"cls": "good",
+"cx": 481,
+"cy": 87
+},
+{
+"cls": "good",
+"cx": 535,
+"cy": 88
+},
+{
+"cls": "good",
+"cx": 606,
+"cy": 91
+},
+{
+"cls": "good",
+"cx": 672,
+"cy": 90
+},
+{
+"cls": "good",
+"cx": 88,
+"cy": 151
+},
+{
+"cls": "good",
+"cx": 158,
+"cy": 159
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 161
+},
+{
+"cls": "good",
+"cx": 279,
+"cy": 157
+},
+{
+"cls": "good",
+"cx": 344,
+"cy": 157
+},
+{
+"cls": "good",
+"cx": 407,
+"cy": 159
+},
+{
+"cls": "good",
+"cx": 471,
+"cy": 154
+},
+{
+"cls": "good",
+"cx": 543,
+"cy": 155
+},
+{
+"cls": "good",
+"cx": 603,
+"cy": 156
+},
+{
+"cls": "broken",
+"cx": 668,
+"cy": 159
+},
+{
+"cls": "good",
+"cx": 96,
+"cy": 221
+},
+{
+"cls": "good",
+"cx": 157,
+"cy": 215
+},
+{
+"cls": "good",
+"cx": 223,
+"cy": 220
+},
+{
+"cls": "good",
+"cx": 280,
+"cy": 215
+},
+{
+"cls": "good",
+"cx": 353,
+"cy": 219
+},
+{
+"cls": "good",
+"cx": 412,
+"cy": 220
+},
+{
+"cls": "good",
+"cx": 472,
+"cy": 220
+},
+{
+"cls": "good",
+"cx": 537,
+"cy": 223
+},
+{
+"cls": "good",
+"cx": 602,
+"cy": 222
+},
+{
+"cls": "good",
+"cx": 667,
+"cy": 222
+},
+{
+"cls": "good",
+"cx": 88,
+"cy": 283
+},
+{
+"cls": "good",
+"cx": 154,
+"cy": 280
+},
+{
+"cls": "good",
+"cx": 225,
+"cy": 285
+},
+{
+"cls": "good",
+"cx": 283,
+"cy": 289
+},
+{
+"cls": "good",
+"cx": 346,
+"cy": 286
+},
+{
+"cls": "good",
+"cx": 412,
+"cy": 281
+},
+{
+"cls": "dark",
+"cx": 474,
+"cy": 287
+},
+{
+"cls": "good",
+"cx": 544,
+"cy": 281
+},
+{
+"cls": "good",
+"cx": 603,
+"cy": 280
+},
+{
+"cls": "good",
+"cx": 669,
+"cy": 286
+},
+{
+"cls": "good",
+"cx": 95,
+"cy": 349
+},
+{
+"cls": "good",
+"cx": 159,
+"cy": 352
+},
+{
+"cls": "good",
+"cx": 217,
+"cy": 353
+},
+{
+"cls": "good",
+"cx": 287,
+"cy": 345
+},
+{
+"cls": "good",
+"cx": 345,
+"cy": 352
+},
+{
+"cls": "good",
+"cx": 415,
+"cy": 348
+},
+{
+"cls": "good",
+"cx": 478,
+"cy": 347
+},
+{
+"cls": "good",
+"cx": 541,
+"cy": 344
+},
+{
+"cls": "good",
+"cx": 608,
+"cy": 346
+},
+{
+"cls": "good",
+"cx": 665,
+"cy": 345
+},
+{
+"cls": "insect",
+"cx": 90,
+"cy": 413
+},
+{
+"cls": "good",
+"cx": 159,
+"cy": 412
+},
+{
+"cls": "good",
+"cx": 223,
+"cy": 414
+},
+{
+"cls": "good",
+"cx": 287,
+"cy": 409
+},
+{
+"cls": "good",
+"cx": 347,
+"cy": 410
+},
+{
+"cls": "good",
+"cx": 414,
+"cy": 411
+},
+{
+"cls": "good",
+"cx": 479,
+"cy": 410
+},
+{
+"cls": "good",
+"cx": 540,
+"cy": 407
+},
+{
+"cls": "good",
+"cx": 609,
+"cy": 408
+},
+{
+"cls": "good",
+"cx": 668,
+"cy": 414
+},
+{
+"cls": "good",
+"cx": 88,
+"cy": 477
+},
+{
+"cls": "good",
+"cx": 152,
+"cy": 479
+},
+{
+"cls": "good",
+"cx": 221,
+"cy": 474
+},
+{
+"cls": "good",
+"cx": 281,
+"cy": 472
+},
+{
+"cls": "good",
+"cx": 347,
+"cy": 472
+},
+{
+"cls": "good",
+"cx": 411,
+"cy": 476
+},
+{
+"cls": "good",
+"cx": 478,
+"cy": 476
+},
+{
+"cls": "good",
+"cx": 537,
+"cy": 473
+},
+{
+"cls": "good",
+"cx": 603,
+"cy": 475
+},
+{
+"cls": "good",
+"cx": 669,
+"cy": 476
+},
+{
+"cls": "good",
+"cx": 96,
+"cy": 543
+},
+{
+"cls": "good",
+"cx": 161,
+"cy": 537
+},
+{
+"cls": "good",
+"cx": 221,
+"cy": 536
+},
+{
+"cls": "good",
+"cx": 289,
+"cy": 545
+},
+{
+"cls": "good",
+"cx": 347,
+"cy": 538
+},
+{
+"cls": "good",
+"cx": 410,
+"cy": 538
+},
+{
+"cls": "good",
+"cx": 479,
+"cy": 540
+},
+{
+"cls": "good",
+"cx": 541,
+"cy": 541
+},
+{
+"cls": "good",
+"cx": 603,
+"cy": 536
+},
+{
+"cls": "good",
+"cx": 667,
+"cy": 541
+},
+{
+"cls": "good",
+"cx": 97,
+"cy": 602
+},
+{
+"cls": "good",
+"cx": 156,
+"cy": 599
+},
+{
+"cls": "good",
+"cx": 215,
+"cy": 608
+},
+{
+"cls": "good",
+"cx": 288,
+"cy": 599
+},
+{
+"cls": "good",
+"cx": 348,
+"cy": 609
+},
+{
+"cls": "good",
+"cx": 417,
+"cy": 606
+},
+{
+"cls": "good",
+"cx": 477,
+"cy": 605
+},
+{
+"cls": "good",
+"cx": 544,
+"cy": 603
+},
+{
+"cls": "good",
+"cx": 603,
+"cy": 606
+},
+{
+"cls": "good",
+"cx": 665,
+"cy": 605
+},
+{
+"cls": "good",
+"cx": 90,
+"cy": 666
+},
+{
+"cls": "good",
+"cx": 154,
+"cy": 668
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 666
+},
+{
+"cls": "good",
+"cx": 289,
+"cy": 669
+},
+{
+"cls": "good",
+"cx": 344,
+"cy": 670
+},
+{
+"cls": "good",
+"cx": 417,
+"cy": 666
+},
+{
+"cls": "good",
+"cx": 476,
+"cy": 671
+},
+{
+"cls": "good",
+"cx": 537,
+"cy": 672
+},
+{
+"cls": "good",
+"cx": 606,
+"cy": 670
+},
+{
+"cls": "good",
+"cx": 673,
+"cy": 664
+}
+]
+},
+{
+"file": "touch_cell64_30.jpg",
+"layout": "cell64",
+"mix": "30",
+"seed": 18,
+"size": 760,
+"true_counts": {
+"good": 70,
+"dark": 10,
+"insect": 7,
+"broken": 8,
+"unhulled": 5
+},
+"true_defects": 30,
+"beans": [
+{
+"cls": "good",
+"cx": 95,
+"cy": 96
+},
+{
+"cls": "insect",
+"cx": 152,
+"cy": 90
+},
+{
+"cls": "good",
+"cx": 216,
+"cy": 94
+},
+{
+"cls": "good",
+"cx": 284,
+"cy": 89
+},
+{
+"cls": "unhulled",
+"cx": 344,
+"cy": 90
+},
+{
+"cls": "good",
+"cx": 412,
+"cy": 95
+},
+{
+"cls": "insect",
+"cx": 481,
+"cy": 94
+},
+{
+"cls": "good",
+"cx": 543,
+"cy": 95
+},
+{
+"cls": "broken",
+"cx": 605,
+"cy": 93
+},
+{
+"cls": "good",
+"cx": 673,
+"cy": 91
+},
+{
+"cls": "unhulled",
+"cx": 94,
+"cy": 151
+},
+{
+"cls": "good",
+"cx": 159,
+"cy": 161
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 161
+},
+{
+"cls": "good",
+"cx": 282,
+"cy": 151
+},
+{
+"cls": "good",
+"cx": 344,
+"cy": 157
+},
+{
+"cls": "good",
+"cx": 417,
+"cy": 156
+},
+{
+"cls": "broken",
+"cx": 472,
+"cy": 160
+},
+{
+"cls": "insect",
+"cx": 535,
+"cy": 155
+},
+{
+"cls": "good",
+"cx": 602,
+"cy": 154
+},
+{
+"cls": "good",
+"cx": 671,
+"cy": 153
+},
+{
+"cls": "insect",
+"cx": 97,
+"cy": 220
+},
+{
+"cls": "dark",
+"cx": 151,
+"cy": 217
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 222
+},
+{
+"cls": "good",
+"cx": 283,
+"cy": 215
+},
+{
+"cls": "good",
+"cx": 351,
+"cy": 221
+},
+{
+"cls": "unhulled",
+"cx": 417,
+"cy": 223
+},
+{
+"cls": "dark",
+"cx": 473,
+"cy": 219
+},
+{
+"cls": "dark",
+"cx": 541,
+"cy": 217
+},
+{
+"cls": "good",
+"cx": 606,
+"cy": 224
+},
+{
+"cls": "dark",
+"cx": 666,
+"cy": 224
+},
+{
+"cls": "good",
+"cx": 91,
+"cy": 286
+},
+{
+"cls": "good",
+"cx": 151,
+"cy": 287
+},
+{
+"cls": "good",
+"cx": 224,
+"cy": 284
+},
+{
+"cls": "good",
+"cx": 287,
+"cy": 279
+},
+{
+"cls": "dark",
+"cx": 352,
+"cy": 286
+},
+{
+"cls": "broken",
+"cx": 411,
+"cy": 283
+},
+{
+"cls": "good",
+"cx": 480,
+"cy": 279
+},
+{
+"cls": "good",
+"cx": 538,
+"cy": 289
+},
+{
+"cls": "dark",
+"cx": 609,
+"cy": 287
+},
+{
+"cls": "good",
+"cx": 672,
+"cy": 282
+},
+{
+"cls": "good",
+"cx": 87,
+"cy": 345
+},
+{
+"cls": "good",
+"cx": 155,
+"cy": 346
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 349
+},
+{
+"cls": "good",
+"cx": 280,
+"cy": 351
+},
+{
+"cls": "broken",
+"cx": 345,
+"cy": 343
+},
+{
+"cls": "good",
+"cx": 414,
+"cy": 351
+},
+{
+"cls": "good",
+"cx": 481,
+"cy": 346
+},
+{
+"cls": "good",
+"cx": 542,
+"cy": 344
+},
+{
+"cls": "good",
+"cx": 606,
+"cy": 350
+},
+{
+"cls": "good",
+"cx": 666,
+"cy": 346
+},
+{
+"cls": "good",
+"cx": 94,
+"cy": 412
+},
+{
+"cls": "good",
+"cx": 161,
+"cy": 411
+},
+{
+"cls": "good",
+"cx": 221,
+"cy": 411
+},
+{
+"cls": "good",
+"cx": 281,
+"cy": 410
+},
+{
+"cls": "good",
+"cx": 349,
+"cy": 417
+},
+{
+"cls": "good",
+"cx": 412,
+"cy": 417
+},
+{
+"cls": "good",
+"cx": 479,
+"cy": 415
+},
+{
+"cls": "good",
+"cx": 539,
+"cy": 412
+},
+{
+"cls": "good",
+"cx": 602,
+"cy": 407
+},
+{
+"cls": "good",
+"cx": 673,
+"cy": 417
+},
+{
+"cls": "unhulled",
+"cx": 88,
+"cy": 480
+},
+{
+"cls": "good",
+"cx": 153,
+"cy": 477
+},
+{
+"cls": "broken",
+"cx": 216,
+"cy": 472
+},
+{
+"cls": "good",
+"cx": 286,
+"cy": 475
+},
+{
+"cls": "good",
+"cx": 348,
+"cy": 474
+},
+{
+"cls": "good",
+"cx": 414,
+"cy": 472
+},
+{
+"cls": "good",
+"cx": 472,
+"cy": 476
+},
+{
+"cls": "good",
+"cx": 537,
+"cy": 476
+},
+{
+"cls": "good",
+"cx": 604,
+"cy": 471
+},
+{
+"cls": "good",
+"cx": 669,
+"cy": 476
+},
+{
+"cls": "good",
+"cx": 90,
+"cy": 535
+},
+{
+"cls": "insect",
+"cx": 155,
+"cy": 538
+},
+{
+"cls": "good",
+"cx": 218,
+"cy": 537
+},
+{
+"cls": "good",
+"cx": 288,
+"cy": 537
+},
+{
+"cls": "good",
+"cx": 348,
+"cy": 545
+},
+{
+"cls": "dark",
+"cx": 410,
+"cy": 535
+},
+{
+"cls": "good",
+"cx": 480,
+"cy": 535
+},
+{
+"cls": "insect",
+"cx": 537,
+"cy": 543
+},
+{
+"cls": "dark",
+"cx": 604,
+"cy": 537
+},
+{
+"cls": "good",
+"cx": 663,
+"cy": 538
+},
+{
+"cls": "good",
+"cx": 97,
+"cy": 601
+},
+{
+"cls": "insect",
+"cx": 156,
+"cy": 603
+},
+{
+"cls": "broken",
+"cx": 223,
+"cy": 604
+},
+{
+"cls": "good",
+"cx": 288,
+"cy": 604
+},
+{
+"cls": "unhulled",
+"cx": 351,
+"cy": 608
+},
+{
+"cls": "good",
+"cx": 412,
+"cy": 603
+},
+{
+"cls": "dark",
+"cx": 475,
+"cy": 604
+},
+{
+"cls": "good",
+"cx": 538,
+"cy": 606
+},
+{
+"cls": "good",
+"cx": 604,
+"cy": 605
+},
+{
+"cls": "good",
+"cx": 669,
+"cy": 604
+},
+{
+"cls": "good",
+"cx": 95,
+"cy": 664
+},
+{
+"cls": "good",
+"cx": 155,
+"cy": 670
+},
+{
+"cls": "dark",
+"cx": 217,
+"cy": 673
+},
+{
+"cls": "good",
+"cx": 282,
+"cy": 670
+},
+{
+"cls": "good",
+"cx": 348,
+"cy": 666
+},
+{
+"cls": "good",
+"cx": 414,
+"cy": 667
+},
+{
+"cls": "good",
+"cx": 474,
+"cy": 670
+},
+{
+"cls": "broken",
+"cx": 537,
+"cy": 667
+},
+{
+"cls": "broken",
+"cx": 603,
+"cy": 669
+},
+{
+"cls": "good",
+"cx": 668,
+"cy": 667
+}
+]
+}
+]
+}

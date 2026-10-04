@@ -1,0 +1,4091 @@
+{
+ "what": "(3) PHOTO-LEVEL OUT-OF-DISTRIBUTION GATE: \"this sample does not look like what the model learned from -> not sure,",
+ "lopo_v1_models_used": true,
+ "abstain_below": 0.59,
+ "sets": {
+  "j4ck_halves": 22,
+  "j4ck_trays": 30,
+  "j4ck_lopo": 11,
+  "cbd": 464,
+  "demo": 7,
+  "j4ck_perturbed": 77,
+  "cbd_perturbed": 777
+ },
+ "baseline_v1_without_ood_gate": {
+  "AAA": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 50,
+   "photos": 50
+  },
+  "AA": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 61,
+   "photos": 61
+  },
+  "A": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 50,
+   "photos": 50
+  },
+  "AB": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 50,
+   "photos": 50
+  },
+  "PB-I": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 49,
+   "photos": 51
+  },
+  "PB-II": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 50,
+   "photos": 50
+  },
+  "C": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 51,
+   "photos": 51
+  },
+  "Bulk": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 50,
+   "photos": 50
+  },
+  "Bits": {
+   "clean": 0,
+   "some": 0,
+   "many": 0,
+   "unsure": 48,
+   "photos": 51
+  },
+  "cbd_all_confident_band_share": 0.0,
+  "cbd_unsure_reason_note": "current rules: 'implausible' (> 60% defects) was added at 23:05 and its 0.6 was tuned on CBD-like photos (rules.ts comment), so CBD is partly in-sample for it",
+  "cbd_about_share_of_confident": null,
+  "j4ck_halves": {
+   "BrocadoLeve#half1": "retake:count",
+   "BrocadoSevero#half1": "retake:count",
+   "CerezaSeca#half1": "retake:not_green",
+   "Concha#half1": "retake:count",
+   "DXHongo#half1": "retake:count",
+   "Inmaduro#half1": "retake:count",
+   "MarronAVinagre#half1": "retake:count",
+   "Negros#half1": "retake:not_green",
+   "Normales#half1": "unsure",
+   "PMordidoCortado#half1": "retake:count",
+   "Pergamino#half1": "unsure",
+   "BrocadoLeve#half2": "retake:count",
+   "BrocadoSevero#half2": "retake:count",
+   "CerezaSeca#half2": "retake:not_green",
+   "Concha#half2": "retake:count",
+   "DXHongo#half2": "retake:count",
+   "Inmaduro#half2": "retake:count",
+   "MarronAVinagre#half2": "retake:count",
+   "Negros#half2": "retake:not_green",
+   "Normales#half2": "clean",
+   "PMordidoCortado#half2": "retake:count",
+   "Pergamino#half2": "unsure"
+  },
+  "j4ck_lopo": {
+   "BrocadoLeve": "unsure",
+   "BrocadoSevero": "unsure",
+   "CerezaSeca": "retake:not_green",
+   "Concha": "unsure",
+   "DXHongo": "retake:count",
+   "Inmaduro": "retake:count",
+   "MarronAVinagre": "unsure",
+   "Negros": "retake:not_green",
+   "Normales": "retake:count",
+   "PMordidoCortado": "unsure",
+   "Pergamino": "unsure"
+  },
+  "demo": {
+   "cbd_aaa_2.jpg": "unsure",
+   "cbd_bits_262.jpg": "unsure",
+   "tray_synthetic_00.jpg": "clean",
+   "tray_synthetic_03.jpg": "clean",
+   "tray_synthetic_12.jpg": "some",
+   "tray_synthetic_30.jpg": "many",
+   "tray_synthetic_40.jpg": "many"
+  },
+  "j4ck_lopo_in_sample_deployed_model": {
+   "BrocadoLeve": "unsure",
+   "BrocadoSevero": "unsure",
+   "CerezaSeca": "retake:not_green",
+   "Concha": "unsure",
+   "DXHongo": "retake:count",
+   "Inmaduro": "retake:count",
+   "MarronAVinagre": "unsure",
+   "Negros": "retake:not_green",
+   "Normales": "retake:count",
+   "PMordidoCortado": "unsure",
+   "Pergamino": "unsure"
+  }
+ },
+ "scores": {
+  "v1_lowconf": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": 0.0,
+     "BrocadoSevero#half1": 0.0,
+     "CerezaSeca#half1": 0.1667,
+     "Concha#half1": 0.0667,
+     "DXHongo#half1": 0.3333,
+     "Inmaduro#half1": 0.0,
+     "MarronAVinagre#half1": 0.0556,
+     "Negros#half1": 0.04,
+     "Normales#half1": 0.1895,
+     "PMordidoCortado#half1": 0.1667,
+     "Pergamino#half1": 0.0,
+     "BrocadoLeve#half2": 0.3333,
+     "BrocadoSevero#half2": 0.3571,
+     "CerezaSeca#half2": 0.0,
+     "Concha#half2": 0.0556,
+     "DXHongo#half2": 0.1667,
+     "Inmaduro#half2": 0.25,
+     "MarronAVinagre#half2": 0.1667,
+     "Negros#half2": 0.0,
+     "Normales#half2": 0.04,
+     "PMordidoCortado#half2": 0.0556,
+     "Pergamino#half2": 0.0
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": 0.2667,
+     "BrocadoSevero": 0.12,
+     "CerezaSeca": 0.0,
+     "Concha": 0.1212,
+     "DXHongo": 0.0,
+     "Inmaduro": 0.0,
+     "MarronAVinagre": 0.25,
+     "Negros": 0.17,
+     "Normales": 0.1795,
+     "PMordidoCortado": 0.1667,
+     "Pergamino": 0.2
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": 0.06,
+     "cbd_bits_262.jpg": 0.2,
+     "tray_synthetic_00.jpg": 0.0,
+     "tray_synthetic_03.jpg": 0.0,
+     "tray_synthetic_12.jpg": 0.01,
+     "tray_synthetic_30.jpg": 0.03,
+     "tray_synthetic_40.jpg": 0.02
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.7335,
+    "j4ck_trays": 0.994,
+    "j4ck_lopo": 0.654
+   },
+   "cbd_aaa_many_min": 0.04,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "fixed_app_rule_0.15": {
+     "threshold": 0.15,
+     "rule": "fixed 15% share (the app's existing unsure-share cut-off), not fitted",
+     "false_refusal": {
+      "j4ck_halves": "9/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "6/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "CerezaSeca#half1",
+       "DXHongo#half1",
+       "Normales#half1",
+       "PMordidoCortado#half1",
+       "BrocadoLeve#half2",
+       "BrocadoSevero#half2",
+       "DXHongo#half2",
+       "Inmaduro#half2",
+       "MarronAVinagre#half2"
+      ],
+      "j4ck_lopo": [
+       "BrocadoLeve",
+       "MarronAVinagre",
+       "Negros",
+       "Normales",
+       "PMordidoCortado",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "0/11",
+      "half_res": "0/11",
+      "blur_r3": "1/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "1/11",
+      "jpeg_q15": "5/11"
+     },
+     "cbd_refused_share": 0.6401,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 23,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 28,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 18,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 25,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 46,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 38,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 39,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 32,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 48,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_halves": {
+     "threshold": 0.35714285714285715,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "0/11",
+      "half_res": "0/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "1/11"
+     },
+     "cbd_refused_share": 0.0711,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 6,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 2,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 3,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 1,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 2,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 7,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 7,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": 0.26666666666666666,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "3/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "DXHongo#half1",
+       "BrocadoLeve#half2",
+       "BrocadoSevero#half2"
+      ],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "0/11",
+      "half_res": "0/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "2/11"
+     },
+     "cbd_refused_share": 0.2672,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 13,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 14,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 6,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 7,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 24,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 16,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 12,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 11,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 21,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": 0.039999999999999994,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "15/22",
+      "j4ck_trays": "7/30",
+      "j4ck_lopo": "8/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "CerezaSeca#half1",
+       "Concha#half1",
+       "DXHongo#half1",
+       "MarronAVinagre#half1",
+       "Negros#half1",
+       "Normales#half1",
+       "PMordidoCortado#half1",
+       "BrocadoLeve#half2",
+       "BrocadoSevero#half2",
+       "Concha#half2",
+       "DXHongo#half2",
+       "Inmaduro#half2",
+       "MarronAVinagre#half2",
+       "Normales#half2",
+       "PMordidoCortado#half2"
+      ],
+      "j4ck_lopo": [
+       "BrocadoLeve",
+       "BrocadoSevero",
+       "Concha",
+       "MarronAVinagre",
+       "Negros",
+       "Normales",
+       "PMordidoCortado",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "23/30",
+     "j4ck_trays_confident_and_correct_after_gate": "23/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "2/11",
+      "warm_cast": "1/11",
+      "half_res": "1/11",
+      "blur_r3": "2/11",
+      "brighter_x1.3": "3/11",
+      "cool_cast": "2/11",
+      "jpeg_q15": "6/11"
+     },
+     "cbd_refused_share": 0.9957,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 59,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "v1_energy": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": -3.3592,
+     "BrocadoSevero#half1": -3.8944,
+     "CerezaSeca#half1": -2.5909,
+     "Concha#half1": -3.5682,
+     "DXHongo#half1": -3.0829,
+     "Inmaduro#half1": -3.3406,
+     "MarronAVinagre#half1": -3.5105,
+     "Negros#half1": -3.2107,
+     "Normales#half1": -2.5864,
+     "PMordidoCortado#half1": -3.1484,
+     "Pergamino#half1": -3.6564,
+     "BrocadoLeve#half2": -2.9886,
+     "BrocadoSevero#half2": -3.0416,
+     "CerezaSeca#half2": -3.9018,
+     "Concha#half2": -3.8574,
+     "DXHongo#half2": -3.1014,
+     "Inmaduro#half2": -4.5274,
+     "MarronAVinagre#half2": -2.9682,
+     "Negros#half2": -3.9212,
+     "Normales#half2": -3.6768,
+     "PMordidoCortado#half2": -3.7903,
+     "Pergamino#half2": -3.6874
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": -2.9685,
+     "BrocadoSevero": -2.8022,
+     "CerezaSeca": -3.8713,
+     "Concha": -3.6206,
+     "DXHongo": -3.1649,
+     "Inmaduro": -3.1118,
+     "MarronAVinagre": -2.7146,
+     "Negros": -2.9055,
+     "Normales": -3.0632,
+     "PMordidoCortado": -3.6834,
+     "Pergamino": -2.9902
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": -3.238,
+     "cbd_bits_262.jpg": -2.804,
+     "tray_synthetic_00.jpg": -3.9423,
+     "tray_synthetic_03.jpg": -3.9565,
+     "tray_synthetic_12.jpg": -3.9081,
+     "tray_synthetic_30.jpg": -3.8181,
+     "tray_synthetic_40.jpg": -3.8099
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.868,
+    "j4ck_trays": 0.9999,
+    "j4ck_lopo": 0.7843
+   },
+   "cbd_aaa_many_min": -3.5270400047302246,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "on_j4ck_halves": {
+     "threshold": -2.586362838745117,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "0/11",
+      "half_res": "0/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "0/11"
+     },
+     "cbd_refused_share": 0.2349,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 12,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 13,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 7,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 16,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 11,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 12,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 12,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 21,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": -2.7146029472351074,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "2/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "CerezaSeca#half1",
+       "Normales#half1"
+      ],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "0/11",
+      "half_res": "0/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "4/11"
+     },
+     "cbd_refused_share": 0.4246,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 18,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 19,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 9,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 15,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 27,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 27,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 29,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 21,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 32,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": -3.527040004730225,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "12/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "8/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "BrocadoLeve#half1",
+       "CerezaSeca#half1",
+       "DXHongo#half1",
+       "Inmaduro#half1",
+       "MarronAVinagre#half1",
+       "Negros#half1",
+       "Normales#half1",
+       "PMordidoCortado#half1",
+       "BrocadoLeve#half2",
+       "BrocadoSevero#half2",
+       "DXHongo#half2",
+       "MarronAVinagre#half2"
+      ],
+      "j4ck_lopo": [
+       "BrocadoLeve",
+       "BrocadoSevero",
+       "DXHongo",
+       "Inmaduro",
+       "MarronAVinagre",
+       "Negros",
+       "Normales",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "1/11",
+      "half_res": "0/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "8/11"
+     },
+     "cbd_refused_share": 0.9935,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 59,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "emb_knn": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": 0.1548,
+     "BrocadoSevero#half1": 0.1444,
+     "CerezaSeca#half1": 0.1212,
+     "Concha#half1": 0.1736,
+     "DXHongo#half1": 0.1199,
+     "Inmaduro#half1": 0.141,
+     "MarronAVinagre#half1": 0.1114,
+     "Negros#half1": 0.1316,
+     "Normales#half1": 0.0818,
+     "PMordidoCortado#half1": 0.1793,
+     "Pergamino#half1": 0.0918,
+     "BrocadoLeve#half2": 0.1458,
+     "BrocadoSevero#half2": 0.1469,
+     "CerezaSeca#half2": 0.1238,
+     "Concha#half2": 0.1834,
+     "DXHongo#half2": 0.1314,
+     "Inmaduro#half2": 0.0953,
+     "MarronAVinagre#half2": 0.114,
+     "Negros#half2": 0.135,
+     "Normales#half2": 0.0657,
+     "PMordidoCortado#half2": 0.1943,
+     "Pergamino#half2": 0.0906
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": 0.15,
+     "BrocadoSevero": 0.1491,
+     "CerezaSeca": 0.1182,
+     "Concha": 0.1811,
+     "DXHongo": 0.1212,
+     "Inmaduro": 0.1094,
+     "MarronAVinagre": 0.1134,
+     "Negros": 0.1533,
+     "Normales": 0.1364,
+     "PMordidoCortado": 0.1945,
+     "Pergamino": 0.1392
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": 0.1792,
+     "cbd_bits_262.jpg": 0.1593,
+     "tray_synthetic_00.jpg": 0.0889,
+     "tray_synthetic_03.jpg": 0.0894,
+     "tray_synthetic_12.jpg": 0.0986,
+     "tray_synthetic_30.jpg": 0.1033,
+     "tray_synthetic_40.jpg": 0.1194
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.7838,
+    "j4ck_trays": 0.9802,
+    "j4ck_lopo": 0.7426
+   },
+   "cbd_aaa_many_min": 0.1689714789390564,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "on_j4ck_halves": {
+     "threshold": 0.19427898526191711,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "1/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": [
+       "PMordidoCortado"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "0/11",
+      "half_res": "0/11",
+      "blur_r3": "3/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "5/11"
+     },
+     "cbd_refused_share": 0.0,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": 0.19451935589313507,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "0/11",
+      "warm_cast": "0/11",
+      "half_res": "0/11",
+      "blur_r3": "3/11",
+      "brighter_x1.3": "0/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "5/11"
+     },
+     "cbd_refused_share": 0.0,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": 0.16897147893905637,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "4/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "2/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "Concha#half1",
+       "PMordidoCortado#half1",
+       "Concha#half2",
+       "PMordidoCortado#half2"
+      ],
+      "j4ck_lopo": [
+       "Concha",
+       "PMordidoCortado"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "2/11",
+      "warm_cast": "2/11",
+      "half_res": "1/11",
+      "blur_r3": "4/11",
+      "brighter_x1.3": "2/11",
+      "cool_cast": "2/11",
+      "jpeg_q15": "9/11"
+     },
+     "cbd_refused_share": 0.5345,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 46,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 46,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 44,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 40,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 10,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 15,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 38,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 9,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "v1f_knn": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": 0.219,
+     "BrocadoSevero#half1": 0.2055,
+     "CerezaSeca#half1": 0.2417,
+     "Concha#half1": 0.1581,
+     "DXHongo#half1": 0.2036,
+     "Inmaduro#half1": 0.1703,
+     "MarronAVinagre#half1": 0.1822,
+     "Negros#half1": 0.1895,
+     "Normales#half1": 0.1752,
+     "PMordidoCortado#half1": 0.1898,
+     "Pergamino#half1": 0.116,
+     "BrocadoLeve#half2": 0.2757,
+     "BrocadoSevero#half2": 0.2708,
+     "CerezaSeca#half2": 0.1799,
+     "Concha#half2": 0.2652,
+     "DXHongo#half2": 0.2352,
+     "Inmaduro#half2": 0.2151,
+     "MarronAVinagre#half2": 0.23,
+     "Negros#half2": 0.1908,
+     "Normales#half2": 0.1765,
+     "PMordidoCortado#half2": 0.226,
+     "Pergamino#half2": 0.1279
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": 0.2671,
+     "BrocadoSevero": 0.218,
+     "CerezaSeca": 0.151,
+     "Concha": 0.2466,
+     "DXHongo": 0.2038,
+     "Inmaduro": 0.1886,
+     "MarronAVinagre": 0.2608,
+     "Negros": 0.2547,
+     "Normales": 0.3229,
+     "PMordidoCortado": 0.2513,
+     "Pergamino": 0.2994
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": 0.2799,
+     "cbd_bits_262.jpg": 0.3115,
+     "tray_synthetic_00.jpg": 0.206,
+     "tray_synthetic_03.jpg": 0.1964,
+     "tray_synthetic_12.jpg": 0.2047,
+     "tray_synthetic_30.jpg": 0.2109,
+     "tray_synthetic_40.jpg": 0.2194
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.9962,
+    "j4ck_trays": 0.9232,
+    "j4ck_lopo": 0.8536
+   },
+   "cbd_aaa_many_min": 0.26774030923843384,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "on_j4ck_halves": {
+     "threshold": 0.275654137134552,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "10/30",
+      "j4ck_lopo": "2/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": [
+       "Normales",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "20/30",
+     "j4ck_trays_confident_and_correct_after_gate": "20/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "4/11",
+      "warm_cast": "5/11",
+      "half_res": "6/11",
+      "blur_r3": "9/11",
+      "brighter_x1.3": "5/11",
+      "cool_cast": "4/11",
+      "jpeg_q15": "9/11"
+     },
+     "cbd_refused_share": 0.9418,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 47,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 57,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 48,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 47,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 40,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 46,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": 0.3228749632835388,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "3/11",
+      "warm_cast": "4/11",
+      "half_res": "3/11",
+      "blur_r3": "4/11",
+      "brighter_x1.3": "3/11",
+      "cool_cast": "3/11",
+      "jpeg_q15": "6/11"
+     },
+     "cbd_refused_share": 0.0259,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 3,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 2,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 7,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": 0.2677403092384338,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "2/22",
+      "j4ck_trays": "15/30",
+      "j4ck_lopo": "2/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "BrocadoLeve#half2",
+       "BrocadoSevero#half2"
+      ],
+      "j4ck_lopo": [
+       "Normales",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "15/30",
+     "j4ck_trays_confident_and_correct_after_gate": "15/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "4/11",
+      "warm_cast": "6/11",
+      "half_res": "6/11",
+      "blur_r3": "9/11",
+      "brighter_x1.3": "6/11",
+      "cool_cast": "4/11",
+      "jpeg_q15": "10/11"
+     },
+     "cbd_refused_share": 0.9935,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 61,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "hand_maha": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": 3.1133,
+     "BrocadoSevero#half1": 4.4104,
+     "CerezaSeca#half1": 5.1344,
+     "Concha#half1": 4.0043,
+     "DXHongo#half1": 2.7008,
+     "Inmaduro#half1": 3.2711,
+     "MarronAVinagre#half1": 4.0899,
+     "Negros#half1": 4.3952,
+     "Normales#half1": 2.6315,
+     "PMordidoCortado#half1": 4.5349,
+     "Pergamino#half1": 3.7294,
+     "BrocadoLeve#half2": 2.9413,
+     "BrocadoSevero#half2": 2.8513,
+     "CerezaSeca#half2": 6.6662,
+     "Concha#half2": 3.39,
+     "DXHongo#half2": 3.3159,
+     "Inmaduro#half2": 2.8033,
+     "MarronAVinagre#half2": 3.5903,
+     "Negros#half2": 3.8817,
+     "Normales#half2": 2.4079,
+     "PMordidoCortado#half2": 3.5775,
+     "Pergamino#half2": 4.2157
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": 2.7916,
+     "BrocadoSevero": 3.6127,
+     "CerezaSeca": 5.9893,
+     "Concha": 3.5319,
+     "DXHongo": 2.9467,
+     "Inmaduro": 2.69,
+     "MarronAVinagre": 4.5532,
+     "Negros": 6.1786,
+     "Normales": 3.6917,
+     "PMordidoCortado": 4.0449,
+     "Pergamino": 9.5802
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": 5.5822,
+     "cbd_bits_262.jpg": 3.7682,
+     "tray_synthetic_00.jpg": 4.1754,
+     "tray_synthetic_03.jpg": 4.2933,
+     "tray_synthetic_12.jpg": 4.3642,
+     "tray_synthetic_30.jpg": 4.4804,
+     "tray_synthetic_40.jpg": 4.9056
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.8921,
+    "j4ck_trays": 0.8105,
+    "j4ck_lopo": 0.7286
+   },
+   "cbd_aaa_many_min": 4.910635948181152,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "on_j4ck_halves": {
+     "threshold": 6.6661505699157715,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "1/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": [
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "1/11",
+      "warm_cast": "1/11",
+      "half_res": "1/11",
+      "blur_r3": "1/11",
+      "brighter_x1.3": "2/11",
+      "cool_cast": "2/11",
+      "jpeg_q15": "4/11"
+     },
+     "cbd_refused_share": 0.0129,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 2,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 2,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 1,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 1,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": 9.580227851867676,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "1/11",
+      "warm_cast": "1/11",
+      "half_res": "0/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "1/11",
+      "cool_cast": "1/11",
+      "jpeg_q15": "2/11"
+     },
+     "cbd_refused_share": 0.0,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": 4.9106359481811515,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "2/22",
+      "j4ck_trays": "4/30",
+      "j4ck_lopo": "3/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "CerezaSeca#half1",
+       "CerezaSeca#half2"
+      ],
+      "j4ck_lopo": [
+       "CerezaSeca",
+       "Negros",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "26/30",
+     "j4ck_trays_confident_and_correct_after_gate": "26/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "3/11",
+      "warm_cast": "3/11",
+      "half_res": "3/11",
+      "blur_r3": "3/11",
+      "brighter_x1.3": "3/11",
+      "cool_cast": "3/11",
+      "jpeg_q15": "6/11"
+     },
+     "cbd_refused_share": 0.7651,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 56,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 48,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 47,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "hand_maha_colour": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": 2.6117,
+     "BrocadoSevero#half1": 3.5559,
+     "CerezaSeca#half1": 3.9122,
+     "Concha#half1": 2.6977,
+     "DXHongo#half1": 2.2991,
+     "Inmaduro#half1": 2.688,
+     "MarronAVinagre#half1": 3.2335,
+     "Negros#half1": 3.4006,
+     "Normales#half1": 2.0476,
+     "PMordidoCortado#half1": 2.4627,
+     "Pergamino#half1": 2.6996,
+     "BrocadoLeve#half2": 2.5342,
+     "BrocadoSevero#half2": 2.3291,
+     "CerezaSeca#half2": 5.3938,
+     "Concha#half2": 2.4133,
+     "DXHongo#half2": 2.6996,
+     "Inmaduro#half2": 2.2034,
+     "MarronAVinagre#half2": 3.4161,
+     "Negros#half2": 2.9758,
+     "Normales#half2": 1.9458,
+     "PMordidoCortado#half2": 2.0966,
+     "Pergamino#half2": 3.491
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": 2.5781,
+     "BrocadoSevero": 3.0646,
+     "CerezaSeca": 5.1528,
+     "Concha": 2.5424,
+     "DXHongo": 2.5391,
+     "Inmaduro": 2.2213,
+     "MarronAVinagre": 4.2039,
+     "Negros": 5.4562,
+     "Normales": 3.3429,
+     "PMordidoCortado": 2.5025,
+     "Pergamino": 7.5568
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": 4.0926,
+     "cbd_bits_262.jpg": 2.3821,
+     "tray_synthetic_00.jpg": 3.7937,
+     "tray_synthetic_03.jpg": 3.8823,
+     "tray_synthetic_12.jpg": 3.9693,
+     "tray_synthetic_30.jpg": 4.0438,
+     "tray_synthetic_40.jpg": 4.3474
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.8022,
+    "j4ck_trays": 0.655,
+    "j4ck_lopo": 0.5872
+   },
+   "cbd_aaa_many_min": 3.645641326904297,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "on_j4ck_halves": {
+     "threshold": 5.393846035003662,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "2/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": [
+       "Negros",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "1/11",
+      "warm_cast": "1/11",
+      "half_res": "1/11",
+      "blur_r3": "1/11",
+      "brighter_x1.3": "3/11",
+      "cool_cast": "2/11",
+      "jpeg_q15": "4/11"
+     },
+     "cbd_refused_share": 0.0366,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 4,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 2,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 1,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": 7.556813716888428,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "1/11",
+      "warm_cast": "1/11",
+      "half_res": "1/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "1/11",
+      "cool_cast": "0/11",
+      "jpeg_q15": "3/11"
+     },
+     "cbd_refused_share": 0.0,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": 3.6456413269042964,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "2/22",
+      "j4ck_trays": "30/30",
+      "j4ck_lopo": "4/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "CerezaSeca#half1",
+       "CerezaSeca#half2"
+      ],
+      "j4ck_lopo": [
+       "CerezaSeca",
+       "MarronAVinagre",
+       "Negros",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "0/30",
+     "j4ck_trays_confident_and_correct_after_gate": "0/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": true,
+      "tray_synthetic_03.jpg": true,
+      "tray_synthetic_12.jpg": true,
+      "tray_synthetic_30.jpg": true,
+      "tray_synthetic_40.jpg": true
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "4/11",
+      "warm_cast": "4/11",
+      "half_res": "4/11",
+      "blur_r3": "3/11",
+      "brighter_x1.3": "4/11",
+      "cool_cast": "4/11",
+      "jpeg_q15": "7/11"
+     },
+     "cbd_refused_share": 0.7737,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 55,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 48,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "hand_maha_shape": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": 1.3165,
+     "BrocadoSevero#half1": 2.1613,
+     "CerezaSeca#half1": 3.1397,
+     "Concha#half1": 2.0,
+     "DXHongo#half1": 1.2918,
+     "Inmaduro#half1": 2.1369,
+     "MarronAVinagre#half1": 1.9688,
+     "Negros#half1": 2.5533,
+     "Normales#half1": 1.3716,
+     "PMordidoCortado#half1": 2.4025,
+     "Pergamino#half1": 2.8755,
+     "BrocadoLeve#half2": 1.2672,
+     "BrocadoSevero#half2": 1.5047,
+     "CerezaSeca#half2": 1.5406,
+     "Concha#half2": 1.789,
+     "DXHongo#half2": 1.5627,
+     "Inmaduro#half2": 1.8779,
+     "MarronAVinagre#half2": 1.3073,
+     "Negros#half2": 1.7158,
+     "Normales#half2": 1.559,
+     "PMordidoCortado#half2": 2.2832,
+     "Pergamino#half2": 2.129
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": 1.1247,
+     "BrocadoSevero": 1.7644,
+     "CerezaSeca": 2.3066,
+     "Concha": 1.8202,
+     "DXHongo": 1.3434,
+     "Inmaduro": 1.6945,
+     "MarronAVinagre": 1.7155,
+     "Negros": 2.7565,
+     "Normales": 1.614,
+     "PMordidoCortado": 2.4476,
+     "Pergamino": 5.3926
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": 1.9652,
+     "cbd_bits_262.jpg": 2.1089,
+     "tray_synthetic_00.jpg": 2.1083,
+     "tray_synthetic_03.jpg": 2.1639,
+     "tray_synthetic_12.jpg": 2.194,
+     "tray_synthetic_30.jpg": 2.169,
+     "tray_synthetic_40.jpg": 2.173
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.5355,
+    "j4ck_trays": 0.1185,
+    "j4ck_lopo": 0.5533
+   },
+   "cbd_aaa_many_min": 1.9354554414749146,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "on_j4ck_halves": {
+     "threshold": 3.1396846771240234,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "1/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": [
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "1/11",
+      "warm_cast": "1/11",
+      "half_res": "1/11",
+      "blur_r3": "2/11",
+      "brighter_x1.3": "1/11",
+      "cool_cast": "1/11",
+      "jpeg_q15": "4/11"
+     },
+     "cbd_refused_share": 0.0,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": 5.392569541931152,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "1/11",
+      "warm_cast": "1/11",
+      "half_res": "0/11",
+      "blur_r3": "0/11",
+      "brighter_x1.3": "1/11",
+      "cool_cast": "1/11",
+      "jpeg_q15": "1/11"
+     },
+     "cbd_refused_share": 0.0,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": 1.9354554414749143,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "10/22",
+      "j4ck_trays": "30/30",
+      "j4ck_lopo": "4/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "BrocadoSevero#half1",
+       "CerezaSeca#half1",
+       "Concha#half1",
+       "Inmaduro#half1",
+       "MarronAVinagre#half1",
+       "Negros#half1",
+       "PMordidoCortado#half1",
+       "Pergamino#half1",
+       "PMordidoCortado#half2",
+       "Pergamino#half2"
+      ],
+      "j4ck_lopo": [
+       "CerezaSeca",
+       "Negros",
+       "PMordidoCortado",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "0/30",
+     "j4ck_trays_confident_and_correct_after_gate": "0/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": true,
+      "tray_synthetic_03.jpg": true,
+      "tray_synthetic_12.jpg": true,
+      "tray_synthetic_30.jpg": true,
+      "tray_synthetic_40.jpg": true
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "4/11",
+      "warm_cast": "4/11",
+      "half_res": "6/11",
+      "blur_r3": "5/11",
+      "brighter_x1.3": "4/11",
+      "cool_cast": "4/11",
+      "jpeg_q15": "10/11"
+     },
+     "cbd_refused_share": 0.3728,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 12,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 12,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 19,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 2,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 24,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  },
+  "v1f_unfam_share": {
+   "per_photo": {
+    "j4ck_halves": {
+     "BrocadoLeve#half1": 0.0667,
+     "BrocadoSevero#half1": 0.0,
+     "CerezaSeca#half1": 0.0,
+     "Concha#half1": 0.1333,
+     "DXHongo#half1": 0.1667,
+     "Inmaduro#half1": 0.0,
+     "MarronAVinagre#half1": 0.0,
+     "Negros#half1": 0.0,
+     "Normales#half1": 0.0316,
+     "PMordidoCortado#half1": 0.0556,
+     "Pergamino#half1": 0.0,
+     "BrocadoLeve#half2": 0.3333,
+     "BrocadoSevero#half2": 0.2857,
+     "CerezaSeca#half2": 0.0,
+     "Concha#half2": 0.2222,
+     "DXHongo#half2": 0.1667,
+     "Inmaduro#half2": 0.125,
+     "MarronAVinagre#half2": 0.1111,
+     "Negros#half2": 0.0,
+     "Normales#half2": 0.02,
+     "PMordidoCortado#half2": 0.1667,
+     "Pergamino#half2": 0.0
+    },
+    "j4ck_lopo": {
+     "BrocadoLeve": 0.3667,
+     "BrocadoSevero": 0.0,
+     "CerezaSeca": 0.0,
+     "Concha": 0.2727,
+     "DXHongo": 0.0833,
+     "Inmaduro": 0.1875,
+     "MarronAVinagre": 0.25,
+     "Negros": 0.18,
+     "Normales": 0.7077,
+     "PMordidoCortado": 0.1111,
+     "Pergamino": 0.5333
+    },
+    "demo": {
+     "cbd_aaa_2.jpg": 0.4,
+     "cbd_bits_262.jpg": 0.64,
+     "tray_synthetic_00.jpg": 0.03,
+     "tray_synthetic_03.jpg": 0.06,
+     "tray_synthetic_12.jpg": 0.12,
+     "tray_synthetic_30.jpg": 0.09,
+     "tray_synthetic_40.jpg": 0.17
+    }
+   },
+   "auroc_vs_cbd": {
+    "j4ck_halves": 0.9972,
+    "j4ck_trays": 0.8797,
+    "j4ck_lopo": 0.8513
+   },
+   "cbd_aaa_many_min": 0.3,
+   "cbd_aaa_many_min_note": "AAA photos v1 calls 'many' under the 22:40 rules (no 'implausible' rule): the 27 photos where v1's own evidence says 'many'",
+   "calibrations": {
+    "fixed_app_rule_0.15": {
+     "threshold": 0.15,
+     "rule": "fixed 15% share (the app's existing unsure-share cut-off), not fitted",
+     "false_refusal": {
+      "j4ck_halves": "6/22",
+      "j4ck_trays": "19/30",
+      "j4ck_lopo": "7/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "DXHongo#half1",
+       "BrocadoLeve#half2",
+       "BrocadoSevero#half2",
+       "Concha#half2",
+       "DXHongo#half2",
+       "PMordidoCortado#half2"
+      ],
+      "j4ck_lopo": [
+       "BrocadoLeve",
+       "Concha",
+       "Inmaduro",
+       "MarronAVinagre",
+       "Negros",
+       "Normales",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "11/30",
+     "j4ck_trays_confident_and_correct_after_gate": "11/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": true
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "10/11",
+      "warm_cast": "9/11",
+      "half_res": "11/11",
+      "blur_r3": "11/11",
+      "brighter_x1.3": "10/11",
+      "cool_cast": "10/11",
+      "jpeg_q15": "11/11"
+     },
+     "cbd_refused_share": 1.0,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 61,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_halves": {
+     "threshold": 0.3333333333333333,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "15/30",
+      "j4ck_lopo": "3/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": [
+       "BrocadoLeve",
+       "Normales",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "15/30",
+     "j4ck_trays_confident_and_correct_after_gate": "15/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "4/11",
+      "warm_cast": "6/11",
+      "half_res": "6/11",
+      "blur_r3": "10/11",
+      "brighter_x1.3": "5/11",
+      "cool_cast": "6/11",
+      "jpeg_q15": "10/11"
+     },
+     "cbd_refused_share": 0.9547,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 47,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 58,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 46,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 44,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 47,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "on_j4ck_lopo": {
+     "threshold": 0.7076923076923077,
+     "rule": "NO GAP: threshold = max J4ckDev score so every calibration photo passes; AAA 'many' photos above it are refused, the rest are not",
+     "false_refusal": {
+      "j4ck_halves": "0/22",
+      "j4ck_trays": "0/30",
+      "j4ck_lopo": "0/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [],
+      "j4ck_lopo": []
+     },
+     "j4ck_trays_confident_after_gate": "30/30",
+     "j4ck_trays_confident_and_correct_after_gate": "30/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": false,
+      "cbd_bits_262.jpg": false,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "3/11",
+      "warm_cast": "4/11",
+      "half_res": "3/11",
+      "blur_r3": "4/11",
+      "brighter_x1.3": "3/11",
+      "cool_cast": "3/11",
+      "jpeg_q15": "5/11"
+     },
+     "cbd_refused_share": 0.0345,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 5,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 0,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 4,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 1,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 6,
+       "confident_band_after_gate": 0
+      }
+     }
+    },
+    "zero_AAA_many": {
+     "threshold": 0.29999999999999993,
+     "rule": "largest threshold that refuses EVERY CBD AAA photo whose v1 evidence says 'many' (22:40 rules; calibrated on AAA only)",
+     "false_refusal": {
+      "j4ck_halves": "1/22",
+      "j4ck_trays": "15/30",
+      "j4ck_lopo": "3/11"
+     },
+     "false_refusal_names": {
+      "j4ck_halves": [
+       "BrocadoLeve#half2"
+      ],
+      "j4ck_lopo": [
+       "BrocadoLeve",
+       "Normales",
+       "Pergamino"
+      ]
+     },
+     "j4ck_trays_confident_after_gate": "15/30",
+     "j4ck_trays_confident_and_correct_after_gate": "15/30",
+     "demo_trays_refused": {
+      "cbd_aaa_2.jpg": true,
+      "cbd_bits_262.jpg": true,
+      "tray_synthetic_00.jpg": false,
+      "tray_synthetic_03.jpg": false,
+      "tray_synthetic_12.jpg": false,
+      "tray_synthetic_30.jpg": false,
+      "tray_synthetic_40.jpg": false
+     },
+     "j4ck_perturbed_refused": {
+      "darker_x0.6": "6/11",
+      "warm_cast": "6/11",
+      "half_res": "8/11",
+      "blur_r3": "10/11",
+      "brighter_x1.3": "6/11",
+      "cool_cast": "6/11",
+      "jpeg_q15": "10/11"
+     },
+     "cbd_refused_share": 0.9849,
+     "cbd_aaa_confident_many_after_gate": "0/50",
+     "cbd_false_confidence_any_band_all_grades": 0.0,
+     "cbd_per_grade": {
+      "AAA": {
+       "photos": 50,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "AA": {
+       "photos": 61,
+       "refused": 60,
+       "confident_band_after_gate": 0
+      },
+      "A": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "AB": {
+       "photos": 50,
+       "refused": 48,
+       "confident_band_after_gate": 0
+      },
+      "PB-I": {
+       "photos": 51,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "PB-II": {
+       "photos": 50,
+       "refused": 49,
+       "confident_band_after_gate": 0
+      },
+      "C": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      },
+      "Bulk": {
+       "photos": 50,
+       "refused": 50,
+       "confident_band_after_gate": 0
+      },
+      "Bits": {
+       "photos": 51,
+       "refused": 51,
+       "confident_band_after_gate": 0
+      }
+     }
+    }
+   }
+  }
+ },
+ "rules_version": "app rules.ts/wilson.ts 23:05 BST 3 Oct 2026",
+ "baseline_app_rules_2240_for_comparison": {
+  "note": "same photos through the 22:40 app rules (band only if the whole 95% interval is in one band; no 'implausible' rule)",
+  "cbd_confident": "163/464",
+  "cbd_AAA_many": "27/50",
+  "j4ck_trays_correct": "16/30",
+  "j4ck_trays_wrong_confident": 0
+ },
+ "implausible_rule_margin": {
+  "cbd": {
+   "photos_with_unsure_share_le_15pct": 163,
+   "of_photos": 464,
+   "min_defect_share": 0.8936170212765957,
+   "share_below_0.6": 0.0,
+   "share_in_0.5_to_0.6": 0.0,
+   "percentiles_5_25_50": [
+    0.9768,
+    1.0,
+    1.0
+   ]
+  },
+  "stress_cbd_AAA_AA_perturbed": {
+   "photos_with_unsure_share_le_15pct": 419,
+   "of_photos": 777,
+   "min_defect_share": 0.3958333333333333,
+   "share_below_0.6": 0.0024,
+   "share_in_0.5_to_0.6": 0.0,
+   "percentiles_5_25_50": [
+    0.9787,
+    1.0,
+    1.0
+   ]
+  },
+  "why_counts_cbd": {
+   "implausible": 459,
+   "too_many_unsure": 0,
+   "": 5
+  },
+  "why_counts_stress": {
+   "implausible": 764,
+   "too_many_unsure": 3,
+   "": 10
+  },
+  "stress_confident_photos": [
+   {
+    "name": "cbdP|AA|82.jpg",
+    "pert": "blur_r3",
+    "band": "many",
+    "p_def": 0.3958333333333333,
+    "unsure_frac": 0.12727272727272726
+   }
+  ]
+ },
+ "gate_comparison": {
+  "none (app rules 23:05)": {
+   "j4ck_trays_correct": "30/30",
+   "j4ck_trays_wrong_confident": 0,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "many"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "1/777",
+   "STRESS_some_or_many": "1/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "1/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 1
+   }
+  },
+  "none (app rules 22:40, for reference)": {
+   "j4ck_trays_correct": "16/30",
+   "j4ck_trays_wrong_confident": 0,
+   "j4ck_halves_confident_lost": "1/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "33/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "many",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "unsure",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "unsure",
+    "tray_synthetic_40.jpg": "many"
+   },
+   "cbd_all_confident": "163/464",
+   "cbd_AAA_many": "27/50",
+   "cbd_heldout_grades_confident": "136/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "419/777",
+   "STRESS_some_or_many": "419/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "74/111",
+    "warm_cast": "55/111",
+    "half_res": "61/111",
+    "blur_r3": "63/111",
+    "brighter_x1.3": "60/111",
+    "cool_cast": "70/111",
+    "jpeg_q15": "36/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 419
+   }
+  },
+  "hand_maha@zeroAAA": {
+   "j4ck_trays_correct": "26/30",
+   "j4ck_trays_wrong_confident": 0,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "many"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "0/777",
+   "STRESS_some_or_many": "0/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "0/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 0
+   }
+  },
+  "energy@zeroAAA": {
+   "j4ck_trays_correct": "30/30",
+   "j4ck_trays_wrong_confident": 0,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "many"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "0/777",
+   "STRESS_some_or_many": "0/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "0/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 0
+   }
+  },
+  "emb_knn@zeroAAA": {
+   "j4ck_trays_correct": "30/30",
+   "j4ck_trays_wrong_confident": 0,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "many"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "1/777",
+   "STRESS_some_or_many": "1/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "1/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 1
+   }
+  },
+  "hand_maha OR emb_knn @zeroAAA": {
+   "j4ck_trays_correct": "26/30",
+   "j4ck_trays_wrong_confident": 0,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "many"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "0/777",
+   "STRESS_some_or_many": "0/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "0/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 0
+   }
+  },
+  "S7 (95th pct)": {
+   "j4ck_trays_correct": "9/30",
+   "j4ck_trays_wrong_confident": 2,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "unsure"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "0/777",
+   "STRESS_some_or_many": "0/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "0/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 0
+   }
+  },
+  "S7 (99th pct)": {
+   "j4ck_trays_correct": "20/30",
+   "j4ck_trays_wrong_confident": 0,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "many"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "1/777",
+   "STRESS_some_or_many": "1/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "1/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 1
+   }
+  },
+  "hand_maha@zeroAAA + S7 (95th)": {
+   "j4ck_trays_correct": "9/30",
+   "j4ck_trays_wrong_confident": 2,
+   "j4ck_halves_confident_lost": "0/1",
+   "j4ck_lopo_confident_lost": "0/0",
+   "j4ck_perturbed_confident": "0/77",
+   "app_demo": {
+    "cbd_aaa_2.jpg": "unsure",
+    "cbd_bits_262.jpg": "unsure",
+    "tray_synthetic_00.jpg": "clean",
+    "tray_synthetic_03.jpg": "clean",
+    "tray_synthetic_12.jpg": "some",
+    "tray_synthetic_30.jpg": "many",
+    "tray_synthetic_40.jpg": "unsure"
+   },
+   "cbd_all_confident": "0/464",
+   "cbd_AAA_many": "0/50",
+   "cbd_heldout_grades_confident": "0/414",
+   "STRESS_cbd_AAA_AA_perturbed_confident": "0/777",
+   "STRESS_some_or_many": "0/777",
+   "STRESS_by_perturbation": {
+    "darker_x0.6": "0/111",
+    "warm_cast": "0/111",
+    "half_res": "0/111",
+    "blur_r3": "0/111",
+    "brighter_x1.3": "0/111",
+    "cool_cast": "0/111",
+    "jpeg_q15": "0/111"
+   },
+   "STRESS_bands": {
+    "clean": 0,
+    "some": 0,
+    "many": 0
+   }
+  }
+ },
+ "integrated_rule_S7": {
+  "bean_familiarity_threshold": 0.29237496852874756,
+  "how": "95th percentile of held-out-half beans' v1-feature 5-NN cosine distance to their fold model's training half",
+  "per_set": {
+   "j4ck_halves": {
+    "BrocadoLeve#half1": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "BrocadoSevero#half1": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "CerezaSeca#half1": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Concha#half1": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "DXHongo#half1": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro#half1": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "MarronAVinagre#half1": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Negros#half1": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Normales#half1": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "PMordidoCortado#half1": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Pergamino#half1": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoLeve#half2": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "BrocadoSevero#half2": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "CerezaSeca#half2": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Concha#half2": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "DXHongo#half2": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro#half2": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "MarronAVinagre#half2": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Negros#half2": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Normales#half2": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "PMordidoCortado#half2": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Pergamino#half2": {
+     "before": "unsure",
+     "after": "unsure"
+    }
+   },
+   "j4ck_trays": {
+    "fold1_def0_0": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "fold1_def0_1": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "fold1_def0_2": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "fold1_def0_3": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "fold1_def0_4": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "fold1_def12_0": {
+     "before": "some",
+     "after": "some"
+    },
+    "fold1_def12_1": {
+     "before": "some",
+     "after": "clean"
+    },
+    "fold1_def12_2": {
+     "before": "some",
+     "after": "some"
+    },
+    "fold1_def12_3": {
+     "before": "some",
+     "after": "some"
+    },
+    "fold1_def12_4": {
+     "before": "some",
+     "after": "some"
+    },
+    "fold1_def30_0": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold1_def30_1": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold1_def30_2": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold1_def30_3": {
+     "before": "many",
+     "after": "some"
+    },
+    "fold1_def30_4": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold2_def0_0": {
+     "before": "clean",
+     "after": "unsure"
+    },
+    "fold2_def0_1": {
+     "before": "clean",
+     "after": "unsure"
+    },
+    "fold2_def0_2": {
+     "before": "clean",
+     "after": "unsure"
+    },
+    "fold2_def0_3": {
+     "before": "clean",
+     "after": "unsure"
+    },
+    "fold2_def0_4": {
+     "before": "clean",
+     "after": "unsure"
+    },
+    "fold2_def12_0": {
+     "before": "some",
+     "after": "unsure"
+    },
+    "fold2_def12_1": {
+     "before": "some",
+     "after": "unsure"
+    },
+    "fold2_def12_2": {
+     "before": "some",
+     "after": "unsure"
+    },
+    "fold2_def12_3": {
+     "before": "some",
+     "after": "unsure"
+    },
+    "fold2_def12_4": {
+     "before": "some",
+     "after": "unsure"
+    },
+    "fold2_def30_0": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold2_def30_1": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold2_def30_2": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold2_def30_3": {
+     "before": "many",
+     "after": "unsure"
+    },
+    "fold2_def30_4": {
+     "before": "many",
+     "after": "unsure"
+    }
+   },
+   "j4ck_lopo": {
+    "BrocadoLeve": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoSevero": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "CerezaSeca": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Concha": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "DXHongo": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "MarronAVinagre": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Negros": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Normales": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "PMordidoCortado": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Pergamino": {
+     "before": "unsure",
+     "after": "unsure"
+    }
+   },
+   "demo": {
+    "cbd_aaa_2.jpg": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "cbd_bits_262.jpg": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "tray_synthetic_00.jpg": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "tray_synthetic_03.jpg": {
+     "before": "clean",
+     "after": "clean"
+    },
+    "tray_synthetic_12.jpg": {
+     "before": "some",
+     "after": "some"
+    },
+    "tray_synthetic_30.jpg": {
+     "before": "many",
+     "after": "many"
+    },
+    "tray_synthetic_40.jpg": {
+     "before": "many",
+     "after": "unsure"
+    }
+   },
+   "j4ck_perturbed": {
+    "BrocadoLeve/darker_x0.6": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoLeve/warm_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoLeve/half_res": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoLeve/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "BrocadoLeve/brighter_x1.3": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoLeve/cool_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoLeve/jpeg_q15": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoSevero/darker_x0.6": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoSevero/warm_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoSevero/half_res": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoSevero/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "BrocadoSevero/brighter_x1.3": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoSevero/cool_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "BrocadoSevero/jpeg_q15": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "CerezaSeca/darker_x0.6": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "CerezaSeca/warm_cast": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "CerezaSeca/half_res": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "CerezaSeca/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "CerezaSeca/brighter_x1.3": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "CerezaSeca/cool_cast": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "CerezaSeca/jpeg_q15": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Concha/darker_x0.6": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Concha/warm_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Concha/half_res": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Concha/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "Concha/brighter_x1.3": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Concha/cool_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Concha/jpeg_q15": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "DXHongo/darker_x0.6": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "DXHongo/warm_cast": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "DXHongo/half_res": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "DXHongo/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "DXHongo/brighter_x1.3": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "DXHongo/cool_cast": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "DXHongo/jpeg_q15": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro/darker_x0.6": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro/warm_cast": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro/half_res": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "Inmaduro/brighter_x1.3": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro/cool_cast": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Inmaduro/jpeg_q15": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "MarronAVinagre/darker_x0.6": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "MarronAVinagre/warm_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "MarronAVinagre/half_res": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "MarronAVinagre/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "MarronAVinagre/brighter_x1.3": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "MarronAVinagre/cool_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "MarronAVinagre/jpeg_q15": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Negros/darker_x0.6": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Negros/warm_cast": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Negros/half_res": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Negros/blur_r3": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Negros/brighter_x1.3": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Negros/cool_cast": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Negros/jpeg_q15": {
+     "before": "retake:not_green",
+     "after": "retake:not_green"
+    },
+    "Normales/darker_x0.6": {
+     "before": "retake:dark",
+     "after": "retake:dark"
+    },
+    "Normales/warm_cast": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Normales/half_res": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Normales/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "Normales/brighter_x1.3": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Normales/cool_cast": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "Normales/jpeg_q15": {
+     "before": "retake:count",
+     "after": "retake:count"
+    },
+    "PMordidoCortado/darker_x0.6": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "PMordidoCortado/warm_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "PMordidoCortado/half_res": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "PMordidoCortado/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "PMordidoCortado/brighter_x1.3": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "PMordidoCortado/cool_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "PMordidoCortado/jpeg_q15": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Pergamino/darker_x0.6": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Pergamino/warm_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Pergamino/half_res": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Pergamino/blur_r3": {
+     "before": "retake:blur",
+     "after": "retake:blur"
+    },
+    "Pergamino/brighter_x1.3": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Pergamino/cool_cast": {
+     "before": "unsure",
+     "after": "unsure"
+    },
+    "Pergamino/jpeg_q15": {
+     "before": "unsure",
+     "after": "unsure"
+    }
+   }
+  },
+  "cbd_per_grade": {
+   "AAA": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    }
+   },
+   "AA": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 61
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 61
+    }
+   },
+   "A": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    }
+   },
+   "AB": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    }
+   },
+   "PB-I": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 49
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 49
+    }
+   },
+   "PB-II": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    }
+   },
+   "C": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 51
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 51
+    }
+   },
+   "Bulk": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 50
+    }
+   },
+   "Bits": {
+    "before": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 48
+    },
+    "after": {
+     "clean": 0,
+     "some": 0,
+     "many": 0,
+     "unsure": 48
+    }
+   }
+  },
+  "cbd_confident_share_before": 0.0,
+  "cbd_confident_share_after": 0.0,
+  "cbd_aaa_confident_many_after": "0/50",
+  "j4ck_trays": {
+   "true_band": {
+    "clean": 10,
+    "some": 10,
+    "many": 10
+   },
+   "before": {
+    "confident": 30,
+    "correct": 30,
+    "wrong_confident": 0
+   },
+   "after": {
+    "confident": 11,
+    "correct": 9,
+    "wrong_confident": 2
+   }
+  },
+  "j4ck_halves_newly_refused": "0/1 confident photos turned 'not sure'",
+  "j4ck_trays_newly_refused": "19/30 confident photos turned 'not sure'",
+  "j4ck_lopo_newly_refused": "0/0 confident photos turned 'not sure'",
+  "demo_newly_refused": "1/5 confident photos turned 'not sure'",
+  "sensitivity_sweep_percentile_of_heldout_half_distances": {
+   "90": {
+    "cbd_all_confident": "0/464",
+    "cbd_AAA_confident_many": "0/50",
+    "j4ck_trays_confident_correct": "1/30",
+    "j4ck_trays_confident_wrong": 0,
+    "j4ck_lopo_confident": "0/11",
+    "j4ck_perturbed_confident": "0/77",
+    "STRESS_cbd_AAA_AA_perturbed_confident": "0/777"
+   },
+   "95": {
+    "cbd_all_confident": "0/464",
+    "cbd_AAA_confident_many": "0/50",
+    "j4ck_trays_confident_correct": "9/30",
+    "j4ck_trays_confident_wrong": 2,
+    "j4ck_lopo_confident": "0/11",
+    "j4ck_perturbed_confident": "0/77",
+    "STRESS_cbd_AAA_AA_perturbed_confident": "0/777"
+   },
+   "99": {
+    "cbd_all_confident": "0/464",
+    "cbd_AAA_confident_many": "0/50",
+    "j4ck_trays_confident_correct": "20/30",
+    "j4ck_trays_confident_wrong": 0,
+    "j4ck_lopo_confident": "0/11",
+    "j4ck_perturbed_confident": "0/77",
+    "STRESS_cbd_AAA_AA_perturbed_confident": "1/777"
+   },
+   "99.5": {
+    "cbd_all_confident": "0/464",
+    "cbd_AAA_confident_many": "0/50",
+    "j4ck_trays_confident_correct": "26/30",
+    "j4ck_trays_confident_wrong": 0,
+    "j4ck_lopo_confident": "0/11",
+    "j4ck_perturbed_confident": "0/77",
+    "STRESS_cbd_AAA_AA_perturbed_confident": "1/777"
+   }
+  },
+  "sweep_note": "95 was fixed before looking at CBD; the other percentiles are shown for sensitivity only"
+ }
+}

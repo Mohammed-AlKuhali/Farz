@@ -1,0 +1,106 @@
+{
+ "protocol": "Export the licence-stated (\"clean\") v2 model with TWO outputs, fp32 and fp16, and check them.\n\n  input  \"image\" float32 [N,3,128,128] RGB in [0,1] (crop contract of src/beans/beanfinder.py; same as v1/v2)\n  output \"probs\" float32 [N,6] = softmax(logits / T) (good, dark, insect, broken, unhulled, other_defect); ImageNet\n         normalisation and T (clean_eval.json, fitted on clean LOSO held-out predictions) are inside the graph\n  output \"embed\" float32 [N,1024] = the penultimate feature (Hardswish output feeding the last Linear), L2-normalised.\n         Computed as u = h / max|h|, embed = u / ||u|| (identical maths to h / ||h||) so that the fp16 graph cannot\n         overflow when squaring (|u| <= 1, sum of 1,024 squares <= 1,024).\nFP16 = onnxconverter_common.float16.convert_float_to_float16(keep_io_types=True). Kept only if its top-class agreement with\nfp32 is >= 99% on ALL CBD bean crops (never used for training, T, thresholds or anything else).\nAlso writes the inputs/expected outputs for the onnxruntime-web wasm parity check (clean_wasm_parity.mjs) and runs it.\nWrites models_v2/farz_beans_v2_clean_{fp32,fp16}.onnx, models_v2/farz_beans_v2_clean_labels.json, reports_v2/clean_export.json.",
+ "temperature": 2.045858915197777,
+ "pair_thresholds": [
+  0.5,
+  0.91
+ ],
+ "agreement_set": "all 23447 CBD bean crops (robust cache)",
+ "final_weights": "$SCRATCHPAD/v2train/folds/licensed.pt",
+ "final_weights_sha256": "14fca14b606e38c978e60aa90b608a395bd646c9863158184cac2064568bc9f9",
+ "fp32": {
+  "file": "models_v2/farz_beans_v2_clean_fp32.onnx",
+  "bytes": 6107254,
+  "sha256": "270880126f5af03dc6ecfafb86f0766fd3c281fed0151abe2e125035ea22e315",
+  "max_abs_prob_diff_vs_pytorch_first_2048": 2.637505531311035e-06,
+  "max_abs_embed_diff_vs_pytorch_first_2048": 1.6987323760986328e-06,
+  "max_abs_embed_diff_onnx_vs_calibration_helper_first_2048": 1.6987323760986328e-06,
+  "embed_norm_min_max": [
+   0.9999998211860657,
+   1.0000001192092896
+  ],
+  "latency_ms_batch50_1thread_laptop_cpu": 75.11549999981071
+ },
+ "fp16": {
+  "file": "models_v2/farz_beans_v2_clean_fp16.onnx",
+  "bytes": 3082642,
+  "sha256": "c40c10f915f7a3ab78f1aead50d3cd027113b1a53d031eea21ffec331c5bc87a",
+  "how": "onnxconverter_common.float16.convert_float_to_float16(keep_io_types=True)",
+  "top_class_agreement_vs_fp32": 0.9964174521260716,
+  "call3_agreement_vs_fp32_at_pair": 0.9952659188808802,
+  "max_abs_prob_diff_vs_fp32": 0.007645905017852783,
+  "embed_cosine_vs_fp32_min_mean": [
+   0.9998837113380432,
+   0.9999805092811584
+  ],
+  "max_abs_embed_diff_vs_fp32": 0.004961386322975159,
+  "any_nan_or_inf": false,
+  "kept": true,
+  "latency_ms_batch50_1thread_laptop_cpu": 75.84820800184389
+ },
+ "wasm_parity": {
+  "fp32": {
+   "runtime": "onnxruntime-web 1.30.0 wasm numThreads=1, Node v26.8.2",
+   "model": "models_v2/farz_beans_v2_clean_fp32.onnx",
+   "tag": "fp32",
+   "n": 300,
+   "embed_dim": 1024,
+   "output_names": [
+    "probs",
+    "embed"
+   ],
+   "max_abs_prob_diff_vs_python_ort": 8.940696716308594e-07,
+   "max_abs_embed_diff_vs_python_ort": 8.344650268554688e-07,
+   "min_embed_cosine_vs_python_ort": 0.9999999999946699,
+   "argmax_agreement": 1,
+   "call3_agreement_at_pair": 1,
+   "wall_ms_load_and_run": 911
+  },
+  "fp16": {
+   "runtime": "onnxruntime-web 1.30.0 wasm numThreads=1, Node v26.8.2",
+   "model": "models_v2/farz_beans_v2_clean_fp16.onnx",
+   "tag": "fp16",
+   "n": 300,
+   "embed_dim": 1024,
+   "output_names": [
+    "probs",
+    "embed"
+   ],
+   "max_abs_prob_diff_vs_python_ort": 0.0004864931106567383,
+   "max_abs_embed_diff_vs_python_ort": 0.0015014857053756714,
+   "min_embed_cosine_vs_python_ort": 0.9999949137811333,
+   "argmax_agreement": 1,
+   "call3_agreement_at_pair": 1,
+   "wall_ms_load_and_run": 886
+  }
+ },
+ "labels_json": {
+  "classes": [
+   "good",
+   "dark",
+   "insect",
+   "broken",
+   "unhulled",
+   "other_defect"
+  ],
+  "defect_classes": [
+   "dark",
+   "insect",
+   "broken",
+   "unhulled",
+   "other_defect"
+  ],
+  "good_at_or_above": 0.5,
+  "defect_at_or_above": 0.91,
+  "temperature_baked_in": 2.045858915197777,
+  "input": 128,
+  "outputs": {
+   "probs": "[N,6] softmax(logits/T)",
+   "embed": "[N,1024] L2-normalised penultimate feature (for on-device calibration)"
+  },
+  "model_file": "models_v2/farz_beans_v2_clean_fp16.onnx",
+  "decision": "pGood = probs[0]; good if pGood >= good_at_or_above; else defect if 1 - pGood >= defect_at_or_above (type = argmax of probs[1:], shown only as 'possible'); otherwise unsure. Touching blobs are unsure.",
+  "training_data": "ONLY the 7 sources that state a licence: afiyah_deteksi, afiyah_bijikopi, vicanadya16 (CC0), loja_yolo (CC BY 4.0), samruddh_grading (MIT), lojano (CC BY-NC 4.0), J4ckDev (CC BY-NC-SA 4.0). The 5 sources with no licence were used only as held-out test data. Licence of these weights: NON-COMMERCIAL research prototype, ShareAlike (CC BY-NC-SA 4.0 from J4ckDev).",
+  "thresholds_fitted_on": "clean leave-one-source-out predictions over the licensed sources, afiyah twins held out together (reports_v2/clean_eval.json)"
+ }
+}

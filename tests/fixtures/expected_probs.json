@@ -1,0 +1,357 @@
+{
+ "model": "app/public/models/farz_beans.onnx",
+ "model_sha256": "200fd5c3184caa5cd65101235a1bbac47e76b16c80bb8caa6fb4ce922b3e0c31",
+ "classes": [
+  "good",
+  "dark",
+  "insect",
+  "broken",
+  "unhulled"
+ ],
+ "abstain_below": 0.59,
+ "input": "name 'image', float32 [N,3,128,128], RGB, value = png_byte / 255 (no other normalisation; ImageNet mean/std is inside the graph)",
+ "output": "name 'probs', float32 [N,5], softmax(logits/T) with T baked in",
+ "runtime": "onnxruntime 1.30.0 Python, CPUExecutionProvider, intra_op_num_threads=1, default graph optimisation",
+ "suggested_tolerance_abs": 0.01,
+ "python_runtime_spread": {
+  "no_graph_opt_1thread": {
+   "max_abs_diff_vs_expected": 1.4790267943709523e-07,
+   "argmax_agreement": 1.0
+  },
+  "all_opt_8threads": {
+   "max_abs_diff_vs_expected": 4.9098372457978545e-08,
+   "argmax_agreement": 1.0
+  }
+ },
+ "items": [
+  {
+   "file": "crops/crop_00_good_Normales_082.png",
+   "true_class": "good",
+   "source_crop": "data/crops/good/Normales_082.png",
+   "test_fold": 2,
+   "probs": [
+    0.9937357,
+    0.0004779,
+    0.0011835,
+    0.0035006,
+    0.0011023
+   ],
+   "argmax": "good",
+   "max_prob": 0.9937357,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_01_good_Normales_038.png",
+   "true_class": "good",
+   "source_crop": "data/crops/good/Normales_038.png",
+   "test_fold": 1,
+   "probs": [
+    0.9768966,
+    0.0033637,
+    0.0144831,
+    0.0029513,
+    0.0023053
+   ],
+   "argmax": "good",
+   "max_prob": 0.9768966,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_02_good_Normales_101.png",
+   "true_class": "good",
+   "source_crop": "data/crops/good/Normales_101.png",
+   "test_fold": 1,
+   "probs": [
+    0.9731128,
+    0.0064909,
+    0.0092593,
+    0.0042944,
+    0.0068426
+   ],
+   "argmax": "good",
+   "max_prob": 0.9731128,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_03_good_Normales_166.png",
+   "true_class": "good",
+   "source_crop": "data/crops/good/Normales_166.png",
+   "test_fold": 2,
+   "probs": [
+    0.9676862,
+    0.0039952,
+    0.0245115,
+    0.0022093,
+    0.0015979
+   ],
+   "argmax": "good",
+   "max_prob": 0.9676862,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_04_dark_MarronAVinagre_000.png",
+   "true_class": "dark",
+   "source_crop": "data/crops/dark/MarronAVinagre_000.png",
+   "test_fold": 1,
+   "probs": [
+    0.0001658,
+    0.9991748,
+    0.0001248,
+    0.0002348,
+    0.0002998
+   ],
+   "argmax": "dark",
+   "max_prob": 0.9991748,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_05_dark_MarronAVinagre_006.png",
+   "true_class": "dark",
+   "source_crop": "data/crops/dark/MarronAVinagre_006.png",
+   "test_fold": 1,
+   "probs": [
+    0.0001375,
+    0.9976528,
+    0.00066,
+    0.0003296,
+    0.0012201
+   ],
+   "argmax": "dark",
+   "max_prob": 0.9976528,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_06_dark_Negros_089.png",
+   "true_class": "dark",
+   "source_crop": "data/crops/dark/Negros_089.png",
+   "test_fold": 1,
+   "probs": [
+    0.0018581,
+    0.9623268,
+    0.005269,
+    0.0299643,
+    0.0005819
+   ],
+   "argmax": "dark",
+   "max_prob": 0.9623268,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_07_dark_MarronAVinagre_012.png",
+   "true_class": "dark",
+   "source_crop": "data/crops/dark/MarronAVinagre_012.png",
+   "test_fold": 1,
+   "probs": [
+    0.0013516,
+    0.9821,
+    0.0155368,
+    0.0003863,
+    0.0006253
+   ],
+   "argmax": "dark",
+   "max_prob": 0.9821,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_08_insect_BrocadoLeve_023.png",
+   "true_class": "insect",
+   "source_crop": "data/crops/insect/BrocadoLeve_023.png",
+   "test_fold": 1,
+   "probs": [
+    0.0022323,
+    0.003777,
+    0.9895828,
+    0.0021161,
+    0.0022919
+   ],
+   "argmax": "insect",
+   "max_prob": 0.9895828,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_09_insect_BrocadoSevero_007.png",
+   "true_class": "insect",
+   "source_crop": "data/crops/insect/BrocadoSevero_007.png",
+   "test_fold": 1,
+   "probs": [
+    0.001917,
+    0.0062208,
+    0.9642745,
+    0.0222645,
+    0.0053232
+   ],
+   "argmax": "insect",
+   "max_prob": 0.9642745,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_10_insect_BrocadoLeve_003.png",
+   "true_class": "insect",
+   "source_crop": "data/crops/insect/BrocadoLeve_003.png",
+   "test_fold": 1,
+   "probs": [
+    0.0003055,
+    0.0151535,
+    0.9830252,
+    0.0008593,
+    0.0006565
+   ],
+   "argmax": "insect",
+   "max_prob": 0.9830252,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_11_insect_BrocadoSevero_002.png",
+   "true_class": "insect",
+   "source_crop": "data/crops/insect/BrocadoSevero_002.png",
+   "test_fold": 2,
+   "probs": [
+    0.0005425,
+    0.0004803,
+    0.996798,
+    0.001627,
+    0.0005523
+   ],
+   "argmax": "insect",
+   "max_prob": 0.996798,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_12_broken_Concha_027.png",
+   "true_class": "broken",
+   "source_crop": "data/crops/broken/Concha_027.png",
+   "test_fold": 1,
+   "probs": [
+    0.0043688,
+    0.0039193,
+    0.0027968,
+    0.9869783,
+    0.0019367
+   ],
+   "argmax": "broken",
+   "max_prob": 0.9869783,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_13_broken_Concha_004.png",
+   "true_class": "broken",
+   "source_crop": "data/crops/broken/Concha_004.png",
+   "test_fold": 1,
+   "probs": [
+    0.0019396,
+    0.0023055,
+    0.0020399,
+    0.9930308,
+    0.0006842
+   ],
+   "argmax": "broken",
+   "max_prob": 0.9930308,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_14_broken_Concha_011.png",
+   "true_class": "broken",
+   "source_crop": "data/crops/broken/Concha_011.png",
+   "test_fold": 2,
+   "probs": [
+    0.0060302,
+    0.0048646,
+    0.0032874,
+    0.9836149,
+    0.002203
+   ],
+   "argmax": "broken",
+   "max_prob": 0.9836149,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_15_broken_PMordidoCortado_006.png",
+   "true_class": "broken",
+   "source_crop": "data/crops/broken/PMordidoCortado_006.png",
+   "test_fold": 2,
+   "probs": [
+    0.0022742,
+    0.002151,
+    0.0022717,
+    0.9909695,
+    0.0023337
+   ],
+   "argmax": "broken",
+   "max_prob": 0.9909695,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_16_unhulled_Pergamino_044.png",
+   "true_class": "unhulled",
+   "source_crop": "data/crops/unhulled/Pergamino_044.png",
+   "test_fold": 1,
+   "probs": [
+    0.0028096,
+    0.009646,
+    0.0027869,
+    0.0018297,
+    0.9829279
+   ],
+   "argmax": "unhulled",
+   "max_prob": 0.9829279,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_17_unhulled_CerezaSeca_008.png",
+   "true_class": "unhulled",
+   "source_crop": "data/crops/unhulled/CerezaSeca_008.png",
+   "test_fold": 1,
+   "probs": [
+    0.0009005,
+    0.0028337,
+    0.0066591,
+    0.0024186,
+    0.9871881
+   ],
+   "argmax": "unhulled",
+   "max_prob": 0.9871881,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_18_unhulled_Pergamino_021.png",
+   "true_class": "unhulled",
+   "source_crop": "data/crops/unhulled/Pergamino_021.png",
+   "test_fold": 1,
+   "probs": [
+    0.001376,
+    0.0061118,
+    0.0014238,
+    0.0011832,
+    0.9899053
+   ],
+   "argmax": "unhulled",
+   "max_prob": 0.9899053,
+   "answered": true
+  },
+  {
+   "file": "crops/crop_19_unhulled_Pergamino_002.png",
+   "true_class": "unhulled",
+   "source_crop": "data/crops/unhulled/Pergamino_002.png",
+   "test_fold": 1,
+   "probs": [
+    0.0005277,
+    0.0027065,
+    0.0008596,
+    0.0072327,
+    0.9886735
+   ],
+   "argmax": "unhulled",
+   "max_prob": 0.9886735,
+   "answered": true
+  }
+ ],
+ "browser_check_node_wasm": {
+  "runtime": "onnxruntime-web 1.30.0 wasm, numThreads=1, Node v26.8.2",
+  "model": "app/public/models/farz_beans.onnx",
+  "n": 20,
+  "max_abs_prob_diff_vs_python": 2.688905000672315e-07,
+  "argmax_agreement": 1,
+  "tolerance": 0.01,
+  "pass": true
+ }
+}

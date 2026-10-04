@@ -1,0 +1,72 @@
+{
+ "rate": 4,
+ "mode": "worker",
+ "runs": {
+  "unthrottled": [
+   {
+    "wall": 1156,
+    "tapToResult": 380.20000000298023,
+    "decode": 8.600000001490116,
+    "finder": 109.30000000074506,
+    "model": 223.19999999925494,
+    "total": 341.30000000074506
+   },
+   {
+    "wall": 1155,
+    "tapToResult": 397.30000000074506,
+    "decode": 8.800000000745058,
+    "finder": 124.39999999850988,
+    "model": 220.40000000223517,
+    "total": 354
+   },
+   {
+    "wall": 1157,
+    "tapToResult": 380.19999999925494,
+    "decode": 9.599999997764826,
+    "finder": 100.09999999776483,
+    "model": 220.80000000074506,
+    "total": 330.80000000074506
+   }
+  ],
+  "throttled": [
+   {
+    "wall": 1161,
+    "tapToResult": 361.5999999977648,
+    "decode": 15,
+    "finder": 79.30000000074506,
+    "model": 228.5,
+    "total": 323.1000000014901
+   },
+   {
+    "wall": 1149,
+    "tapToResult": 360.3999999985099,
+    "decode": 13.5,
+    "finder": 79.30000000074506,
+    "model": 228.79999999701977,
+    "total": 322.5
+   },
+   {
+    "wall": 1162,
+    "tapToResult": 380,
+    "decode": 14.800000000745058,
+    "finder": 102.39999999850988,
+    "model": 227.10000000149012,
+    "total": 345
+   }
+  ]
+ },
+ "unthrottled": {
+  "tapToResult": 380,
+  "decode": 9,
+  "finder": 109,
+  "model": 221,
+  "total": 341
+ },
+ "throttled": {
+  "tapToResult": 362,
+  "decode": 15,
+  "finder": 79,
+  "model": 229,
+  "total": 323
+ }
+}

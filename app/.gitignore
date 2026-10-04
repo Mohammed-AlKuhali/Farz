@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dev-dist/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+# NOTE: public/ort/ (onnxruntime-web wasm, copied by scripts/copy-ort.mjs) is committed on purpose so any host
+# that runs plain `vite build` (without the prebuild step) still ships the runtime locally.
